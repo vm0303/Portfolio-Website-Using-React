@@ -1,0 +1,58 @@
+import "./intro.css"
+import pic from "../../image/Intro.png"
+import {init} from 'ityped'
+
+
+
+import {useEffect, useRef} from "react";
+
+
+const Intro = () => {
+    const textRef = useRef();
+    useEffect(() => {
+        init(textRef.current,
+            {
+                showCursor: true,
+                backDelay: 1200,
+                strings: ["playing video games.", "watching sports.", "reading books.", "traveling.",
+                    "eating/dining at various cuisines or restaurants.", "hiking.", "watching movies/TV shows. "],
+            })
+    }, []);
+    return (
+        <div className="Intro">
+
+                <div className="i-left_side">
+
+                    <div className="i-left_side_wrapper">
+                        <h2 className="i-greeting">Hello! I'm</h2>
+                        <h1 className="i-name">Vishal Madhav.</h1>
+
+                        <div className="i-titles">
+                            <div className="i-title-item">I'm learning to be a Full-Stack Developer</div>
+                        </div>
+                        <br/>
+                        <p className="i-desc">
+                            I am a recent Computer Science undergraduate, and an upcoming full-stack developer.
+                        </p>
+                        <br/>
+                        <div className="i-hobbies">
+                            My favorite hobbies include <span ref={textRef}></span>
+                        </div>
+                    </div>
+
+                    <svg viewBox="0 0 95 95" className="arrows">
+                        <path className="a1" d="M0 0 L30 32 L60 0"></path>
+                        <path className="a2" d="M0 20 L30 52 L60 20"></path>
+                    </svg>
+
+                </div>
+
+                <div className="i-right_side">
+                    <div className="i-background"></div>
+                    <img src={pic} alt="" className="i-img"></img>
+                </div>
+        </div>
+    )
+}
+export default Intro;
+

@@ -1,0 +1,143 @@
+#link_menu
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar li
+{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#link_menu
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#link_menu li
+{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#link_menu li a
+{
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
+    color: #ffffff;
+}
+
+.icons
+{
+    text-decoration: none;
+    color: #ffffff;
+}
+.navbar
+{
+    display: flex;
+    align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -5px;
+    z-index: 2;
+    height: 70px;
+    min-height: 70px;
+    width: calc(100% - 1.5rem);
+    justify-content: center;
+    padding: 0 1rem;
+    box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
+    background: #0b78d0;
+
+
+
+}
+
+
+.navbar, ul
+{
+    display: flex;
+    flex-direction:row;
+}
+ul li
+{
+    padding: 0 5px;
+}
+.wrapper
+{
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+}
+
+
+#link_menu li a:hover
+{
+    color: #000000;
+}
+#link_menu li a:hover::after
+{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #000000;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+
+}
+
+
+/*#mobile
+{
+    display: none;
+}
+#mobile i
+{
+    color: black;
+}*/
+/*@media screen and (max-width: 769px)
+{
+    #navbar
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 90px;
+        right: 0 ;
+        width: 300px;
+        height: 100vh;
+        background: transparent;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1 );
+        padding: 40px 0 0 10px ;
+    }
+    #navbar li
+    {
+        margin-bottom: 25px;
+    }
+    #mobile
+    {
+        display: block;
+    }
+    #mobile i
+    {
+        font-size:24px;
+        cursor: pointer;
+    }
+}*/
+/*
+#hamburger
+{
+    padding: 5px;
+}
+#navbar.active
+{
+    right: 0px;
+}*/

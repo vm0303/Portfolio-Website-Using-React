@@ -1,0 +1,202 @@
+.Intro {
+    display: flex;
+    height: 100vh;
+
+
+}
+.i-left_side
+{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 550px;
+
+}
+
+.i-right_side
+{
+    flex: 1;
+    position: relative;
+}
+
+.i-left_side_wrapper
+{
+    padding: 50px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.i-greeting
+{
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.i-name {
+    font-size: 60px;
+}
+
+.i-title-item {
+    height: 70px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #0b78d0;
+    display: flex;
+    align-items: center;
+}
+
+.i-desc {
+    font-size: 23px;
+}
+
+.i-hobby-titles {
+    height: 50px;
+    overflow: hidden;
+}
+
+.i-hobbies {
+    font-size: 23px;
+}
+
+.i-hobby-title-wrapper {
+    height: 100%;
+
+    animation: move 10s ease-in-out infinite;
+}
+
+@keyframes move {
+    25% {
+        transform: translateY(-50px);
+    }
+    50% {
+        transform: translateY(-100px);
+    }
+    75% {
+        transform: translateY(-150px);
+    }
+    100% {
+        transform: translateY(-200px);
+    }
+}
+
+.i-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.i-background {
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    background-color: #0b78d0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.i-scroll
+{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 20px;
+}
+
+
+span
+{
+    font-size: inherit;
+    color: #0b78d0;
+}
+
+.ityped-cursor
+{
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.arrows {
+    width: 60px;
+    height: 120px;
+    position: absolute;
+    margin-left: 30px;
+    bottom: -40px;
+
+
+}
+
+.arrows path {
+    stroke: black;
+    fill: transparent;
+    stroke-width: 1px;
+    animation: arrow 3s infinite;
+    -webkit-animation: arrow 3s infinite;
+}
+
+@keyframes arrow {
+    0% {
+        opacity: 0
+    }
+    40% {
+        opacity: 1
+    }
+    80% {
+        opacity: 0
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes arrow /* For Safari, and Chrome via mobile*/
+{
+    0% {
+        opacity: 0
+    }
+    40% {
+        opacity: 1
+    }
+    80% {
+        opacity: 0
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+.arrows path.a1 {
+    animation-delay: -1s;
+    -webkit-animation-delay: -1s; /* For Safari, Edge, and Chrome */
+}
+
+.arrows path.a2 {
+    animation-delay: -0.5s;
+    -webkit-animation-delay: -0.5s; /* For Safari, Edge, and Chrome */
+}
+
+.arrows path.a3 {
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s; /* For Safari, Edge, and Chrome */
+}
+
+
+
+
+
+
+
+
+
