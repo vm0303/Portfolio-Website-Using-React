@@ -1,143 +1,100 @@
-#link_menu
+*
 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
 }
-#navbar li
+.toggle
 {
-    list-style: none;
-    padding: 0 20px;
-    position: relative;
-}
-
-#link_menu
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#link_menu li
-{
-    list-style: none;
-    padding: 0 20px;
-    position: relative;
-}
-#link_menu li a
-{
-    text-decoration: none;
-    font-size: 1.3rem;
-    font-weight: 500;
-    transition: 0.2s ease-in-out;
+    font-size: 30px;
     color: #ffffff;
+    float: left;
+    line-height: 45px;
+    margin-left: 5%;
+    cursor: pointer;
+    display: none;
 }
-
-.icons
+nav
 {
-    text-decoration: none;
-    color: #ffffff;
+    background-color: #0b78d0;
+    height: 60px;
+    width: 100%;
 }
-.navbar
+ul
 {
-    display: flex;
-    align-items: center;
-    position: -webkit-sticky;
-    position: sticky;
-    top: -5px;
-    z-index: 2;
-    height: 70px;
-    min-height: 70px;
-    width: calc(100% - 1.5rem);
-    justify-content: center;
-    padding: 0 1rem;
-    box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
-    background: #0b78d0;
-
-
-
+    float: left;
+    margin-left: 5%;
 }
-
-
-.navbar, ul
+.social_media
 {
-    display: flex;
-    flex-direction:row;
+    float: right;
+    margin-left: 5%;
+
 }
 ul li
 {
-    padding: 0 5px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: inline-block;
 }
-.wrapper
+ul li a
 {
-    display:flex;
-    justify-content: space-between;
-    width:100%;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
 }
-
-
-#link_menu li a:hover
-{
-    color: #000000;
-}
-#link_menu li a:hover::after
-{
-    content: "";
-    width: 30%;
-    height: 2px;
-    background: #000000;
-    position: absolute;
-    bottom: -4px;
-    left: 20px;
-
-}
-
-
-/*#mobile
-{
-    display: none;
-}
-#mobile i
+.nav_links a:hover
 {
     color: black;
-}*/
-/*@media screen and (max-width: 769px)
+}
+
+.social_media
 {
-    #navbar
-    {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        position: fixed;
-        top: 90px;
-        right: 0 ;
-        width: 300px;
-        height: 100vh;
-        background: transparent;
-        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1 );
-        padding: 40px 0 0 10px ;
-    }
-    #navbar li
-    {
-        margin-bottom: 25px;
-    }
-    #mobile
+    padding: 18px 20px;
+}
+.social_media a
+{
+
+    padding: 14px;
+    color: white;
+}
+.social_media a:hover
+{
+    color: black;
+}
+@media screen and (max-width: 1052px)
+{
+    .toggle
     {
         display: block;
     }
-    #mobile i
+    ul
     {
-        font-size:24px;
-        cursor: pointer;
+        position: fixed;
+        top: -400px;
+        z-index: -1;
+        margin-top: -15px;
+        right: 0;
+        left: 0;
+        width: 200px;
+        background-color: white;
+        transition: top .4s;
+        display: inline-block;
+        margin-top: 0;
     }
-}*/
-/*
-#hamburger
-{
-    padding: 5px;
+    ul.show
+    {
+        top: 60px;
+        background: #0b78d0;
+    }
+    ul li
+    {
+        top: 0;
+        width: 100%;
+    }
+
 }
-#navbar.active
-{
-    right: 0px;
-}*/
+

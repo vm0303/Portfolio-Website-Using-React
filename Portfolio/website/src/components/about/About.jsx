@@ -1,14 +1,14 @@
 import "./about.css";
 import pic from "../../image/about_me.jpg";
-import Fade from 'react-reveal/Fade';
+import {Fade} from "react-reveal";
+
 
 
 const About = () =>
 {
     return (
-
+        <Fade effect="fade" delay={400}>
         <div className="about" id="aboutMe">
-
                 <div className="about-left">
                     <div className="a-card background"></div>
                     <div className="a-card">
@@ -32,10 +32,8 @@ const About = () =>
                             such as finding errors efficiently or thinking about a program logically.
                         </p>
                 </div>
-
-
-
         </div>
+        </Fade>
 
     );
 };

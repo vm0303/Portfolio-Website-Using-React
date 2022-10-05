@@ -3,6 +3,7 @@
     height: 100vh;
 
 
+
 }
 .i-left_side
 {
@@ -138,15 +139,17 @@ span
 
 }
 
-.arrows path {
+.arrows path
+{
     stroke: black;
     fill: transparent;
     stroke-width: 1px;
-    animation: arrow 3s infinite;
-    -webkit-animation: arrow 3s infinite;
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite;
 }
 
-@keyframes arrow {
+@keyframes arrow
+{
     0% {
         opacity: 0
     }
@@ -178,18 +181,18 @@ span
 }
 
 .arrows path.a1 {
-    animation-delay: -1s;
-    -webkit-animation-delay: -1s; /* For Safari, Edge, and Chrome */
+    animation-delay:-1s;
+    -webkit-animation-delay:-1s; /* Safari 和 Chrome */
 }
 
 .arrows path.a2 {
-    animation-delay: -0.5s;
-    -webkit-animation-delay: -0.5s; /* For Safari, Edge, and Chrome */
+    animation-delay:-0.5s;
+    -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
 }
 
 .arrows path.a3 {
-    animation-delay: 0s;
-    -webkit-animation-delay: 0s; /* For Safari, Edge, and Chrome */
+    animation-delay:0s;
+    -webkit-animation-delay:0s; /* Safari 和 Chrome */
 }
 
 
