@@ -14,13 +14,14 @@ const Intro = () => {
             {
                 showCursor: true,
                 backDelay: 1200,
-                strings: ["playing video games.", "watching sports.", "reading books.", "traveling.",
+                strings: ["playing video games.", "watching sports.", "reading books.", "traveling.", "biking.",
                     "eating/dining at various cuisines or restaurants.", "hiking.", "watching movies/TV shows. "],
             })
     }, []);
     return (
-        <Fade effect="fade" delay={500}>
-        <div className="Intro" id="intro">
+
+        <div className="Intro" id="introduce">
+            <Fade effect="fade" delay={1350}>
                 <div className="i-left_side">
 
                     <div className="i-left_side_wrapper">
@@ -47,14 +48,18 @@ const Intro = () => {
                     </svg>
 
                 </div>
-
+            </Fade>
+            <Fade effect="fade" delay={1100}>
                 <div className="i-right_side">
+                    <div className="imgContainer">
                     <div className="i-background"></div>
                     <img src={pic} alt="" className="i-img"></img>
+                    </div>
                 </div>
 
+            </Fade>
         </div>
-        </Fade>
+
     )
 }
 export default Intro;

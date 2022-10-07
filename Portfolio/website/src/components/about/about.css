@@ -2,6 +2,8 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    padding-top: 30px;
+
 }
 
 .about-left {
@@ -42,12 +44,13 @@
     object-fit: cover;
 }
 .about-title {
-    background: linear-gradient(to right, #0c0d0e 20%, #0b78d0 40%, #0b78d0 60%, #000000 80%);
+    background: linear-gradient(to right, #0c0d0e 20%, #0b78d0 40%, #0b88ed 60%, #000000 80%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    animation: shine 3s linear infinite reverse;
+
+    animation: shine 4s linear infinite reverse;
 }
 @keyframes shine {
     to {
@@ -61,6 +64,7 @@
     transition: all 500ms;
     font-weight: normal;
     font-style: italic;
+    margin: 20px 0;
 }
 
 .about-sub-title:hover
@@ -72,8 +76,19 @@
     position: relative;
     text-decoration: none;
     transition: all 500ms;
+    margin: 20px 0;
 }
 .about-description:hover
+{
+    transform: scale(1.05);
+}
+.a-degree-image
+{
+    width: 160px;
+    height: 130px;
+    border-radius: 10px;
+}
+.about-description_2:hover
 {
     transform: scale(1.05);
 }

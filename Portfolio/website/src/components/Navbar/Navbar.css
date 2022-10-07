@@ -1,100 +1,87 @@
-*
+.navbar
 {
-    padding: 0;
-    box-sizing: border-box;
-}
-.toggle
-{
-    font-size: 30px;
-    color: #ffffff;
-    float: left;
-    line-height: 45px;
-    margin-left: 5%;
-    cursor: pointer;
-    display: none;
-}
-nav
-{
-    background-color: #0b78d0;
-    height: 60px;
     width: 100%;
-}
-ul
-{
-    float: left;
-    margin-left: 5%;
-}
-.social_media
-{
-    float: right;
-    margin-left: 5%;
+    height: 50px;
+    background-color: #0b78d0;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    margin-right: 40px;
 
 }
-ul li
+.wrapper
 {
-    margin: 0;
-    padding: 0;
-    position: relative;
-    display: inline-block;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-ul li a
+
+.left .hamburger
+{
+    width: 32px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.left span
+{
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transform-origin: left;
+    transition: all 1s ease;
+}
+.right
+{
+    display: flex;
+    align-items: center;
+}
+.icon
 {
     font-size: 20px;
-    font-weight: 500;
-    line-height: 60px;
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-}
-.nav_links a:hover
-{
-    color: black;
-}
-
-.social_media
-{
-    padding: 18px 20px;
-}
-.social_media a
-{
-
-    padding: 14px;
+    margin-right: 5px;
     color: white;
 }
-.social_media a:hover
+.social_media_Container
+{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+.icon:hover
 {
     color: black;
+    transition: all 0.5s ease;
 }
-@media screen and (max-width: 1052px)
+
+.navbar.active
+ {
+     background-color: #0b78d0;
+     color: #ffffff;
+ }
+.navbar.active .hamburger span:first-child
 {
-    .toggle
-    {
-        display: block;
-    }
-    ul
-    {
-        position: fixed;
-        top: -400px;
-        z-index: -1;
-        margin-top: -15px;
-        right: 0;
-        left: 0;
-        width: 200px;
-        background-color: white;
-        transition: top .4s;
-        display: inline-block;
-        margin-top: 0;
-    }
-    ul.show
-    {
-        top: 60px;
-        background: #0b78d0;
-    }
-    ul li
-    {
-        top: 0;
-        width: 100%;
-    }
+    background-color: #000000;
+    transform: rotate(45deg);
+}
+.navbar.active .hamburger span:nth-child(2)
+{
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.navbar.active .hamburger span:last-child
+{
+    background-color: #000000;
+    transform: rotate(-45deg);
 
 }
+
+
+
+
+
+
 

@@ -4,11 +4,13 @@ import {Fade} from "react-reveal";
 
 
 
+
 const About = () =>
 {
     return (
-        <Fade effect="fade" delay={400}>
-        <div className="about" id="aboutMe">
+
+        <div className="about" id="about">
+            <Fade effect="fade" delay={800}>
                 <div className="about-left">
                     <div className="a-card background"></div>
                     <div className="a-card">
@@ -19,21 +21,28 @@ const About = () =>
                         />
                     </div>
                 </div>
+            </Fade>
 
+            <Fade effect="fade" delay={1100}>
                 <div className="about-right">
                         <h1 className="about-title">About Me</h1>
                         <h3 className="about-sub-title">
-                            "The road to success and the road to failure are almost exactly the same." — Colin R. Davis
+                            "Great things come from hard work and perseverance. No excuses." -Kobe Bryant
                         </h3>
+
                         <p className="about-description">
-                            Since high school, my love for coding started to grow into a wonderful passion, because I was always in awe on how
-                            it could transform various ideas, solutions, and instructions into a programming language that the
-                            computer can understand. In addition to this, it helped shape my skills in problem-solving and analysis,
-                            such as finding errors efficiently or thinking about a program logically.
+                            Since high school, I always had this passion to be a programmer, because I would be
+                            creating these various applications and services that can benefit people in their
+                            day-to-day lives. Whether it's something entertaining like a game, crucial like a
+                            full-scale algorithm, or formal like a software service for a company,
+                            I feel joyful and satisfied that my work is benefiting millions of people around the world.
                         </p>
+
+
                 </div>
+            </Fade>
         </div>
-        </Fade>
+
 
     );
 };

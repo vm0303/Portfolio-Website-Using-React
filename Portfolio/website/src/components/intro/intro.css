@@ -1,13 +1,14 @@
 .Intro {
     display: flex;
     height: 100vh;
+    padding-top: 50px;
 
 
 
 }
 .i-left_side
 {
-    flex: 1;
+    flex: 0.5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,7 +18,8 @@
 
 .i-right_side
 {
-    flex: 1;
+padding-top: 10px;
+    flex: 0.5;
     position: relative;
 }
 
@@ -39,7 +41,8 @@
     font-size: 60px;
 }
 
-.i-title-item {
+.i-title-item
+{
     height: 70px;
     font-size: 25px;
     font-weight: bold;
