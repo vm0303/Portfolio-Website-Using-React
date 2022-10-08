@@ -15,7 +15,7 @@ const Intro = () => {
                 showCursor: true,
                 backDelay: 1200,
                 strings: ["playing video games.", "watching sports.", "reading books.", "traveling.", "biking.",
-                    "eating/dining at various cuisines or restaurants.", "hiking.", "watching movies/TV shows. "],
+                    "eating/dining in various restaurants.", "hiking.", "watching movies/TV shows. "],
             })
     }, []);
     return (

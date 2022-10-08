@@ -1,6 +1,7 @@
 import "./about.css";
 import pic from "../../image/about_me.jpg";
 import {Fade} from "react-reveal";
+import resume from "../../assets/2022-Vishal-Madhav-Resume.pdf"
 
 
 
@@ -31,13 +32,23 @@ const About = () =>
                         </h3>
 
                         <p className="about-description">
-                            Since high school, I always had this passion to be a programmer, because I would be
+                            Since high school, I always had a passion to be a programmer, because I would be
                             creating these various applications and services that can benefit people in their
                             day-to-day lives. Whether it's something entertaining like a game, crucial like a
                             full-scale algorithm, or formal like a software service for a company,
                             I feel joyful and satisfied that my work is benefiting millions of people around the world.
                         </p>
+                        <p className="about-description">
+                            Whenever I am not coding, you'll find me working out at the gym, playing tons of
+                            video games, or watching a movie or TV show that I like.
+                        </p>
 
+                    <div id="container">
+                        <div id="button-translate">
+                            <div id="translate"></div>
+                            <a href={resume} download className="button">Resumé</a>
+                        </div>
+                    </div>
 
                 </div>
             </Fade>
