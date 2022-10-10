@@ -26,7 +26,7 @@ export default function SideMenu({menuOpen, setMenuOpen})
 
                 <li onClick={() => setMenuOpen(false)}>
                     <a>
-                        <Link to='#projs' smooth>
+                        <Link to='#projects' smooth>
                             Projects
                         </Link>
                     </a>

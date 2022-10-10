@@ -11,7 +11,7 @@ const About = () =>
     return (
 
         <div className="about" id="about">
-            <Fade effect="fade" delay={800}>
+            <Fade effect="fade" delay={700}>
                 <div className="about-left">
                     <div className="a-card background"></div>
                     <div className="a-card">
@@ -24,7 +24,7 @@ const About = () =>
                 </div>
             </Fade>
 
-            <Fade effect="fade" delay={1100}>
+            <Fade effect="fade" delay={900}>
                 <div className="about-right">
                         <h1 className="about-title">About Me</h1>
                         <h3 className="about-sub-title">

@@ -21,7 +21,7 @@ const Intro = () => {
     return (
 
         <div className="Intro" id="introduce">
-            <Fade effect="fade" delay={1350}>
+            <Fade effect="fade" delay={1150}>
                 <div className="i-left_side">
 
                     <div className="i-left_side_wrapper">
@@ -49,7 +49,7 @@ const Intro = () => {
 
                 </div>
             </Fade>
-            <Fade effect="fade" delay={1100}>
+            <Fade effect="fade" delay={800}>
                 <div className="i-right_side">
                     <div className="imgContainer">
                     <div className="i-background"></div>

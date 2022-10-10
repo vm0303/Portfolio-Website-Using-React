@@ -1,7 +1,7 @@
 import Intro from "./components/intro/Intro";
 import About from "./components/about/About";
 import NavbarFile from "./components/Navbar/NavbarFile";
-import Projects from "./components/projs/Projects";
+import ProjectList from "./components/ProjectList/projectList";
 import Contact from "./components/contact/Contact";
 import {useState} from "react";
 import SideMenu from "./components/SideMenu/SideMenu";
@@ -17,7 +17,7 @@ function App()
         <div className="sections">
             <Intro/>
             <About/>
-            <Projects/>
+            <ProjectList/>
             <Contact/>
         </div>
         </div>
