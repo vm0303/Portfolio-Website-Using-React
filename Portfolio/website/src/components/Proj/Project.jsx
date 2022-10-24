@@ -6,7 +6,9 @@ const Project = () =>
 {
     return (
         <div className="proj">
-            LOADING....
+            <div className="proj-browser">
+
+            </div>
         </div>
 
     )

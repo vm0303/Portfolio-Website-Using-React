@@ -36,7 +36,7 @@ const About = () =>
                             creating these various applications and services that can benefit people in their
                             day-to-day lives. Whether it's something entertaining like a game, crucial like a
                             full-scale algorithm, or formal like a software service for a company,
-                            I feel joyful and satisfied that my work is benefiting millions of people around the world.
+                            I feel joyful and satisfied that my work can benefit millions of people around the world.
                         </p>
                         <p className="about-description">
                             Whenever I am not coding, you'll find me working out at the gym, playing tons of

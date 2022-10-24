@@ -44,7 +44,7 @@
     object-fit: cover;
 }
 .about-title {
-    background: linear-gradient(to right, #0c0d0e 20%, #0b78d0 40%, rgba(62, 139, 251, 0.81) 60%, #000000 80%);
+    background: linear-gradient(to right, #0c0d0e 20%, #0b78d0 40%, rgba(89, 155, 251, 0.81) 60%, #000000 80%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -83,12 +83,7 @@
 {
     transform: scale(1.05);
 }
-.a-degree-image
-{
-    width: 160px;
-    height: 130px;
-    border-radius: 10px;
-}
+
 .about-description_2:hover
 {
     transform: scale(1.05);
@@ -132,7 +127,7 @@ a
 #button-translate a
 {
     position: relative;
-    transition: all .45s ease-Out;
+    transition: all .60s ease-Out;
 }
 
 #translate
