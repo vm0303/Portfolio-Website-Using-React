@@ -29,11 +29,11 @@ const Intro = () => {
                         <h1 className="i-name">Vishal Madhav.</h1>
 
                         <div className="i-titles">
-                            <div className="i-title-item">I'm learning to be a Full-Stack Developer</div>
+                            <div className="i-title-item">I'm learning to be a Front-End Developer</div>
                         </div>
                         <br/>
                         <p className="i-desc">
-                            I am a recent Computer Science undergraduate, and an upcoming full-stack developer.
+                            I am a recent Computer Science undergraduate, and an upcoming front-end developer.
                         </p>
                         <br/>
                         <div className="i-hobbies">

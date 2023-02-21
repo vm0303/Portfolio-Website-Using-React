@@ -48,7 +48,6 @@
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
     font-size: 35px;
     font-weight: 600;
     animation: shine 5s linear infinite reverse;
@@ -83,14 +82,8 @@
 {
     transform: scale(1.05);
 }
-
-.about-description_2:hover
-{
-    transform: scale(1.05);
-}
 #container
 {
-
     padding: 12px 0 12px 0;
     display: flex;
     flex-direction: row;
@@ -134,7 +127,7 @@
 .button p:hover
 {
     color: #ffffff;
-    transition: all ease-in-out 0.6s;
+    transition: all ease-in-out 0.4s;
 }
 
 .button:hover span {
