@@ -1,18 +1,17 @@
-import "./project.css";
+import "./Project.css";
 
 
-
-const Project = () =>
-{
+const Project = ({img, link}) => {
     return (
         <div className="proj">
+
             <div className="proj-browser">
-                <div className="proj-web-header"></div>
-                <div className="proj-web-header"></div>
-                <div className="proj-web-header"></div>
+                <div className="proj-web-header-circle"></div>
+                <div className="proj-web-header-circle"></div>
+                <div className="proj-web-header-circle"></div>
             </div>
-            <a href="https://vm0303.github.io/hangman-game-using-Vanilla.js/" target="blank" rel="noreferrer">
-                <img src="" alt="" className="proj-img"/>
+            <a href={link} target="blank" rel="noreferrer">
+                <img src={img} alt="" className="proj-img"/>
             </a>
         </div>
 

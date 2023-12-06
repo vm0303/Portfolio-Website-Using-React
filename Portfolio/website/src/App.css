@@ -1,3 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#dark {
+    color: white;
+    width: 100%;
+    background-color: #0c0c0c;
+}
+
+#light {
+    color: black;
+    width: 100%;
+    background-color: white;
+}
+
+
+.toggle-switch {
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    z-index: 999;
+    display: flex;
+
+}
+
+.toggle-icon {
+    width: 17px;
+    height: 17px;
+}
+
+@media screen and (max-width: 667px) {
+    .toggle-switch {
+        right: 19px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .toggle-switch {
+        right: 8px;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .toggle-switch {
+        right: 10px;
+    }
+}
+
+
+@media screen and (max-width: 280px) {
+    .toggle-switch {
+        right: 0;
+    }
+}
 
 
 

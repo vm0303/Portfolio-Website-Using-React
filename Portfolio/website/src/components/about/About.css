@@ -1,0 +1,2903 @@
+.about {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+
+}
+
+.about-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+}
+
+.about-right {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.a-card.background {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+
+}
+
+#light .a-card.background {
+    background-color: #245fc6;
+}
+
+#dark .a-card.background {
+    background-color: #22b255;
+}
+
+.a-card {
+    width: 60%;
+    height: 70vh;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-title {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+
+.about-sub-title {
+    position: relative;
+    transition: all 500ms;
+    font-weight: normal;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+
+.about-description {
+    position: relative;
+    text-decoration: none;
+    transition: all 500ms;
+    margin: 15px 0;
+
+
+}
+
+
+.button-container {
+    padding: 12px 0 12px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.resume-button {
+    background-color: transparent;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    height: 45px;
+    width: 160px;
+    border-radius: 10px;
+    text-align: center;
+    border: solid currentColor;
+    transition: all 0.6s cubic-bezier(.86, .01, .15, .99);
+    box-shadow: 6px 7px 40px -4px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.resume-button::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    bottom: 0;
+}
+
+#light .resume-button {
+    color: #245fc6;
+}
+
+#dark .resume-button {
+    color: #22b255;
+}
+
+
+.resume-button a {
+    text-decoration: none;
+}
+
+
+.resume-button::before {
+    clip-path: circle(0% at 50% 50%);
+    transition: 0.6s;
+    opacity: 1;
+}
+
+#light .resume-button::before {
+    background: #245fc6;
+}
+
+#dark .resume-button::before {
+    background: #22b255;
+}
+
+
+#light .resume-button p {
+    color: #245fc6;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all ease-in-out 0.6s;
+    transform: perspective(1px) translateZ(0);
+}
+
+#dark .resume-button p {
+    color: #22b255;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all ease-in-out 0.6s;
+    transform: perspective(1px) translateZ(0);
+}
+
+.resume-button:active {
+    background-color: #ebf3ed;
+
+}
+
+
+@media (hover: hover) {
+    .about-sub-title:hover {
+        transform: scale(1.05);
+    }
+
+    .about-description:hover {
+        transform: scale(1.05);
+    }
+
+    #light .resume-button:hover {
+
+        transition: 0.6s;
+        box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
+    }
+
+    #dark .resume-button:hover {
+
+        transition: 0.6s;
+        box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
+    }
+
+    #light .resume-button p:hover {
+
+        transition: 0.6s;
+        color: white;
+    }
+
+    #dark .resume-button p:hover {
+
+        transition: 0.6s;
+        color: white;
+    }
+
+    .resume-button:hover::before {
+        clip-path: circle(100% at 50% 50%);
+    }
+
+}
+
+
+/*Mobile-view*/
+@media screen and (max-width: 667px) and (max-height: 375px) {
+    .about {
+        flex-direction: column;
+        margin-top: 780px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+
+    .a-card {
+        height: 110vh;
+        width: 110vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 40px;
+        text-align: center;
+        margin: 10px;
+        padding: 0 10px;
+
+    }
+
+    .about-description {
+        font-size: 20px;
+        text-align: left;
+        padding: 5px 10px;
+        margin: 5px 10px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 22px;
+        padding: 5px 10px;
+        margin: 5px 10px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 50px;
+        width: 155px;
+        background-color: transparent;
+    }
+
+
+}
+
+@media screen and (max-width: 640px) and (max-height: 360px) {
+    .about {
+        flex-direction: column;
+        margin-top: 780px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+
+    .a-card {
+        height: 110vh;
+        width: 110vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 40px;
+        text-align: center;
+        margin: 10px;
+        padding: 0 10px;
+
+    }
+
+    .about-description {
+        font-size: 20px;
+        text-align: left;
+        padding: 5px 10px;
+        margin: 5px 10px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 22px;
+        padding: 5px 10px;
+        margin: 5px 10px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 50px;
+        width: 150px;
+        background-color: transparent;
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+    .about {
+        flex-direction: column;
+        margin-top: 250px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+
+    .a-card {
+        height: 45vh;
+        width: 45vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 40px;
+        text-align: center;
+        margin: 10px;
+        padding: 0 10px;
+
+    }
+
+    .about-description {
+        font-size: 20px;
+        text-align: left;
+        padding: 5px 10px;
+        margin: 5px 10px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 22px;
+        padding: 5px 10px;
+        margin: 5px 10px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 50px;
+        width: 150px;
+        background-color: transparent;
+    }
+
+
+}
+
+@media screen and (max-width: 568px) and (max-height: 320px) {
+    .about {
+        flex-direction: column;
+        margin-top: 820px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 110vh;
+        width: 110vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 35px;
+        text-align: center;
+        margin: 10px;
+        padding: 0 10px;
+
+    }
+
+    .about-description {
+        font-size: 18px;
+        text-align: left;
+        padding: 5px 20px;
+        margin: 5px 20px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 20px;
+        padding: 5px 20px;
+        margin: 5px 20px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+    }
+
+
+}
+
+@media screen and (max-width: 540px) {
+    .about {
+        flex-direction: column;
+        margin-top: 330px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 45vh;
+        width: 45vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 40px;
+        text-align: center;
+        margin: 10px;
+        padding: 0 10px;
+
+    }
+
+    .about-description {
+        font-size: 18px;
+        text-align: left;
+        padding: 5px 10px;
+        margin: 5px 10px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 20px;
+        padding: 5px 10px;
+        margin: 5px 10px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 50px;
+        width: 145px;
+        background-color: transparent;
+    }
+
+
+}
+
+@media screen and (max-width: 540px) and (max-height: 360px) {
+    .about {
+        flex-direction: column;
+        margin-top: 700px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 100vh;
+        width: 100vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        text-align: center;
+        margin: 10px;
+        padding: 0 10px;
+
+    }
+
+    .about-description {
+        font-size: 17px;
+        text-align: left;
+        padding: 5px 20px;
+        margin: 5px 20px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 19px;
+        padding: 5px 20px;
+        margin: 5px 20px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+    }
+
+
+}
+
+/*
+DONE - DON'T TOUCH!
+ */
+@media screen and (max-width: 504px) {
+    .about {
+        flex-direction: column;
+        margin-top: 650px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 70vh;
+        width: 70vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        text-align: center;
+        margin: 10px;
+        padding: 0 10px;
+
+    }
+
+    .about-description {
+        font-size: 17px;
+        text-align: left;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 19px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+    }
+
+
+}
+
+/*
+DONE - DON'T TOUCH!
+ */
+@media screen and (max-width: 480px) and (max-height: 320px) {
+    .about {
+        flex-direction: column;
+        margin-top: 700px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 95vh;
+        width: 95vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        text-align: center;
+        margin: 10px;
+        padding: 0 10px;
+
+    }
+
+    .about-description {
+        font-size: 17px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 19px;
+        padding: 5px 24px;
+        margin: 5px 24px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+    }
+
+
+}
+
+/*
+DONE - DON'T TOUCH!
+ */
+@media screen and (max-width: 432px) {
+    .about {
+        flex-direction: column;
+        margin-top: 280px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 45vh;
+        width: 45vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        text-align: center;
+        margin: 10px;
+        padding: 0 10px;
+
+    }
+
+    .about-description {
+        font-size: 17px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 19px;
+        padding: 5px 20px;
+        margin: 5px 20px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+    }
+
+
+}
+
+/*
+DONE - DON'T TOUCH!
+ */
+@media screen and (max-width: 430px) {
+    .about {
+        flex-direction: column;
+        margin-top: 230px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 35vh;
+        width: 35vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        text-align: center;
+        margin: 10px;
+        padding: 0 10px;
+
+    }
+
+    .about-description {
+        font-size: 17px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 19px;
+        padding: 5px 20px;
+        margin: 5px 20px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+    }
+
+
+}
+
+/*
+DONE - DON'T TOUCH!
+ */
+@media screen and (max-width: 428px) {
+    .about {
+        flex-direction: column;
+        margin-top: 200px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 35vh;
+        width: 35vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        text-align: center;
+        margin: 10px;
+        padding: 0 10px;
+
+    }
+
+    .about-description {
+        font-size: 16px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 18px;
+        padding: 5px 20px;
+        margin: 5px 20px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+    }
+
+
+}
+
+/*
+DONE - DON'T TOUCH!
+ */
+@media screen and (max-width: 414px) {
+    .about {
+        flex-direction: column;
+        margin-top: 250px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 35vh;
+        width: 35vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        text-align: center;
+        margin: 10px;
+        padding: 0 10px;
+
+    }
+
+    .about-description {
+        font-size: 16px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 18px;
+        padding: 5px 20px;
+        margin: 5px 20px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+    }
+
+
+}
+
+/*
+DONE - DON'T TOUCH!
+ */
+@media screen and (max-width: 414px) and (max-height: 736px) {
+    .about {
+        flex-direction: column;
+        margin-top: 300px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 40vh;
+        width: 40vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        text-align: center;
+        margin: 10px;
+        padding: 0 10px;
+
+    }
+
+    .about-description {
+        font-size: 16px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 18px;
+        padding: 5px 20px;
+        margin: 5px 20px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+    }
+
+
+}
+
+/*
+DONE - DON'T TOUCH!
+ */
+@media screen and (max-width: 412px) {
+    .about {
+        flex-direction: column;
+        margin-top: 110px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 30vh;
+        width: 30vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        text-align: center;
+        margin: 10px;
+        padding: 0 10px;
+
+    }
+
+    .about-description {
+        font-size: 16px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 18px;
+        padding: 5px 20px;
+        margin: 5px 20px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+
+    }
+
+
+}
+
+/*
+DONE - DON'T TOUCH!
+869px, 883px, 892px, 906px, 914px, 915px
+ */
+@media screen and (max-width: 412px) and (max-height: 919px) {
+    .about {
+        flex-direction: column;
+        margin-top: 220px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 35vh;
+        width: 35vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        text-align: center;
+        margin: 10px;
+        padding: 0 10px;
+
+    }
+
+    .about-description {
+        font-size: 16px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 18px;
+        padding: 5px 20px;
+        margin: 5px 20px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+
+    }
+
+
+}
+
+@media screen and (max-width: 412px) and (max-height: 846px) {
+    .about {
+        flex-direction: column;
+        margin-top: 220px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 40vh;
+        width: 40vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        text-align: center;
+        margin: 10px;
+        padding: 0 10px;
+
+    }
+
+    .about-description {
+        font-size: 16px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 18px;
+        padding: 5px 20px;
+        margin: 5px 20px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+
+    }
+
+
+}
+
+@media screen and (max-width: 412px) and (max-height: 823px) {
+    .about {
+        flex-direction: column;
+        margin-top: 280px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 40vh;
+        width: 40vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        text-align: center;
+        margin: 10px;
+        padding: 0 10px;
+
+    }
+
+    .about-description {
+        font-size: 16px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 18px;
+        padding: 5px 20px;
+        margin: 5px 20px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+
+    }
+
+
+}
+
+@media screen and (max-width: 412px) and (max-height: 732px) {
+    .about {
+        flex-direction: column;
+        margin-top: 350px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 45vh;
+        width: 45vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        text-align: center;
+        margin: 10px;
+        padding: 0 10px;
+
+    }
+
+    .about-description {
+        font-size: 16px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 18px;
+        padding: 5px 20px;
+        margin: 5px 20px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+
+    }
+
+
+}
+
+/*
+DONE - DON'T TOUCH!
+ */
+@media screen and (max-width: 411px) {
+    .about {
+        flex-direction: column;
+        margin-top: 130px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 35vh;
+        width: 35vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 15px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 17px;
+        padding: 5px 20px;
+        margin: 5px 20px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+    }
+
+
+}
+
+@media screen and (max-width: 411px) and (max-height: 731px) {
+    .about {
+        flex-direction: column;
+        margin-top: 360px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 45vh;
+        width: 45vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 15px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 17px;
+        padding: 5px 20px;
+        margin: 5px 20px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+    }
+
+
+}
+
+/*
+DONE - DON'T TOUCH!
+ */
+@media screen and (max-width: 400px) {
+    .about {
+        flex-direction: column;
+        margin-top: 180px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 35vh;
+        width: 35vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 15px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 17px;
+        padding: 5px 20px;
+        margin: 5px 20px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+    }
+
+}
+
+/*
+DONE - DON'T TOUCH!
+ */
+@media screen and (max-width: 392px) {
+    .about {
+        flex-direction: column;
+        margin-top: 210px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 35vh;
+        width: 35vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 15px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 17px;
+        padding: 5px 10px;
+        margin: 5px 10px;
+
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+
+    }
+
+
+}
+
+/*
+DONE - DON'T TOUCH!
+ */
+@media screen and (max-width: 390px) {
+    .about {
+        flex-direction: column;
+        margin-top: 200px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 35vh;
+        width: 35vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 15px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 17px;
+        padding: 5px 10px;
+        margin: 5px 10px;
+
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+
+    }
+
+
+}
+
+@media screen and (max-width: 390px)  and (max-height: 695px) {
+    .about {
+        flex-direction: column;
+        margin-top: 360px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 45vh;
+        width: 45vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 15px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 17px;
+        padding: 5px 10px;
+        margin: 5px 10px;
+
+    }
+
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+
+    }
+
+
+}
+
+@media screen and (max-width: 390px)  and (max-height: 390px) {
+    .about {
+        flex-direction: column;
+        margin-top: 600px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 75vh;
+        width: 75vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 15px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 17px;
+        padding: 5px 10px;
+        margin: 5px 10px;
+
+    }
+
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+
+    }
+
+
+}
+
+/*
+DONE - DON'T TOUCH!
+ */
+@media screen and (max-width: 385px) {
+    .about {
+        flex-direction: column;
+        margin-top: 210px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 35vh;
+        width: 35vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 15px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 17px;
+        padding: 5px 10px;
+        margin: 5px 10px;
+
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+    }
+
+}
+
+/*
+DONE - DON'T TOUCH!
+ */
+@media screen and (max-width: 384px) {
+    .about {
+        flex-direction: column;
+        margin-top: 200px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 35vh;
+        width: 35vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 15px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 17px;
+        padding: 5px 10px;
+        margin: 5px 10px;
+
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+    }
+
+}
+
+@media screen and (max-width: 384px) and (max-height: 640px) {
+    .about {
+        flex-direction: column;
+        margin-top: 350px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 45vh;
+        width: 45vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 15px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 17px;
+        padding: 5px 10px;
+        margin: 5px 10px;
+
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+
+    }
+
+
+}
+
+/*
+DONE - DON'T TOUCH!
+ */
+@media screen and (max-width: 375px) {
+    .about {
+        flex-direction: column;
+        margin-top: 210px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 35vh;
+        width: 35vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 15px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 17px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+    }
+
+
+}
+
+@media screen and (max-width: 375px) and (max-height: 667px) {
+    .about {
+        flex-direction: column;
+        margin-top: 360px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 45vh;
+        width: 45vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 15px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 17px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+
+    }
+
+
+}
+
+
+/*
+DONE - DON'T TOUCH!
+ */
+@media screen and (max-width: 360px) {
+    .about {
+        flex-direction: column;
+        margin-top: 180px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 35vh;
+        width: 35vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 14px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 16px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+    }
+
+}
+
+@media screen and (max-width: 360px) and (max-height: 800px) {
+    .about {
+        flex-direction: column;
+        margin-top: 190px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 35vh;
+        width: 35vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 14px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 16px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+    }
+
+}
+
+/*
+Takes max-height: 770px, 771px
+ */
+@media screen and (max-width: 360px) and (max-height: 780px) {
+    .about {
+        flex-direction: column;
+        margin-top: 200px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 35vh;
+        width: 35vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 14px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 16px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+    }
+
+}
+
+@media screen and (max-width: 360px) and (max-height: 760px) {
+    .about {
+        flex-direction: column;
+        margin-top: 210px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 40vh;
+        width: 40vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 14px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 16px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+    }
+
+}
+
+@media screen and (max-width: 360px) and (max-height: 747px) {
+    .about {
+        flex-direction: column;
+        margin-top: 200px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 40vh;
+        width: 40vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 14px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 16px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+    }
+
+}
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+    .about {
+        flex-direction: column;
+        margin-top: 200px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 40vh;
+        width: 40vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 14px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 16px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+    }
+
+}
+
+@media screen and (max-width: 360px) and (max-height: 720px) {
+    .about {
+        flex-direction: column;
+        margin-top: 260px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 40vh;
+        width: 40vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 14px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 16px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+    }
+
+}
+
+@media screen and (max-width: 360px) and (max-height: 640px) {
+    .about {
+        flex-direction: column;
+        margin-top: 350px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 45vh;
+        width: 45vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 14px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 16px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+    }
+
+}
+
+@media screen and (max-width: 360px) and (max-height: 540px) {
+    .about {
+        flex-direction: column;
+        margin-top: 400px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 50vh;
+        width: 50vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 14px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 16px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 45px;
+        width: 140px;
+        background-color: transparent;
+
+
+    }
+}
+
+/*
+DONE - DON'T TOUCH!
+ */
+@media screen and (max-width: 320px) {
+    .about {
+        flex-direction: column;
+        margin-top: 230px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 40vh;
+        width: 40vh;
+
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 12px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        font-size: 14px;
+        margin: 10px 5px;
+        padding: 0 5px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+        height: 40px;
+        width: 110px;
+        background-color: transparent;
+    }
+}
+
+@media screen and (max-width: 320px) and (max-height: 568px) {
+
+    .about {
+        flex-direction: column;
+        margin-top: 230px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 45vh;
+        width: 45vh;
+    }
+
+
+    .about-right {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 12px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        font-size: 14px;
+        margin: 10px 5px;
+        padding: 0 5px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 40px;
+        width: 110px;
+        background-color: transparent;
+
+
+    }
+}
+
+@media screen and (max-width: 320px) and (max-height: 480px) {
+
+
+    .about {
+        flex-direction: column;
+        margin-top: 320px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 50vh;
+        width: 50vh;
+    }
+
+
+    .about-right {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 12px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        font-size: 14px;
+        margin: 10px 5px;
+        padding: 0 5px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 40px;
+        width: 110px;
+        background-color: transparent;
+
+
+    }
+}
+
+/*
+DONE - DON'T TOUCH!
+ */
+@media screen and (max-width: 280px) {
+    .about {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 35vh;
+        width: 35vh;
+
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .about-title {
+        font-size: 30px;
+        text-align: center;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 10px;
+        text-align: left;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 12px;
+        margin: 5px;
+        padding: 5px;
+
+    }
+
+    .button-container {
+        margin: 10px 20px;
+        padding: 10px 20px;
+    }
+
+    .resume-button {
+        height: 40px;
+        width: 125px;
+        background-color: transparent;
+
+    }
+
+}

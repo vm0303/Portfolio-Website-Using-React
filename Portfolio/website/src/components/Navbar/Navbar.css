@@ -1,81 +1,135 @@
-.navbar
-{
+.navbar {
     width: 100%;
     height: 50px;
-    background-color: #235fc8;
     position: fixed;
     top: 0;
     z-index: 3;
     margin-right: 40px;
 
 }
-.wrapper
-{
+
+#light .navbar {
+    background-color: #235fc8;
+}
+
+#dark .navbar {
+    background-color: #22b154;
+}
+
+.wrapper {
     padding: 10px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.left .hamburger
-{
-    width: 32px;
+.left .hamburger {
+    width: 31px;
     height: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
 }
-.left span
-{
+
+.left span {
     width: 100%;
     height: 3px;
-    background-color: white;
     transform-origin: left;
     transition: all 1s ease;
 }
-.right
-{
+
+#light .left span {
+    background-color: white;
+}
+
+#dark .left span {
+    background-color: #0c0c0c;
+}
+
+
+.right {
     display: flex;
     align-items: center;
 }
-.icon
-{
+
+.icon {
     font-size: 20px;
     margin-right: 5px;
+
+}
+
+#light .icon {
     color: white;
 }
-.social_media_Container
-{
+
+#dark .icon {
+    color: #0c0c0c;
+}
+
+.social_media_Container {
     display: flex;
     align-items: center;
     margin-left: 30px;
 }
-.icon:hover
-{
-    color: black;
-    transition: all 0.5s ease;
+
+@media (hover: hover) {
+
+
+    #light .icon:hover {
+        color: #0c0c0c;
+        transition: all 0.5s ease;
+    }
+
+    #dark .icon:hover {
+        color: white;
+        transition: all 0.5s ease;
+    }
 }
 
-.navbar.active
- {
-     background-color: #235fc8;
-     color: #ffffff;
- }
-.navbar.active .hamburger span:first-child
-{
+#light .navbar.active .hamburger span:first-child {
     background-color: #000000;
     transform: rotate(45deg);
 }
-.navbar.active .hamburger span:nth-child(2)
-{
+
+#dark .navbar.active .hamburger span:first-child {
+    background-color: white;
+    transform: rotate(45deg);
+}
+
+
+.navbar.active .hamburger span:nth-child(2) {
     opacity: 0;
     transition: all 0.5s ease;
 }
-.navbar.active .hamburger span:last-child
-{
+
+#light .navbar.active .hamburger span:last-child {
     background-color: #000000;
     transform: rotate(-45deg);
+
+}
+
+#dark .navbar.active .hamburger span:last-child {
+    background-color: white;
+    transform: rotate(-45deg);
+
+}
+
+.hamburger.disabled {
+    pointer-events: none;
+    opacity: 0.5; /* Adjust the opacity as needed */
+}
+
+.social_media_Container.disabled {
+    pointer-events: none;
+    opacity: 0.5; /* Adjust the opacity as needed */
+}
+
+
+@media screen and (max-width: 411px) {
+    .wrapper {
+        padding: 10px 20px;
+    }
 
 }
 

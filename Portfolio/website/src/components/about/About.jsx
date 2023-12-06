@@ -1,26 +1,10 @@
-import "./about.css";
-import $ from 'jquery';
+import "./About.css";
 import pic from "../../image/about_me.jpg";
 import {Fade} from "react-reveal";
-import resume from "../../assets/2023-Vishal-Madav-Resume.pdf"
+import resume from "../../assets/2023-Vishal-Madhav-Resume.pdf"
 
-export default function About()
-{
-    $(function() {
-        $('.button')
-            .on('mouseenter', function(e) {
-                let parentOffset = $(this).offset(),
-                    relX = e.pageX - parentOffset.left,
-                    relY = e.pageY - parentOffset.top;
-                $(this).find('span').css({top:relY, left:relX})
-            })
-            .on('mouseout', function(e) {
-                let parentOffset = $(this).offset(),
-                    relX = e.pageX - parentOffset.left,
-                    relY = e.pageY - parentOffset.top;
-                $(this).find('span').css({top:relY, left:relX})
-            });
-    });
+export default function About() {
+
 
     return (
 
@@ -46,26 +30,24 @@ export default function About()
                     </h3>
 
                     <p className="about-description">
-                        Since high school, I always had a passion to be a developer, because I would be in awe on
-                        how they create these various applications and services that can benefit people in their
-                        day-to-day lives. Whether it's something entertaining like a game, crucial like a
-                        full-scale algorithm, or formal like a software service for a company,
-                        So to do something like that would make feel happy because I want my
-                        work to benefit millions of people around the world.
+                        My fascination with development and coding began at a young age, driven by the promise of
+                        improving daily life through technology. Over the years, I've honed my skills in both
+                        front-end and back-end development, focusing on user-friendly solutions and solving intricate
+                        challenges. In addition, I hold the AWS Cloud Practitioner certification, enabling me to
+                        design efficient and secure cloud solutions using Amazon Web Services. This certification
+                        enhances my ability to deliver innovative digital experiences while optimizing infrastructure
+                        and operational efficiency. My commitment to collaboration and continuous learning fuels my
+                        passion for creating cutting-edge technology solutions.
                     </p>
+
                     <p className="about-description">
-                        Whenever I am not coding, you'll find me working out at the gym, playing tons of
-                        video games, or watching a movie or TV show that I like.
+                        When I'm not immersed in coding, you'll find me working out at the gym, playing video games,
+                        riding my bicycle through scenic paths, or enjoying various movies and TV shows.
                     </p>
 
-                    <div id="container">
-                        <div id="button-translate">
-                            <div id="translate"></div>
-                            <a href={resume} download className="button"><p>Resumé</p><span></span></a>
-
-                        </div>
+                    <div className="button-container">
+                        <button className="resume-button"><a href={resume} download><p>Resumé</p></a></button>
                     </div>
-
                 </div>
             </Fade>
         </div>
