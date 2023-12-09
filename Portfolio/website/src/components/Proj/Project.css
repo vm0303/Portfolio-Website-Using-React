@@ -70,6 +70,13 @@
     }
 }
 
+@media screen and (max-width: 653px) and (max-height: 280px) {
+    .proj {
+        width: 45%;
+        height: 60vh;
+    }
+}
+
 @media screen and (max-width: 640px) and (max-height: 360px) {
     .proj {
         width: 40%;
@@ -356,6 +363,7 @@ DONE - DON'T TOUCH!
 /*
 DONE - DON'T TOUCH!
  */
+
 @media screen and (max-width: 280px) {
     .proj {
         width: 40%;

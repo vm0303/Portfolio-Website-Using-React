@@ -95,20 +95,21 @@
     border: solid currentColor;
     transition: all 0.6s cubic-bezier(.86, .01, .15, .99);
     box-shadow: 6px 7px 40px -4px rgba(0, 0, 0, 0.2);
-
-
 }
 
 .resume-button::before {
     content: "";
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     top: 0;
     left: 0;
     right: 0;
-
     bottom: 0;
+    clip-path: circle(0% at 50% 50%);
+    transition: 0.6s;
+    opacity: 1;
 }
+
 
 #light .resume-button {
     color: #245fc6;
@@ -124,11 +125,7 @@
 }
 
 
-.resume-button::before {
-    clip-path: circle(0% at 50% 50%);
-    transition: 0.6s;
-    opacity: 1;
-}
+
 
 #light .resume-button::before {
     background: #245fc6;
@@ -202,7 +199,6 @@
 
 }
 
-
 /*Mobile-view*/
 @media screen and (max-width: 667px) and (max-height: 375px) {
     .about {
@@ -266,6 +262,67 @@
 
 }
 
+@media screen and (max-width: 653px) and (max-height: 280px) {
+    .about {
+        flex-direction: column;
+        margin-top: 780px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+
+    .a-card {
+        height: 100vh;
+        width: 100vh;
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 35px;
+        text-align: center;
+        margin: 10px;
+        padding: 0 10px;
+
+    }
+
+    .about-description {
+        font-size: 20px;
+        text-align: left;
+        padding: 5px 10px;
+        margin: 5px 10px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 22px;
+        padding: 5px 10px;
+        margin: 5px 10px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+
+        height: 50px;
+        width: 155px;
+        background-color: transparent;
+    }
+
+
+}
 @media screen and (max-width: 640px) and (max-height: 360px) {
     .about {
         flex-direction: column;
@@ -2840,6 +2897,8 @@ DONE - DON'T TOUCH!
 /*
 DONE - DON'T TOUCH!
  */
+
+
 @media screen and (max-width: 280px) {
     .about {
         flex-direction: column;

@@ -8,7 +8,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import InputForm from './InputForm';
 
 const Contact = ({setModalOpen, setMenuOpen}) => {
-
     const [focused, setFocus] = useState(false);
     const handleFocus = () => {
         setFocus(true);
@@ -24,7 +23,9 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [timerSubmit, setTimerSubmit] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
-    const [timer, setTimer] = useState(10); // Initial timer value in seconds
+    const [timer, setTimer] = useState(10); // Initial timer value in seconds for submit button
+    const [isReviewButtonDisabled, setIsReviewButtonDisabled] = useState(false);
+    const [countdownTimer, setCountdownTimer] = useState(3600);
 
     useEffect(() => {
         let interval;
@@ -52,6 +53,32 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
         }
     }, [showModal]);
 
+    useEffect(() => {
+        const lastSubmitTime = localStorage.getItem('lastSubmitTime');
+        const currentTime = new Date().getTime();
+        const elapsedTimeSinceSubmit = (currentTime - lastSubmitTime) / 1000;
+
+        if (elapsedTimeSinceSubmit < 3600) {
+            setCountdownTimer(-Math.floor(elapsedTimeSinceSubmit));
+            setIsReviewButtonDisabled(true);
+
+            const interval = setInterval(() => {
+                setCountdownTimer((prevTimer) => {
+                    if (prevTimer === 1) {
+                        setIsReviewButtonDisabled(false);
+                        clearInterval(interval);
+                    }
+                    return prevTimer - 1;
+                });
+            }, 1000);
+
+            return () => {
+                clearInterval(interval);
+            };
+        }
+    }, []); // Run this effect only once on component mount
+
+
     const inputs = [
         {
             id: 1,
@@ -59,10 +86,10 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
             type: 'text',
             placeholder: 'Enter your name here. ',
             errorMsg:
-                "Please enter either a valid first name, or a full name. Make sure you don't exceed past 50 characters, or use any numbers or special characters that are not typically associated with names. ",
+                "Please enter either a valid first name, or a full name with no spaces. Make sure you don't exceed past 50 characters, or use any numbers or special characters that are not typically associated with names. ",
             label: 'Name',
             required: true,
-            pattern: '^[A-Za-z\'-. ]{2,50}$',
+            pattern: "^[a-zA-Z]+[a-zA-Z\\s]*?[^0-9]{2,50}$"
         },
         {
             id: 2,
@@ -73,7 +100,7 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
                 'Please enter a valid subject that summarizes your message here. Make sure you don\'t exceed past 78 characters.',
             label: 'Subject',
             required: true,
-            pattern: '^[a-zA-Z0-9!@#$&()\\-`.+,/" ]{2,78}$',
+            pattern: "^[a-zA-Z0-9]+[a-zA-Z0-9\\s]*[^0-9]{2,78}$"
         },
         {
             id: 3,
@@ -82,7 +109,7 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
             placeholder: 'Enter your email here.',
             errorMsg:
                 'Please enter a valid email address. Make sure you are using a valid email domain so that I can reply my response back to you.',
-            label: 'Email',
+            label: "Email",
             required: true,
         },
     ];
@@ -91,23 +118,28 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
 
     const handleReview = (event) => {
         event.preventDefault();
-        setShowModal(true);
-        setModalOpen(true);
-        setMenuOpen(false);
+        const lastSubmitTime = localStorage.getItem('lastSubmitTime');
+        const currentTime = new Date().getTime();
+        const elapsedTimeSinceSubmit = (currentTime - lastSubmitTime) / 1000;
 
-    };
-    const [coolDown, setCoolDown] = useState(false);
-    const handleReviewSubmit = () => {
+        if (isReviewButtonDisabled && elapsedTimeSinceSubmit < 3600) {
+            const remainingTime = Math.ceil(3600 - elapsedTimeSinceSubmit);
+            const remainingMinutes = Math.floor(remainingTime / 60);
+            const remainingSeconds = remainingTime % 60;
 
-        if (coolDown) {
-            const remainingTime = Math.ceil((coolDown - Date.now()) / 1000 / 60); // Remaining time in minutes
-            const message = `Please wait ${remainingTime} minute${remainingTime !== 1 ? 's' : ''} before submitting again.`;
-
-            toast(message, {
+            toast(`In order to avoid spam and mass submission, please wait ${remainingMinutes} minutes and ${remainingSeconds} 
+            seconds before you can review and submit another form.`, {
                 className: 'foo-bar',
             });
             return;
         }
+        setIsReviewButtonDisabled(false);
+        setShowModal(true);
+        setModalOpen(true);
+        setMenuOpen(false);
+    };
+
+    const handleReviewSubmit = () => {
         setIsSubmitting(true);
         setTimeout(() => {
             setIsSubmitting(false);
@@ -117,21 +149,14 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
                 setShowModal(false);
                 setModalOpen(false);
                 setIsClosing(false);
-                toast('Thanks! Your response has been sent! Please give me some time ' +
-                    'to respond back to you.', {
+                toast('Thanks! Your response has been sent! Please give me some time to respond back to you.', {
                     className: 'foo-bar',
                 });
-                setCoolDown(true);
-
-                // Set coolDown period
-                setTimeout(() => {
-                    setCoolDown(false);
-                }, 2.7e+6); // Adjust the coolDown duration as needed
+                localStorage.setItem('lastSubmitTime', new Date().getTime());
+                setIsReviewButtonDisabled(true);
             }, 500); // Adjust the delay based on your fade-out animation duration
         }, 2000);
-
     };
-
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -174,12 +199,10 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
                         </div>
                     </div>
                     <div className="container-right">
-                        <p className="container-desc bolded">
-                            Have any questions, comments, or job opportunities for me?
-                        </p>
-                        <p className="container-desc">
-                            Don't hesitate to get in contact with me by filling out the form below!
-                        </p>
+                        <p className="container-desc bolded">Have any questions, comments, or job opportunities for
+                            me?</p>
+                        <p className="container-desc">Don't hesitate to get in contact with me by filling out the form
+                            below!</p>
                         <form ref={formRef} onSubmit={handleReview}>
                             {inputs.map((inputVals) => (
                                 <InputForm key={inputVals.id} {...inputVals} value={vals[inputVals.name]}
@@ -199,7 +222,8 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
                                 onChange={handleChange}
                             />
                             <p className="error-message-textArea">Please enter your message above.</p>
-                            <button className="review-button" type="submit">
+                            <button className={`review-button ${isReviewButtonDisabled ? 'disabled' : ''}`}
+                                    type="submit">
                                 <p>Review</p>
                             </button>
                         </form>
@@ -211,11 +235,13 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
                                     <h2 className="modal-title">Review Your Submission</h2>
                                     <p className="modal-desc">Please review what you typed in form down below. </p>
                                     <p className="modal-desc">
-                                        If you need to make any changes,
-                                        click or tap the back button.</p>
-                                    <p className="modal-desc">Otherwise, wait 10 seconds before
-                                        you can click or tap the submit button. This is to prevent any
-                                        accidental submissions.</p>
+                                        If you need to make any changes, click or tap the back button.
+                                    </p>
+                                    <p className="modal-desc">
+                                        Otherwise, wait 10 seconds before you can click or tap the submit button. This
+                                        is to prevent any
+                                        accidental submissions.
+                                    </p>
 
                                     {inputs.map((inputVals) => (
                                         <div key={inputVals.id} className="review-field">
@@ -228,18 +254,12 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
                                         <p className="input-value">{vals.message}</p>
                                     </div>
                                     <div className="modal-buttons">
-                                        <button className="back-button" onClick={closeModal} type="submit">
+                                        <button className="back-button" onClick={closeModal} type="button">
                                             <p>Back</p>
                                         </button>
-                                        <button className="submit-button" disabled={timerSubmit || isSubmitting}
-                                                onClick={handleReviewSubmit}>
-                                            <p>
-                                                {isSubmitting
-                                                    ? 'Submitting...'
-                                                    : timerSubmit
-                                                        ? `Wait (${timer}s)`
-                                                        : 'Submit'}
-                                            </p>
+                                        <button type="submit" className="submit-button"
+                                                disabled={timerSubmit || isSubmitting} onClick={handleReviewSubmit}>
+                                            <p>{isSubmitting ? 'Submitting...' : timerSubmit ? `Wait (${timer}s)` : 'Submit'}</p>
                                         </button>
                                     </div>
                                 </div>
@@ -248,7 +268,6 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
                     </div>
                 </div>
             </div>
-
         </Fade>
     );
 };

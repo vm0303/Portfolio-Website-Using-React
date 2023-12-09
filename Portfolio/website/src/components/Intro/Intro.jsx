@@ -2,6 +2,7 @@ import "./Intro.css";
 import {init} from 'ityped'
 import pic from "../../image/Intro.png"
 import Fade from 'react-reveal/Fade';
+
 import {useEffect, useRef, useState} from "react";
 
 

@@ -51,6 +51,27 @@
     }
 }
 
+@media screen and (max-width: 653px) and (max-height: 280px) {
+    .project-body {
+        padding: 30px;
+        margin-top: 830px;
+    }
+
+    .project-texts {
+        width: 100%;
+    }
+
+    .project-title {
+        font-size: 35px;
+
+    }
+
+    .project-description {
+        font-size: 20px;
+        padding: 0 140px;
+    }
+}
+
 @media screen and (max-width: 640px) and (max-height: 360px) {
     .project-body {
         padding: 30px;
@@ -871,6 +892,7 @@ DONE - DON'T TOUCH!
 /*
 DONE - DON'T TOUCH!
  */
+
 @media screen and (max-width: 280px) {
     .project-body {
         padding: 10px;

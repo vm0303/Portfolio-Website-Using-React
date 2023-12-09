@@ -177,7 +177,19 @@ ul li a {
 /*
 Height
  */
+@media screen and (min-height: 280px) {
+    .side_menu {
+        width: 130px;
+        left: -130px;
+        height: 100vh;
 
+    }
+
+    ul {
+        font-size: 13px;
+    }
+
+}
 @media screen and (min-height: 320px) {
     .side_menu {
         width: 150px;
