@@ -1,3 +1,4 @@
+### About this Project
 This is a personal project that I wanted to do for a while. However, since I was busy with college coursework,
 I didn't have enough time. Now that I have some free time, I decided to create some projects to help sharpen my skills,
 and make me stand out in the market. One of them is a React Portfolio Website, where I talk about who I am as a person,

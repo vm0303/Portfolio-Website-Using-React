@@ -68,7 +68,6 @@
 
 #light textarea {
     border: 1px solid black;
-
     color: black;
     width: 98%;
     height: 40%;
@@ -235,40 +234,6 @@ form {
     animation: fade-in 0.5s forwards;
 }
 
-@-moz-document url-prefix() {
-    .modal-overlay {
-        height: 110%;
-    }
-
-    .modal-buttons .back-button:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        -moz-clip-path: circle(0% at 50% 50%);
-        transition: 0.6s;
-        opacity: 1;
-        z-index: 0;
-    }
-
-    .modal-buttons .submit-button:before {
-        content: "";
-        position: absolute;
-        z-index: 0;
-        top: 0;
-        left: 0;
-        right: 0;
-        -moz-clip-path: circle(0% at 50% 50%);
-        transition: 0.6s;
-        opacity: 1;
-        bottom: 0;
-    }
-
-
-}
-
 
 /* Modal Content */
 #light .modal-content {
@@ -355,7 +320,7 @@ form {
     margin-top: 20px;
 }
 
-.modal-buttons .back-button {
+.back-button {
     background-color: transparent;
     position: relative;
     display: block;
@@ -373,7 +338,7 @@ form {
 
 }
 
-.modal-buttons .back-button:before {
+.back-button:before {
     content: "";
     position: absolute;
     top: 0;
@@ -387,30 +352,30 @@ form {
 }
 
 
-#light .modal-buttons .back-button {
+#light .back-button {
     color: #e86016;
 }
 
-#dark .modal-buttons .back-button {
+#dark .back-button {
     color: #e64040;
 }
 
 
-.modal-buttons .back-button a {
+.back-button a {
     text-decoration: none;
 }
 
 
-#light .modal-buttons .back-button:before {
+#light .back-button:before {
     background: #e86016;
 }
 
-#dark .modal-buttons .back-button:before {
+#dark .back-button:before {
     background: #e64040;
 }
 
 
-#light .modal-buttons .back-button p {
+#light .back-button p {
     color: #e86016;
     line-height: 30px;
     font-size: 16px;
@@ -419,7 +384,7 @@ form {
     transform: perspective(1px) translateZ(0);
 }
 
-#dark .modal-buttons .back-button p {
+#dark .back-button p {
     color: #e64040;
     line-height: 30px;
     font-size: 16px;
@@ -429,18 +394,18 @@ form {
 }
 
 
-.modal-buttons .back-button:active {
+.back-button:active {
     background-color: #ebf3ed;
 }
 
 
-.modal-buttons .submit-button {
+.submit-button {
     background-color: transparent;
     position: relative;
     display: block;
     overflow: hidden;
     cursor: pointer;
-    z-index: 0;
+    z-index: 999;
     height: 45px;
     width: 160px;
     border-radius: 10px;
@@ -452,43 +417,44 @@ form {
 
 }
 
-.modal-buttons .submit-button:before {
+.submit-button:before {
     content: "";
     position: absolute;
-    z-index: 999;
     top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     clip-path: circle(0% at 50% 50%);
     transition: 0.6s;
     opacity: 1;
-    bottom: 0;
+    z-index: 0;
 }
 
-#light .modal-buttons .submit-button {
+
+#light .submit-button {
     color: #245fc6;
 }
 
-#dark .modal-buttons .submit-button {
+#dark .submit-button {
     color: #22b255;
 }
 
 
-.modal-buttons .submit-button a {
+.submit-button a {
     text-decoration: none;
 }
 
 
-#light .modal-buttons .submit-button:before {
+#light .submit-button:before {
     background: #245fc6;
 }
 
-#dark .modal-buttons .submit-button:before {
+#dark .submit-button:before {
     background: #22b255;
 }
 
 
-#light .modal-buttons .submit-button p {
+#light .submit-button p {
     color: #245fc6;
     line-height: 30px;
     font-size: 16px;
@@ -497,7 +463,7 @@ form {
     transform: perspective(1px) translateZ(0);
 }
 
-#dark .modal-buttons .submit-button p {
+#dark .submit-button p {
     color: #22b255;
     line-height: 30px;
     font-size: 16px;
@@ -507,22 +473,8 @@ form {
 }
 
 
-.modal-buttons .submit-button:active {
+.submit-button:active {
     background-color: #ebf3ed;
-}
-
-.modal-buttons .submit-button[disabled] {
-    cursor: not-allowed;
-}
-
-/* Review Field Styles */
-.review-field {
-    margin-bottom: 15px;
-}
-
-.review-field label {
-    font-weight: bold;
-    margin-right: 10px;
 }
 
 
@@ -555,60 +507,107 @@ form {
     }
 
 
-    #light .modal-buttons .back-button:hover {
+    #light .back-button:hover {
         transition: 0.6s;
         box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
     }
 
-    #dark .modal-buttons .back-button:hover {
+    #dark .back-button:hover {
 
         transition: 0.6s;
         box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
     }
 
-    #light .modal-buttons .back-button:hover p {
+    #light .back-button:hover p {
 
         transition: 0.6s;
         color: white;
     }
 
-    #dark .modal-buttons .back-button:hover p {
+    #dark .back-button:hover p {
         transition: 0.6s;
         color: white;
     }
 
-    .modal-buttons .back-button:hover:before {
+    .back-button:hover:before {
         clip-path: circle(100% at 50% 50%);
     }
 
 
-    #light .modal-buttons .submit-button:hover {
+    #light .submit-button:hover {
         transition: 0.6s;
         box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
     }
 
-    #dark .modal-buttons .submit-button:hover {
+    #dark .submit-button:hover {
 
         transition: 0.6s;
         box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
     }
 
-    #light .modal-buttons .submit-button:hover p {
+    #light .submit-button:hover p {
+        color: white;
+        transition: 0.6s;
+    }
 
+    #dark .submit-button:hover p {
         transition: 0.6s;
         color: white;
     }
 
-    #dark .modal-buttons .submit-button:hover p {
-        transition: 0.6s;
-        color: white;
-    }
-
-    .modal-buttons .submit-button:hover:before {
+    .submit-button:hover:before {
         clip-path: circle(100% at 50% 50%);
     }
 
 }
+
+@-moz-document url-prefix() {
+    .modal-overlay {
+        position: absolute;
+
+    }
+
+    .back-button:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: 0.6s;
+        opacity: 1;
+        z-index: 0;
+    }
+
+    .submit-button:before {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        transition: 0.6s;
+        opacity: 1;
+        bottom: 0;
+    }
+
+
+}
+
+
+/* Review Field Styles */
+.review-field {
+    margin-bottom: 15px;
+}
+
+.review-field label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+
+
 
 .review-button.disabled {
     /* Add your styling for the disabled state */
@@ -5656,13 +5655,13 @@ DONE - DON'T TOUCH!
             height: 210%;
         }
 
-        .modal-buttons .back-button {
+        .back-button {
             height: 35px;
             width: 100px;
             margin: 5px;
         }
 
-        .modal-buttons .submit-button {
+        .submit-button {
             height: 35px;
             width: 100px;
             margin: 5px;

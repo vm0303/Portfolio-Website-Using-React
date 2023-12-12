@@ -25,13 +25,13 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
     const [isClosing, setIsClosing] = useState(false);
     const [timer, setTimer] = useState(10); // Initial timer value in seconds for submit button
     const [isReviewButtonDisabled, setIsReviewButtonDisabled] = useState(false);
-    const [countdownTimer, setCountdownTimer] = useState(3600);
+    const [countdownTimer, setCountdownTimer] = useState(30);
 
     useEffect(() => {
         let interval;
         const body = document.body;
         if (showModal) {
-            body.style.overflow = 'hidden';
+            body.style.overflow = 'auto';
             setTimerSubmit(true);
             interval = setInterval(() => {
                 setTimer((prevTimer) => {
@@ -58,7 +58,7 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
         const currentTime = new Date().getTime();
         const elapsedTimeSinceSubmit = (currentTime - lastSubmitTime) / 1000;
 
-        if (elapsedTimeSinceSubmit < 3600) {
+        if (elapsedTimeSinceSubmit < 30) {
             setCountdownTimer(-Math.floor(elapsedTimeSinceSubmit));
             setIsReviewButtonDisabled(true);
 
@@ -122,8 +122,8 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
         const currentTime = new Date().getTime();
         const elapsedTimeSinceSubmit = (currentTime - lastSubmitTime) / 1000;
 
-        if (isReviewButtonDisabled && elapsedTimeSinceSubmit < 3600) {
-            const remainingTime = Math.ceil(3600 - elapsedTimeSinceSubmit);
+        if (isReviewButtonDisabled && elapsedTimeSinceSubmit < 30) {
+            const remainingTime = Math.ceil(30 - elapsedTimeSinceSubmit);
             const remainingMinutes = Math.floor(remainingTime / 60);
             const remainingSeconds = remainingTime % 60;
 
