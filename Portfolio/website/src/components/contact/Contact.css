@@ -254,7 +254,7 @@ form {
     background: #0c0c0c;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(230, 228, 228, 0.22);
     max-width: 600px;
     width: 100%;
     max-height: 50vh; /* Adjust this value as needed */
@@ -562,35 +562,17 @@ form {
 }
 
 @-moz-document url-prefix() {
+
     .modal-overlay {
         position: absolute;
 
     }
 
-    .back-button:before {
-        content: "";
+    .modal-content {
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        transition: 0.6s;
-        opacity: 1;
-        z-index: 0;
+        transform: translateY(-43%);
+        z-index: 10000; /* Place content on top of the overlay */
     }
-
-    .submit-button:before {
-        content: "";
-        position: absolute;
-        z-index: 0;
-        top: 0;
-        left: 0;
-        right: 0;
-        transition: 0.6s;
-        opacity: 1;
-        bottom: 0;
-    }
-
 
 }
 
@@ -5430,46 +5412,42 @@ DONE - DON'T TOUCH!
     }
 
     .modal-overlay {
-
-        width: 100%;
-        height: 100%;
+        width: 101%;
 
     }
 
     /* Modal Content */
     #light .modal-content, #dark .modal-content {
-        width: 320px;
-        max-height: 50vh; /* Adjust the value based on your design */
+        width: 280px;
+        max-height: 45vh; /* Adjust the value based on your design */
         margin: 20px; /* Center the modal horizontally */
-
-
     }
 
     #light .modal-content h2 {
         margin-bottom: 20px;
         color: #000000;
-        font-size: 16px;
+        font-size: 15px;
         text-align: center;
     }
 
     #dark .modal-content h2 {
         margin-bottom: 20px;
         color: #ffffff;
-        font-size: 16px;
+        font-size: 15px;
         text-align: center;
     }
 
     #light .modal-desc, #dark .modal-desc {
         margin: 10px 0;
-        font-size: 14px;
-    }
-
-    #light .input-label, #dark .input-label {
         font-size: 13px;
     }
 
-    #light .input-value, #dark .input-value {
+    #light .input-label, #dark .input-label {
         font-size: 12px;
+    }
+
+    #light .input-value, #dark .input-value {
+        font-size: 11px;
         word-wrap: break-word;
     }
 
@@ -5491,6 +5469,43 @@ DONE - DON'T TOUCH!
         height: 35px;
         width: 100px;
         margin: 5px
+    }
+
+    @-moz-document url-prefix() {
+        .modal-overlay {
+            width: 100%;
+        }
+
+        #light .modal-content {
+
+            padding: 20px;
+            max-width: 200px;
+            width: 100%;
+            max-height: 45vh;
+            transform: translateY(-70%);
+
+        }
+
+        #dark .modal-content {
+            padding: 20px;
+            max-width: 200px;
+            width: 100%;
+            max-height: 45vh;
+            transform: translateY(-70%);
+        }
+
+
+        .back-button {
+            height: 35px;
+            width: 100px;
+            margin: 5px;
+        }
+
+        .submit-button {
+            height: 35px;
+            width: 100px;
+            margin: 5px;
+        }
     }
 
 }
@@ -5585,20 +5600,15 @@ DONE - DON'T TOUCH!
     }
 
     .modal-overlay {
-
-        width: 100%;
-        height: 100%;
+        width: 101%;
 
     }
-
 
     /* Modal Content */
     #light .modal-content, #dark .modal-content {
         width: 280px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 10px; /* Center the modal horizontally */
-
-
+        max-height: 45vh; /* Adjust the value based on your design */
+        margin: 20px; /* Center the modal horizontally */
     }
 
     #light .modal-content h2 {
@@ -5652,8 +5662,26 @@ DONE - DON'T TOUCH!
     @-moz-document url-prefix() {
         .modal-overlay {
             width: 100%;
-            height: 210%;
         }
+
+        #light .modal-content {
+
+            padding: 20px;
+            max-width: 200px;
+            width: 100%;
+            max-height: 45vh;
+            transform: translateY(-70%);
+
+        }
+
+        #dark .modal-content {
+            padding: 20px;
+            max-width: 200px;
+            width: 100%;
+            max-height: 45vh;
+            transform: translateY(-70%);
+        }
+
 
         .back-button {
             height: 35px;

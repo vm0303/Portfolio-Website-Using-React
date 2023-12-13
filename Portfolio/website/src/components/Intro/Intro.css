@@ -140,18 +140,21 @@
     }
 }
 
+.arrow-wrapper {
+    position: relative;
+}
+
 .arrows {
     width: 60px;
     height: 130px;
     position: absolute;
-    margin-left: 30px;
-    transform: translateY(295px);
+    transform: translateY(235px);
+    right: 290px;
 }
 
 @-moz-document url-prefix() {
     .arrows {
-        transform: translateY(255px);
-        position: fixed;
+        transform: translateY(250px);
     }
 }
 

@@ -26,12 +26,12 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
     const [timer, setTimer] = useState(10); // Initial timer value in seconds for submit button
     const [isReviewButtonDisabled, setIsReviewButtonDisabled] = useState(false);
     const [countdownTimer, setCountdownTimer] = useState(30);
-
+    const [disableParentScroll, setDisableParentScroll] = useState(false);
     useEffect(() => {
         let interval;
         const body = document.body;
         if (showModal) {
-            body.style.overflow = 'auto';
+            body.style.overflow = disableParentScroll ? 'hidden' : 'auto';
             setTimerSubmit(true);
             interval = setInterval(() => {
                 setTimer((prevTimer) => {
@@ -132,6 +132,14 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
                 className: 'foo-bar',
             });
             return;
+        }
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+            setTimeout(() => {
+                contactSection.scrollIntoView({behavior: 'smooth'});
+                // Set the state to disable parent scroll
+                setDisableParentScroll(true);
+            }, 100); // Adjust the delay based on your needs
         }
         setIsReviewButtonDisabled(false);
         setShowModal(true);
