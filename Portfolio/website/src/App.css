@@ -31,26 +31,26 @@
     height: 17px;
 }
 
-@media screen and (max-width: 667px) {
+@media only screen and (min-width: 667px) {
     .toggle-switch {
         right: 19px;
     }
 }
 
-@media screen and (max-width: 390px) {
+@media only screen and (min-width: 390px) and (max-width: 666px) {
     .toggle-switch {
         right: 8px;
     }
 }
 
-@media screen and (max-width: 385px) {
+@media only screen and (min-width: 385px) and (max-width: 389px) {
     .toggle-switch {
         right: 10px;
     }
 }
 
 
-@media screen and (max-width: 280px) {
+@media only screen and (min-width: 280px) {
     .toggle-switch {
         right: 0;
     }

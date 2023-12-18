@@ -509,6 +509,7 @@
 
 }
 
+
 @media only screen and (min-width: 540px) and (max-width: 567px) {
     .about {
         flex-direction: column;
@@ -569,7 +570,6 @@
 
 
 }
-
 @media only screen and (min-width: 540px) and (max-width: 567px) and (max-height: 360px) {
     .about {
         flex-direction: column;
@@ -1209,7 +1209,6 @@ DONE - DON'T TOUCH!
 
 
 }
-
 @media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 846px) {
     .about {
         flex-direction: column;
@@ -1272,7 +1271,6 @@ DONE - DON'T TOUCH!
 
 
 }
-
 @media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 823px) {
     .about {
         flex-direction: column;
@@ -1335,7 +1333,6 @@ DONE - DON'T TOUCH!
 
 
 }
-
 @media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 732px) {
     .about {
         flex-direction: column;
@@ -1426,6 +1423,7 @@ DONE - DON'T TOUCH!
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -1462,7 +1460,6 @@ DONE - DON'T TOUCH!
 
 
 }
-
 @media only screen and (min-width: 411px) and (max-width: 411px) and (max-height: 731px) {
     .about {
         flex-direction: column;
@@ -1487,6 +1484,7 @@ DONE - DON'T TOUCH!
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -1551,6 +1549,7 @@ DONE - DON'T TOUCH!
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -1613,6 +1612,7 @@ DONE - DON'T TOUCH!
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -1678,6 +1678,7 @@ DONE - DON'T TOUCH!
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -1716,7 +1717,6 @@ DONE - DON'T TOUCH!
 
 
 }
-
 @media only screen and (min-width: 390px) and (max-width: 391px) and (max-height: 695px) {
     .about {
         flex-direction: column;
@@ -1745,6 +1745,7 @@ DONE - DON'T TOUCH!
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -1783,7 +1784,6 @@ DONE - DON'T TOUCH!
 
 
 }
-
 @media only screen and (min-width: 390px) and (max-width: 391px) and (max-height: 390px) {
     .about {
         flex-direction: column;
@@ -1812,6 +1812,7 @@ DONE - DON'T TOUCH!
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -1878,6 +1879,7 @@ DONE - DON'T TOUCH!
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -1940,6 +1942,7 @@ DONE - DON'T TOUCH!
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -1976,7 +1979,6 @@ DONE - DON'T TOUCH!
     }
 
 }
-
 @media only screen and (min-width: 384px) and (max-width: 384px) and (max-height: 640px) {
     .about {
         flex-direction: column;
@@ -2001,6 +2003,7 @@ DONE - DON'T TOUCH!
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -2068,6 +2071,7 @@ DONE - DON'T TOUCH!
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -2104,7 +2108,6 @@ DONE - DON'T TOUCH!
 
 
 }
-
 @media only screen and (min-width: 375px) and (max-width: 383px) and (max-height: 667px) {
     .about {
         flex-direction: column;
@@ -2130,6 +2133,7 @@ DONE - DON'T TOUCH!
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -2198,6 +2202,7 @@ DONE - DON'T TOUCH!
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -2233,7 +2238,6 @@ DONE - DON'T TOUCH!
     }
 
 }
-
 @media only screen and (min-width: 360px) and (max-width: 374px) and (max-height: 800px) {
     .about {
         flex-direction: column;
@@ -2258,6 +2262,7 @@ DONE - DON'T TOUCH!
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -2296,7 +2301,7 @@ DONE - DON'T TOUCH!
 /*
 Takes max-height: 770px, 771px
  */
-@media only screen and (min-width: 360px)and (max-width: 374px) and (max-height: 780px) {
+@media only screen and (min-width: 360px) and (max-width: 374px) and (max-height: 780px) {
     .about {
         flex-direction: column;
         margin-top: 200px;
@@ -2320,6 +2325,7 @@ Takes max-height: 770px, 771px
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -2356,7 +2362,7 @@ Takes max-height: 770px, 771px
 
 }
 
-@media only screen and (min-width: 360px)and (max-width: 374px) and (max-height: 760px) {
+@media only screen and (min-width: 360px) and (max-width: 374px) and (max-height: 760px) {
     .about {
         flex-direction: column;
         margin-top: 210px;
@@ -2380,6 +2386,7 @@ Takes max-height: 770px, 771px
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -2416,7 +2423,7 @@ Takes max-height: 770px, 771px
 
 }
 
-@media only screen and (min-width: 360px)and (max-width: 374px) and (max-height: 747px) {
+@media only screen and (min-width: 360px) and (max-width: 374px) and (max-height: 747px) {
     .about {
         flex-direction: column;
         margin-top: 200px;
@@ -2440,6 +2447,7 @@ Takes max-height: 770px, 771px
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -2476,7 +2484,7 @@ Takes max-height: 770px, 771px
 
 }
 
-@media only screen and (min-width: 360px)and (max-width: 374px) and (max-height: 740px) {
+@media only screen and (min-width: 360px) and (max-width: 374px) and (max-height: 740px) {
     .about {
         flex-direction: column;
         margin-top: 200px;
@@ -2500,6 +2508,7 @@ Takes max-height: 770px, 771px
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -2536,7 +2545,7 @@ Takes max-height: 770px, 771px
 
 }
 
-@media only screen and (min-width: 360px)and (max-width: 374px) and (max-height: 720px) {
+@media only screen and (min-width: 360px) and (max-width: 374px) and (max-height: 720px) {
     .about {
         flex-direction: column;
         margin-top: 260px;
@@ -2560,6 +2569,7 @@ Takes max-height: 770px, 771px
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -2596,7 +2606,7 @@ Takes max-height: 770px, 771px
 
 }
 
-@media only screen and (min-width: 360px)and (max-width: 374px) and (max-height: 640px) {
+@media only screen and (min-width: 360px) and (max-width: 374px) and (max-height: 640px) {
     .about {
         flex-direction: column;
         margin-top: 350px;
@@ -2620,6 +2630,7 @@ Takes max-height: 770px, 771px
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -2655,7 +2666,6 @@ Takes max-height: 770px, 771px
     }
 
 }
-
 @media only screen and (min-width: 360px) and (max-width: 374px) and (max-height: 540px) {
     .about {
         flex-direction: column;
@@ -2680,6 +2690,7 @@ Takes max-height: 770px, 771px
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -2715,6 +2726,7 @@ Takes max-height: 770px, 771px
 
     }
 }
+
 
 
 @media only screen and (min-width: 345px) and (max-width: 359px) and (max-height: 883px) {
@@ -2741,6 +2753,8 @@ Takes max-height: 770px, 771px
     }
 
     .about-title {
+        text-align: center;
+
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -2805,6 +2819,7 @@ DONE - DON'T TOUCH!
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -2835,7 +2850,6 @@ DONE - DON'T TOUCH!
         background-color: transparent;
     }
 }
-
 @media only screen and (min-width: 320px) and (max-width: 344px) and (max-height: 568px) {
 
     .about {
@@ -2859,6 +2873,7 @@ DONE - DON'T TOUCH!
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;
@@ -2892,7 +2907,6 @@ DONE - DON'T TOUCH!
 
     }
 }
-
 @media only screen and (min-width: 320px) and (max-width: 344px) and (max-height: 480px) {
 
 
@@ -2917,6 +2931,7 @@ DONE - DON'T TOUCH!
     }
 
     .about-title {
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         margin: 5px;

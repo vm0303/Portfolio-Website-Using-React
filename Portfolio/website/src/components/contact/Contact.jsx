@@ -26,14 +26,13 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
     const [timer, setTimer] = useState(10); // Initial timer value in seconds for submit button
     const [isReviewButtonDisabled, setIsReviewButtonDisabled] = useState(false);
     const [countdownTimer, setCountdownTimer] = useState(30);
-    const [disableParentScroll, setDisableParentScroll] = useState(false);
     useEffect(() => {
-        let interval;
+
         const body = document.body;
         if (showModal) {
-            body.style.overflow = disableParentScroll ? 'hidden' : 'auto';
+            body.classList.add("no-scroll")
             setTimerSubmit(true);
-            interval = setInterval(() => {
+            const interval = setInterval(() => {
                 setTimer((prevTimer) => {
                     if (prevTimer === 1) {
                         setTimerSubmit(false);
@@ -47,7 +46,7 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
                 clearInterval(interval);
             };
         } else {
-            body.style.overflow = 'auto';
+            body.classList.remove("no-scroll");
             setTimerSubmit(false);
             setTimer(10); // Reset timer when modal is closed
         }
@@ -89,7 +88,7 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
                 "Please enter either a valid first name, or a full name with no spaces. Make sure you don't exceed past 50 characters, or use any numbers or special characters that are not typically associated with names. ",
             label: 'Name',
             required: true,
-            pattern: "^[a-zA-Z]+[a-zA-Z\\s]*?[^0-9]{2,50}$"
+            pattern: "^[a-zA-Z]+[a-zA-Z\\s]*?[^0-9]{1,50}$"
         },
         {
             id: 2,
@@ -137,8 +136,6 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
         if (contactSection) {
             setTimeout(() => {
                 contactSection.scrollIntoView({behavior: 'smooth'});
-                // Set the state to disable parent scroll
-                setDisableParentScroll(true);
             }, 100); // Adjust the delay based on your needs
         }
         setIsReviewButtonDisabled(false);
