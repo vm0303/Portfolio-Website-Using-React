@@ -143,11 +143,7 @@ ul li a {
     }
 }
 
-@media screen and (min-width: 432px) {
-    /*
-   ignore side_menu styling
-    */
-}
+
 
 @media screen and (min-width: 540px) {
     .side_menu {
@@ -192,7 +188,7 @@ Height
 }
 @media screen and (min-height: 320px) {
     .side_menu {
-        width: 150px;
+        width: 130px;
         left: -150px;
         height: 100vh;
 
@@ -200,6 +196,7 @@ Height
 
     ul {
         font-size: 15px;
+
     }
 }
 
@@ -249,7 +246,6 @@ Height
     .side_menu {
         width: 130px;
         left: -150px;
-
         height: 100vh;
 
     }
@@ -328,5 +324,13 @@ Height
         font-size: 18px;
     }
 }
+
+@media screen and (min-height: 960px) {
+
+    ul {
+        font-size: 20px;
+    }
+}
+
 
 
