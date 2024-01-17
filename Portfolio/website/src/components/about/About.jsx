@@ -1,7 +1,7 @@
 import "./About.css";
 import pic from "../../image/about_me.jpg";
 import {Fade} from "react-reveal";
-import resume from "../../assets/2023-Vishal-Madhav-Resume.pdf"
+import resume from "../../assets/Vishal-Madhav-Resume 2024.pdf"
 
 export default function About() {
 

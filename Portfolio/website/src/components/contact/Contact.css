@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 
 .container {
     height: 155vh;
@@ -22,20 +29,35 @@
 
 .container-wrapper {
     padding: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .container-left {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
 }
 
 .container-right {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     padding: 14px;
     margin: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -47,6 +69,7 @@
 .container-image {
     border-radius: 50%;
     background: transparent;
+    -o-object-fit: cover;
     object-fit: cover;
     position: absolute;
     width: 380px;
@@ -93,8 +116,44 @@
 
 }
 
+#light textarea::-webkit-input-placeholder {
+    color: #666666;
+}
+
+#light textarea::-moz-placeholder {
+    color: #666666;
+}
+
+#light textarea:-ms-input-placeholder {
+    color: #666666;
+}
+
+#light textarea::-ms-input-placeholder {
+    color: #666666;
+}
+
 #light textarea::placeholder {
     color: #666666;
+}
+
+#dark textarea::-webkit-input-placeholder {
+    color: #efeeee;
+
+}
+
+#dark textarea::-moz-placeholder {
+    color: #efeeee;
+
+}
+
+#dark textarea:-ms-input-placeholder {
+    color: #efeeee;
+
+}
+
+#dark textarea::-ms-input-placeholder {
+    color: #efeeee;
+
 }
 
 #dark textarea::placeholder {
@@ -120,7 +179,10 @@ form {
     border-radius: 10px;
     text-align: center;
     border: solid currentColor;
-    transition: all 0.6s cubic-bezier(.86, .01, .15, .99);
+    -webkit-transition: screen 0.6s cubic-bezier(.86, .01, .15, .99);
+    -o-transition: screen 0.6s cubic-bezier(.86, .01, .15, .99);
+    transition: screen 0.6s cubic-bezier(.86, .01, .15, .99);
+    -webkit-box-shadow: 6px 7px 40px -4px rgba(0, 0, 0, 0.2);
     box-shadow: 6px 7px 40px -4px rgba(0, 0, 0, 0.2);
 
 
@@ -134,7 +196,10 @@ form {
     left: 0;
     right: 0;
     bottom: 0;
+    -webkit-clip-path: circle(0% at 50% 50%);
     clip-path: circle(0% at 50% 50%);
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
     transition: 0.6s;
     opacity: 1;
 }
@@ -167,7 +232,10 @@ form {
     line-height: 30px;
     font-size: 16px;
     font-weight: 400;
-    transition: all ease-in-out 0.6s;
+    -webkit-transition: screen ease-in-out 0.6s;
+    -o-transition: screen ease-in-out 0.6s;
+    transition: screen ease-in-out 0.6s;
+    -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
 }
 
@@ -176,7 +244,10 @@ form {
     line-height: 30px;
     font-size: 16px;
     font-weight: 400;
-    transition: all ease-in-out 0.6s;
+    -webkit-transition: screen ease-in-out 0.6s;
+    -o-transition: screen ease-in-out 0.6s;
+    transition: screen ease-in-out 0.6s;
+    -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
 }
 
@@ -226,17 +297,21 @@ form {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.83); /* Semi-transparent black overlay */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    z-index: 1000;
     opacity: 0;
+    -webkit-animation: fade-in 0.5s forwards;
     animation: fade-in 0.5s forwards;
 }
 
-.no-scroll {
-    overflow: hidden;
-}
+
 
 
 /* Modal Content */
@@ -244,12 +319,14 @@ form {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
+    -webkit-box-shadow: 0 0 10px rgba(30, 30, 30, 0.5);
     box-shadow: 0 0 10px rgba(30, 30, 30, 0.5);
     max-width: 600px;
     width: 100%;
     max-height: 50vh; /* Adjust this value as needed */
     overflow-y: auto;
     opacity: 1;
+    -webkit-animation: fade-in 0.5s forwards;
     animation: fade-in 0.5s forwards;
 
 }
@@ -258,17 +335,29 @@ form {
     background: #0c0c0c;
     padding: 20px;
     border-radius: 8px;
+    -webkit-box-shadow: 0 0 10px rgba(120, 120, 120, 0.5);
     box-shadow: 0 0 10px rgba(120, 120, 120, 0.5);
     max-width: 600px;
     width: 100%;
     max-height: 50vh; /* Adjust this value as needed */
     overflow-y: auto;
     opacity: 1;
+    -webkit-animation: fade-in 0.5s forwards;
     animation: fade-in 0.5s forwards;
 }
 
 .fade-out {
+    -webkit-animation: fade-out 0.5s forwards;
     animation: fade-out 0.5s forwards;
+}
+
+@-webkit-keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fade-in {
@@ -277,6 +366,15 @@ form {
     }
     to {
         opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }
 
@@ -319,7 +417,11 @@ form {
 
 /* Modal Buttons */
 .modal-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-evenly;
     margin-top: 20px;
 }
@@ -336,7 +438,10 @@ form {
     border-radius: 10px;
     text-align: center;
     border: solid currentColor;
-    transition: all 0.6s cubic-bezier(.86, .01, .15, .99);
+    -webkit-transition: screen 0.6s cubic-bezier(.86, .01, .15, .99);
+    -o-transition: screen 0.6s cubic-bezier(.86, .01, .15, .99);
+    transition: screen 0.6s cubic-bezier(.86, .01, .15, .99);
+    -webkit-box-shadow: 6px 7px 40px -4px rgba(0, 0, 0, 0.2);
     box-shadow: 6px 7px 40px -4px rgba(0, 0, 0, 0.2);
 
 
@@ -349,7 +454,10 @@ form {
     left: 0;
     right: 0;
     bottom: 0;
+    -webkit-clip-path: circle(0% at 50% 50%);
     clip-path: circle(0% at 50% 50%);
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
     transition: 0.6s;
     opacity: 1;
     z-index: 0;
@@ -384,7 +492,10 @@ form {
     line-height: 30px;
     font-size: 16px;
     font-weight: 400;
-    transition: all ease-in-out 0.6s;
+    -webkit-transition: screen ease-in-out 0.6s;
+    -o-transition: screen ease-in-out 0.6s;
+    transition: screen ease-in-out 0.6s;
+    -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
 }
 
@@ -393,7 +504,10 @@ form {
     line-height: 30px;
     font-size: 16px;
     font-weight: 400;
-    transition: all ease-in-out 0.6s;
+    -webkit-transition: screen ease-in-out 0.6s;
+    -o-transition: screen ease-in-out 0.6s;
+    transition: screen ease-in-out 0.6s;
+    -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
 }
 
@@ -415,7 +529,10 @@ form {
     border-radius: 10px;
     text-align: center;
     border: solid currentColor;
-    transition: all 0.6s cubic-bezier(.86, .01, .15, .99);
+    -webkit-transition: screen 0.6s cubic-bezier(.86, .01, .15, .99);
+    -o-transition: screen 0.6s cubic-bezier(.86, .01, .15, .99);
+    transition: screen 0.6s cubic-bezier(.86, .01, .15, .99);
+    -webkit-box-shadow: 6px 7px 40px -4px rgba(0, 0, 0, 0.2);
     box-shadow: 6px 7px 40px -4px rgba(0, 0, 0, 0.2);
 
 
@@ -428,7 +545,10 @@ form {
     left: 0;
     right: 0;
     bottom: 0;
+    -webkit-clip-path: circle(0% at 50% 50%);
     clip-path: circle(0% at 50% 50%);
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
     transition: 0.6s;
     opacity: 1;
     z-index: 0;
@@ -463,7 +583,10 @@ form {
     line-height: 30px;
     font-size: 16px;
     font-weight: 400;
-    transition: all ease-in-out 0.6s;
+    -webkit-transition: screen ease-in-out 0.6s;
+    -o-transition: screen ease-in-out 0.6s;
+    transition: screen ease-in-out 0.6s;
+    -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
 }
 
@@ -472,7 +595,10 @@ form {
     line-height: 30px;
     font-size: 16px;
     font-weight: 400;
-    transition: all ease-in-out 0.6s;
+    -webkit-transition: screen ease-in-out 0.6s;
+    -o-transition: screen ease-in-out 0.6s;
+    transition: screen ease-in-out 0.6s;
+    -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
 }
 
@@ -482,84 +608,128 @@ form {
 }
 
 
+
 @media (hover: hover) {
 
     #light .review-button:hover {
+        -webkit-transition: 0.6s;
+        -o-transition: 0.6s;
         transition: 0.6s;
+        -webkit-box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1);
         box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
     }
 
     #dark .review-button:hover {
 
+        -webkit-transition: 0.6s;
+
+        -o-transition: 0.6s;
+
         transition: 0.6s;
+        -webkit-box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1);
         box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
     }
 
     #light .review-button:hover p {
+
+        -webkit-transition: 0.6s;
+
+        -o-transition: 0.6s;
 
         transition: 0.6s;
         color: white;
     }
 
     #dark .review-button:hover p {
+        -webkit-transition: 0.6s;
+        -o-transition: 0.6s;
         transition: 0.6s;
         color: black;
     }
 
     .review-button:hover:before {
+        -webkit-clip-path: circle(100% at 50% 50%);
         clip-path: circle(100% at 50% 50%);
     }
 
 
     #light .back-button:hover {
+        -webkit-transition: 0.6s;
+        -o-transition: 0.6s;
         transition: 0.6s;
+        -webkit-box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1);
         box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
     }
 
     #dark .back-button:hover {
 
+        -webkit-transition: 0.6s;
+
+        -o-transition: 0.6s;
+
         transition: 0.6s;
+        -webkit-box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1);
         box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
     }
 
     #light .back-button:hover p {
+
+        -webkit-transition: 0.6s;
+
+        -o-transition: 0.6s;
 
         transition: 0.6s;
         color: white;
     }
 
     #dark .back-button:hover p {
+        -webkit-transition: 0.6s;
+        -o-transition: 0.6s;
         transition: 0.6s;
         color: white;
     }
 
     .back-button:hover:before {
+        -webkit-clip-path: circle(100% at 50% 50%);
         clip-path: circle(100% at 50% 50%);
     }
 
 
     #light .submit-button:hover {
+        -webkit-transition: 0.6s;
+        -o-transition: 0.6s;
         transition: 0.6s;
+        -webkit-box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1);
         box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
     }
 
     #dark .submit-button:hover {
 
+        -webkit-transition: 0.6s;
+
+        -o-transition: 0.6s;
+
         transition: 0.6s;
+        -webkit-box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1);
         box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
     }
 
     #light .submit-button:hover p {
         color: white;
+        -webkit-transition: 0.6s;
+        -o-transition: 0.6s;
         transition: 0.6s;
     }
 
     #dark .submit-button:hover p {
+        -webkit-transition: 0.6s;
+        -o-transition: 0.6s;
         transition: 0.6s;
         color: white;
     }
 
     .submit-button:hover:before {
+        -webkit-clip-path: circle(100% at 50% 50%);
         clip-path: circle(100% at 50% 50%);
     }
 
@@ -604,12 +774,17 @@ form {
 /*
  Mobile-view
  */
-@media only screen and (min-width: 667px) and (max-width: 668px) and (max-height: 375px) {
+
+
+@media only screen  and (min-width: 667px) and (max-width: 668px) and (max-height: 375px) {
     .container {
         height: 400vh;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 20px 20px;
         margin: 20px 20px;
@@ -661,7 +836,39 @@ form {
 
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 16px;
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 16px;
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 16px;
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 16px;
+    }
+
     #light textarea::placeholder {
+        font-size: 16px;
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 16px;
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 16px;
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 16px;
+    }
+
+    #dark textarea::-ms-input-placeholder {
         font-size: 16px;
     }
 
@@ -692,11 +899,11 @@ form {
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 667px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 50px; /* Center the modal horizontally */
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 50px; /*Adjust the value based on your design*/
 
 
     }
@@ -730,9 +937,13 @@ form {
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -753,12 +964,15 @@ form {
 
 }
 
-@media only screen and (min-width: 653px) and (max-width: 666px) and (max-height: 280px) {
+@media only screen  and (min-width: 653px) and (max-width: 666px) and (max-height: 280px) {
     .container {
         height: 525vh;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 20px 20px;
         margin: 20px 20px;
@@ -810,7 +1024,39 @@ form {
 
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 16px;
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 16px;
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 16px;
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 16px;
+    }
+
     #light textarea::placeholder {
+        font-size: 16px;
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 16px;
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 16px;
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 16px;
+    }
+
+    #dark textarea::-ms-input-placeholder {
         font-size: 16px;
     }
 
@@ -841,11 +1087,11 @@ form {
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 653px;
-        max-height: 60vh; /* Adjust the value based on your design */
-        margin: 30px; /* Center the modal horizontally */
+        max-height: 60vh; /* Adjust the value based on your design*/
+        margin: 30px; /*Adjust the value based on your design*/
 
 
     }
@@ -879,9 +1125,13 @@ form {
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -902,12 +1152,15 @@ form {
 
 }
 
-@media only screen and (min-width: 640px) and (max-width: 652px) and (max-height: 360px) {
+@media only screen  and (min-width: 640px) and (max-width: 652px) and (max-height: 360px) {
     .container {
         height: 410vh;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 20px 20px;
         margin: 20px 20px;
@@ -959,7 +1212,39 @@ form {
 
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 16px;
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 16px;
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 16px;
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 16px;
+    }
+
     #light textarea::placeholder {
+        font-size: 16px;
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 16px;
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 16px;
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 16px;
+    }
+
+    #dark textarea::-ms-input-placeholder {
         font-size: 16px;
     }
 
@@ -986,11 +1271,11 @@ form {
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 640px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 45px; /* Center the modal horizontally */
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 45px; /*Adjust the value based on your design*/
 
 
     }
@@ -1024,9 +1309,13 @@ form {
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -1047,12 +1336,15 @@ form {
 
 }
 
-@media only screen and (min-width: 600px) and (max-width: 639px) {
+@media only screen  and (min-width: 600px) and (max-width: 639px) {
     .container {
         height: 160vh;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 20px 20px;
         margin: 20px 20px;
@@ -1104,7 +1396,39 @@ form {
 
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 16px;
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 16px;
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 16px;
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 16px;
+    }
+
     #light textarea::placeholder {
+        font-size: 16px;
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 16px;
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 16px;
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 16px;
+    }
+
+    #dark textarea::-ms-input-placeholder {
         font-size: 16px;
     }
 
@@ -1131,11 +1455,11 @@ form {
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 600px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 40px; /* Center the modal horizontally */
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 40px; /*Adjust the value based on your design*/
 
 
     }
@@ -1169,9 +1493,13 @@ form {
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -1191,12 +1519,15 @@ form {
 
 }
 
-@media only screen and (min-width: 568px) and (max-width: 599px) and (max-height: 320px) {
+@media only screen  and (min-width: 568px) and (max-width: 599px) and (max-height: 320px) {
     .container {
         height: 430vh;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 20px 20px;
         margin: 20px 20px;
@@ -1248,7 +1579,39 @@ form {
         padding-right: 2px;
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 14px;
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 14px;
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 14px;
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 14px;
+    }
+
     #light textarea::placeholder {
+        font-size: 14px;
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 14px;
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 14px;
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 14px;
+    }
+
+    #dark textarea::-ms-input-placeholder {
         font-size: 14px;
     }
 
@@ -1279,11 +1642,11 @@ form {
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 568px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 45px; /* Center the modal horizontally */
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 45px; /*Adjust the value based on your design*/
 
 
     }
@@ -1317,9 +1680,13 @@ form {
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -1341,12 +1708,15 @@ form {
 }
 
 
-@media only screen and (min-width: 540px) and (max-width: 567px) {
+@media only screen  and (min-width: 540px) and (max-width: 567px) {
     .container {
         height: 150vh;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 20px 20px;
         margin: 20px 20px;
@@ -1398,7 +1768,39 @@ form {
 
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 14px;
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 14px;
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 14px;
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 14px;
+    }
+
     #light textarea::placeholder {
+        font-size: 14px;
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 14px;
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 14px;
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 14px;
+    }
+
+    #dark textarea::-ms-input-placeholder {
         font-size: 14px;
     }
 
@@ -1425,11 +1827,11 @@ form {
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 540px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 40px; /* Center the modal horizontally */
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 40px; /*Adjust the value based on your design*/
 
 
     }
@@ -1463,9 +1865,13 @@ form {
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -1486,12 +1892,15 @@ form {
 
 }
 
-@media only screen and (min-width: 540px) and (max-width: 567px) and (max-height: 360px) {
+@media only screen  and (min-width: 540px) and (max-width: 567px) and (max-height: 360px) {
     .container {
-        height: 370vh;
+        height: auto;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 20px 20px;
         margin: 20px 20px;
@@ -1543,7 +1952,39 @@ form {
         padding-right: 2px;
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 13px;
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 13px;
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 13px;
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 13px;
+    }
+
     #light textarea::placeholder {
+        font-size: 13px;
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 13px;
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 13px;
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 13px;
+    }
+
+    #dark textarea::-ms-input-placeholder {
         font-size: 13px;
     }
 
@@ -1574,11 +2015,11 @@ form {
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 540px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 50px; /* Center the modal horizontally */
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 50px; /*Adjust the value based on your design*/
 
 
     }
@@ -1612,9 +2053,13 @@ form {
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -1635,12 +2080,15 @@ form {
 
 }
 
-@media only screen and (min-width: 504px) and (max-width: 539px) {
+@media only screen  and (min-width: 504px) and (max-width: 539px) {
     .container {
-        height: 260vh;
+        height: auto;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 10px 10px;
         margin: 10px 10px;
@@ -1691,8 +2139,52 @@ form {
 
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 13px;
+
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 13px;
+
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 13px;
+
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 13px;
+
+    }
+
     #light textarea::placeholder {
         font-size: 13px;
+
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 13px;
+
+
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 13px;
+
+
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 13px;
+
+
+    }
+
+    #dark textarea::-ms-input-placeholder {
+        font-size: 13px;
+
 
     }
 
@@ -1725,11 +2217,11 @@ form {
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 504px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 40px; /* Center the modal horizontally */
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 40px; /*Adjust the value based on your design*/
 
 
     }
@@ -1763,9 +2255,13 @@ form {
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -1787,12 +2283,15 @@ form {
 }
 
 
-@media only screen and (min-width: 480px) and (max-width: 503px) and (max-height: 320px) {
+@media only screen  and (min-width: 480px) and (max-width: 503px) and (max-height: 320px) {
     .container {
-        height: 435vh;
+        height: auto;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 20px 20px;
         margin: 20px 20px;
@@ -1844,7 +2343,39 @@ form {
         padding-right: 2px;
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 13px;
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 13px;
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 13px;
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 13px;
+    }
+
     #light textarea::placeholder {
+        font-size: 13px;
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 13px;
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 13px;
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 13px;
+    }
+
+    #dark textarea::-ms-input-placeholder {
         font-size: 13px;
     }
 
@@ -1875,11 +2406,11 @@ form {
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 480px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 50px; /* Center the modal horizontally */
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 50px; /*Adjust the value based on your design*/
 
 
     }
@@ -1913,9 +2444,13 @@ form {
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -1936,12 +2471,15 @@ form {
 
 }
 
-@media only screen and (min-width: 432px) and (max-width: 479px) {
+@media only screen  and (min-width: 432px) and (max-width: 479px) {
     .container {
-        height: 180vh;
+        height: auto
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 10px 10px;
         margin: 10px 10px;
@@ -1982,18 +2520,62 @@ form {
     }
 
     #light textarea {
-        width: 98.3%;
+        width: 99%;
         font-size: 13px;
     }
 
     #dark textarea {
-        width: 98.3%;
+        width: 99%;
+        font-size: 13px;
+
+    }
+
+    #light textarea::-webkit-input-placeholder {
+        font-size: 13px;
+
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 13px;
+
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 13px;
+
+    }
+
+    #light textarea::-ms-input-placeholder {
         font-size: 13px;
 
     }
 
     #light textarea::placeholder {
         font-size: 13px;
+
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 13px;
+
+
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 13px;
+
+
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 13px;
+
+
+    }
+
+    #dark textarea::-ms-input-placeholder {
+        font-size: 13px;
+
 
     }
 
@@ -2026,11 +2608,11 @@ form {
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 432px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 35px; /* Center the modal horizontally */
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 35px; /*Adjust the value based on your design*/
 
 
     }
@@ -2064,9 +2646,13 @@ form {
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -2084,14 +2670,30 @@ form {
         margin: 5px
     }
 
+    @-moz-document url-prefix() {
+
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(27%);
+        }
+
+
+    }
+
 }
 
-@media only screen and (min-width: 430px) and (max-width: 431px) {
+@media only screen  and (min-width: 430px) and (max-width: 431px) {
     .container {
-        height: 150vh;
+        height: auto;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 10px 10px;
         margin: 10px 10px;
@@ -2142,8 +2744,52 @@ form {
 
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 13px;
+
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 13px;
+
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 13px;
+
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 13px;
+
+    }
+
     #light textarea::placeholder {
         font-size: 13px;
+
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 13px;
+
+
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 13px;
+
+
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 13px;
+
+
+    }
+
+    #dark textarea::-ms-input-placeholder {
+        font-size: 13px;
+
 
     }
 
@@ -2176,11 +2822,11 @@ form {
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 430px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 35px; /* Center the modal horizontally */
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 35px; /*Adjust the value based on your design*/
 
 
     }
@@ -2214,9 +2860,13 @@ form {
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -2236,12 +2886,15 @@ form {
 
 }
 
-@media only screen and (min-width: 428px) and (max-width: 429px) {
+@media only screen  and (min-width: 428px) and (max-width: 429px) {
     .container {
-        height: 140vh;
+        height: auto;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 10px 10px;
         margin: 10px 10px;
@@ -2292,8 +2945,52 @@ form {
 
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 12px;
+
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 12px;
+
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 12px;
+
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 12px;
+
+    }
+
     #light textarea::placeholder {
         font-size: 12px;
+
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 12px;
+
+
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 12px;
+
+
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 12px;
+
+
+    }
+
+    #dark textarea::-ms-input-placeholder {
+        font-size: 12px;
+
 
     }
 
@@ -2326,11 +3023,11 @@ form {
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 428px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 35px; /* Center the modal horizontally */
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 35px; /*Adjust the value based on your design*/
 
 
     }
@@ -2364,9 +3061,13 @@ form {
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -2386,15 +3087,18 @@ form {
 
 }
 
-/*
+/*!*
 DONE - DON'T TOUCH!
- */
-@media only screen and (min-width: 414px) and (max-width: 427px) {
+ *!*/
+@media only screen  and (min-width: 414px) and (max-width: 427px) {
     .container {
-        height: 145vh;
+        height: auto;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 10px 10px;
         margin: 10px 10px;
@@ -2447,8 +3151,52 @@ DONE - DON'T TOUCH!
 
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 12px;
+
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 12px;
+
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 12px;
+
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 12px;
+
+    }
+
     #light textarea::placeholder {
         font-size: 12px;
+
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 12px;
+
+
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 12px;
+
+
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 12px;
+
+
+    }
+
+    #dark textarea::-ms-input-placeholder {
+        font-size: 12px;
+
 
     }
 
@@ -2481,11 +3229,11 @@ DONE - DON'T TOUCH!
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 414px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 30px; /* Center the modal horizontally */
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 30px; /*Adjust the value based on your design*/
 
 
     }
@@ -2519,9 +3267,13 @@ DONE - DON'T TOUCH!
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -2539,14 +3291,49 @@ DONE - DON'T TOUCH!
         margin: 5px
     }
 
+    @-moz-document url-prefix() {
+
+        .container {
+            height: auto;
+        }
+
+        .container-desc {
+            font-size: 14px;
+        }
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(25%);
+        }
+        #light .modal-desc, #dark .modal-desc {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        #light .input-label, #dark .input-label {
+            font-size: 15px;
+
+        }
+
+        #light .input-value, #dark .input-value {
+            font-size: 14px;
+            word-wrap: break-word;
+        }
+    }
+
 }
 
-@media only screen and (min-width: 414px) and (max-width: 427px) and (max-height: 736px) {
+@media only screen  and (min-width: 414px) and (max-width: 427px) and (max-height: 736px) {
     .container {
-        height: 180vh;
+        height: auto;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 10px 10px;
         margin: 10px 10px;
@@ -2599,8 +3386,52 @@ DONE - DON'T TOUCH!
 
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 12px;
+
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 12px;
+
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 12px;
+
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 12px;
+
+    }
+
     #light textarea::placeholder {
         font-size: 12px;
+
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 12px;
+
+
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 12px;
+
+
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 12px;
+
+
+    }
+
+    #dark textarea::-ms-input-placeholder {
+        font-size: 12px;
+
 
     }
 
@@ -2633,11 +3464,12 @@ DONE - DON'T TOUCH!
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 414px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 30px; /* Center the modal horizontally */
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 30px; /*Adjust the value based on your design*/
+        transform: translateY(-15%);
 
 
     }
@@ -2671,9 +3503,13 @@ DONE - DON'T TOUCH!
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -2691,16 +3527,52 @@ DONE - DON'T TOUCH!
         margin: 5px
     }
 
+    @-moz-document url-prefix() {
+
+        .container {
+            height: auto;
+        }
+
+        .container-desc {
+            font-size: 14px;
+        }
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(40%);
+        }
+        #light .modal-desc, #dark .modal-desc {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        #light .input-label, #dark .input-label {
+            font-size: 15px;
+
+        }
+
+        #light .input-value, #dark .input-value {
+            font-size: 14px;
+            word-wrap: break-word;
+        }
+    }
+
 }
-/*
+
+/*!*
 DONE - DON'T TOUCH!
- */
-@media only screen and (min-width: 412px) and (max-width: 413px) {
+ *!*/
+@media only screen  and (min-width: 412px) and (max-width: 413px) {
     .container {
-        height: 130vh;
+        height: auto;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 10px 10px;
         margin: 10px 10px;
@@ -2741,20 +3613,64 @@ DONE - DON'T TOUCH!
     }
 
     #light textarea {
-        width: 98.5%;
+        width: 99%;
         font-size: 12px;
 
 
     }
 
     #dark textarea {
-        width: 98.5%;
+        width: 99%;
+        font-size: 12px;
+
+    }
+
+    #light textarea::-webkit-input-placeholder {
+        font-size: 12px;
+
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 12px;
+
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 12px;
+
+    }
+
+    #light textarea::-ms-input-placeholder {
         font-size: 12px;
 
     }
 
     #light textarea::placeholder {
         font-size: 12px;
+
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 12px;
+
+
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 12px;
+
+
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 12px;
+
+
+    }
+
+    #dark textarea::-ms-input-placeholder {
+        font-size: 12px;
+
 
     }
 
@@ -2787,11 +3703,11 @@ DONE - DON'T TOUCH!
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 412px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 30px; /* Center the modal horizontally */
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 30px; /*Adjust the value based on your design*/
 
 
     }
@@ -2825,9 +3741,13 @@ DONE - DON'T TOUCH!
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -2845,390 +3765,237 @@ DONE - DON'T TOUCH!
         margin: 5px
     }
 
+    .container {
+        height: auto;
+    }
+
+    @-moz-document url-prefix() {
+
+        .container {
+            height: auto;
+        }
+
+        .container-desc {
+            font-size: 14px;
+        }
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(40%);
+        }
+        #light .modal-desc, #dark .modal-desc {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        #light .input-label, #dark .input-label {
+            font-size: 15px;
+
+        }
+
+        #light .input-value, #dark .input-value {
+            font-size: 14px;
+            word-wrap: break-word;
+        }
+    }
+
+
+    @-moz-document url-prefix() {
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(10%);
+        }
+
+    }
+
 
 }
 
-@media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 919px) {
+@media only screen  and (min-width: 412px) and (max-width: 413px) and (max-height: 919px) {
     .container {
-        height: 143vh;
+        height: auto;
+    }
+
+    @-moz-document url-prefix() {
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(25%);
+        }
+
     }
 }
-/*
+
+/*!*
 Takes height 914px as well
- */
-@media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 915px) {
+ *!*/
+@media only screen  and (min-width: 412px) and (max-width: 413px) and (max-height: 915px) {
     .container {
-        height: 145vh;
+        height: auto;
+    }
+
+    @-moz-document url-prefix() {
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(25%);
+        }
+
     }
 
 
 }
 
-@media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 906px) {
+@media only screen  and (min-width: 412px) and (max-width: 413px) and (max-height: 906px) {
     .container {
-        height: 145vh;
+        height: auto;
+    }
+
+    @-moz-document url-prefix() {
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(25%);
+        }
+
     }
 
 
 }
 
-@media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 892px) {
+@media only screen  and (min-width: 412px) and (max-width: 413px) and (max-height: 892px) {
     .container {
-        height: 145vh;
+        height: auto;
+    }
+
+    @-moz-document url-prefix() {
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(25%);
+        }
+
     }
 
 
 }
 
-@media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 883px) {
+@media only screen  and (min-width: 412px) and (max-width: 413px) and (max-height: 883px) {
     .container {
-        height: 150vh;
+        height: auto;
+    }
+
+    @-moz-document url-prefix() {
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(25%);
+        }
+
     }
 }
 
-@media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 869px) {
+@media only screen  and (min-width: 412px) and (max-width: 413px) and (max-height: 869px) {
     .container {
-        height: 150vh;
+        height: auto;
     }
 
+    @-moz-document url-prefix() {
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(25%);
+        }
 
-}
-
-@media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 846px) {
-    .container {
-        height: 155vh;
-    }
-
-
-}
-
-@media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 823px) {
-    .container {
-        height: 160vh;
-    }
-
-
-}
-
-@media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 732px) {
-    .container {
-        height: 180vh;
     }
 
 
 }
 
-/*
+@media only screen  and (min-width: 412px) and (max-width: 413px) and (max-height: 846px) {
+    .container {
+        height: auto;
+    }
+
+    @-moz-document url-prefix() {
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(25%);
+        }
+
+    }
+
+
+}
+
+@media only screen  and (min-width: 412px) and (max-width: 413px) and (max-height: 823px) {
+    .container {
+        height: auto;
+    }
+
+    @-moz-document url-prefix() {
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(25%);
+        }
+
+    }
+
+}
+
+@media only screen  and (min-width: 412px) and (max-width: 413px) and (max-height: 732px) {
+    .container {
+        height: auto;
+    }
+
+    @-moz-document url-prefix() {
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(35%);
+        }
+
+    }
+}
+
+
+/*!*
 DONE - DON'T TOUCH!
- */
-@media only screen and (min-width: 411px) and (max-width: 411px) {
+ *!*/
+@media only screen  and (min-width: 400px) and (max-width: 410px) {
     .container {
-        height: 136vh;
+        height: auto;
     }
 
     .container-wrapper {
-        flex-direction: column;
-        padding: 10px 10px;
-        margin: 10px 10px;
-    }
-
-    .text-area-label {
-        font-size: 14px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
-    .container-image {
-        margin: 110px 37px;
-        padding: 50px;
-        width: 195px;
-        height: 195px;
-    }
-
-    .container-title {
-        font-size: 26px;
-        text-align: center;
-        width: 100%;
-    }
-
-    .container-desc {
-        font-size: 16px;
-        text-align: center;
-        width: 90%;
-    }
-
-    .container-bg {
-        display: none;
-    }
-
-    form {
-        margin-top: 230px;
-
-    }
-
-    #light textarea {
-        width: 99%;
-        font-size: 12px;
-        padding-right: 1px;
-
-    }
-
-    #dark textarea {
-
-        width: 99%;
-        font-size: 12px;
-        padding-right: 1px;
-
-    }
-
-    #light textarea::placeholder {
-        font-size: 12px;
-
-    }
-
-    #dark textarea::placeholder {
-        font-size: 12px;
-
-
-    }
-
-    .error-message-textArea {
-        font-size: 12px;
-        width: 100%;
-
-    }
-
-    .review-button {
-        margin: 0 68px;
-        height: 45px;
-        width: 129px;
-    }
-
-    .modal-overlay {
-
-        width: 100%;
-        height: 100%;
-
-    }
-
-    /* Modal Content */
-    #light .modal-content, #dark .modal-content {
-        width: 411px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 30px; /* Center the modal horizontally */
-
-
-    }
-
-    #light .modal-content h2 {
-        margin-bottom: 20px;
-        color: #000000;
-        font-size: 22px;
-        text-align: center;
-    }
-
-    #dark .modal-content h2 {
-        margin-bottom: 20px;
-        color: #ffffff;
-        font-size: 22px;
-        text-align: center;
-    }
-
-    #light .modal-desc, #dark .modal-desc {
-        margin: 10px 0;
-        font-size: 18px;
-    }
-
-    #light .input-label, #dark .input-label {
-        font-size: 17px;
-
-    }
-
-    #light .input-value, #dark .input-value {
-        font-size: 16px;
-        word-wrap: break-word;
-    }
-
-    /* Modal Buttons */
-    .modal-buttons {
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 20px;
-
-    }
-
-    .back-button {
-        height: 45px;
-        width: 150px;
-        margin: 5px
-    }
-
-    .submit-button {
-        height: 45px;
-        width: 150px;
-        margin: 5px
-    }
-
-
-}
-
-@media only screen and (min-width: 411px) and (max-width: 411px) and (max-height: 731px) {
-    .container {
-        height: 180vh;
-    }
-
-    .container-wrapper {
-        flex-direction: column;
-        padding: 10px 10px;
-        margin: 10px 10px;
-    }
-
-    .text-area-label {
-        font-size: 14px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
-    .container-image {
-        margin: 110px 37px;
-        padding: 50px;
-        width: 195px;
-        height: 195px;
-    }
-
-    .container-title {
-        font-size: 26px;
-        text-align: center;
-        width: 100%;
-    }
-
-    .container-desc {
-        font-size: 15px;
-        text-align: center;
-        width: 80%;
-    }
-
-    .container-bg {
-        display: none;
-    }
-
-    form {
-        margin-top: 230px;
-    }
-
-    #light textarea {
-        width: 99%;
-        font-size: 12px;
-        padding-right: 1px;
-
-    }
-
-    #dark textarea {
-
-        width: 99%;
-        font-size: 12px;
-        padding-right: 1px;
-
-    }
-
-    #light textarea::placeholder {
-        font-size: 12px;
-
-    }
-
-    #dark textarea::placeholder {
-        font-size: 12px;
-
-
-    }
-
-    .error-message-textArea {
-        font-size: 12px;
-        width: 100%;
-
-    }
-
-    .review-button {
-        margin: 0 68px;
-        height: 45px;
-        width: 129px;
-    }
-
-    .modal-overlay {
-
-        width: 100%;
-        height: 100%;
-
-    }
-
-    /* Modal Content */
-    #light .modal-content, #dark .modal-content {
-        width: 411px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 30px; /* Center the modal horizontally */
-
-
-    }
-
-    #light .modal-content h2 {
-        margin-bottom: 20px;
-        color: #000000;
-        font-size: 22px;
-        text-align: center;
-    }
-
-    #dark .modal-content h2 {
-        margin-bottom: 20px;
-        color: #ffffff;
-        font-size: 22px;
-        text-align: center;
-    }
-
-    #light .modal-desc, #dark .modal-desc {
-        margin: 10px 0;
-        font-size: 18px;
-    }
-
-    #light .input-label, #dark .input-label {
-        font-size: 17px;
-
-    }
-
-    #light .input-value, #dark .input-value {
-        font-size: 16px;
-        word-wrap: break-word;
-    }
-
-    /* Modal Buttons */
-    .modal-buttons {
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 20px;
-
-    }
-
-    .back-button {
-        height: 45px;
-        width: 150px;
-        margin: 5px
-    }
-
-    .submit-button {
-        height: 45px;
-        width: 150px;
-        margin: 5px
-    }
-}
-
-/*
-DONE - DON'T TOUCH!
- */
-@media only screen and (min-width: 400px) and (max-width: 410px) {
-    .container {
-        height: 150vh;
-    }
-
-    .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 10px 10px;
         margin: 10px 10px;
@@ -3283,8 +4050,52 @@ DONE - DON'T TOUCH!
 
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 12px;
+
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 12px;
+
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 12px;
+
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 12px;
+
+    }
+
     #light textarea::placeholder {
         font-size: 12px;
+
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 12px;
+
+
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 12px;
+
+
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 12px;
+
+
+    }
+
+    #dark textarea::-ms-input-placeholder {
+        font-size: 12px;
+
 
     }
 
@@ -3317,11 +4128,11 @@ DONE - DON'T TOUCH!
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 400px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 30px; /* Center the modal horizontally */
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 30px; /*Adjust the value based on your design*/
 
 
     }
@@ -3355,9 +4166,13 @@ DONE - DON'T TOUCH!
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -3375,18 +4190,32 @@ DONE - DON'T TOUCH!
         margin: 5px
     }
 
+    @-moz-document url-prefix() {
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(27%);
+        }
+
+    }
+
 
 }
 
-/*
+/*!*
 DONE - DON'T TOUCH!
- */
-@media only screen and (min-width: 392px) and (max-width: 399px) {
+ *!*/
+@media only screen  and (min-width: 392px) and (max-width: 399px) {
     .container {
-        height: 163vh;
+        height: auto;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 10px 10px;
         margin: 10px 10px;
@@ -3428,7 +4257,7 @@ DONE - DON'T TOUCH!
 
     #light textarea {
 
-        width: 98.5%;
+        width: 99%;
         font-size: 11px;
         padding-right: 1px;
 
@@ -3436,14 +4265,58 @@ DONE - DON'T TOUCH!
 
     #dark textarea {
 
-        width: 98.5%;
+        width: 99%;
         font-size: 11px;
         padding-right: 1px;
 
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 11px;
+
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 11px;
+
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 11px;
+
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 11px;
+
+    }
+
     #light textarea::placeholder {
         font-size: 11px;
+
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 11px;
+
+
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 11px;
+
+
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 11px;
+
+
+    }
+
+    #dark textarea::-ms-input-placeholder {
+        font-size: 11px;
+
 
     }
 
@@ -3476,11 +4349,11 @@ DONE - DON'T TOUCH!
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 392px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 25px; /* Center the modal horizontally */
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 25px; /*Adjust the value based on your design*/
 
 
     }
@@ -3514,9 +4387,13 @@ DONE - DON'T TOUCH!
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -3534,17 +4411,31 @@ DONE - DON'T TOUCH!
         margin: 5px
     }
 
+    @-moz-document url-prefix() {
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(25%);
+        }
+
+    }
+
 }
 
-/*
+/*!*
 DONE - DON'T TOUCH!
- */
+ *!*/
 @media only screen and (min-width: 390px) and (max-width: 391px) {
     .container {
-        height: 150vh;
+        height: auto;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 10px 10px;
         margin: 10px 10px;
@@ -3600,8 +4491,52 @@ DONE - DON'T TOUCH!
 
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 11px;
+
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 11px;
+
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 11px;
+
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 11px;
+
+    }
+
     #light textarea::placeholder {
         font-size: 11px;
+
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 11px;
+
+
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 11px;
+
+
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 11px;
+
+
+    }
+
+    #dark textarea::-ms-input-placeholder {
+        font-size: 11px;
+
 
     }
 
@@ -3634,11 +4569,11 @@ DONE - DON'T TOUCH!
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 390px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 20px; /* Center the modal horizontally */
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 20px; /*Adjust the value based on your design*/
 
 
     }
@@ -3672,9 +4607,13 @@ DONE - DON'T TOUCH!
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -3692,327 +4631,31 @@ DONE - DON'T TOUCH!
         margin: 5px
     }
 
-}
+    @-moz-document url-prefix() {
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(25%);
+        }
 
-@media only screen and (min-width: 390px) and (max-width: 391px) and (max-height: 695px) {
-    .container {
-        height: 185vh;
-    }
-
-    .container-wrapper {
-        flex-direction: column;
-        padding: 10px 10px;
-        margin: 10px 10px;
-    }
-
-    .text-area-label {
-        font-size: 13px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
-    .container-image {
-        margin: 105px 27px;
-        padding: 50px;
-        width: 194px;
-        height: 194px;
-    }
-
-    .container-title {
-        font-size: 26px;
-        text-align: center;
-        width: 100%;
-    }
-
-    .container-desc {
-        font-size: 15px;
-        text-align: center;
-        width: 90%;
-    }
-
-    .container-bg {
-        display: none;
-    }
-
-    form {
-        margin-top: 230px;
-
-    }
-
-    #light textarea {
-
-        width: 98.5%;
-        font-size: 11px;
-        padding-right: 1px;
-
-    }
-
-    #dark textarea {
-
-        width: 98.5%;
-        font-size: 11px;
-        padding-right: 1px;
-
-    }
-
-    #light textarea::placeholder {
-        font-size: 11px;
-
-    }
-
-    #dark textarea::placeholder {
-        font-size: 11px;
-
-
-    }
-
-    .error-message-textArea {
-        font-size: 11px;
-        width: 100%;
-
-    }
-
-    .review-button {
-        margin: 0 59px;
-        height: 45px;
-        width: 130px;
-    }
-
-    .review-button p {
-        margin-right: 2px;
-    }
-
-    .modal-overlay {
-
-        width: 100%;
-        height: 100%;
-
-    }
-
-    /* Modal Content */
-    #light .modal-content, #dark .modal-content {
-        width: 390px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 25px; /* Center the modal horizontally */
-
-
-    }
-
-    #light .modal-content h2 {
-        margin-bottom: 20px;
-        color: #000000;
-        font-size: 20px;
-        text-align: center;
-    }
-
-    #dark .modal-content h2 {
-        margin-bottom: 20px;
-        color: #ffffff;
-        font-size: 20px;
-        text-align: center;
-    }
-
-    #light .modal-desc, #dark .modal-desc {
-        margin: 10px 0;
-        font-size: 17px;
-    }
-
-    #light .input-label, #dark .input-label {
-        font-size: 16px;
-
-    }
-
-    #light .input-value, #dark .input-value {
-        font-size: 15px;
-        word-wrap: break-word;
-    }
-
-    /* Modal Buttons */
-    .modal-buttons {
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 20px;
-
-    }
-
-    .back-button {
-        height: 45px;
-        width: 135px;
-        margin: 5px;
-    }
-
-    .submit-button {
-        height: 45px;
-        width: 135px;
-        margin: 5px
     }
 
 }
 
-@media only screen and (min-width: 390px) and (max-width: 391px) and (max-height: 390px) {
-    .container {
-        height: 325vh;
-    }
-
-    .container-wrapper {
-        flex-direction: column;
-        padding: 10px 10px;
-        margin: 10px 10px;
-    }
-
-    .text-area-label {
-        font-size: 13px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
-    .container-image {
-        margin: 105px 27px;
-        padding: 50px;
-        width: 194px;
-        height: 194px;
-    }
-
-    .container-title {
-        font-size: 26px;
-        text-align: center;
-        width: 100%;
-    }
-
-    .container-desc {
-        font-size: 15px;
-        text-align: center;
-        width: 90%;
-    }
-
-    .container-bg {
-        display: none;
-    }
-
-    form {
-        margin-top: 230px;
-
-    }
-
-    #light textarea {
-
-        width: 98.5%;
-        font-size: 11px;
-        padding-right: 1px;
-
-    }
-
-    #dark textarea {
-
-        width: 98.5%;
-        font-size: 11px;
-        padding-right: 1px;
-
-    }
-
-    #light textarea::placeholder {
-        font-size: 11px;
-
-    }
-
-    #dark textarea::placeholder {
-        font-size: 11px;
-
-
-    }
-
-    .error-message-textArea {
-        font-size: 11px;
-        width: 100%;
-
-    }
-
-    .review-button {
-        margin: 0 59px;
-        height: 45px;
-        width: 130px;
-    }
-
-    .review-button p {
-        margin-right: 2px;
-    }
-
-    .modal-overlay {
-
-        width: 100%;
-        height: 100%;
-
-    }
-
-    /* Modal Content */
-    #light .modal-content, #dark .modal-content {
-        width: 390px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 25px; /* Center the modal horizontally */
-
-
-    }
-
-    #light .modal-content h2 {
-        margin-bottom: 20px;
-        color: #000000;
-        font-size: 20px;
-        text-align: center;
-    }
-
-    #dark .modal-content h2 {
-        margin-bottom: 20px;
-        color: #ffffff;
-        font-size: 20px;
-        text-align: center;
-    }
-
-    #light .modal-desc, #dark .modal-desc {
-        margin: 10px 0;
-        font-size: 17px;
-    }
-
-    #light .input-label, #dark .input-label {
-        font-size: 16px;
-
-    }
-
-    #light .input-value, #dark .input-value {
-        font-size: 15px;
-        word-wrap: break-word;
-    }
-
-    /* Modal Buttons */
-    .modal-buttons {
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 20px;
-
-    }
-
-    .back-button {
-        height: 45px;
-        width: 135px;
-        margin: 5px;
-    }
-
-    .submit-button {
-        height: 45px;
-        width: 135px;
-        margin: 5px
-    }
-
-}
-
-/*
+/*!*
 DONE - DON'T TOUCH!
- */
+ *!*/
 @media only screen and (min-width: 385px) and (max-width: 389px) {
     .container {
-        height: 150vh;
+        height: auto;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 10px 10px;
         margin: 10px 10px;
@@ -4068,8 +4711,52 @@ DONE - DON'T TOUCH!
 
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 11px;
+
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 11px;
+
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 11px;
+
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 11px;
+
+    }
+
     #light textarea::placeholder {
         font-size: 11px;
+
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 11px;
+
+
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 11px;
+
+
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 11px;
+
+
+    }
+
+    #dark textarea::-ms-input-placeholder {
+        font-size: 11px;
+
 
     }
 
@@ -4102,11 +4789,11 @@ DONE - DON'T TOUCH!
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 385px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 20px; /* Center the modal horizontally */
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 20px; /*Adjust the value based on your design*/
 
 
     }
@@ -4140,9 +4827,13 @@ DONE - DON'T TOUCH!
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -4160,18 +4851,32 @@ DONE - DON'T TOUCH!
         margin: 5px
     }
 
+    @-moz-document url-prefix() {
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(25%);
+        }
+
+    }
+
 
 }
 
-/*
+/*!*
 DONE - DON'T TOUCH!
- */
+ *!*/
 @media only screen and (min-width: 384px) and (max-width: 384px) {
     .container {
-        height: 153vh;
+        height: auto
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 10px 10px;
         margin: 10px 10px;
@@ -4193,13 +4898,13 @@ DONE - DON'T TOUCH!
     .container-title {
         font-size: 26px;
         text-align: center;
-        width: 100%;
+        width: 103%;
     }
 
     .container-desc {
         font-size: 15px;
         text-align: center;
-        width: 90%;
+        width: 95%;
     }
 
     .container-bg {
@@ -4227,8 +4932,52 @@ DONE - DON'T TOUCH!
 
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 11px;
+
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 11px;
+
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 11px;
+
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 11px;
+
+    }
+
     #light textarea::placeholder {
         font-size: 11px;
+
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 11px;
+
+
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 11px;
+
+
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 11px;
+
+
+    }
+
+    #dark textarea::-ms-input-placeholder {
+        font-size: 11px;
+
 
     }
 
@@ -4261,11 +5010,11 @@ DONE - DON'T TOUCH!
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 384px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 20px; /* Center the modal horizontally */
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 20px; /*Adjust the value based on your design*/
 
 
     }
@@ -4299,9 +5048,13 @@ DONE - DON'T TOUCH!
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -4318,14 +5071,28 @@ DONE - DON'T TOUCH!
         width: 125px;
         margin: 5px
     }
+
+    @-moz-document url-prefix() {
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(25%);
+        }
+
+    }
 }
 
-@media only screen and (min-width: 384px) and (max-width: 384px) and (max-height: 640px) {
+@media only screen  and (min-width: 384px) and (max-width: 384px) and (max-height: 640px) {
     .container {
-        height: 200vh;
+        height: auto
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 10px 10px;
         margin: 10px 10px;
@@ -4380,8 +5147,52 @@ DONE - DON'T TOUCH!
 
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 11px;
+
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 11px;
+
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 11px;
+
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 11px;
+
+    }
+
     #light textarea::placeholder {
         font-size: 11px;
+
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 11px;
+
+
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 11px;
+
+
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 11px;
+
+
+    }
+
+    #dark textarea::-ms-input-placeholder {
+        font-size: 11px;
+
 
     }
 
@@ -4414,11 +5225,11 @@ DONE - DON'T TOUCH!
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 384px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 20px; /* Center the modal horizontally */
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 20px; /*Adjust the value based on your design*/
 
 
     }
@@ -4452,9 +5263,13 @@ DONE - DON'T TOUCH!
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -4472,17 +5287,33 @@ DONE - DON'T TOUCH!
         margin: 5px
     }
 
+    @-moz-document url-prefix() {
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(25%);
+        }
+
+    }
+
 }
 
-/*
+
+/*!*
 DONE - DON'T TOUCH!
- */
+ *!*/
+
 @media only screen and (min-width: 375px) and (max-width: 383px) {
     .container {
-        height: 157vh;
+        height: auto;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 10px 10px;
         margin: 10px 10px;
@@ -4539,8 +5370,52 @@ DONE - DON'T TOUCH!
 
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 11px;
+
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 11px;
+
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 11px;
+
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 11px;
+
+    }
+
     #light textarea::placeholder {
         font-size: 11px;
+
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 11px;
+
+
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 11px;
+
+
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 11px;
+
+
+    }
+
+    #dark textarea::-ms-input-placeholder {
+        font-size: 11px;
+
 
     }
 
@@ -4573,12 +5448,12 @@ DONE - DON'T TOUCH!
 
     }
 
-    /* Modal Content */
+    /*Modal Content*/
     #light .modal-content, #dark .modal-content {
         width: 375px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 20px; /* Center the modal horizontally */
-
+        max-height: 50vh; /* /* Adjust the value based on your design*/
+        margin: 20px; /*Adjust the value based on your design*/
+        transform: translateY(5%);
 
     }
 
@@ -4611,9 +5486,13 @@ DONE - DON'T TOUCH!
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*/*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -4631,15 +5510,29 @@ DONE - DON'T TOUCH!
         margin: 5px
     }
 
+    @-moz-document url-prefix() {
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 80%;
+            transform: translateY(30%);
+        }
+
+    }
+
 
 }
 
 @media only screen and (min-width: 375px) and (max-width: 383px) and (max-height: 667px) {
     .container {
-        height: 190vh;
+        height: auto;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 10px 10px;
         margin: 10px 10px;
@@ -4681,7 +5574,7 @@ DONE - DON'T TOUCH!
     }
 
     #light textarea {
-        width: 98.5%;
+        width: 99%;
         font-size: 11px;
         padding-right: 0;
 
@@ -4690,13 +5583,45 @@ DONE - DON'T TOUCH!
 
     #dark textarea {
 
-        width: 98.5%;
+        width: 99%;
         font-size: 11px;
         padding-right: 0;
 
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 11px;
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 11px;
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 11px;
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 11px;
+    }
+
     #light textarea::placeholder {
+        font-size: 11px;
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 11px;
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 11px;
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 11px;
+    }
+
+    #dark textarea::-ms-input-placeholder {
         font-size: 11px;
     }
 
@@ -4717,7 +5642,7 @@ DONE - DON'T TOUCH!
     }
 
     .review-button p {
-        margin-right: 2px;
+        margin-right: 0;
     }
 
     .modal-overlay {
@@ -4730,10 +5655,10 @@ DONE - DON'T TOUCH!
     /* Modal Content */
     #light .modal-content, #dark .modal-content {
         width: 375px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 20px; /* Center the modal horizontally */
-
-
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 20px; /*Adjust the value based on your design*/
+        -ms-transform: translateY(-30%);
+        transform: translateY(-30%);
     }
 
     #light .modal-content h2 {
@@ -4764,9 +5689,13 @@ DONE - DON'T TOUCH!
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*Modal Buttons*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -4784,15 +5713,454 @@ DONE - DON'T TOUCH!
         margin: 5px
     }
 
+    @-moz-document url-prefix() {
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 80%;
+            transform: translateY(40%);
+        }
+
+    }
+
 
 }
 
-/*
-DONE - DON'T TOUCH!
- */
-@media only screen and (min-width: 360px) and (max-width: 374px) and (max-height: 840px) {
+@media only screen and (min-width: 375px) and (max-width: 383px) and (max-height: 635px) {
+
+
+    /* Modal Content */
+    #light .modal-content, #dark .modal-content {
+        width: 375px;
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 20px; /*Adjust the value based on your design*/
+        -ms-transform: translateY(-30%);
+        transform: translateY(-30%);
+    }
+
+
+}
+
+@media only screen and (min-width: 375px) and (max-width: 383px) and (max-height: 629px) {
+    .container {
+        height: auto;
+    }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 10px 10px;
+        margin: 10px 10px;
+    }
+
+    .text-area-label {
+        font-size: 13px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+
+    .container-image {
+        margin: 105px 19px;
+        padding: 50px;
+        width: 195px;
+        height: 195px;
+    }
+
+    .container-title {
+        font-size: 26px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .container-desc {
+        font-size: 15px;
+        text-align: center;
+        width: 90%;
+    }
+
+    .container-bg {
+        display: none;
+    }
+
+    form {
+        margin-top: 230px;
+
+    }
+
+    #light textarea {
+        width: 99%;
+        font-size: 11px;
+        padding-right: 0;
+
+
+    }
+
+    #dark textarea {
+
+        width: 99%;
+        font-size: 11px;
+        padding-right: 0;
+
+    }
+
+    #light textarea::-webkit-input-placeholder {
+        font-size: 11px;
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 11px;
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 11px;
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 11px;
+    }
+
+    #light textarea::placeholder {
+        font-size: 11px;
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 11px;
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 11px;
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 11px;
+    }
+
+    #dark textarea::-ms-input-placeholder {
+        font-size: 11px;
+    }
+
+    #dark textarea::placeholder {
+        font-size: 11px;
+    }
+
+    .error-message-textArea {
+        font-size: 11px;
+        width: 100%;
+
+    }
+
+    .review-button {
+        margin: 0 54px;
+        height: 45px;
+        width: 128px;
+    }
+
+    .review-button p {
+        margin-right: 0;
+    }
+
+    .modal-overlay {
+
+        width: 100%;
+        height: 100%;
+
+    }
+
+    /* Modal Content */
+    #light .modal-content, #dark .modal-content {
+        width: 375px;
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 20px; /*Adjust the value based on your design*/
+        -webkit-transform: translateY(-20%);
+        -ms-transform: translateY(-20%);
+        transform: translateY(-20%);
+    }
+
+    #light .modal-content h2 {
+        margin-bottom: 20px;
+        color: #000000;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    #dark .modal-content h2 {
+        margin-bottom: 20px;
+        color: #ffffff;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    #light .modal-desc, #dark .modal-desc {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    #light .input-label, #dark .input-label {
+        font-size: 15px;
+    }
+
+    #light .input-value, #dark .input-value {
+        font-size: 14px;
+        word-wrap: break-word;
+    }
+
+    /*Modal Buttons*/
+    .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-evenly;
+        margin-top: 20px;
+
+    }
+
+    .back-button {
+        height: 40px;
+        width: 100px;
+        margin: 5px;
+    }
+
+    .submit-button {
+        height: 40px;
+        width: 100px;
+        margin: 5px
+    }
+
+    @-moz-document url-prefix() {
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 80%;
+            transform: translateY(40%);
+        }
+
+    }
+
+
+}
+
+@media only screen and (min-width: 375px) and (max-width: 383px) and (max-height: 559px) {
+    .container {
+        height: auto;
+    }
+
+    .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 10px 10px;
+        margin: 10px 10px;
+    }
+
+    .text-area-label {
+        font-size: 13px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+
+    .container-image {
+        margin: 105px 19px;
+        padding: 50px;
+        width: 195px;
+        height: 195px;
+    }
+
+    .container-title {
+        font-size: 26px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .container-desc {
+        font-size: 15px;
+        text-align: center;
+        width: 90%;
+    }
+
+    .container-bg {
+        display: none;
+    }
+
+    form {
+        margin-top: 230px;
+
+    }
+
+    #light textarea {
+        width: 99%;
+        font-size: 11px;
+        padding-right: 0;
+
+
+    }
+
+    #dark textarea {
+
+        width: 99%;
+        font-size: 11px;
+        padding-right: 0;
+
+    }
+
+    #light textarea::-webkit-input-placeholder {
+        font-size: 11px;
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 11px;
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 11px;
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 11px;
+    }
+
+    #light textarea::placeholder {
+        font-size: 11px;
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 11px;
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 11px;
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 11px;
+    }
+
+    #dark textarea::-ms-input-placeholder {
+        font-size: 11px;
+    }
+
+    #dark textarea::placeholder {
+        font-size: 11px;
+    }
+
+    .error-message-textArea {
+        font-size: 11px;
+        width: 100%;
+
+    }
+
+    .review-button {
+        margin: 0 54px;
+        height: 45px;
+        width: 128px;
+    }
+
+    .review-button p {
+        margin-right: 0;
+    }
+
+    .modal-overlay {
+
+        width: 100%;
+        height: 100%;
+
+    }
+
+    /* Modal Content */
+    #light .modal-content, #dark .modal-content {
+        width: 375px;
+        max-height: 50vh; /* Adjust the value based on your design*/
+        margin: 20px; /*Adjust the value based on your design*/
+        -ms-transform: translateY(-13%);
+        transform: translateY(-13%);
+    }
+
+    #light .modal-content h2 {
+        margin-bottom: 20px;
+        color: #000000;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    #dark .modal-content h2 {
+        margin-bottom: 20px;
+        color: #ffffff;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    #light .modal-desc, #dark .modal-desc {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    #light .input-label, #dark .input-label {
+        font-size: 15px;
+    }
+
+    #light .input-value, #dark .input-value {
+        font-size: 14px;
+        word-wrap: break-word;
+    }
+
+    /*Modal Buttons*/
+    .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-evenly;
+        margin-top: 20px;
+
+    }
+
+    .back-button {
+        height: 40px;
+        width: 100px;
+        margin: 5px;
+    }
+
+    .submit-button {
+        height: 40px;
+        width: 100px;
+        margin: 5px
+    }
+
+    @-moz-document url-prefix() {
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 80%;
+            transform: translateY(40%);
+        }
+
+    }
+
+
+}
+
+
+/*!*
+DONE - DON'T TOUCH!
+ *!*/
+@media only screen  and (min-width: 360px) and (max-width: 374px) {
+    .container {
+        height: auto
+    }
+    .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 10px 10px;
         margin: 10px 10px;
@@ -4833,21 +6201,57 @@ DONE - DON'T TOUCH!
 
     #light textarea {
 
-        width: 98%;
+        width: 99%;
         font-size: 9px;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
         transform: translateX(0);
 
     }
 
     #dark textarea {
 
-        width: 98%;
+        width: 99%;
         font-size: 9px;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
         transform: translateX(0);
 
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 9px;
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 9px;
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 9px;
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 9px;
+    }
+
     #light textarea::placeholder {
+        font-size: 9px;
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 9px;
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 9px;
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 9px;
+    }
+
+    #dark textarea::-ms-input-placeholder {
         font-size: 9px;
     }
 
@@ -4868,7 +6272,7 @@ DONE - DON'T TOUCH!
     }
 
     .review-button p {
-        margin-right: 2px;
+        margin-right: 0;
     }
 
     .modal-overlay {
@@ -4878,11 +6282,11 @@ DONE - DON'T TOUCH!
 
     }
 
-    /* Modal Content */
+    /*!* Modal Content *!*/
     #light .modal-content, #dark .modal-content {
         width: 360px;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 20px; /* Center the modal horizontally */
+        max-height: 50vh; /*/* Adjust the value based on your design*/
+        margin: 25px; /*/*Adjust the value based on your design*/
 
 
     }
@@ -4915,9 +6319,13 @@ DONE - DON'T TOUCH!
         word-wrap: break-word;
     }
 
-    /* Modal Buttons */
+    /*!* Modal Buttons *!*/
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -4935,90 +6343,157 @@ DONE - DON'T TOUCH!
         margin: 5px
     }
 
-}
+    @-moz-document url-prefix() {
 
-@media only screen and (min-width: 360px) and (max-width: 374px) and (max-height: 840px) {
-    .container {
-        height: 140vh;
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+        }
     }
 
 }
 
-@media only screen and (min-width: 360px) and (max-width: 374px) and (max-height: 800px) {
-    .container {
-        height: 148vh;
+@media only screen  and (min-width: 360px) and (max-width: 374px) and (max-height: 840px) {
+
+    @-moz-document url-prefix() {
+        #light .modal-content, #dark .modal-content {
+            transform: translateY(-35%);
+        }
     }
 
 }
 
-@media only screen and (min-width: 360px) and (max-width: 374px) and (max-height: 780px) {
-    .container {
-        height: 150vh;
-    }
+@media only screen  and (min-width: 360px) and (max-width: 374px) and (max-height: 800px) {
 
-
-}
-/*
-The media only screen below takes max height 770px as well
- */
-@media only screen and (min-width: 360px) and (max-width: 374px) and (max-height: 771px) {
-    .container {
-        height: 153vh;
-    }
-
-
-}
-
-@media only screen and (min-width: 360px) and (max-width: 374px) and (max-height: 760px) {
-    .container {
-        height: 155vh;
-    }
-
-
-}
-
-@media only screen and (min-width: 360px) and (max-width: 374px) and (max-height: 747px) {
-    .container {
-        height: 157vh;
+    @-moz-document url-prefix() {
+        #light .modal-content, #dark .modal-content {
+            transform: translateY(-40%);
+        }
     }
 
 }
 
-@media only screen and (min-width: 360px) and (max-width: 374px) and (max-height: 740px) {
-    .container {
-        height: 160vh;
+@media only screen  and (min-width: 360px) and (max-width: 374px) and (max-height: 780px) {
+    @-moz-document url-prefix() {
+        #light .modal-content, #dark .modal-content {
+            transform: translateY(-45%);
+        }
+    }
+
+
+
+}
+
+/*!*
+The media only screen  below takes max height 770px as well
+ *!*/
+@media only screen  and (min-width: 360px) and (max-width: 374px) and (max-height: 771px) {
+
+    @-moz-document url-prefix() {
+        #light .modal-content, #dark .modal-content {
+            transform: translateY(20%);
+        }
+    }
+
+
+}
+
+@media only screen  and (min-width: 360px) and (max-width: 374px) and (max-height: 760px) {
+
+    @-moz-document url-prefix() {
+        #light .modal-content, #dark .modal-content {
+            transform: translateY(20%);
+        }
+    }
+
+
+}
+
+@media only screen  and (min-width: 360px) and (max-width: 374px) and (max-height: 747px) {
+
+    @-moz-document url-prefix() {
+        #light .modal-content, #dark .modal-content {
+            transform: translateY(-50%);
+        }
     }
 
 }
 
-@media only screen and (min-width: 360px) and (max-width: 374px) and (max-height: 720px) {
-    .container {
-        height: 165vh;
+@media only screen  and (min-width: 360px) and (max-width: 374px) and (max-height: 740px) {
+
+    @-moz-document url-prefix() {
+        #light .modal-content, #dark .modal-content {
+            transform: translateY(-50%);
+        }
     }
 
 }
 
-@media only screen and (min-width: 360px) and (max-width: 374px) and (max-height: 640px) {
-    .container {
-        height: 185vh;
+@media only screen  and (min-width: 360px) and (max-width: 374px) and (max-height: 720px) {
+
+    @-moz-document url-prefix() {
+        #light .modal-content, #dark .modal-content {
+            transform: translateY(25%);
+        }
     }
 
 }
 
-@media only screen and (min-width: 360px) and (max-width: 374px) and (max-height: 540px) {
-    .container {
-        height: 220vh;
+@media only screen  and (min-width: 360px) and (max-width: 374px) and (max-height: 657px) {
+
+    @-moz-document url-prefix() {
+        #light .modal-content, #dark .modal-content {
+            transform: translateY(25%);
+        }
     }
 
 }
 
-@media only screen and (min-width: 345px) and (max-width: 359px) and (max-height: 883px) {
+@media only screen  and (min-width: 360px) and (max-width: 374px) and (max-height: 640px) {
 
+    #light .modal-content, #dark .modal-content {
+        -webkit-transform: translateY(8%);
+        -ms-transform: translateY(8%);
+        transform: translateY(8%);
+    }
+
+    @-moz-document url-prefix() {
+
+        #light .modal-content, #dark .modal-content {
+            transform: translateY(45%);
+        }
+    }
+
+}
+
+@media only screen  and (min-width: 360px) and (max-width: 374px) and (max-height: 612px) {
+
+    #light .modal-content, #dark .modal-content {
+        -webkit-transform: translateY(8%);
+        -ms-transform: translateY(8%);
+        transform: translateY(8%);
+    }
+
+    @-moz-document url-prefix() {
+
+        #light .modal-content, #dark .modal-content {
+            transform: translateY(70%);
+        }
+    }
+
+}
+
+@media only screen  and (min-width: 345px) and (max-width: 359px) and (max-height: 883px) {
     .container {
-        height: 150vh;
+        height: auto;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 10px 10px;
         margin: 10px 10px;
@@ -5061,6 +6536,8 @@ The media only screen below takes max height 770px as well
 
         width: 99%;
         font-size: 9px;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
         transform: translateX(0);
 
     }
@@ -5069,11 +6546,45 @@ The media only screen below takes max height 770px as well
 
         width: 99%;
         font-size: 9px;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
         transform: translateX(0);
 
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 9px;
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 9px;
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 9px;
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 9px;
+    }
+
     #light textarea::placeholder {
+        font-size: 9px;
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 9px;
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 9px;
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 9px;
+    }
+
+    #dark textarea::-ms-input-placeholder {
         font-size: 9px;
     }
 
@@ -5094,7 +6605,7 @@ The media only screen below takes max height 770px as well
     }
 
     .review-button p {
-        margin-right: 2px;
+        margin-right: 0;
     }
 
     .modal-overlay {
@@ -5108,7 +6619,7 @@ The media only screen below takes max height 770px as well
     #light .modal-content, #dark .modal-content {
         width: 65%;
         max-height: 45vh; /* Adjust the value based on your design */
-        margin: 20px; /* Center the modal horizontally */
+        margin: 20px; /* Center the modal horizontonly screeny */
 
 
     }
@@ -5143,7 +6654,11 @@ The media only screen below takes max height 770px as well
 
     /* Modal Buttons */
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -5162,9 +6677,19 @@ The media only screen below takes max height 770px as well
     }
 
     @-moz-document url-prefix() {
-        #light .modal-content, #dark .modal-content {
-            transform: translateY(-45%);
+
+        #light textarea, #dark textarea {
+            height: 25%;
         }
+        #light .modal-content, #dark .modal-content {
+            transform: translateY(20%);
+        }
+        .container {
+            height: auto;
+        }
+
+
+
     }
 
 }
@@ -5172,12 +6697,15 @@ The media only screen below takes max height 770px as well
 /*
 DONE - DON'T TOUCH!
  */
-@media only screen and (min-width: 320px) and (max-width: 344px) {
+@media only screen  and (min-width: 320px) and (max-width: 344px) {
     .container {
-        height: 175vh;
+        height: auto;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 10px 10px;
         margin: 10px 10px;
@@ -5221,22 +6749,62 @@ DONE - DON'T TOUCH!
     }
 
     #light textarea {
-        width: 100.5%;
+        width: 101%;
         font-size: 8px;
+        -webkit-transform: translateX(-2px);
+        -ms-transform: translateX(-2px);
         transform: translateX(-2px);
 
     }
 
     #dark textarea {
 
-        width: 100.5%;
+        width: 101%;
         font-size: 8px;
+        -webkit-transform: translateX(-2px);
+        -ms-transform: translateX(-2px);
         transform: translateX(-2px);
+    }
+
+    #light textarea::-webkit-input-placeholder {
+        font-size: 8px;
+
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 8px;
+
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 8px;
+
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 8px;
+
     }
 
     #light textarea::placeholder {
         font-size: 8px;
 
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 8px;
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 8px;
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 8px;
+    }
+
+    #dark textarea::-ms-input-placeholder {
+        font-size: 8px;
     }
 
     #dark textarea::placeholder {
@@ -5246,6 +6814,8 @@ DONE - DON'T TOUCH!
     .error-message-textArea {
         font-size: 8px;
         width: 102%;
+        -webkit-transform: translateX(-2px);
+        -ms-transform: translateX(-2px);
         transform: translateX(-2px);
     }
 
@@ -5257,7 +6827,7 @@ DONE - DON'T TOUCH!
     }
 
     .review-button p {
-        margin-right: 2px;
+        margin-right: 0;
     }
 
     .modal-overlay {
@@ -5270,8 +6840,7 @@ DONE - DON'T TOUCH!
     /* Modal Content */
     #light .modal-content, #dark .modal-content {
         width: 70%;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 20px; /* Center the modal horizontally */
+        margin: 20px; /* Center the modal horizontonly screeny */
 
 
     }
@@ -5306,7 +6875,11 @@ DONE - DON'T TOUCH!
 
     /* Modal Buttons */
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -5325,16 +6898,20 @@ DONE - DON'T TOUCH!
     }
 
     @-moz-document url-prefix() {
+
+        #light textarea, #dark textarea {
+            height: 20%;
+        }
         .modal-overlay {
             width: 100%;
         }
 
         #light .modal-content {
-            transform: translateY(-63%);
+            transform: translateY(30%);
         }
 
         #dark .modal-content {
-            transform: translateY(-63%);
+            transform: translateY(30%);
         }
 
 
@@ -5353,12 +6930,15 @@ DONE - DON'T TOUCH!
 
 }
 
-@media only screen and (min-width: 320px) and (max-width: 344px) and (max-height: 568px) {
+@media only screen  and (min-width: 320px) and (max-width: 344px) and (max-height: 640px) {
     .container {
-        height: 200vh;
+        height: auto;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 10px 10px;
         margin: 10px 10px;
@@ -5373,10 +6953,10 @@ DONE - DON'T TOUCH!
     }
 
     .container-image {
-        margin: 110px 20px;
+        margin: 110px 16px;
         padding: 30px;
-        width: 178px;
-        height: 178px;
+        width: 186px;
+        height: 186px;
     }
 
     .container-title {
@@ -5402,22 +6982,62 @@ DONE - DON'T TOUCH!
     }
 
     #light textarea {
-        width: 100.5%;
+        width: 101%;
         font-size: 8px;
+        -webkit-transform: translateX(-2px);
+        -ms-transform: translateX(-2px);
         transform: translateX(-2px);
 
     }
 
     #dark textarea {
 
-        width: 100.5%;
+        width: 101%;
         font-size: 8px;
+        -webkit-transform: translateX(-2px);
+        -ms-transform: translateX(-2px);
         transform: translateX(-2px);
+    }
+
+    #light textarea::-webkit-input-placeholder {
+        font-size: 8px;
+
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 8px;
+
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 8px;
+
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 8px;
+
     }
 
     #light textarea::placeholder {
         font-size: 8px;
 
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 8px;
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 8px;
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 8px;
+    }
+
+    #dark textarea::-ms-input-placeholder {
+        font-size: 8px;
     }
 
     #dark textarea::placeholder {
@@ -5427,6 +7047,8 @@ DONE - DON'T TOUCH!
     .error-message-textArea {
         font-size: 8px;
         width: 102%;
+        -webkit-transform: translateX(-2px);
+        -ms-transform: translateX(-2px);
         transform: translateX(-2px);
     }
 
@@ -5438,7 +7060,7 @@ DONE - DON'T TOUCH!
     }
 
     .review-button p {
-        margin-right: 2px;
+        margin-right: 0;
     }
 
     .modal-overlay {
@@ -5451,8 +7073,7 @@ DONE - DON'T TOUCH!
     /* Modal Content */
     #light .modal-content, #dark .modal-content {
         width: 70%;
-        max-height: 50vh; /* Adjust the value based on your design */
-        margin: 20px; /* Center the modal horizontally */
+        margin: 20px; /* Center the modal horizontonly screeny */
 
 
     }
@@ -5487,7 +7108,11 @@ DONE - DON'T TOUCH!
 
     /* Modal Buttons */
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -5506,16 +7131,20 @@ DONE - DON'T TOUCH!
     }
 
     @-moz-document url-prefix() {
+
+        #light textarea, #dark textarea {
+            height: 20%;
+        }
         .modal-overlay {
             width: 100%;
         }
 
         #light .modal-content {
-            transform: translateY(-80%);
+            transform: translateY(30%);
         }
 
         #dark .modal-content {
-            transform: translateY(-80%);
+            transform: translateY(30%);
         }
 
 
@@ -5534,204 +7163,30 @@ DONE - DON'T TOUCH!
 
 }
 
-@media only screen and (min-width: 320px) and (max-width: 344px) and (max-height: 480px) {
-    .container {
-        height: 235vh;
-    }
-
-    .container-wrapper {
-        flex-direction: column;
-        padding: 10px 10px;
-        margin: 10px 10px;
-    }
-
-    .text-area-label {
-        font-size: 10px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        position: relative;
-        right: 2px;
-    }
-
-    .container-image {
-        margin: 110px 20px;
-        padding: 30px;
-        width: 178px;
-        height: 178px;
-    }
-
-    .container-title {
-        font-size: 20px;
-        text-align: center;
-        width: 100%;
-
-    }
-
-    .container-desc {
-        font-size: 12px;
-        text-align: center;
-        width: 90%;
-
-    }
-
-    .container-bg {
-        display: none;
-    }
-
-    form {
-        margin-top: 230px;
-    }
-
-    #light textarea {
-        width: 100.5%;
-        font-size: 8px;
-        transform: translateX(-2px);
-
-    }
-
-    #dark textarea {
-
-        width: 100.5%;
-        font-size: 8px;
-        transform: translateX(-2px);
-    }
-
-    #light textarea::placeholder {
-        font-size: 8px;
-
-    }
-
-    #dark textarea::placeholder {
-        font-size: 8px;
-    }
-
-    .error-message-textArea {
-        font-size: 8px;
-        width: 102%;
-        transform: translateX(-2px);
-    }
-
-
-    .review-button {
-        margin: 0 41px;
-        height: 40px;
-        width: 110px;
-    }
-
-    .review-button p {
-        margin-right: 2px;
-    }
-
-    .modal-overlay {
-        width: 100%;
-
-    }
-
-    /* Modal Content */
+@media only screen  and (min-width: 320px) and (max-width: 344px) and (max-height: 568px) {
     #light .modal-content, #dark .modal-content {
-        width: 70%;
-        max-height: 45vh; /* Adjust the value based on your design */
-        padding: 20px;
-
-
+        overflow-y: auto;
+        transform: translateY(-60%);
     }
-
-    #light .modal-content h2 {
-        margin-bottom: 20px;
-        color: #000000;
-        font-size: 15px;
-        text-align: center;
-    }
-
-    #dark .modal-content h2 {
-        margin-bottom: 20px;
-        color: #ffffff;
-        font-size: 15px;
-        text-align: center;
-    }
-
-    #light .modal-desc, #dark .modal-desc {
-        margin: 10px 0;
-        font-size: 13px;
-    }
-
-    #light .input-label, #dark .input-label {
-        font-size: 12px;
-    }
-
-    #light .input-value, #dark .input-value {
-        font-size: 11px;
-        word-wrap: break-word;
-    }
-
-    /* Modal Buttons */
-    .modal-buttons {
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 20px;
-
-    }
-
-    .back-button {
-        height: 35px;
-        width: 100px;
-        margin: 5px;
-    }
-
-    .submit-button {
-        height: 35px;
-        width: 100px;
-        margin: 5px
-    }
-
     @-moz-document url-prefix() {
-        .modal-overlay {
-            width: 100%;
+        #light .modal-content, #dark .modal-content {
+            transform: translateY(-40%);
         }
 
-        #light .modal-content {
-
-            transform: translateY(-115%);
-            width: 70%;
-            max-height: 45vh; /* Adjust the value based on your design */
-            padding: 20px;
-
-
-        }
-
-        #dark .modal-content {
-
-            transform: translateY(-115%);
-            width: 70%;
-            max-height: 45vh; /* Adjust the value based on your design */
-            padding: 20px;
-        }
-
-
-        .back-button {
-            height: 35px;
-            width: 100px;
-            margin: 5px;
-        }
-
-        .submit-button {
-            height: 35px;
-            width: 100px;
-            margin: 5px;
-        }
     }
-
 }
-
 /*
 DONE - DON'T TOUCH!
  */
-@media only screen and (min-width: 280px) and (max-width: 319px) and (max-height: 653px) {
+@media only screen  and (min-width: 280px) and (max-width: 319px) and (max-height: 653px) {
     .container {
-        height: 175vh;
+        height: auto;
     }
 
     .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding: 12px 12px;
         margin: 10px 10px;
@@ -5748,7 +7203,7 @@ DONE - DON'T TOUCH!
     }
 
     .container-image {
-        margin: 100px 1px;
+        margin: 100px 17px;
         width: 172px;
         height: 172px;
     }
@@ -5762,7 +7217,7 @@ DONE - DON'T TOUCH!
     .container-desc {
         font-size: 10px;
         text-align: center;
-        width: 95%;
+        width: 83%;
     }
 
     .container-bg {
@@ -5774,18 +7229,54 @@ DONE - DON'T TOUCH!
     }
 
     #light textarea {
-        width: 110.5%;
+        width: 111%;
         font-size: 8px;
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
         transform: translateX(-10px);
     }
 
     #dark textarea {
-        width: 110.5%;
+        width: 111%;
         font-size: 8px;
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
         transform: translateX(-10px);
     }
 
+    #light textarea::-webkit-input-placeholder {
+        font-size: 8px;
+    }
+
+    #light textarea::-moz-placeholder {
+        font-size: 8px;
+    }
+
+    #light textarea:-ms-input-placeholder {
+        font-size: 8px;
+    }
+
+    #light textarea::-ms-input-placeholder {
+        font-size: 8px;
+    }
+
     #light textarea::placeholder {
+        font-size: 8px;
+    }
+
+    #dark textarea::-webkit-input-placeholder {
+        font-size: 8px;
+    }
+
+    #dark textarea::-moz-placeholder {
+        font-size: 8px;
+    }
+
+    #dark textarea:-ms-input-placeholder {
+        font-size: 8px;
+    }
+
+    #dark textarea::-ms-input-placeholder {
         font-size: 8px;
     }
 
@@ -5797,19 +7288,21 @@ DONE - DON'T TOUCH!
     .error-message-textArea {
         font-size: 8px;
         width: 112.5%;
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
         transform: translateX(-10px);
 
 
     }
 
     .review-button {
-        margin: 0 23px;
+        margin: 0 35px;
         height: 40px;
         width: 110px;
     }
 
     .review-button p {
-        margin-right: 1px;
+        margin-left: 1px;
     }
 
     .modal-overlay {
@@ -5822,7 +7315,7 @@ DONE - DON'T TOUCH!
     #light .modal-content, #dark .modal-content {
         width: 280px;
         max-height: 45vh; /* Adjust the value based on your design */
-        margin: 20px; /* Center the modal horizontally */
+        margin: 20px; /* Center the modal horizontonly screeny */
     }
 
     #light .modal-content h2 {
@@ -5855,7 +7348,11 @@ DONE - DON'T TOUCH!
 
     /* Modal Buttons */
     .modal-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-evenly;
         margin-top: 20px;
 
@@ -5874,6 +7371,10 @@ DONE - DON'T TOUCH!
     }
 
     @-moz-document url-prefix() {
+
+        #light textarea, #dark textarea {
+            height: 20%;
+        }
         .modal-overlay {
             width: 100%;
         }
@@ -5883,7 +7384,7 @@ DONE - DON'T TOUCH!
             padding: 20px;
             width: 70%;
             max-height: 45vh;
-            transform: translateY(-70%);
+            transform: translateY(55%);
 
         }
 
@@ -5891,7 +7392,7 @@ DONE - DON'T TOUCH!
             padding: 20px;
             width: 70%;
             max-height: 45vh;
-            transform: translateY(-70%);
+            transform: translateY(55%);
         }
 
 

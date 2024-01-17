@@ -1,8 +1,22 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .project-body {
 
     padding: 50px 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     text-align: center;
 }
@@ -21,8 +35,13 @@
 }
 
 .project-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
 }
@@ -30,6 +49,7 @@
 /*
  Mobile-view
  */
+
 @media only screen and (min-width: 667px) and (max-width: 668px) and (max-height: 375px) {
     .project-body {
         padding: 30px;
@@ -198,9 +218,9 @@
     }
 }
 
-/*
+/*!*
 DONE - DON'T TOUCH!
- */
+ *!*/
 @media only screen and (min-width: 480px) and (max-width: 503px) and (max-height: 320px) {
     .project-body {
         padding: 30px;
@@ -222,9 +242,9 @@ DONE - DON'T TOUCH!
     }
 }
 
-/*
+/*!*
 DONE - DON'T TOUCH!
- */
+ *!*/
 @media only screen and (min-width: 432px) and (max-width: 479px) {
     .project-body {
         padding: 30px;
@@ -246,9 +266,9 @@ DONE - DON'T TOUCH!
     }
 }
 
-/*
+/*!*
 DONE - DON'T TOUCH!
- */
+ *!*/
 @media only screen and (min-width: 430px) and (max-width: 431px) {
     .project-body {
         padding: 30px;
@@ -270,9 +290,9 @@ DONE - DON'T TOUCH!
     }
 }
 
-/*
+/*!*
 DONE - DON'T TOUCH!
- */
+ *!*/
 @media only screen and (min-width: 428px) and (max-width: 429px) {
     .project-body {
         padding: 30px;
@@ -292,11 +312,18 @@ DONE - DON'T TOUCH!
         font-size: 16px;
         padding: 0 51px;
     }
+
+    @-moz-document url-prefix() {
+        .project-body {
+            padding: 30px;
+            margin-top: 570px;
+        }
+    }
 }
 
-/*
+/*!*
 DONE - DON'T TOUCH!
- */
+ *!*/
 @media only screen and (min-width: 414px) and (max-width: 427px) {
     .project-body {
         padding: 30px;
@@ -337,14 +364,26 @@ DONE - DON'T TOUCH!
         font-size: 16px;
         padding: 0 51px;
     }
+
+    @-moz-document url-prefix() {
+
+        .project-body {
+            padding: 30px;
+            margin-top: 250px;
+
+        }
+        .project-description {
+            font-size: 14px;
+
+        }
+    }
 }
 
-/*
+/*!*
 DONE - DON'T TOUCH!
- */
+ *!*/
 @media only screen and (min-width: 412px) and (max-width: 413px) {
     .project-body {
-
         margin-top: 180px;
         padding: 30px;
     }
@@ -370,9 +409,10 @@ DONE - DON'T TOUCH!
         margin-top: 300px;
     }
 }
-/*
+
+/*!*
 Takes height 906px and 914px as well
- */
+ *!*/
 @media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 915px) {
     .project-body {
         margin-top: 305px;
@@ -418,53 +458,13 @@ Takes height 906px and 914px as well
 
         margin-top: 490px;
     }
+
 }
-/*
+
+
+/*!*
 DONE - DON'T TOUCH!
- */
-@media only screen and (min-width: 411px) and (max-width: 411px) {
-    .project-body {
-        padding: 30px;
-        margin-top: 220px;
-    }
-
-    .project-texts {
-        width: 100%;
-    }
-
-    .project-title {
-        font-size: 30px;
-    }
-
-    .project-description {
-        font-size: 15px;
-        padding: 0 58px;
-    }
-}
-
-@media only screen and (min-width: 411px) and (max-width: 411px) and (max-height: 731px) {
-    .project-body {
-        padding: 30px;
-        margin-top: 440px;
-    }
-
-    .project-texts {
-        width: 100%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 15px;
-        padding: 0 58px;
-    }
-}
-/*
-DONE - DON'T TOUCH!
- */
+ *!*/
 @media only screen and (min-width: 400px) and (max-width: 410px) {
     .project-body {
         padding: 30px;
@@ -485,10 +485,33 @@ DONE - DON'T TOUCH!
         padding: 0 53px;
     }
 }
-/*
+
+
+@media only screen and (min-width: 393px) and (max-width: 399px) {
+    .project-body {
+        padding: 20px;
+        margin-top: 450px;
+    }
+
+    .project-texts {
+        width: 103%;
+    }
+
+    .project-title {
+        font-size: 30px;
+
+    }
+
+    .project-description {
+        font-size: 15px;
+        padding: 0 55px;
+    }
+}
+
+/*!*
 DONE - DON'T TOUCH!
- */
-@media only screen and (min-width: 392px) and (max-width: 399px) {
+ *!*/
+@media only screen and (min-width: 392px) and (max-width: 392px) {
     .project-body {
         padding: 20px;
         margin-top: 340px;
@@ -508,13 +531,14 @@ DONE - DON'T TOUCH!
         padding: 0 55px;
     }
 }
-/*
+
+/*!*
 DONE - DON'T TOUCH!
- */
+ *!*/
 @media only screen and (min-width: 390px) and (max-width: 391px) {
     .project-body {
         padding: 20px;
-        margin-top: 335px;
+        margin-top: 400px;
     }
 
     .project-texts {
@@ -532,50 +556,9 @@ DONE - DON'T TOUCH!
     }
 }
 
-@media only screen and (min-width: 390px) and (max-width: 391px) and (max-height: 695px) {
-    .project-body {
-        padding: 20px;
-        margin-top: 500px;
-    }
-
-    .project-texts {
-        width: 103%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 15px;
-        padding: 0 55px;
-    }
-}
-
-@media only screen and (min-width: 390px) and (max-width: 391px) and (max-height: 390px) {
-    .project-body {
-        padding: 30px;
-        margin-top: 770px;
-    }
-
-    .project-texts {
-        width: 110%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 15px;
-        padding: 0 64px;
-    }
-}
-/*
+/*!*
 DONE - DON'T TOUCH!
- */
+ *!*/
 @media only screen and (min-width: 385px) and (max-width: 389px) {
     .project-body {
         padding: 20px;
@@ -596,13 +579,14 @@ DONE - DON'T TOUCH!
         padding: 0 64px;
     }
 }
-/*
+
+/*!*
 DONE - DON'T TOUCH!
- */
+ *!*/
 @media only screen and (min-width: 384px)  and (max-width: 384px) {
     .project-body {
         padding: 20px;
-        margin-top: 340px;
+        margin-top: 400px;
     }
 
     .project-texts {
@@ -616,7 +600,7 @@ DONE - DON'T TOUCH!
 
     .project-description {
         font-size: 15px;
-        padding: 0 55px;
+        padding: 0 40px;
     }
 }
 
@@ -640,9 +624,13 @@ DONE - DON'T TOUCH!
         padding: 0 55px;
     }
 }
+
+
 /*
+!*
 DONE - DON'T TOUCH!
- */
+ *!
+*/
 
 @media only screen and (min-width: 375px) and (max-width: 383px) {
     .project-body {
@@ -663,12 +651,17 @@ DONE - DON'T TOUCH!
         font-size: 15px;
         padding: 0 55px;
     }
-}
 
+    @-moz-document url-prefix() {
+        .project-body {
+            margin-top: 250px;
+        }
+    }
+}
 @media only screen and (min-width: 375px)  and (max-width: 383px) and (max-height: 667px) {
     .project-body {
         padding: 23px;
-        margin-top: 530px;
+        margin-top: 580px;
     }
 
     .project-texts {
@@ -682,12 +675,74 @@ DONE - DON'T TOUCH!
 
     .project-description {
         font-size: 15px;
-        padding: 0 55px;
+        padding: 0 45px;
+    }
+
+    @-moz-document url-prefix() {
+        .project-body {
+            margin-top: 250px;
+        }
     }
 }
-/*
+
+@media only screen and (min-width: 375px)  and (max-width: 383px) and (max-height: 629px) {
+    .project-body {
+        padding: 23px;
+        margin-top: 600px;
+    }
+
+    .project-texts {
+        width: 105%;
+    }
+
+    .project-title {
+        font-size: 30px;
+
+    }
+
+    .project-description {
+        font-size: 15px;
+        padding: 0 45px;
+    }
+
+    @-moz-document url-prefix() {
+        .project-body {
+            margin-top: 250px;
+        }
+    }
+}
+
+@media only screen and (min-width: 375px)  and (max-width: 383px) and (max-height: 559px) {
+    .project-body {
+        padding: 23px;
+        margin-top: 550px;
+    }
+
+    .project-texts {
+        width: 105%;
+    }
+
+    .project-title {
+        font-size: 30px;
+
+    }
+
+    .project-description {
+        font-size: 15px;
+        padding: 0 45px;
+    }
+
+    @-moz-document url-prefix() {
+        .project-body {
+            margin-top: 250px;
+        }
+    }
+}
+
+
+/*!*
 DONE - DON'T TOUCH!
- */
+ *!*/
 @media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 840px) {
     .project-body {
         padding: 20px;
@@ -708,7 +763,6 @@ DONE - DON'T TOUCH!
         padding: 0 50px;
     }
 }
-
 @media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 800px) {
     .project-body {
         padding: 20px;
@@ -717,7 +771,6 @@ DONE - DON'T TOUCH!
 
 
 }
-
 @media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 780px) {
     .project-body {
         padding: 20px;
@@ -726,7 +779,6 @@ DONE - DON'T TOUCH!
 
 
 }
-
 @media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 771px) {
     .project-body {
         padding: 20px;
@@ -735,7 +787,6 @@ DONE - DON'T TOUCH!
 
 
 }
-
 @media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 770px) {
     .project-body {
         padding: 20px;
@@ -743,7 +794,6 @@ DONE - DON'T TOUCH!
     }
 
 }
-
 @media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 760px) {
     .project-body {
         padding: 20px;
@@ -751,7 +801,6 @@ DONE - DON'T TOUCH!
     }
 
 }
-
 @media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 747px) {
     .project-body {
         padding: 20px;
@@ -760,7 +809,6 @@ DONE - DON'T TOUCH!
 
 
 }
-
 @media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 740px) {
     .project-body {
         padding: 20px;
@@ -769,13 +817,29 @@ DONE - DON'T TOUCH!
 
 
 }
-
 @media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 720px) {
     .project-body {
         padding: 20px;
         margin-top: 480px;
     }
 
+
+}
+
+@media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 670px) {
+    .project-body {
+        padding: 20px;
+        margin-top: 420px;
+    }
+
+
+}
+
+@media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 657px) {
+    .project-body {
+        padding: 20px;
+        margin-top: 400px;
+    }
 
 }
 
@@ -787,13 +851,14 @@ DONE - DON'T TOUCH!
 
 }
 
-@media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 540px) {
+@media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 612px) {
     .project-body {
         padding: 20px;
-        margin-top: 640px;
+        margin-top: 500px;
     }
 
 }
+
 
 @media only screen and (min-width: 345px) and (max-width: 359px) and (max-height: 883px) {
     .project-body {
@@ -839,10 +904,31 @@ DONE - DON'T TOUCH!
     }
 }
 
+@media only screen and (min-width: 320px) and (max-width: 344px) and (max-height: 640px) {
+    .project-body {
+        padding: 20px;
+        margin-top: 320px;
+    }
+
+    .project-texts {
+        width: 105%;
+    }
+
+    .project-title {
+        font-size: 30px;
+
+    }
+
+    .project-description {
+        font-size: 12px;
+        padding: 0 50px;
+    }
+}
+
 @media only screen and (min-width: 320px) and (max-width: 344px) and (max-height: 568px) {
     .project-body {
         padding: 20px;
-        margin-top: 395px;
+        margin-top: 620px;
     }
 
     .project-texts {
@@ -859,25 +945,6 @@ DONE - DON'T TOUCH!
     }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 344px) and (max-height: 480px) {
-    .project-body {
-        padding: 20px;
-        margin-top: 470px;
-    }
-
-    .project-texts {
-        width: 105%;
-    }
-
-    .project-title {
-        font-size: 30px;
-    }
-
-    .project-description {
-        font-size: 12px;
-        padding: 0 50px;
-    }
-}
 
 /*
 DONE - DON'T TOUCH!
@@ -886,7 +953,7 @@ DONE - DON'T TOUCH!
 @media only screen and (min-width: 280px) and (max-width: 319px) and (max-height: 653px) {
     .project-body {
         padding: 10px;
-        margin-top: 205px;
+        margin-top: 230px;
 
     }
 
@@ -900,7 +967,7 @@ DONE - DON'T TOUCH!
 
     .project-description {
         font-size: 10px;
-        padding: 0 50px;
+        padding: 0 60px;
 
 
     }

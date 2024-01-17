@@ -1,6 +1,6 @@
 import React, {useRef, useState, useEffect} from 'react';
 import './Contact.css';
-import Avatar from '../../image/Vishal-02.jpg';
+import Avatar from '../../image/Vishal-Contact.jpg';
 import {Fade} from 'react-reveal';
 
 import {Slide, toast, ToastContainer} from 'react-toastify';
@@ -9,9 +9,15 @@ import InputForm from './InputForm';
 
 const Contact = ({setModalOpen, setMenuOpen}) => {
     const [focused, setFocus] = useState(false);
+
     const handleFocus = () => {
         setFocus(true);
+
     };
+    const handleInputClick = () => {
+        setMenuOpen(false);
+    };
+
 
     const [vals, setVals] = useState({
         user_name: '',
@@ -28,9 +34,9 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
     const [countdownTimer, setCountdownTimer] = useState(30);
     useEffect(() => {
 
-        const body = document.body;
+
         if (showModal) {
-            body.classList.add("no-scroll")
+            document.body.style.overflow = "hidden"
             setTimerSubmit(true);
             const interval = setInterval(() => {
                 setTimer((prevTimer) => {
@@ -46,7 +52,7 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
                 clearInterval(interval);
             };
         } else {
-            body.classList.remove("no-scroll");
+            document.body.style.overflow = "auto"
             setTimerSubmit(false);
             setTimer(10); // Reset timer when modal is closed
         }
@@ -78,6 +84,7 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
     }, []); // Run this effect only once on component mount
 
 
+
     const inputs = [
         {
             id: 1,
@@ -85,7 +92,8 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
             type: 'text',
             placeholder: 'Enter your name here. ',
             errorMsg:
-                "Please enter either a valid first name, or a full name with no spaces. Make sure you don't exceed past 50 characters, or use any numbers or special characters that are not typically associated with names. ",
+                "Please enter a valid first name or a full name with a space that is between 2-50 characters. " +
+                "Avoid using numbers or any special characters that are not typically used in names.",
             label: 'Name',
             required: true,
             pattern: "^[a-zA-Z]+[a-zA-Z\\s]*?[^0-9]{1,50}$"
@@ -96,10 +104,11 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
             type: 'text',
             placeholder: 'Enter the message subject here.',
             errorMsg:
-                'Please enter a valid subject that summarizes your message here. Make sure you don\'t exceed past 78 characters.',
+                'Please enter a valid subject title that can summarize your message here. Make sure you don\'t exceed ' +
+                'past 78 characters, or start the title of the subject with a special character.',
             label: 'Subject',
             required: true,
-            pattern: "^[a-zA-Z0-9]+[a-zA-Z0-9\\s]*[^0-9]{2,78}$"
+            pattern: "^[! ]?[^\\s](\\s*[^\\s]){1,76}$"
         },
         {
             id: 3,
@@ -107,7 +116,7 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
             type: 'email',
             placeholder: 'Enter your email here.',
             errorMsg:
-                'Please enter a valid email address. Make sure you are using a valid email domain so that I can reply my response back to you.',
+                'Please enter a valid email address. This is so I can reply my response back to you.',
             label: "Email",
             required: true,
         },
@@ -120,6 +129,8 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
         const lastSubmitTime = localStorage.getItem('lastSubmitTime');
         const currentTime = new Date().getTime();
         const elapsedTimeSinceSubmit = (currentTime - lastSubmitTime) / 1000;
+        const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
+        const isVirtualKeyboardActive = document.activeElement.tagName === 'INPUT';
 
         if (isReviewButtonDisabled && elapsedTimeSinceSubmit < 30) {
             const remainingTime = Math.ceil(30 - elapsedTimeSinceSubmit);
@@ -132,11 +143,23 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
             });
             return;
         }
-        const contactSection = document.getElementById('contact');
-        if (contactSection) {
+        if (isFirefox && isVirtualKeyboardActive) {
+            // Close the keyboard
+            document.activeElement.blur();
+
+            // Introduce a delay before scrolling to the modal
             setTimeout(() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                    contactSection.scrollIntoView({behavior: 'smooth'});
+                }
+            }, 1000); // Adjust the delay based on your needs
+        } else {
+            // Proceed with scrolling to the modal as before
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
                 contactSection.scrollIntoView({behavior: 'smooth'});
-            }, 100); // Adjust the delay based on your needs
+            }
         }
         setIsReviewButtonDisabled(false);
         setShowModal(true);
@@ -211,7 +234,7 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
                         <form ref={formRef} onSubmit={handleReview}>
                             {inputs.map((inputVals) => (
                                 <InputForm key={inputVals.id} {...inputVals} value={vals[inputVals.name]}
-                                           onChange={handleChange}/>
+                                           onChange={handleChange} autoCapitalize="none" onClick={handleInputClick}/>
                             ))}
                             <label className="text-area-label">Your message</label>
                             <textarea
