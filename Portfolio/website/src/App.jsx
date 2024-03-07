@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import ProjectList from "./components/ProjectList/ProjectList";
 import Contact from "./components/contact/Contact";
 import {createContext, useState} from "react";
+
 import SideMenu from "./components/SideMenu/SideMenu";
 import Switch from "react-switch";
 import "./App.css"
@@ -29,7 +30,7 @@ function App() {
                 <Intro/>
                 <About/>
                 <ProjectList/>
-                <Contact setModalOpen={setModalOpen} setMenuOpen={setMenuOpen}/>
+                <Contact setMenuOpen={setMenuOpen}/>
                 <Fade effect="fade" delay={800}>
                     <div className="toggle-switch">
                         <label htmlFor="icon-switch">

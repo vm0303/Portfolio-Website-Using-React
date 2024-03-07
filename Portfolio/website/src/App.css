@@ -1,9 +1,6 @@
-* {
-    margin: 0;
-    padding: 0;
+body {
+    -webkit-overflow-scrolling: touch;
 }
-
-
 #dark {
     color: white;
     width: 100%;

@@ -3,11 +3,13 @@ import './Contact.css';
 import Avatar from '../../image/Vishal-Contact.jpg';
 import {Fade} from 'react-reveal';
 
+
 import {Slide, toast, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import InputForm from './InputForm';
 
-const Contact = ({setModalOpen, setMenuOpen}) => {
+const Contact = ({setMenuOpen}) => {
+
     const [focused, setFocus] = useState(false);
 
     const handleFocus = () => {
@@ -25,65 +27,6 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
         user_email: '',
     });
 
-    const [showModal, setShowModal] = useState(false);
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [timerSubmit, setTimerSubmit] = useState(false);
-    const [isClosing, setIsClosing] = useState(false);
-    const [timer, setTimer] = useState(10); // Initial timer value in seconds for submit button
-    const [isReviewButtonDisabled, setIsReviewButtonDisabled] = useState(false);
-    const [countdownTimer, setCountdownTimer] = useState(30);
-    useEffect(() => {
-
-
-        if (showModal) {
-            document.body.style.overflow = "hidden"
-            setTimerSubmit(true);
-            const interval = setInterval(() => {
-                setTimer((prevTimer) => {
-                    if (prevTimer === 1) {
-                        setTimerSubmit(false);
-                        clearInterval(interval);
-                    }
-                    return prevTimer - 1;
-                });
-            }, 1000);
-
-            return () => {
-                clearInterval(interval);
-            };
-        } else {
-            document.body.style.overflow = "auto"
-            setTimerSubmit(false);
-            setTimer(10); // Reset timer when modal is closed
-        }
-    }, [showModal]);
-
-    useEffect(() => {
-        const lastSubmitTime = localStorage.getItem('lastSubmitTime');
-        const currentTime = new Date().getTime();
-        const elapsedTimeSinceSubmit = (currentTime - lastSubmitTime) / 1000;
-
-        if (elapsedTimeSinceSubmit < 30) {
-            setCountdownTimer(-Math.floor(elapsedTimeSinceSubmit));
-            setIsReviewButtonDisabled(true);
-
-            const interval = setInterval(() => {
-                setCountdownTimer((prevTimer) => {
-                    if (prevTimer === 1) {
-                        setIsReviewButtonDisabled(false);
-                        clearInterval(interval);
-                    }
-                    return prevTimer - 1;
-                });
-            }, 1000);
-
-            return () => {
-                clearInterval(interval);
-            };
-        }
-    }, []); // Run this effect only once on component mount
-
-
 
     const inputs = [
         {
@@ -93,10 +36,11 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
             placeholder: 'Enter your name here. ',
             errorMsg:
                 "Please enter a valid first name or a full name with a space that is between 2-50 characters. " +
-                "Avoid using numbers or any special characters that are not typically used in names.",
+                "Avoid using numbers or any special characters that are not typically used in names." +
+                "In addition, make sure you don't start with a whitespace.",
             label: 'Name',
             required: true,
-            pattern: "^[a-zA-Z]+[a-zA-Z\\s]*?[^0-9]{1,50}$"
+            pattern: "^(?! )(?![\\d])[A-Za-z][A-Za-z\\s]{1,49}$"
         },
         {
             id: 2,
@@ -104,8 +48,9 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
             type: 'text',
             placeholder: 'Enter the message subject here.',
             errorMsg:
-                'Please enter a valid subject title that can summarize your message here. Make sure you don\'t exceed ' +
-                'past 78 characters, or start the title of the subject with a special character.',
+                'Please enter a valid subject title that can summarize your message here. ' +
+                'Make sure it is between 2-78 characters, and that it does not start with a special character, ' +
+                'or a whitespace.',
             label: 'Subject',
             required: true,
             pattern: "^[! ]?[^\\s](\\s*[^\\s]){1,76}$"
@@ -124,67 +69,13 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
 
     const formRef = useRef();
 
-    const handleReview = (event) => {
+    /*The code below handles the logic when the modal is open*/
+
+
+    const handleReview = async (event) => {
         event.preventDefault();
-        const lastSubmitTime = localStorage.getItem('lastSubmitTime');
-        const currentTime = new Date().getTime();
-        const elapsedTimeSinceSubmit = (currentTime - lastSubmitTime) / 1000;
-        const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
-        const isVirtualKeyboardActive = document.activeElement.tagName === 'INPUT';
 
-        if (isReviewButtonDisabled && elapsedTimeSinceSubmit < 30) {
-            const remainingTime = Math.ceil(30 - elapsedTimeSinceSubmit);
-            const remainingMinutes = Math.floor(remainingTime / 60);
-            const remainingSeconds = remainingTime % 60;
-
-            toast(`In order to avoid spam and mass submission, please wait ${remainingMinutes} minutes and ${remainingSeconds} 
-            seconds before you can review and submit another form.`, {
-                className: 'foo-bar',
-            });
-            return;
-        }
-        if (isFirefox && isVirtualKeyboardActive) {
-            // Close the keyboard
-            document.activeElement.blur();
-
-            // Introduce a delay before scrolling to the modal
-            setTimeout(() => {
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                    contactSection.scrollIntoView({behavior: 'smooth'});
-                }
-            }, 1000); // Adjust the delay based on your needs
-        } else {
-            // Proceed with scrolling to the modal as before
-            const contactSection = document.getElementById('contact');
-            if (contactSection) {
-                contactSection.scrollIntoView({behavior: 'smooth'});
-            }
-        }
-        setIsReviewButtonDisabled(false);
-        setShowModal(true);
-        setModalOpen(true);
-        setMenuOpen(false);
-    };
-
-    const handleReviewSubmit = () => {
-        setIsSubmitting(true);
-        setTimeout(() => {
-            setIsSubmitting(false);
-            setIsClosing(true); // Trigger fade-out animation
-            setModalOpen(false);
-            setTimeout(() => {
-                setShowModal(false);
-                setModalOpen(false);
-                setIsClosing(false);
-                toast('Thanks! Your response has been sent! Please give me some time to respond back to you.', {
-                    className: 'foo-bar',
-                });
-                localStorage.setItem('lastSubmitTime', new Date().getTime());
-                setIsReviewButtonDisabled(true);
-            }, 500); // Adjust the delay based on your fade-out animation duration
-        }, 2000);
-    };
+    }
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -203,19 +94,9 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
         }
     };
 
-    const closeModal = () => {
-        localStorage.removeItem('contactFormSubmitted');
-        setIsClosing(true); // Trigger fade-out animation
-        setModalOpen(false);
-        setTimeout(() => {
-            setShowModal(false);
-            setIsClosing(false);
-        }, 500); // Adjust the delay based on your fade-out animation duration
-    };
-
     return (
         <Fade effect="fade" delay={700}>
-            <div id="contact" className="container">
+            <div className='container fade-out' id="contact">
                 <div className="container-bg"></div>
                 <div className="container-wrapper">
                     <div className="container-left">
@@ -229,12 +110,14 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
                     <div className="container-right">
                         <p className="container-desc bolded">Have any questions, comments, or job opportunities for
                             me?</p>
-                        <p className="container-desc">Don't hesitate to get in contact with me by filling out the form
+                        <p className="container-desc">Don't hesitate to get in contact with me by filling out the
+                            form
                             below!</p>
                         <form ref={formRef} onSubmit={handleReview}>
                             {inputs.map((inputVals) => (
                                 <InputForm key={inputVals.id} {...inputVals} value={vals[inputVals.name]}
-                                           onChange={handleChange} autoCapitalize="none" onClick={handleInputClick}/>
+                                           onChange={handleChange} autoCapitalize="none"
+                                           onClick={handleInputClick}/>
                             ))}
                             <label className="text-area-label">Your message</label>
                             <textarea
@@ -249,55 +132,49 @@ const Contact = ({setModalOpen, setMenuOpen}) => {
                                 value={vals.message}
                                 onChange={handleChange}
                             />
-                            <p className="error-message-textArea">Please enter your message above.</p>
-                            <button className={`review-button ${isReviewButtonDisabled ? 'disabled' : ''}`}
+                            <p className="error-message-textArea">Please enter your message above.
+                                Make sure you don't exceed past 480 characters.</p>
+                            <button className='review-button'
                                     type="submit">
                                 <p>Review</p>
                             </button>
                         </form>
                         <ToastContainer position="bottom-right" transition={Slide}/>
-                        {/* Display Modal */}
-                        {showModal && (
-                            <div className={`modal-overlay ${isClosing ? 'fade-out' : ''}`}>
-                                <div className={`modal-content ${isClosing ? 'fade-out' : ''}`}>
-                                    <h2 className="modal-title">Review Your Submission</h2>
-                                    <p className="modal-desc">Please review what you typed in form down below. </p>
-                                    <p className="modal-desc">
-                                        If you need to make any changes, click or tap the back button.
-                                    </p>
-                                    <p className="modal-desc">
-                                        Otherwise, wait 10 seconds before you can click or tap the submit button. This
-                                        is to prevent any
-                                        accidental submissions.
-                                    </p>
+                    </div>
+                </div>
+                <div className='container-review fade-in'>
+                    <h2 className="modal-title">Review Your Submission</h2>
+                    <p className="modal-desc">Please review what you typed in the form down below. </p>
+                    <p className="modal-desc">
+                        If you need to make any changes, click or tap the back button.
+                    </p>
+                    <p className="modal-desc">
+                        Otherwise, wait 10 seconds before you can click or tap the submit button. This
+                        is to prevent any
+                        accidental submissions.
+                    </p>
 
-                                    {inputs.map((inputVals) => (
-                                        <div key={inputVals.id} className="review-field">
-                                            <label className="input-label">{inputVals.label}:</label>
-                                            <p className="input-value">{vals[inputVals.name]}</p>
-                                        </div>
-                                    ))}
-                                    <div className="review-field">
-                                        <label className="input-label">Your message:</label>
-                                        <p className="input-value">{vals.message}</p>
-                                    </div>
-                                    <div className="modal-buttons">
-                                        <button className="back-button" onClick={closeModal} type="button">
-                                            <p>Back</p>
-                                        </button>
-                                        <button type="submit" className="submit-button"
-                                                disabled={timerSubmit || isSubmitting} onClick={handleReviewSubmit}>
-                                            <p>{isSubmitting ? 'Submitting...' : timerSubmit ? `Wait (${timer}s)` : 'Submit'}</p>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
+                    {inputs.map((inputVals) => (
+                        <div key={inputVals.id} className="review-field">
+                            <label className="input-label">{inputVals.label}:</label>
+                            <p className="input-value">{vals[inputVals.name]}</p>
+                        </div>
+                    ))}
+                    <div className="review-field">
+                        <label className="input-label">Your message:</label>
+                        <p className="input-value">{vals.message}</p>
+                    </div>
+                    <div className="modal-buttons">
+                        <button className="back-button" type="button">
+                            <p>Back</p>
+                        </button>
+                        <button type="submit" className="submit-button">
+                            <p>Submit</p>
+                        </button>
                     </div>
                 </div>
             </div>
         </Fade>
     );
 };
-
 export default Contact;

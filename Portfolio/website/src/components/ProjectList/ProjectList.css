@@ -46,523 +46,16 @@
     width: 100%;
 }
 
-/*
- Mobile-view
- */
 
-@media only screen and (min-width: 667px) and (max-width: 668px) and (max-height: 375px) {
-    .project-body {
-        padding: 30px;
-        margin-top: 830px;
-    }
-
-    .project-texts {
-        width: 100%;
-    }
-
-    .project-title {
-        font-size: 40px;
-
-    }
-
-    .project-description {
-        font-size: 20px;
-        padding: 0 147px;
-    }
-}
-
-@media only screen and (min-width: 653px) and (max-width: 666px) and (max-height: 280px) {
-    .project-body {
-        padding: 30px;
-        margin-top: 830px;
-    }
-
-    .project-texts {
-        width: 100%;
-    }
-
-    .project-title {
-        font-size: 35px;
-
-    }
-
-    .project-description {
-        font-size: 20px;
-        padding: 0 140px;
-    }
-}
-
-@media only screen and (min-width: 640px) and (max-width: 652px) and (max-height: 360px) {
-    .project-body {
-        padding: 30px;
-        margin-top: 865px;
-    }
-
-    .project-texts {
-        width: 100%;
-    }
-
-    .project-title {
-        font-size: 40px;
-
-    }
-
-    .project-description {
-        font-size: 20px;
-        padding: 0 114px;
-    }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 639px) {
-    .project-body {
-        padding: 30px;
-        margin-top: 370px;
-    }
-
-    .project-texts {
-        width: 100%;
-    }
-
-    .project-title {
-        font-size: 40px;
-
-    }
-
-    .project-description {
-        font-size: 20px;
-        padding: 0 114px;
-    }
-}
-
-@media only screen and (min-width: 568px) and (max-width: 599px) and (max-height: 320px) {
-    .project-body {
-        padding: 30px;
-        margin-top: 850px;
-    }
-
-    .project-texts {
-        width: 100%;
-    }
-
-    .project-title {
-        font-size: 35px;
-
-    }
-
-    .project-description {
-        font-size: 18px;
-        padding: 0 107px;
-    }
-}
-
-@media only screen and (min-width: 540px) and (max-width: 567px) {
-    .project-body {
-        padding: 40px;
-        margin-top: 345px;
-    }
-
-    .project-texts {
-        width: 100%;
-    }
-
-    .project-title {
-        font-size: 40px;
-
-    }
-
-    .project-description {
-        font-size: 18px;
-        padding: 0 89px;
-    }
-}
-
-@media only screen and (min-width: 540px) and (max-width: 567px) and (max-height: 360px) {
-    .project-body {
-        padding: 30px;
-        margin-top: 825px;
-    }
-
-    .project-texts {
-        width: 100%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 17px;
-        padding: 0 107px;
-    }
-}
-
-@media only screen and (min-width: 504px) and (max-width: 539px) {
-    .project-body {
-        padding: 30px;
-        margin-top: 675px;
-    }
-
-    .project-texts {
-        width: 100%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 17px;
-        padding: 0 90px;
-    }
-}
-
-/*!*
-DONE - DON'T TOUCH!
- *!*/
-@media only screen and (min-width: 480px) and (max-width: 503px) and (max-height: 320px) {
-    .project-body {
-        padding: 30px;
-        margin-top: 850px;
-    }
-
-    .project-texts {
-        width: 100%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 17px;
-        padding: 0 57px;
-    }
-}
-
-/*!*
-DONE - DON'T TOUCH!
- *!*/
-@media only screen and (min-width: 432px) and (max-width: 479px) {
-    .project-body {
-        padding: 30px;
-        margin-top: 510px;
-    }
-
-    .project-texts {
-        width: 100%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 17px;
-        padding: 0 51px;
-    }
-}
-
-/*!*
-DONE - DON'T TOUCH!
- *!*/
-@media only screen and (min-width: 430px) and (max-width: 431px) {
-    .project-body {
-        padding: 30px;
-        margin-top: 320px;
-    }
-
-    .project-texts {
-        width: 100%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 17px;
-        padding: 0 51px;
-    }
-}
-
-/*!*
-DONE - DON'T TOUCH!
- *!*/
-@media only screen and (min-width: 428px) and (max-width: 429px) {
-    .project-body {
-        padding: 30px;
-        margin-top: 270px;
-    }
-
-    .project-texts {
-        width: 100%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 16px;
-        padding: 0 51px;
-    }
-
-    @-moz-document url-prefix() {
-        .project-body {
-            padding: 30px;
-            margin-top: 570px;
-        }
-    }
-}
-
-/*!*
-DONE - DON'T TOUCH!
- *!*/
-@media only screen and (min-width: 414px) and (max-width: 427px) {
-    .project-body {
-        padding: 30px;
-        margin-top: 315px;
-    }
-
-    .project-texts {
-        width: 100%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 16px;
-        padding: 0 51px;
-    }
-}
-
-@media only screen and (min-width: 414px) and (max-width: 427px) and (max-height: 736px) {
-    .project-body {
-        padding: 30px;
-        margin-top: 450px;
-    }
-
-    .project-texts {
-        width: 100%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 16px;
-        padding: 0 51px;
-    }
-
-    @-moz-document url-prefix() {
-
-        .project-body {
-            padding: 30px;
-            margin-top: 250px;
-
-        }
-        .project-description {
-            font-size: 14px;
-
-        }
-    }
-}
-
-/*!*
-DONE - DON'T TOUCH!
- *!*/
-@media only screen and (min-width: 412px) and (max-width: 413px) {
-    .project-body {
-        margin-top: 180px;
-        padding: 30px;
-    }
-
-
-    .project-texts {
-        width: 100%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 16px;
-        padding: 0 51px;
-    }
-}
-
-@media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 919px) {
-    .project-body {
-        margin-top: 300px;
-    }
-}
-
-/*!*
-Takes height 906px and 914px as well
- *!*/
-@media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 915px) {
-    .project-body {
-        margin-top: 305px;
-    }
-}
-
-@media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 892px) {
-    .project-body {
-        margin-top: 360px;
-    }
-}
-
-@media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 883px) {
-    .project-body {
-
-        margin-top: 360px;
-    }
-}
-
-@media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 869px) {
-    .project-body {
-
-        margin-top: 375px;
-    }
-}
-
-@media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 846px) {
-    .project-body {
-
-        margin-top: 390px;
-    }
-}
-
-@media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 823px) {
-    .project-body {
-
-        margin-top: 400px;
-    }
-}
-
-@media only screen and (min-width: 412px) and (max-width: 413px) and (max-height: 732px) {
-    .project-body {
-
-        margin-top: 490px;
-    }
-
-}
-
-
-/*!*
-DONE - DON'T TOUCH!
- *!*/
-@media only screen and (min-width: 400px) and (max-width: 410px) {
-    .project-body {
-        padding: 30px;
-        margin-top: 290px;
-    }
-
-    .project-texts {
-        width: 100%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 15px;
-        padding: 0 53px;
-    }
-}
-
-
-@media only screen and (min-width: 393px) and (max-width: 399px) {
+/*6s, 7 for IOS 15
+8 for IOS 16
+XS, 11 Pro, SE (2nd and 3rd Gen) for IOS 17 (Flipped)*/
+@media only screen and (min-width: 548px) and (max-width: 667px)
+and (min-height: 300px) and (max-height: 375px)
+and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
     .project-body {
         padding: 20px;
-        margin-top: 450px;
-    }
-
-    .project-texts {
-        width: 103%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 15px;
-        padding: 0 55px;
-    }
-}
-
-/*!*
-DONE - DON'T TOUCH!
- *!*/
-@media only screen and (min-width: 392px) and (max-width: 392px) {
-    .project-body {
-        padding: 20px;
-        margin-top: 340px;
-    }
-
-    .project-texts {
-        width: 103%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 15px;
-        padding: 0 55px;
-    }
-}
-
-/*!*
-DONE - DON'T TOUCH!
- *!*/
-@media only screen and (min-width: 390px) and (max-width: 391px) {
-    .project-body {
-        padding: 20px;
-        margin-top: 400px;
-    }
-
-    .project-texts {
-        width: 103%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 15px;
-        padding: 0 55px;
-    }
-}
-
-/*!*
-DONE - DON'T TOUCH!
- *!*/
-@media only screen and (min-width: 385px) and (max-width: 389px) {
-    .project-body {
-        padding: 20px;
-        margin-top: 330px;
+        margin-top: 620px;
     }
 
     .project-texts {
@@ -575,18 +68,19 @@ DONE - DON'T TOUCH!
     }
 
     .project-description {
-        font-size: 15px;
-        padding: 0 64px;
+        font-size: 12px;
+        padding: 0 175px;
     }
 }
 
-/*!*
-DONE - DON'T TOUCH!
- *!*/
-@media only screen and (min-width: 384px)  and (max-width: 384px) {
+
+/*SE (1st GEN) IOS 15 (Flipped)*/
+@media only screen and (min-width: 448px) and (max-width: 568px)
+and (min-height: 220px) and (max-height: 320px)
+and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
     .project-body {
         padding: 20px;
-        margin-top: 400px;
+        margin-top: 680px;
     }
 
     .project-texts {
@@ -594,47 +88,23 @@ DONE - DON'T TOUCH!
     }
 
     .project-title {
-        font-size: 30px;
+        font-size: 40px;
 
     }
 
     .project-description {
-        font-size: 15px;
-        padding: 0 40px;
+        font-size: 12px;
+        padding: 0 120px;
     }
 }
 
-@media only screen and (min-width: 384px) and (max-width: 384px) and (max-height: 640px) {
+
+/*XR for IOS 17*/
+@media only screen and (min-width: 414px) and (max-width: 414px)
+and (min-height: 700px) and (max-height: 896px)
+and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
     .project-body {
         padding: 20px;
-        margin-top: 530px;
-    }
-
-    .project-texts {
-        width: 105%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 15px;
-        padding: 0 55px;
-    }
-}
-
-
-/*
-!*
-DONE - DON'T TOUCH!
- *!
-*/
-
-@media only screen and (min-width: 375px) and (max-width: 383px) {
-    .project-body {
-        padding: 23px;
         margin-top: 350px;
     }
 
@@ -649,108 +119,23 @@ DONE - DON'T TOUCH!
 
     .project-description {
         font-size: 15px;
-        padding: 0 55px;
-    }
-
-    @-moz-document url-prefix() {
-        .project-body {
-            margin-top: 250px;
-        }
-    }
-}
-@media only screen and (min-width: 375px)  and (max-width: 383px) and (max-height: 667px) {
-    .project-body {
-        padding: 23px;
-        margin-top: 580px;
-    }
-
-    .project-texts {
-        width: 105%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 15px;
-        padding: 0 45px;
-    }
-
-    @-moz-document url-prefix() {
-        .project-body {
-            margin-top: 250px;
-        }
+        padding: 0 70px;
     }
 }
 
-@media only screen and (min-width: 375px)  and (max-width: 383px) and (max-height: 629px) {
-    .project-body {
-        padding: 23px;
-        margin-top: 600px;
-    }
-
-    .project-texts {
-        width: 105%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 15px;
-        padding: 0 45px;
-    }
-
-    @-moz-document url-prefix() {
-        .project-body {
-            margin-top: 250px;
-        }
-    }
-}
-
-@media only screen and (min-width: 375px)  and (max-width: 383px) and (max-height: 559px) {
-    .project-body {
-        padding: 23px;
-        margin-top: 550px;
-    }
-
-    .project-texts {
-        width: 105%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 15px;
-        padding: 0 45px;
-    }
-
-    @-moz-document url-prefix() {
-        .project-body {
-            margin-top: 250px;
-        }
-    }
-}
-
-
-/*!*
-DONE - DON'T TOUCH!
- *!*/
-@media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 840px) {
+/*6S Plus, 7 Plus for IOS 15
+8 PLus for IOS 16
+11 Pro Max for IOS 17*/
+@media only screen and (min-width: 414px) and (max-width: 414px)
+and (min-height: 616px) and (max-height: 736px)
+and (-webkit-min-device-pixel-ratio: 2.6), only screen and (min--moz-device-pixel-ratio: 2.6), only screen and (-o-min-device-pixel-ratio: 2.6/1), only screen and (min-device-pixel-ratio: 2.6) {
     .project-body {
         padding: 20px;
-        margin-top: 360px;
+        margin-top: 350px;
     }
 
     .project-texts {
-        width: 110%;
+        width: 105%;
     }
 
     .project-title {
@@ -760,135 +145,45 @@ DONE - DON'T TOUCH!
 
     .project-description {
         font-size: 14px;
-        padding: 0 50px;
+        padding: 0 70px;
     }
 }
-@media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 800px) {
+
+/*6s, 7 for IOS 15
+8 for IOS 16
+XS, 11 Pro, SE (2nd and 3rd Gen) for IOS 17 */
+@media only screen and (min-width: 375px) and (max-width: 375px)
+and (min-height: 548px) and (max-height: 667px)
+and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
     .project-body {
         padding: 20px;
-        margin-top: 380px;
+        margin-top: 350px;
     }
 
-
-}
-@media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 780px) {
-    .project-body {
-        padding: 20px;
-        margin-top: 400px;
+    .project-texts {
+        width: 105%;
     }
 
+    .project-title {
+        font-size: 30px;
 
-}
-@media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 771px) {
-    .project-body {
-        padding: 20px;
-        margin-top: 434px;
     }
 
-
-}
-@media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 770px) {
-    .project-body {
-        padding: 20px;
-        margin-top: 435px;
+    .project-description {
+        font-size: 12px;
+        padding: 0 70px;
     }
-
 }
-@media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 760px) {
+
+/*SE (1st GEN) IOS 15*/
+@media only screen and (min-width: 320px) and (max-width: 320px)
+and (min-height: 448px) and (max-height: 568px)
+and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
     .project-body {
         padding: 20px;
         margin-top: 450px;
     }
 
-}
-@media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 747px) {
-    .project-body {
-        padding: 20px;
-        margin-top: 472px;
-    }
-
-
-}
-@media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 740px) {
-    .project-body {
-        padding: 20px;
-        margin-top: 465px;
-    }
-
-
-}
-@media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 720px) {
-    .project-body {
-        padding: 20px;
-        margin-top: 480px;
-    }
-
-
-}
-
-@media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 670px) {
-    .project-body {
-        padding: 20px;
-        margin-top: 420px;
-    }
-
-
-}
-
-@media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 657px) {
-    .project-body {
-        padding: 20px;
-        margin-top: 400px;
-    }
-
-}
-
-@media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 640px) {
-    .project-body {
-        padding: 20px;
-        margin-top: 555px;
-    }
-
-}
-
-@media only screen and (min-width: 360px)  and (max-width: 374px) and (max-height: 612px) {
-    .project-body {
-        padding: 20px;
-        margin-top: 500px;
-    }
-
-}
-
-
-@media only screen and (min-width: 345px) and (max-width: 359px) and (max-height: 883px) {
-    .project-body {
-        padding: 20px;
-        margin-top: 360px;
-    }
-
-    .project-texts {
-        width: 110%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 14px;
-        padding: 0 50px;
-    }
-}
-/*
-DONE - DON'T TOUCH!
- */
-@media only screen and (min-width: 320px) and (max-width: 344px) {
-    .project-body {
-        padding: 20px;
-        margin-top: 320px;
-    }
-
     .project-texts {
         width: 105%;
     }
@@ -904,71 +199,4 @@ DONE - DON'T TOUCH!
     }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 344px) and (max-height: 640px) {
-    .project-body {
-        padding: 20px;
-        margin-top: 320px;
-    }
 
-    .project-texts {
-        width: 105%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 12px;
-        padding: 0 50px;
-    }
-}
-
-@media only screen and (min-width: 320px) and (max-width: 344px) and (max-height: 568px) {
-    .project-body {
-        padding: 20px;
-        margin-top: 620px;
-    }
-
-    .project-texts {
-        width: 105%;
-    }
-
-    .project-title {
-        font-size: 30px;
-    }
-
-    .project-description {
-        font-size: 12px;
-        padding: 0 50px;
-    }
-}
-
-
-/*
-DONE - DON'T TOUCH!
- */
-
-@media only screen and (min-width: 280px) and (max-width: 319px) and (max-height: 653px) {
-    .project-body {
-        padding: 10px;
-        margin-top: 230px;
-
-    }
-
-    .project-texts {
-        width: 100%;
-    }
-
-    .project-title {
-        font-size: 30px;
-    }
-
-    .project-description {
-        font-size: 10px;
-        padding: 0 60px;
-
-
-    }
-}

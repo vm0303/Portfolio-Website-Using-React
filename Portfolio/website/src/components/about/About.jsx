@@ -1,13 +1,11 @@
+import React from 'react';
 import "./About.css";
 import pic from "../../image/about_me.jpg";
 import {Fade} from "react-reveal";
-import resume from "../../assets/Vishal-Madhav-Resume 2024.pdf"
+import resume from "../../assets/Vishal-Madhav-Resume 2024.pdf";
 
-export default function About() {
-
-
+const About = () => {
     return (
-
         <div className="about" id="about">
             <Fade effect="fade" delay={700}>
                 <div className="about-left">
@@ -51,16 +49,7 @@ export default function About() {
                 </div>
             </Fade>
         </div>
+    );
+};
 
-
-    )
-}
-
-
-
-
-
-
-
-
-
+export default About;
