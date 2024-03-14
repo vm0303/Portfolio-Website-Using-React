@@ -10,17 +10,17 @@
 .container {
     height: auto;
     position: relative;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
+
 }
 
 .container-bg {
 
-    width: 20px;
+    width: 15px;
     height: 100%;
     position: absolute;
 
 }
+
 
 #light .container-bg {
     background-color: #245fc6;
@@ -291,27 +291,60 @@ form {
     display: block;
 }
 
-.fade-out {
-    opacity: 0;
-}
-
-.fade-in {
-    opacity: 1;
-}
-
 .container-review {
-    opacity: 1;
     transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    border: none;
+    transform: translateY(-15px);
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding around content */
+    max-width: 60%; /* Maximum width */
+    height: auto; /* Auto height */
+    margin: 0 auto; /* Center horizontally */
+
+}
+
+#light .container-review {
+
+    box-shadow: 0 0 10px rgba(224, 230, 253, 0.91); /* Drop shadow for depth */
+}
+
+#dark .container-review {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.34); /* Drop shadow for depth */
+}
+
+.container-review.active {
+    opacity: 1;
+}
+
+.review-title {
+    text-align: center; /* Center-align the title */
+    margin-bottom: 20px; /* Space below the title */
+    font-size: 25px;
+}
+
+.review-desc {
+    text-align: center; /* Center-align description paragraphs */
+
+    font-size: 17px;
+    margin: 10px 65px;
+
+}
+
+.input-label {
+    font-size: 15px;
+}
+
+.input-value {
+    font-size: 14px;
 }
 
 
 /* Modal Buttons */
-.modal-buttons {
+.review-form-buttons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-evenly;
     margin-top: 20px;
 }
@@ -806,7 +839,7 @@ and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-
     }
 
     /*Modal Buttons*/
-    .modal-buttons {
+    .review-form-buttons {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -1006,7 +1039,7 @@ and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-
     }
 
     /*Modal Buttons*/
-    .modal-buttons {
+    .review-form-buttons {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -1205,7 +1238,7 @@ and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-
     }
 
     /*Modal Buttons*/
-    .modal-buttons {
+    .review-form-buttons {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -1406,7 +1439,7 @@ and (-webkit-min-device-pixel-ratio: 2.6), only screen and (min--moz-device-pixe
     }
 
     /*Modal Buttons*/
-    .modal-buttons {
+    .review-form-buttons {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -1607,7 +1640,7 @@ and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-
     }
 
     /*Modal Buttons*/
-    .modal-buttons {
+    .review-form-buttons {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -1807,7 +1840,7 @@ and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-
     }
 
     /*Modal Buttons*/
-    .modal-buttons {
+    .review-form-buttons {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
