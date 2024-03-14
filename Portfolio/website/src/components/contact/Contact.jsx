@@ -26,6 +26,8 @@ const Contact = ({setMenuOpen}) => {
     const containerReviewRef = useRef(null);
     const contactContainerRef = useRef(null);
     const [reviewActive, setReviewActive] = useState(false);
+    const [countdown, setCountdown] = useState(0); // Countdown state
+    const [flash, setFlash] = useState(false); // Flash state
 
     const [inputs, setInputs] = useState([
         {
@@ -65,21 +67,47 @@ const Contact = ({setMenuOpen}) => {
 
     const formRef = useRef();
 
+    useEffect(() => {
+        if (countdown > 0) {
+            const timer = setTimeout(() => {
+                setCountdown(countdown - 1);
+            }, 1000);
+
+            return () => clearTimeout(timer);
+        }
+    }, [countdown]);
+
     const handleReview = async (event) => {
         event.preventDefault();
-    }
+    };
 
     const handleChange = (e) => {
         const {name, value} = e.target;
+        // Filter out trailing duplicate letters
+        const filteredValue = removeTrailingDuplicates(value);
         setVals(prevVals => ({
             ...prevVals,
-            [name]: value,
+            [name]: filteredValue,
         }));
+    };
+
+    const removeTrailingDuplicates = (str) => {
+        let result = '';
+        let lastChar = '';
+        for (let char of str) {
+            if (char !== lastChar) {
+                result += char;
+                lastChar = char;
+            }
+        }
+        return result;
     };
 
     useEffect(() => {
         if (containerReviewRef.current && reviewActive) {
             containerReviewRef.current.scrollIntoView({behavior: 'smooth'});
+            // Start the countdown when reviewActive becomes true
+            setCountdown(10);
         }
     }, [reviewActive]);
 
@@ -101,12 +129,13 @@ const Contact = ({setMenuOpen}) => {
         };
     }, [scrollLimit, reviewActive]);
 
-
     const handleBackButtonClick = () => {
         // Scroll to the "contact" element
         if (contactContainerRef.current) {
             contactContainerRef.current.scrollIntoView({behavior: 'smooth'});
         }
+        // Reset the countdown and stop it
+        setCountdown(0);
         // Trigger the fade-out animation by setting reviewActive to false
         setReviewActive(false);
     };
@@ -127,7 +156,7 @@ const Contact = ({setMenuOpen}) => {
                 return input;
             });
             setInputs(updatedInputs);
-            return; // Exit early, do not proceed to opening the review section
+            return; // Exit early and do not proceed to open the review section
         }
 
         // Proceed to open the review section if all required fields are filled
@@ -135,7 +164,21 @@ const Contact = ({setMenuOpen}) => {
             containerReviewRef.current.scrollIntoView({behavior: 'smooth'});
         }
         setReviewActive(true);
+        // Start the countdown when reviewActive becomes true
+        setCountdown(10);
     };
+
+    useEffect(() => {
+        // Start the flashing effect when countdown reaches 0
+        if (countdown === 0) {
+            const interval = setInterval(() => {
+                setFlash(prevState => !prevState);
+            }, 500);
+
+            // Clear interval after 5 seconds
+            setTimeout(() => clearInterval(interval), 5000);
+        }
+    }, [countdown]);
 
     return (
         <Fade effect="fade" delay={700}>
@@ -181,7 +224,8 @@ const Contact = ({setMenuOpen}) => {
                             <button
                                 className='review-button'
                                 type="submit"
-                                onClick={handleReviewButtonClick}
+                                onClick={reviewActive ? null : handleReviewButtonClick}
+                                disabled={reviewActive && countdown > 0} // Disable button when reviewActive and countdown > 0
                             >
                                 <p>Review</p>
                             </button>
@@ -199,10 +243,8 @@ const Contact = ({setMenuOpen}) => {
                     <p className="review-desc">
                         If you need to make any changes, click or tap the back button.
                     </p>
-                    <p className="review-desc">
-                        Otherwise, wait 10 seconds before you can click or tap the submit button. This
-                        is to prevent any
-                        accidental submissions.
+                    <p className={`review-desc ${countdown === 0 && flash ? 'animate-fade-out' : ''} ${countdown === 0 && !flash ? 'animate-fade-in' : ''}`}>
+                        {countdown > 0 ? `Otherwise, please wait ${countdown} seconds before submitting.` : 'You can now submit the form.'}
                     </p>
 
                     {inputs.map(inputVals => (
@@ -223,8 +265,8 @@ const Contact = ({setMenuOpen}) => {
                         >
                             <p>Back</p>
                         </button>
-                        <button type="submit" className="submit-button">
-                            <p>Submit</p>
+                        <button type="submit" className="submit-button" disabled={countdown > 0}>
+                            <p>{countdown > 0 ? `Wait ${countdown}s` : 'Submit'}</p>
                         </button>
                     </div>
                 </div>

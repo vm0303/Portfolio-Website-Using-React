@@ -8,7 +8,7 @@ import {useEffect, useRef, useState} from "react";
 
 const FADE_INTERVAL_MS = 1650;
 const WORD_CHANGE_INTERVAL_MS = FADE_INTERVAL_MS * 2;
-const WORDS_TO_ANIMATE = ['Web Developer', 'Cloud Practitioner', 'Software Developer'];
+const WORDS_TO_ANIMATE = ['Web Developer', 'Cloud Practitioner', 'Software Developer', 'Java Developer'];
 
 const Intro = () => {
     const [fadeProp, setFadeProp] = useState({fade: 'fading-in'});

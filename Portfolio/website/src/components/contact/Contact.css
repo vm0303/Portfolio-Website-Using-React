@@ -331,14 +331,52 @@ form {
 
 }
 
-.input-label {
-    font-size: 15px;
-}
-
 .input-value {
     font-size: 14px;
+    word-wrap: break-word;
 }
 
+/* Review Field Styles */
+.review-field {
+    margin-bottom: 15px;
+}
+
+.review-field label {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.review-button.disabled {
+    /* Add your styling for the disabled state */
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.animate-fade-out {
+    animation: fadeOut 0.5s ease-in-out forwards;
+}
 
 /* Modal Buttons */
 .review-form-buttons {
@@ -674,20 +712,7 @@ form {
 }
 
 
-/* Review Field Styles */
-.review-field {
-    margin-bottom: 15px;
-}
 
-.review-field label {
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-.review-button.disabled {
-    /* Add your styling for the disabled state */
-    cursor: pointer;
-}
 
 
 /*
