@@ -83,25 +83,12 @@ const Contact = ({setMenuOpen}) => {
 
     const handleChange = (e) => {
         const {name, value} = e.target;
-        // Filter out trailing duplicate letters
-        const filteredValue = removeTrailingDuplicates(value);
         setVals(prevVals => ({
             ...prevVals,
-            [name]: filteredValue,
+            [name]: value,
         }));
     };
 
-    const removeTrailingDuplicates = (str) => {
-        let result = '';
-        let lastChar = '';
-        for (let char of str) {
-            if (char !== lastChar) {
-                result += char;
-                lastChar = char;
-            }
-        }
-        return result;
-    };
 
     useEffect(() => {
         if (containerReviewRef.current && reviewActive) {
