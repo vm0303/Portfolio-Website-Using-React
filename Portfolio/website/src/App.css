@@ -24,11 +24,29 @@ body {
 
 }
 
-.toggle-icon {
-    width: 17px;
-    height: 17px;
+
+.light-tooltip {
+    background-color: #235fc8;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+
 }
 
+/* Styles for tooltip in dark mode */
+.dark-tooltip {
+    background-color: #22b255;
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+.toggle-icon {
+    width: 25px;
+    height: 25px;
+
+}
 
 
 @media only screen and (min-width: 280px) and (max-width: 319px) {
@@ -37,6 +55,7 @@ body {
         top: 55px;
     }
 }
+
 
 
 

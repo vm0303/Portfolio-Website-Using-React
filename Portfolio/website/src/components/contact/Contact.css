@@ -313,6 +313,25 @@ form {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.34); /* Drop shadow for depth */
 }
 
+#light .toast-message {
+    background: black;
+    color: white;
+}
+
+#dark .toast-message {
+    background: white;
+    color: black;
+}
+
+
+#light .Toastify__progress-bar {
+    color: #235fc8;
+}
+
+#dark .Toastify__progress-bar {
+    color: #22b255;
+}
+
 .container-review.active {
     opacity: 1;
 }
@@ -370,6 +389,7 @@ form {
     }
 }
 
+
 .animate-fade-in {
     animation: fadeIn 0.5s ease-in-out forwards;
 }
@@ -377,6 +397,7 @@ form {
 .animate-fade-out {
     animation: fadeOut 0.5s ease-in-out forwards;
 }
+
 
 /* Modal Buttons */
 .review-form-buttons {
@@ -567,8 +588,6 @@ form {
 .submit-button:active {
     background-color: #ebf3ed;
 }
-
-
 
 
 @media (hover: hover) {

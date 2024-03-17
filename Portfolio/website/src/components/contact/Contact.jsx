@@ -3,12 +3,13 @@ import './Contact.css';
 import Avatar from '../../image/Vishal-Contact.jpg';
 import {Fade} from 'react-reveal';
 import InputForm from './InputForm';
-import {Slide, ToastContainer} from 'react-toastify';
+import {Slide, toast, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = ({setMenuOpen}) => {
     const [focused, setFocus] = useState(false);
     const [scrollLimit, setScrollLimit] = useState(2150);
+    const [submitting, setSubmitting] = useState(false);
     const handleFocus = () => {
         setFocus(true);
     };
@@ -28,7 +29,6 @@ const Contact = ({setMenuOpen}) => {
     const [reviewActive, setReviewActive] = useState(false);
     const [countdown, setCountdown] = useState(0); // Countdown state
     const [flash, setFlash] = useState(false); // Flash state
-
     const [inputs, setInputs] = useState([
         {
             id: 1,
@@ -94,7 +94,7 @@ const Contact = ({setMenuOpen}) => {
         if (containerReviewRef.current && reviewActive) {
             containerReviewRef.current.scrollIntoView({behavior: 'smooth'});
             // Start the countdown when reviewActive becomes true
-            setCountdown(10);
+            setCountdown(2);
         }
     }, [reviewActive]);
 
@@ -152,7 +152,7 @@ const Contact = ({setMenuOpen}) => {
         }
         setReviewActive(true);
         // Start the countdown when reviewActive becomes true
-        setCountdown(10);
+        setCountdown(2);
     };
 
     useEffect(() => {
@@ -166,6 +166,41 @@ const Contact = ({setMenuOpen}) => {
             setTimeout(() => clearInterval(interval), 5000);
         }
     }, [countdown]);
+
+    const handleSubmitButtonClick = async () => {
+        if (!submitting) {
+            setSubmitting(true); // Set submitting state to true
+            // Perform any additional actions before submission if needed
+
+            // Simulate submission delay
+            setTimeout(() => {
+                // Reset states after submission
+                setSubmitting(false);
+                setCountdown(0);
+                // Close the review section
+                setReviewActive(false);
+                // Disable the review button
+                // Disable the form's input fields
+                // This can be done by updating the input array to include a "disabled" property
+                const updatedInputs = inputs.map(input => ({...input, disabled: true}));
+                setInputs(updatedInputs);
+                toast.success("Thank you! The form has been submitted. " +
+                    "Please give me a few hours or so to reach back to you.",
+                    {
+                        className: "toast-message",
+                        position: "bottom-right",
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        transition: Slide
+                    });
+
+            }, 3000); // Adjust the delay as needed
+
+
+        }
+    };
+
 
     return (
         <Fade effect="fade" delay={700}>
@@ -217,8 +252,7 @@ const Contact = ({setMenuOpen}) => {
                                 <p>Review</p>
                             </button>
                         </form>
-
-                        <ToastContainer position="bottom-right" transition={Slide}/>
+                        <ToastContainer className="toastMessage"/>
                     </div>
                 </div>
                 <div
@@ -252,11 +286,17 @@ const Contact = ({setMenuOpen}) => {
                         >
                             <p>Back</p>
                         </button>
-                        <button type="submit" className="submit-button" disabled={countdown > 0}>
-                            <p>{countdown > 0 ? `Wait ${countdown}s` : 'Submit'}</p>
+                        <button
+                            type="submit"
+                            className="submit-button"
+                            disabled={countdown > 0 || submitting}
+                            onClick={handleSubmitButtonClick}
+                        >
+                            <p>{submitting ? "Submitting" : (countdown > 0 ? `Wait ${countdown}s` : 'Submit')}</p>
                         </button>
                     </div>
                 </div>
+
             </div>
         </Fade>
     );
