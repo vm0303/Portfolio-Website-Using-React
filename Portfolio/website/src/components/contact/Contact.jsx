@@ -6,16 +6,16 @@ import InputForm from './InputForm';
 import {Slide, toast, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Contact = ({setMenuOpen}) => {
+const Contact = () => {
     const [focused, setFocus] = useState(false);
     const [scrollLimit, setScrollLimit] = useState(2150);
     const [submitting, setSubmitting] = useState(false);
+    const [formSubmitted, setFormSubmitted] = useState(false);
+
     const handleFocus = () => {
         setFocus(true);
     };
-    const handleInputClick = () => {
-        setMenuOpen(false);
-    };
+
 
     const [vals, setVals] = useState({
         user_name: '',
@@ -184,20 +184,31 @@ const Contact = ({setMenuOpen}) => {
                 // This can be done by updating the input array to include a "disabled" property
                 const updatedInputs = inputs.map(input => ({...input, disabled: true}));
                 setInputs(updatedInputs);
-                toast.success("Thank you! The form has been submitted. " +
-                    "Please give me a few hours or so to reach back to you.",
-                    {
-                        className: "toast-message",
-                        position: "bottom-right",
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        transition: Slide
-                    });
+                // Set formSubmitted to true
+                setFormSubmitted(true);
+
+                setTimeout(() => {
+                    toast.success("Thank you! The form has been submitted successfully. " +
+                        "I'll get back to you shortly. " +
+                        "Click to close and return to the contact form.",
+                        {
+                            className: "toast-message",
+                            position: "bottom-center",
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            autoClose: false,
+                            transition: Slide,
+                            onClose: () => {
+                                if (contactContainerRef.current) {
+                                    contactContainerRef.current.scrollIntoView({behavior: 'smooth'});
+                                }
+                            }
+                        });
+                }, 750)
+
 
             }, 3000); // Adjust the delay as needed
-
-
         }
     };
 
@@ -206,7 +217,7 @@ const Contact = ({setMenuOpen}) => {
         <Fade effect="fade" delay={700}>
             <div className='container' id="contact">
                 <div className="container-bg"></div>
-                <div className="container-wrapper" ref={contactContainerRef}>
+                <div className={`container-wrapper ${formSubmitted ? 'submitted' : ''}`} ref={contactContainerRef}>
                     <div className="container-left">
                         <h1 className="container-title">Feel free to contact me!</h1>
                         <div className="container-info">
@@ -225,7 +236,7 @@ const Contact = ({setMenuOpen}) => {
                             {inputs.map(inputVals => (
                                 <InputForm key={inputVals.id} {...inputVals} value={vals[inputVals.name]}
                                            onChange={handleChange} autoCapitalize="none"
-                                           onClick={handleInputClick} disabled={reviewActive}/>
+                                           disabled={reviewActive}/>
                             ))}
                             <label className="text-area-label">Your message (Max: 500 Characters)</label>
                             <textarea

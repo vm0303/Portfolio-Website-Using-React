@@ -18,9 +18,8 @@ export const ThemeContext = createContext(null);
 function App() {
     const [theme, setTheme] = useState("light");
     const [menuOpen, setMenuOpen] = useState(false);
-    const [modalOpen, setModalOpen] = useState(false);
     const [isMobileView, setIsMobileView] = useState(false);
-
+    const [reviewActive, setReviewActive] = useState(false);
     const toggleTheme = () => {
         setTheme((currentTheme) => (currentTheme === "light" ? "dark" : "light"));
     }
@@ -41,12 +40,12 @@ function App() {
         <ThemeContext.Provider value={{theme, toggleTheme}}>
 
             <div className="app" id={theme}>
-                <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} modalOpen={modalOpen}/>
+                <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
                 <SideMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
                 <Intro/>
                 <About/>
                 <ProjectList/>
-                <Contact setMenuOpen={setMenuOpen}/>
+                <Contact/>
                 <Fade effect="fade" delay={800}>
                     <div className="toggle-switch">
                         <Popup

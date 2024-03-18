@@ -13,6 +13,10 @@
 
 }
 
+.submitted {
+    margin-top: 0;
+}
+
 .container-bg {
 
     width: 15px;
@@ -313,23 +317,23 @@ form {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.34); /* Drop shadow for depth */
 }
 
+
 #light .toast-message {
     background: black;
     color: white;
+    margin: auto; /* Center horizontally */
+    width: 100%;
+
+
 }
 
 #dark .toast-message {
     background: white;
     color: black;
-}
+    margin: auto; /* Center horizontally */
+    width: 100%;
 
 
-#light .Toastify__progress-bar {
-    color: #235fc8;
-}
-
-#dark .Toastify__progress-bar {
-    color: #22b255;
 }
 
 .container-review.active {

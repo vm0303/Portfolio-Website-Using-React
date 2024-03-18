@@ -117,14 +117,17 @@
 
 .hamburger.disabled {
     pointer-events: none;
-    opacity: 0.5; /* Adjust the opacity as needed */
+    opacity: 0.5;
 }
 
-.social_media_Container.disabled {
+.navbar.disabled {
     pointer-events: none;
-    opacity: 0.5; /* Adjust the opacity as needed */
 }
 
+.navbar.disabled .social_media_Container {
+    opacity: 0.5; /* Adjust opacity to gray out the icons */
+    pointer-events: none;
+}
 
 @media only screen and (min-width: 320px) and (max-width: 667px) {
     .wrapper {
