@@ -67,19 +67,9 @@ const Contact = ({setMenuOpen}) => {
 
         },
     ]);
-
+    const [fadeOut, setFadeOut] = useState(false);
     const formRef = useRef();
 
-
-    useEffect(() => {
-        if (submitButtonCountdown > 0) {
-            const timer = setTimeout(() => {
-                setSubmitButtonCountdown(submitButtonCountdown - 1);
-            }, 1000);
-
-            return () => clearTimeout(timer);
-        }
-    }, [submitButtonCountdown]);
 
     const handleReview = async (event) => {
         event.preventDefault();
@@ -92,8 +82,6 @@ const Contact = ({setMenuOpen}) => {
             [name]: value,
         }));
     };
-
-
 
 
     useEffect(() => {
@@ -115,43 +103,50 @@ const Contact = ({setMenuOpen}) => {
     }, [scrollLimit, reviewActive]);
 
     const handleBackButtonClick = () => {
-        // Scroll to the "contact" element
-        if (contactContainerRef.current) {
-            contactContainerRef.current.scrollIntoView({behavior: 'smooth'});
-        }
-        // Reset the submitButtonCountdown and stop it
-        setSubmitButtonCountdown(0);
         // Trigger the fade-out animation by setting reviewActive to false
-        setReviewActive(false);
+        setFadeOut(true);
+        setSubmitButtonCountdown(3);
+
+        setTimeout(() => {
+            setReviewActive(false);
+            document.querySelector(".hamburger").style.pointerEvents = "auto";
+            document.querySelector(".hamburger").style.opacity = 1;
+            document.querySelector('.right').style.pointerEvents = 'auto';
+            document.querySelector('.right').style.opacity = 1;
+        }, 550); // Adjust the timing as needed to match your CSS animation duration
+
+
     };
 
+    // Add a useEffect to reset fadeOut state when reviewActive changes
+    useEffect(() => {
+        setFadeOut(false); // Reset fadeOut state when reviewActive changes
+    }, [reviewActive]);
+
     const handleReviewButtonClick = () => {
-        // Check if all required fields are filled
-        const hasEmptyFields = inputs.some(input => {
-            return !vals[input.name] && input.required;
-        });
-
-        // If there are empty required fields, display errors and prevent opening the review section
-        if (hasEmptyFields || !vals.message) {
-            // Display errors for empty required fields
-            const updatedInputs = inputs.map(input => {
-                if ((!vals[input.name] && input.required) || (!vals.message && input.name === 'message')) {
-                    return {...input, error: true};
-                }
-                return input;
+        if (reviewButtonDisabled) {
+            toast.info(
+                "Test",
+                {
+                    className: "toast-message",
+                    position: "bottom-right",
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    autoClose: 5000,
+                    transition: Slide
+                });
+        } else {
+            // Check if all required fields are filled
+            const hasEmptyFields = inputs.some(input => {
+                return !vals[input.name] && input.required;
             });
-            setInputs(updatedInputs);
-            return; // Exit early and do not proceed to open the review section
-        }
 
-        // Check if email field is valid
-        const emailInput = inputs.find(input => input.name === 'user_email');
-        if (emailInput) {
-            const emailField = document.querySelector(`input[name="${emailInput.name}"]`);
-            if (emailField && !emailField.checkValidity()) {
-                // Display error for invalid email format
+            // If there are empty required fields, display errors and prevent opening the review section
+            if (hasEmptyFields || !vals.message) {
+                // Display errors for empty required fields
                 const updatedInputs = inputs.map(input => {
-                    if (input.name === 'user_email') {
+                    if ((!vals[input.name] && input.required) || (!vals.message && input.name === 'message')) {
                         return {...input, error: true};
                     }
                     return input;
@@ -159,19 +154,34 @@ const Contact = ({setMenuOpen}) => {
                 setInputs(updatedInputs);
                 return; // Exit early and do not proceed to open the review section
             }
-        }
 
-        // Proceed to open the review section if all required fields are filled and email is valid
-        if (containerReviewRef.current) {
-            containerReviewRef.current.scrollIntoView({behavior: 'smooth'});
-        }
-        setReviewActive(true);
+            // Check if email field is valid
+            const emailInput = inputs.find(input => input.name === 'user_email');
+            if (emailInput) {
+                const emailField = document.querySelector(`input[name="${emailInput.name}"]`);
+                if (emailField && !emailField.checkValidity()) {
+                    // Display error for invalid email format
+                    const updatedInputs = inputs.map(input => {
+                        if (input.name === 'user_email') {
+                            return {...input, error: true};
+                        }
+                        return input;
+                    });
+                    setInputs(updatedInputs);
+                    return; // Exit early and do not proceed to open the review section
+                }
+            }
 
-        // Start the submitButtonCountdown when reviewActive becomes true
-        setSubmitButtonCountdown(3);
+            // Proceed to open the review section if all required fields are filled and email is valid
+            if (containerReviewRef.current) {
+                containerReviewRef.current.scrollIntoView({behavior: 'smooth'});
+            }
+            setReviewActive(true);
+
+            // Start the submitButtonCountdown when reviewActive becomes true
+            setSubmitButtonCountdown(3);
+        }
     }
-
-
 
     useEffect(() => {
         if (containerReviewRef.current && reviewActive) {
@@ -196,36 +206,38 @@ const Contact = ({setMenuOpen}) => {
                 setSubmitting(false);
                 setSubmitButtonCountdown(0);
                 // Close the review section
-                setReviewActive(false);
+                setTimeout(() => {
+                    setReviewActive(false);
+                }, 600)
+                // Call the fade out state to fade out the review container
+                setFadeOut(true);
                 // Disable the form's input fields
-                // This can be done by updating the input array to include a "disabled" property
+                // Can be done by updating the input array to include a "disabled" property
                 const updatedInputs = inputs.map(input => ({...input, disabled: true}));
                 setInputs(updatedInputs);
+                document.querySelector(".review-button").style.opacity = 0.4;
                 document.querySelector('.hamburger').style.pointerEvents = 'none';
                 document.querySelector('.hamburger').style.opacity = 0.5;
                 document.querySelector('.right').style.pointerEvents = 'none';
                 document.querySelector('.right').style.opacity = 0.5;
                 disableBodyScroll(document.body);
+                setReviewButtonDisabled(true);
+                setFormSubmitted(true);
+
+
                 setTimeout(() => {
                     toast.success("Thank you! The form has been submitted successfully. " +
                         "I'll get back to you shortly. " +
-                        "Click to close and return to the contact form.", {
+                        "Click to close this message.", {
                         className: "toast-message",
-                        position: "bottom-center",
+                        position: "bottom-right",
                         hideProgressBar: false,
                         closeOnClick: true,
                         pauseOnHover: true,
                         autoClose: false,
                         transition: Slide,
                         onClose: () => {
-                            setFormSubmitted(true);
-                            setReviewButtonDisabled(true);
-                            document.querySelector(".review-button").disabled = true;
-                            document.querySelector(".review-button").style.opacity = 0.4;
                             enableBodyScroll(document.body)
-                            if (contactContainerRef.current) {
-                                contactContainerRef.current.scrollIntoView({behavior: 'smooth'});
-                            }
                             document.querySelector(".hamburger").style.pointerEvents = "auto";
                             document.querySelector(".hamburger").style.opacity = 1;
                             document.querySelector('.right').style.pointerEvents = 'auto';
@@ -233,12 +245,13 @@ const Contact = ({setMenuOpen}) => {
 
                         }
                     });
-                }, 750);
+                }, 1200);
             }, 3000); // Adjust the delay as needed
 
         }
     };
 
+    //Flashing text event to indicate the user can submit the form.
     useEffect(() => {
         // Start the flashing effect when submitButtonCountdown reaches 0
         if (submitButtonCountdown === 0) {
@@ -252,13 +265,20 @@ const Contact = ({setMenuOpen}) => {
     }, [submitButtonCountdown]);
 
 
+    useEffect(() => {
+        if (submitButtonCountdown > 0) {
+            const timer = setTimeout(() => {
+                setSubmitButtonCountdown(submitButtonCountdown - 1);
+            }, 1000);
 
-
+            return () => clearTimeout(timer);
+        }
+    }, [submitButtonCountdown]);
 
 
     return (
-        <Fade effect="fade" delay={700}>
-            <div className='container' id="contact">
+        <div className='container' id="contact">
+            <Fade effect="fade" delay={700}>
                 <div className="container-bg"></div>
                 <div className={`container-wrapper ${formSubmitted ? 'submitted' : ''}`} ref={contactContainerRef}>
                     <div className="container-left">
@@ -309,49 +329,54 @@ const Contact = ({setMenuOpen}) => {
                         <ToastContainer className="toastMessage"/>
                     </div>
                 </div>
-                <div
-                    ref={containerReviewRef}
-                    className={`container-review ${reviewActive ? 'active' : ''}`}
-                >
-                    <h2 className="review-title">Review Your Submission</h2>
-                    <p className="review-desc">Please review what you typed in the form down below. </p>
-                    <p className="review-desc">
-                        If you need to make any changes, click or tap the back button.
-                    </p>
-                    <p className={`review-desc ${submitButtonCountdown === 0 && flash ? 'animate-fade-out' : ''} ${submitButtonCountdown === 0 && !flash ? 'animate-fade-in' : ''}`}>
-                        {submitButtonCountdown > 0 ? `Otherwise, please wait ${submitButtonCountdown} seconds before submitting.` : 'You can now submit the form.'}
-                    </p>
+            </Fade>
+            <div className={`fade-container ${!reviewActive ? 'hidden' : ''}`}>
+                {reviewActive && (
+                    <div
+                        ref={containerReviewRef}
+                        className={`container-review ${reviewActive ? 'active' : ''} ${fadeOut ? 'fade-out' : ''}`}
+                    >
+                        <h2 className="review-title">Review Your Submission</h2>
+                        <p className="review-desc">Please review what you typed in the form down below. </p>
+                        <p className="review-desc">
+                            If you need to make any changes, click or tap the back button.
+                        </p>
+                        <p className={`review-desc ${submitButtonCountdown === 0 && flash ? 'animate-fade-out' : ''} ${submitButtonCountdown === 0 && !flash ? 'animate-fade-in' : ''}`}>
+                            {submitButtonCountdown > 0 ? `Otherwise, please wait ${submitButtonCountdown} seconds before submitting.` : 'You can now submit the form.'}
+                        </p>
 
-                    {inputs.map(inputVals => (
-                        <div key={inputVals.id} className="review-field">
-                            <label className="input-label">{inputVals.label}:</label>
-                            <p className="input-value">{vals[inputVals.name]}</p>
+                        {inputs.map(inputVals => (
+                            <div key={inputVals.id} className="review-field">
+                                <label className="input-label">{inputVals.label}:</label>
+                                <p className="input-value">{vals[inputVals.name]}</p>
+                            </div>
+                        ))}
+                        <div className="review-field">
+                            <label className="input-label">Your message:</label>
+                            <p className="input-value">{vals.message}</p>
                         </div>
-                    ))}
-                    <div className="review-field">
-                        <label className="input-label">Your message:</label>
-                        <p className="input-value">{vals.message}</p>
+                        <div className="review-form-buttons">
+                            <button
+                                className="back-button"
+                                type="button"
+                                onClick={handleBackButtonClick}
+                            >
+                                <p>Back</p>
+                            </button>
+                            <button
+                                type="submit"
+                                className="submit-button"
+                                disabled={submitButtonCountdown > 0 || submitting}
+                                onClick={handleSubmitButtonClick}
+                            >
+                                <p>{submitting ? "Submitting..." : (submitButtonCountdown > 0 ? `Wait ${submitButtonCountdown}s` : 'Submit')}</p>
+                            </button>
+                        </div>
                     </div>
-                    <div className="review-form-buttons">
-                        <button
-                            className="back-button"
-                            type="button"
-                            onClick={handleBackButtonClick}
-                        >
-                            <p>Back</p>
-                        </button>
-                        <button
-                            type="submit"
-                            className="submit-button"
-                            disabled={submitButtonCountdown > 0 || submitting}
-                            onClick={handleSubmitButtonClick}
-                        >
-                            <p>{submitting ? "Submitting" : (submitButtonCountdown > 0 ? `Wait ${submitButtonCountdown}s` : 'Submit')}</p>
-                        </button>
-                    </div>
-                </div>
+                )}
             </div>
-        </Fade>
+        </div>
+
     );
 };
 

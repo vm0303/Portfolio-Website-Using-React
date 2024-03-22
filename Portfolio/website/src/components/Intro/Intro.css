@@ -39,7 +39,7 @@
 
 .i-left_side_wrapper {
     padding: 45px;
-    height: 90%;
+    height: 85%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -96,9 +96,9 @@
 }
 
 .i-title-item {
-    -webkit-transform: translateY(-7px);
-    -ms-transform: translateY(-7px);
-    transform: translateY(-7px);
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
     font-size: 30px;
     display: -webkit-box;
     display: -ms-flexbox;

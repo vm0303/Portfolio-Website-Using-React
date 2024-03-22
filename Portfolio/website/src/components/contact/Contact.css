@@ -5,6 +5,11 @@
 * Browsers: last 4 version
 */
 
+#light .Toastify__close-button {
+    color: white; /* Replace with your preferred color */
+
+
+}
 
 .container {
     height: auto;
@@ -23,6 +28,30 @@
     position: absolute;
 
 }
+
+.fade-container {
+    opacity: 1;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.fade-container.hidden {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.fade-out {
+    animation: reviewFadeOut 0.5s ease forwards;
+}
+
+@keyframes reviewFadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 
 
 #light .container-bg {
@@ -322,6 +351,7 @@ form {
     color: white;
     margin: auto; /* Center horizontally */
     width: 100%;
+    font-size: 15px;
 
 }
 
@@ -330,6 +360,7 @@ form {
     color: black;
     margin: auto; /* Center horizontally */
     width: 100%;
+    font-size: 15px;
 
 
 }
