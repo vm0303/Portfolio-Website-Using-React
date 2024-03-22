@@ -18,11 +18,12 @@ export const ThemeContext = createContext(null);
 function App() {
     const [theme, setTheme] = useState("light");
     const [menuOpen, setMenuOpen] = useState(false);
+
     const [isMobileView, setIsMobileView] = useState(false);
-    const [reviewActive, setReviewActive] = useState(false);
+
     const toggleTheme = () => {
         setTheme((currentTheme) => (currentTheme === "light" ? "dark" : "light"));
-    }
+    };
 
     useEffect(() => {
         const handleResize = () => {
@@ -36,16 +37,16 @@ function App() {
             window.removeEventListener("resize", handleResize);
         };
     }, []);
+
     return (
         <ThemeContext.Provider value={{theme, toggleTheme}}>
-
             <div className="app" id={theme}>
                 <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
                 <SideMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
                 <Intro/>
                 <About/>
                 <ProjectList/>
-                <Contact/>
+                <Contact menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
                 <Fade effect="fade" delay={800}>
                     <div className="toggle-switch">
                         <Popup
@@ -82,11 +83,9 @@ function App() {
                         </Popup>
                     </div>
                 </Fade>
-
-
             </div>
         </ThemeContext.Provider>
-    )
+    );
 }
 
 export default App;

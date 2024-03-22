@@ -4,6 +4,7 @@ import {BrowserRouter} from "react-router-dom";
 
 export default function SideMenu({menuOpen, setMenuOpen}) {
     return (
+
         <BrowserRouter>
             <div className={"side_menu " + (menuOpen && "active")}>
                 <ul>

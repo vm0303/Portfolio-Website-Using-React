@@ -115,20 +115,6 @@
 
 }
 
-.hamburger.disabled {
-    pointer-events: none;
-    opacity: 0.5;
-}
-
-.navbar.disabled {
-    pointer-events: none;
-}
-
-.navbar.disabled .social_media_Container {
-    opacity: 0.5; /* Adjust opacity to gray out the icons */
-    pointer-events: none;
-}
-
 @media only screen and (min-width: 320px) and (max-width: 667px) {
     .wrapper {
         padding: 10px 20px;
