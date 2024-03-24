@@ -14,6 +14,7 @@ const Contact = ({setMenuOpen}) => {
     const [formSubmitted, setFormSubmitted] = useState(false);
     const [reviewButtonDisabled, setReviewButtonDisabled] = useState(false);
 
+
     const handleFocus = () => {
         setFocus(true);
     };
@@ -28,6 +29,7 @@ const Contact = ({setMenuOpen}) => {
 
     const containerReviewRef = useRef(null);
     const contactContainerRef = useRef(null);
+    const formRef = useRef();
     const [reviewActive, setReviewActive] = useState(false);
     const [submitButtonCountdown, setSubmitButtonCountdown] = useState(0); // Countdown state for submit button.
     const [flash, setFlash] = useState(false); // Flash state
@@ -38,7 +40,7 @@ const Contact = ({setMenuOpen}) => {
             type: 'text',
             placeholder: 'Enter your name here. ',
             errorMsg: "Please enter a valid first name or a full name with a space that is between 2-50 characters. " +
-                "Avoid using numbers or any special characters that are not typically used in names." +
+                "Avoid using numbers or any special characters that are not typically used in names. " +
                 "In addition, make sure you don't start with a whitespace.",
             label: 'Name',
             required: true,
@@ -68,7 +70,13 @@ const Contact = ({setMenuOpen}) => {
         },
     ]);
     const [fadeOut, setFadeOut] = useState(false);
-    const formRef = useRef();
+    const initialTime = 240;
+    const [timeRemaining, setTimeRemaining] = useState(initialTime);
+    const [startTimer, setStartTimer] = useState(false);
+
+
+
+
 
 
     const handleReview = async (event) => {
@@ -109,10 +117,12 @@ const Contact = ({setMenuOpen}) => {
 
         setTimeout(() => {
             setReviewActive(false);
+            document.querySelector(".review-button").style.opacity = 1;
             document.querySelector(".hamburger").style.pointerEvents = "auto";
             document.querySelector(".hamburger").style.opacity = 1;
             document.querySelector('.right').style.pointerEvents = 'auto';
             document.querySelector('.right').style.opacity = 1;
+            document.querySelector('.review-button').style.pointerEvents = 'auto';
         }, 550); // Adjust the timing as needed to match your CSS animation duration
 
 
@@ -125,17 +135,7 @@ const Contact = ({setMenuOpen}) => {
 
     const handleReviewButtonClick = () => {
         if (reviewButtonDisabled) {
-            toast.info(
-                "Test",
-                {
-                    className: "toast-message",
-                    position: "bottom-right",
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    autoClose: 5000,
-                    transition: Slide
-                });
+            showToastInfo();
         } else {
             // Check if all required fields are filled
             const hasEmptyFields = inputs.some(input => {
@@ -176,6 +176,9 @@ const Contact = ({setMenuOpen}) => {
             if (containerReviewRef.current) {
                 containerReviewRef.current.scrollIntoView({behavior: 'smooth'});
             }
+            document.querySelector('.review-button').style.pointerEvents = 'none';
+            document.querySelector(".review-button").style.opacity = 0.2;
+
             setReviewActive(true);
 
             // Start the submitButtonCountdown when reviewActive becomes true
@@ -199,7 +202,6 @@ const Contact = ({setMenuOpen}) => {
     const handleSubmitButtonClick = () => {
         if (!submitting) {
             setSubmitting(true); // Set submitting state to true
-            // Perform any additional actions before submission if needed
             // Simulate submission delay
             setTimeout(() => {
                 // Reset states after submission
@@ -215,7 +217,6 @@ const Contact = ({setMenuOpen}) => {
                 // Can be done by updating the input array to include a "disabled" property
                 const updatedInputs = inputs.map(input => ({...input, disabled: true}));
                 setInputs(updatedInputs);
-                document.querySelector(".review-button").style.opacity = 0.4;
                 document.querySelector('.hamburger').style.pointerEvents = 'none';
                 document.querySelector('.hamburger').style.opacity = 0.5;
                 document.querySelector('.right').style.pointerEvents = 'none';
@@ -223,33 +224,42 @@ const Contact = ({setMenuOpen}) => {
                 disableBodyScroll(document.body);
                 setReviewButtonDisabled(true);
                 setFormSubmitted(true);
-
-
+                setVals({
+                    user_name: '',
+                    user_subject: '',
+                    user_email: '',
+                    message: ''
+                })
                 setTimeout(() => {
-                    toast.success("Thank you! The form has been submitted successfully. " +
-                        "I'll get back to you shortly. " +
-                        "Click to close this message.", {
-                        className: "toast-message",
-                        position: "bottom-right",
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        autoClose: false,
-                        transition: Slide,
-                        onClose: () => {
-                            enableBodyScroll(document.body)
-                            document.querySelector(".hamburger").style.pointerEvents = "auto";
-                            document.querySelector(".hamburger").style.opacity = 1;
-                            document.querySelector('.right').style.pointerEvents = 'auto';
-                            document.querySelector('.right').style.opacity = 1;
-
-                        }
-                    });
+                    showToastSuccess();
                 }, 1200);
             }, 3000); // Adjust the delay as needed
 
         }
     };
+    const showToastSuccess = () => {
+        toast.success("Thank you! The form has been submitted successfully. " +
+            "I'll get back to you shortly. " +
+            "Click to close this message.", {
+            className: "toast-message",
+            position: "bottom-right",
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            autoClose: false,
+            transition: Slide,
+            onClose: () => {
+                enableBodyScroll(document.body)
+                document.querySelector(".hamburger").style.pointerEvents = "auto";
+                document.querySelector(".hamburger").style.opacity = 1;
+                document.querySelector('.right').style.pointerEvents = 'auto';
+                document.querySelector('.right').style.opacity = 1;
+                document.querySelector('.review-button').style.pointerEvents = 'auto';
+                document.querySelector(".review-button").style.cursor = 'not-allowed';
+                showToastInfo();
+            }
+        });
+    }
 
     //Flashing text event to indicate the user can submit the form.
     useEffect(() => {
@@ -264,7 +274,6 @@ const Contact = ({setMenuOpen}) => {
         }
     }, [submitButtonCountdown]);
 
-
     useEffect(() => {
         if (submitButtonCountdown > 0) {
             const timer = setTimeout(() => {
@@ -275,6 +284,54 @@ const Contact = ({setMenuOpen}) => {
         }
     }, [submitButtonCountdown]);
 
+
+    const showToastInfo = () => {
+        const hours = Math.floor(timeRemaining / 3600);
+        const minutes = Math.floor((timeRemaining % 3600) / 60);
+        const seconds = timeRemaining % 60;
+        setStartTimer(true);
+        let toastMessage = "";
+        if (hours > 0) {
+            toastMessage = `Please wait ${hours} hour${hours > 1 ? 's' : ''}`;
+            if (minutes > 0 || seconds > 0) {
+                toastMessage += `, ${minutes} minute${minutes > 1 ? 's' : ''}`;
+                if (seconds > 0) {
+                    toastMessage += ` and ${seconds} second${seconds > 1 ? 's' : ''}`;
+                }
+            }
+        } else if (minutes > 0) {
+            toastMessage = `Please wait ${minutes} minute${minutes > 1 ? 's' : ''}`;
+            if (seconds > 0) {
+                toastMessage += ` and ${seconds} second${seconds > 1 ? 's' : ''}`;
+            }
+        } else {
+            toastMessage = `Please wait ${seconds} second${seconds > 1 ? 's' : ''}`;
+        }
+
+        toast.info(
+            toastMessage + " till you can submit another form. Click to close this message",
+            {
+                className: "toast-message",
+                position: "bottom-right",
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                autoClose: false,
+                transition: Slide
+            });
+
+    }
+    useEffect(() => {
+
+        if (startTimer && timeRemaining > 0) {
+            const timer = setTimeout(() => {
+                setTimeRemaining(timeRemaining - 1);
+            }, 1000);
+
+            return () => clearTimeout(timer);
+        }
+
+    }, [startTimer, timeRemaining]);
 
     return (
         <div className='container' id="contact">
@@ -299,7 +356,7 @@ const Contact = ({setMenuOpen}) => {
                             {inputs.map(inputVals => (
                                 <InputForm key={inputVals.id} {...inputVals} value={vals[inputVals.name]}
                                            onChange={handleChange} autoCapitalize="none"
-                                           disabled={reviewActive}/>
+                                           disabled={reviewActive || formSubmitted}/>
                             ))}
                             <label className="text-area-label">Your message (Max: 500 Characters)</label>
                             <textarea
@@ -313,7 +370,7 @@ const Contact = ({setMenuOpen}) => {
                                 required
                                 value={vals.message}
                                 onChange={handleChange}
-                                disabled={reviewActive}
+                                disabled={reviewActive || formSubmitted}
                             />
                             <p className="error-message-textArea">Please enter your message above.
                                 Make sure you don't exceed past 500 characters.</p>
