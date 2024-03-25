@@ -11,10 +11,12 @@ const Contact = ({setMenuOpen}) => {
     const [focused, setFocus] = useState(false);
     const [scrollLimit, setScrollLimit] = useState(2150);
     const [submitting, setSubmitting] = useState(false);
-    const [formSubmitted, setFormSubmitted] = useState(false);
-    const [reviewButtonDisabled, setReviewButtonDisabled] = useState(false);
-
-
+    const [formSubmitted, setFormSubmitted] = useState(
+        JSON.parse(localStorage.getItem('formSubmitted')) || false // Retrieve from LocalStorage (boolean) or set to false
+    );
+    const [reviewButtonDisabled, setReviewButtonDisabled] = useState(
+        JSON.parse(localStorage.getItem('reviewButtonDisabled')) || false // Retrieve from LocalStorage (boolean) or set to false
+    );
     const handleFocus = () => {
         setFocus(true);
     };
@@ -70,10 +72,11 @@ const Contact = ({setMenuOpen}) => {
         },
     ]);
     const [fadeOut, setFadeOut] = useState(false);
-    const initialTime = 240;
-    const [timeRemaining, setTimeRemaining] = useState(initialTime);
+    const initialTime = 10;
+    const [timeRemaining, setTimeRemaining] = useState(
+        parseInt(localStorage.getItem('timeRemaining')) || initialTime // Retrieve from LocalStorage or set initial value
+    );
     const [startTimer, setStartTimer] = useState(false);
-
 
 
 
@@ -138,41 +141,42 @@ const Contact = ({setMenuOpen}) => {
             showToastInfo();
         } else {
             // Check if all required fields are filled
-            const hasEmptyFields = inputs.some(input => {
-                return !vals[input.name] && input.required;
-            });
+            /*   const hasEmptyFields = inputs.some(input => {
+                   return !vals[input.name] && input.required;
+               });
 
-            // If there are empty required fields, display errors and prevent opening the review section
-            if (hasEmptyFields || !vals.message) {
-                // Display errors for empty required fields
-                const updatedInputs = inputs.map(input => {
-                    if ((!vals[input.name] && input.required) || (!vals.message && input.name === 'message')) {
-                        return {...input, error: true};
-                    }
-                    return input;
-                });
-                setInputs(updatedInputs);
-                return; // Exit early and do not proceed to open the review section
-            }
+               // If there are empty required fields, display errors and prevent opening the review section
+               if (hasEmptyFields || !vals.message) {
+                   // Display errors for empty required fields
+                   const updatedInputs = inputs.map(input => {
+                       if ((!vals[input.name] && input.required) || (!vals.message && input.name === 'message')) {
+                           return {...input, error: "true"};
+                       }
+                       return input;
+                   });
+                   setInputs(updatedInputs);
+                   return; // Exit early and do not proceed to open the review section
+               }
 
-            // Check if email field is valid
-            const emailInput = inputs.find(input => input.name === 'user_email');
-            if (emailInput) {
-                const emailField = document.querySelector(`input[name="${emailInput.name}"]`);
-                if (emailField && !emailField.checkValidity()) {
-                    // Display error for invalid email format
-                    const updatedInputs = inputs.map(input => {
-                        if (input.name === 'user_email') {
-                            return {...input, error: true};
-                        }
-                        return input;
-                    });
-                    setInputs(updatedInputs);
-                    return; // Exit early and do not proceed to open the review section
-                }
-            }
-
+               // Check if email field is valid
+               const emailInput = inputs.find(input => input.name === 'user_email');
+               if (emailInput) {
+                   const emailField = document.querySelector(`input[name="${emailInput.name}"]`);
+                   if (emailField && !emailField.checkValidity()) {
+                       // Display error for invalid email format
+                       const updatedInputs = inputs.map(input => {
+                           if (input.name === 'user_email') {
+                               return {...input, error: true};
+                           }
+                           return input;
+                       });
+                       setInputs(updatedInputs);
+                       return; // Exit early and do not proceed to open the review section
+                   }
+               }
+   */
             // Proceed to open the review section if all required fields are filled and email is valid
+            // This is if the back button has not been clicked at all
             if (containerReviewRef.current) {
                 containerReviewRef.current.scrollIntoView({behavior: 'smooth'});
             }
@@ -190,7 +194,6 @@ const Contact = ({setMenuOpen}) => {
         if (containerReviewRef.current && reviewActive) {
             containerReviewRef.current.scrollIntoView({behavior: 'smooth'});
             // Start the submitButtonCountdown when reviewActive becomes true
-            setSubmitButtonCountdown(3);
             // Disable the navbar elements
             document.querySelector('.hamburger').style.pointerEvents = 'none';
             document.querySelector('.hamburger').style.opacity = 0.5;
@@ -201,6 +204,8 @@ const Contact = ({setMenuOpen}) => {
     }, [reviewActive]);
     const handleSubmitButtonClick = () => {
         if (!submitting) {
+            document.querySelector(".back-button").style.pointerEvents = "none";
+            document.querySelector(".back-button").style.opacity = 0.2;
             setSubmitting(true); // Set submitting state to true
             // Simulate submission delay
             setTimeout(() => {
@@ -215,8 +220,7 @@ const Contact = ({setMenuOpen}) => {
                 setFadeOut(true);
                 // Disable the form's input fields
                 // Can be done by updating the input array to include a "disabled" property
-                const updatedInputs = inputs.map(input => ({...input, disabled: true}));
-                setInputs(updatedInputs);
+
                 document.querySelector('.hamburger').style.pointerEvents = 'none';
                 document.querySelector('.hamburger').style.opacity = 0.5;
                 document.querySelector('.right').style.pointerEvents = 'none';
@@ -284,11 +288,11 @@ const Contact = ({setMenuOpen}) => {
         }
     }, [submitButtonCountdown]);
 
-
+    const hours = Math.floor(timeRemaining / 3600);
+    const minutes = Math.floor((timeRemaining % 3600) / 60);
+    const seconds = timeRemaining % 60;
     const showToastInfo = () => {
-        const hours = Math.floor(timeRemaining / 3600);
-        const minutes = Math.floor((timeRemaining % 3600) / 60);
-        const seconds = timeRemaining % 60;
+
         setStartTimer(true);
         let toastMessage = "";
         if (hours > 0) {
@@ -316,22 +320,32 @@ const Contact = ({setMenuOpen}) => {
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
-                autoClose: false,
+                autoClose: 5000,
                 transition: Slide
             });
 
     }
     useEffect(() => {
-
         if (startTimer && timeRemaining > 0) {
             const timer = setTimeout(() => {
-                setTimeRemaining(timeRemaining - 1);
+                setTimeRemaining(prevTime => {
+                    if (prevTime === 1) {
+                        // Enable fields and button when time reaches zero
+
+                        setReviewButtonDisabled(false);
+
+                        document.querySelector('.review-button').style.opacity = 1;
+                        document.querySelector('.review-button').style.cursor = "auto";
+
+                    }
+                    return prevTime - 1;
+                });
             }, 1000);
 
             return () => clearTimeout(timer);
         }
-
     }, [startTimer, timeRemaining]);
+
 
     return (
         <div className='container' id="contact">
@@ -384,6 +398,7 @@ const Contact = ({setMenuOpen}) => {
                             </button>
                         </form>
                         <ToastContainer className="toastMessage"/>
+                        <p>{hours}h {minutes}m {seconds}s </p>
                     </div>
                 </div>
             </Fade>
