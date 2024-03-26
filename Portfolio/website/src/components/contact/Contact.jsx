@@ -72,15 +72,13 @@ const Contact = ({setMenuOpen}) => {
         },
     ]);
     const [fadeOut, setFadeOut] = useState(false);
-    const initialTime = 10;
+    const initialTime = 20;
     const [timeRemaining, setTimeRemaining] = useState(
         parseInt(localStorage.getItem('timeRemaining')) || initialTime // Retrieve from LocalStorage or set initial value
     );
-    const [startTimer, setStartTimer] = useState(false);
-
-
-
-
+    const [startTimer, setStartTimer] = useState(
+        JSON.parse(localStorage.getItem('startTimer')) || false
+    );
 
     const handleReview = async (event) => {
         event.preventDefault();
@@ -141,40 +139,40 @@ const Contact = ({setMenuOpen}) => {
             showToastInfo();
         } else {
             // Check if all required fields are filled
-            /*   const hasEmptyFields = inputs.some(input => {
-                   return !vals[input.name] && input.required;
-               });
+            const hasEmptyFields = inputs.some(input => {
+                return !vals[input.name] && input.required;
+            });
 
-               // If there are empty required fields, display errors and prevent opening the review section
-               if (hasEmptyFields || !vals.message) {
-                   // Display errors for empty required fields
-                   const updatedInputs = inputs.map(input => {
-                       if ((!vals[input.name] && input.required) || (!vals.message && input.name === 'message')) {
-                           return {...input, error: "true"};
-                       }
-                       return input;
-                   });
-                   setInputs(updatedInputs);
-                   return; // Exit early and do not proceed to open the review section
-               }
+            // If there are empty required fields, display errors and prevent opening the review section
+            if (hasEmptyFields || !vals.message) {
+                // Display errors for empty required fields
+                const updatedInputs = inputs.map(input => {
+                    if ((!vals[input.name] && input.required) || (!vals.message && input.name === 'message')) {
+                        return {...input, error: "true"};
+                    }
+                    return input;
+                });
+                setInputs(updatedInputs);
+                return; // Exit early and do not proceed to open the review section
+            }
 
-               // Check if email field is valid
-               const emailInput = inputs.find(input => input.name === 'user_email');
-               if (emailInput) {
-                   const emailField = document.querySelector(`input[name="${emailInput.name}"]`);
-                   if (emailField && !emailField.checkValidity()) {
-                       // Display error for invalid email format
-                       const updatedInputs = inputs.map(input => {
-                           if (input.name === 'user_email') {
-                               return {...input, error: true};
-                           }
-                           return input;
-                       });
-                       setInputs(updatedInputs);
-                       return; // Exit early and do not proceed to open the review section
-                   }
-               }
-   */
+            // Check if email field is valid
+            const emailInput = inputs.find(input => input.name === 'user_email');
+            if (emailInput) {
+                const emailField = document.querySelector(`input[name="${emailInput.name}"]`);
+                if (emailField && !emailField.checkValidity()) {
+                    // Display error for invalid email format
+                    const updatedInputs = inputs.map(input => {
+                        if (input.name === 'user_email') {
+                            return {...input, error: true};
+                        }
+                        return input;
+                    });
+                    setInputs(updatedInputs);
+                    return; // Exit early and do not proceed to open the review section
+                }
+            }
+
             // Proceed to open the review section if all required fields are filled and email is valid
             // This is if the back button has not been clicked at all
             if (containerReviewRef.current) {
@@ -220,7 +218,6 @@ const Contact = ({setMenuOpen}) => {
                 setFadeOut(true);
                 // Disable the form's input fields
                 // Can be done by updating the input array to include a "disabled" property
-
                 document.querySelector('.hamburger').style.pointerEvents = 'none';
                 document.querySelector('.hamburger').style.opacity = 0.5;
                 document.querySelector('.right').style.pointerEvents = 'none';
@@ -259,7 +256,8 @@ const Contact = ({setMenuOpen}) => {
                 document.querySelector('.right').style.pointerEvents = 'auto';
                 document.querySelector('.right').style.opacity = 1;
                 document.querySelector('.review-button').style.pointerEvents = 'auto';
-                document.querySelector(".review-button").style.cursor = 'not-allowed';
+                document.querySelector(".review-button").style.cursor = 'auto';
+                document.querySelector(".review-button").style.opacity = 1;
                 showToastInfo();
             }
         });
@@ -288,11 +286,11 @@ const Contact = ({setMenuOpen}) => {
         }
     }, [submitButtonCountdown]);
 
-    const hours = Math.floor(timeRemaining / 3600);
-    const minutes = Math.floor((timeRemaining % 3600) / 60);
-    const seconds = timeRemaining % 60;
-    const showToastInfo = () => {
 
+    const showToastInfo = () => {
+        const hours = Math.floor(timeRemaining / 3600);
+        const minutes = Math.floor((timeRemaining % 3600) / 60);
+        const seconds = timeRemaining % 60;
         setStartTimer(true);
         let toastMessage = "";
         if (hours > 0) {
@@ -326,32 +324,41 @@ const Contact = ({setMenuOpen}) => {
 
     }
     useEffect(() => {
+
+        localStorage.setItem('timeRemaining', timeRemaining.toString());
+        localStorage.setItem('formSubmitted', JSON.stringify(formSubmitted));
+        localStorage.setItem('reviewButtonDisabled', JSON.stringify(reviewButtonDisabled));
+        localStorage.setItem('startTimer', JSON.stringify(startTimer));
         if (startTimer && timeRemaining > 0) {
             const timer = setTimeout(() => {
                 setTimeRemaining(prevTime => {
                     if (prevTime === 1) {
                         // Enable fields and button when time reaches zero
-
                         setReviewButtonDisabled(false);
-
+                        setReviewActive(false);
+                        setFormSubmitted(false);
                         document.querySelector('.review-button').style.opacity = 1;
                         document.querySelector('.review-button').style.cursor = "auto";
-
                     }
                     return prevTime - 1;
                 });
             }, 1000);
 
             return () => clearTimeout(timer);
+        } else if (timeRemaining === 0) {
+            // Reset the timer to initial value when it reaches zero
+            setTimeRemaining(initialTime);
+            setStartTimer(false);
         }
-    }, [startTimer, timeRemaining]);
+    }, [startTimer, timeRemaining, initialTime, formSubmitted, reviewButtonDisabled]);
+
 
 
     return (
         <div className='container' id="contact">
             <Fade effect="fade" delay={700}>
                 <div className="container-bg"></div>
-                <div className={`container-wrapper ${formSubmitted ? 'submitted' : ''}`} ref={contactContainerRef}>
+                <div className="container-wrapper" ref={contactContainerRef}>
                     <div className="container-left">
                         <h1 className="container-title">Feel free to contact me!</h1>
                         <div className="container-info">
@@ -370,7 +377,9 @@ const Contact = ({setMenuOpen}) => {
                             {inputs.map(inputVals => (
                                 <InputForm key={inputVals.id} {...inputVals} value={vals[inputVals.name]}
                                            onChange={handleChange} autoCapitalize="none"
-                                           disabled={reviewActive || formSubmitted}/>
+                                           disabled={reviewActive || formSubmitted}
+
+                                />
                             ))}
                             <label className="text-area-label">Your message (Max: 500 Characters)</label>
                             <textarea
@@ -385,6 +394,7 @@ const Contact = ({setMenuOpen}) => {
                                 value={vals.message}
                                 onChange={handleChange}
                                 disabled={reviewActive || formSubmitted}
+
                             />
                             <p className="error-message-textArea">Please enter your message above.
                                 Make sure you don't exceed past 500 characters.</p>
@@ -397,8 +407,10 @@ const Contact = ({setMenuOpen}) => {
                                 <p>Review</p>
                             </button>
                         </form>
+                        <div id="showToastForTextField" aria-live="assertive" style={{display: 'none'}}>
+                            {showToastInfo}
+                        </div>
                         <ToastContainer className="toastMessage"/>
-                        <p>{hours}h {minutes}m {seconds}s </p>
                     </div>
                 </div>
             </Fade>
