@@ -201,6 +201,7 @@ const Contact = ({setMenuOpen}) => {
         }
     }, [reviewActive]);
     const handleSubmitButtonClick = () => {
+
         if (!submitting) {
             document.querySelector(".back-button").style.pointerEvents = "none";
             document.querySelector(".back-button").style.opacity = 0.2;
@@ -231,7 +232,11 @@ const Contact = ({setMenuOpen}) => {
                     user_email: '',
                     message: ''
                 })
+
                 setTimeout(() => {
+                    if (contactContainerRef.current) {
+                        contactContainerRef.current.scrollIntoView({behavior: 'smooth'});
+                    }
                     showToastSuccess();
                 }, 1200);
             }, 3000); // Adjust the delay as needed
@@ -466,6 +471,5 @@ const Contact = ({setMenuOpen}) => {
 
 
 export default Contact;
-
 
 

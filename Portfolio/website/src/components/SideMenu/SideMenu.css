@@ -65,8 +65,12 @@ ul li a {
     }
 }
 
+/*
+------------------------Mobile CSS--------------------------------------------------------------------------------
+ */
 
-@media only screen and (min-width: 548px) and (max-width: 667px)
+/*XS, 11 Pro, SE (2nd and 3rd Gen) for IOS 17 (Flipped)*/
+@media only screen and (min-width: 540px) and (max-width: 667px)
 and (min-height: 300px) and (max-height: 375px)
 and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
     .side_menu {
@@ -78,28 +82,11 @@ and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-
 
     ul {
         font-size: 15px;
-        transform: translateY(13%);
+        transform: translateY(15%);
 
     }
 }
 
-/*SE (1st GEN) IOS 15 (Flipped)*/
-@media only screen and (min-width: 448px) and (max-width: 568px)
-and (min-height: 220px) and (max-height: 320px)
-and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
-    .side_menu {
-        width: 130px;
-        left: -150px;
-        height: 100vh;
-
-    }
-
-    ul {
-        font-size: 12px;
-        transform: translateY(20%);
-
-    }
-}
 
 
 /*XR for IOS 17*/
@@ -120,9 +107,7 @@ and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-
     }
 }
 
-/*6S Plus, 7 Plus for IOS 15
-8 PLus for IOS 16
-11 Pro Max for IOS 17*/
+/*11 Pro Max for IOS 17*/
 @media only screen and (min-width: 414px) and (max-width: 414px)
 and (min-height: 616px) and (max-height: 736px)
 and (-webkit-min-device-pixel-ratio: 2.6), only screen and (min--moz-device-pixel-ratio: 2.6), only screen and (-o-min-device-pixel-ratio: 2.6/1), only screen and (min-device-pixel-ratio: 2.6) {
@@ -140,11 +125,9 @@ and (-webkit-min-device-pixel-ratio: 2.6), only screen and (min--moz-device-pixe
     }
 }
 
-/*6s, 7 for IOS 15
-8 for IOS 16
-XS, 11 Pro, SE (2nd and 3rd Gen) for IOS 17 */
+/*XS, 11 Pro, SE (2nd and 3rd Gen) for IOS 17 */
 @media only screen and (min-width: 375px) and (max-width: 375px)
-and (min-height: 548px) and (max-height: 667px)
+and (min-height: 540px) and (max-height: 667px)
 and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
     .side_menu {
         width: 130px;
@@ -160,20 +143,3 @@ and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-
     }
 }
 
-/*SE (1st GEN) IOS 15*/
-@media only screen and (min-width: 320px) and (max-width: 320px)
-and (min-height: 448px) and (max-height: 568px)
-and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
-    .side_menu {
-        width: 130px;
-        left: -150px;
-        height: 100vh;
-
-    }
-
-    ul {
-        font-size: 12px;
-        transform: translateY(15%);
-
-    }
-}
