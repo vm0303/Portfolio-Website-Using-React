@@ -119,6 +119,54 @@
 /*
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
+/*XR for IOS 17 (FLIPPED)*/
+@media only screen and (min-width: 500px) and (max-width: 896px)
+and (min-height: 360px) and (max-height: 414px)
+and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
+    .formInput {
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    #light input {
+        width: 103.3%;
+        font-size: 12px;
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+
+    #dark input {
+        width: 103.3%;
+        font-size: 12px;
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+
+    }
+
+    .input-area-label {
+        font-size: 10px;
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+
+
+    }
+
+    .error-message {
+        font-size: 7px;
+        width: 104.2%;
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+
+    }
+
+
+}
+
+
 
 
 /*
@@ -149,7 +197,7 @@ and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-
     }
 
     .input-area-label {
-        font-size: 11px;
+        font-size: 10px;
         -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);
         transform: translateX(-10px);
@@ -158,7 +206,7 @@ and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-
     }
 
     .error-message {
-        font-size: 11px;
+        font-size: 7px;
         width: 104.2%;
         -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);

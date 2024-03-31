@@ -771,6 +771,201 @@ form {
  */
 
 
+/*XR for IOS 17 (FLIPPED)*/
+@media only screen and (min-width: 500px) and (max-width: 896px)
+and (min-height: 360px) and (max-height: 414px)
+and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
+    .container {
+        height: auto;
+    }
+
+    .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 10px 10px;
+        margin: 10px 10px;
+    }
+
+    .text-area-label {
+        font-size: 10px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: -10px;
+
+    }
+
+    .container-image {
+        margin: 113px 225px;
+        padding: 50px;
+        width: 218px;
+        height: 218px;
+    }
+
+    .container-title {
+        font-size: 30px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .container-desc {
+        font-size: 17px;
+        text-align: center;
+        width: 49%;
+    }
+
+    .container-bg {
+        display: none;
+    }
+
+    form {
+        margin-top: 230px;
+
+    }
+
+    #light textarea {
+        width: 103%;
+        font-size: 12px;
+        transform: translateX(-10px);
+
+    }
+
+
+    #dark textarea {
+        width: 103%;
+        font-size: 12px;
+        transform: translateX(-10px);
+
+    }
+
+    #light textarea::placeholder {
+        font-size: 12px;
+
+    }
+
+
+    #dark textarea::placeholder {
+        font-size: 12px;
+
+
+    }
+
+    .error-message-textArea {
+        font-size: 7px;
+        width: 104.2%;
+        transform: translateX(-10px);
+
+    }
+
+    .review-button {
+        margin: 10px 235px;
+        height: 45px;
+        width: 120px;
+    }
+
+    .review-button p {
+        margin-left: 1px;
+    }
+
+
+    .container-review {
+        max-width: 80%;
+    }
+
+    #light .container-review {
+
+        box-shadow: 0 0 10px rgba(70, 70, 70, 0.91); /* Drop shadow for depth */
+    }
+
+    #dark .container-review {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.66); /* Drop shadow for depth */
+    }
+
+
+    .review-title {
+        text-align: center; /* Center-align the title */
+        margin-bottom: 20px; /* Space below the title */
+        font-size: 30px;
+    }
+
+    .review-desc {
+        text-align: center;
+        font-size: 17px;
+        margin: 15px 135px;
+
+    }
+
+    #light .input-label, #dark .input-label {
+        font-size: 14px;
+
+    }
+
+    #light .input-value, #dark .input-value {
+        font-size: 12px;
+        word-wrap: break-word;
+    }
+
+
+    /*Modal Buttons*/
+    .review-form-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-evenly;
+        margin-top: 20px;
+
+    }
+
+    .back-button {
+        height: 45px;
+        width: 150px;
+        margin: 5px
+    }
+
+    .submit-button {
+        height: 45px;
+        width: 150px;
+        margin: 5px
+    }
+
+    @-moz-document url-prefix() {
+
+        .container {
+            height: auto;
+        }
+
+        .container-desc {
+            font-size: 14px;
+        }
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+        #light .modal-content, #dark .modal-content {
+            width: 75%;
+            transform: translateY(25%);
+        }
+        #light .modal-desc, #dark .modal-desc {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        #light .input-label, #dark .input-label {
+            font-size: 15px;
+
+        }
+
+        #light .input-value, #dark .input-value {
+            font-size: 14px;
+            word-wrap: break-word;
+        }
+    }
+
+}
+
+
 /*XS, 11 Pro, SE (2nd and 3rd Gen) for IOS 17 (Flipped)*/
 @media only screen and (min-width: 540px) and (max-width: 667px)
 and (min-height: 300px) and (max-height: 375px)
@@ -789,7 +984,7 @@ and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-
     }
 
     .text-area-label {
-        font-size: 11px;
+        font-size: 10px;
         margin-top: 20px;
         margin-bottom: 10px;
         margin-left: -10px;
@@ -889,10 +1084,9 @@ and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-
     }
 
     .review-desc {
-        text-align: center; /* Center-align description paragraphs */
+        text-align: center;
         font-size: 17px;
-        margin: 10px 50px;
-
+        margin: 15px 135px;
     }
 
     #light .input-label, #dark .input-label {

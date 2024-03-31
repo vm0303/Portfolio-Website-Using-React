@@ -277,6 +277,97 @@
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
 
+/*XR for IOS 17 (FLIPPED)*/
+@media only screen and (min-width: 500px) and (max-width: 896px)
+and (min-height: 360px) and (max-height: 414px)
+and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) and (orientation: landscape) {
+    .intro {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .i-left_side_wrapper {
+        margin: 0 15px;
+        padding: 0 15px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .i-greeting {
+        font-size: 24px;
+
+    }
+
+    #light .i-name {
+        font-size: 26px;
+        margin: 5px;
+
+    }
+
+    #dark .i-name {
+        font-size: 26px;
+        margin: 5px;
+
+    }
+
+    .i-title-item {
+        font-size: 24px;
+        -webkit-transform: translateY(-7px);
+        -ms-transform: translateY(-7px);
+        transform: translateY(-7px);
+        margin: 5px 0;
+    }
+
+    .i-desc {
+        font-size: 15px;
+        width: 73%;
+        margin: 5px 0;
+
+    }
+
+    .i-hobbies {
+        font-size: 15px;
+        margin: -5px 0;
+        width: 75%;
+    }
+
+    .i-img {
+        margin-top: 5px;
+        height: 130vh;
+    }
+
+    .i-background {
+        margin-top: 5px;
+        height: 130vh;
+    }
+
+
+    .arrows {
+        display: none;
+    }
+
+    @-moz-document url-prefix() {
+        .i-title-item {
+            margin: 0;
+            transform: translateY(-4px);
+        }
+        .i-hobbies {
+            margin: 15px 0;
+        }
+
+    }
+
+
+}
+
 
 /*11 Pro Max for IOS 17 (Flipped)*/
 @media only screen and (min-width: 616px) and (max-width: 736px)
@@ -643,8 +734,7 @@ and (-webkit-min-device-pixel-ratio: 2.6), only screen and (min--moz-device-pixe
 
 }
 
-/*8 for IOS 16
-XS, 11 Pro, SE (2nd and 3rd Gen) for IOS 17 */
+/*XS, 11 Pro, SE (2nd and 3rd Gen) for IOS 17 */
 @media only screen and (min-width: 375px) and (max-width: 375px)
 and (min-height: 540px) and (max-height: 667px)
 and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
