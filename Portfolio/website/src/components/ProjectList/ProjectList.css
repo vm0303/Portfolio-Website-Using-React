@@ -50,6 +50,31 @@
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
 
+@media only screen and (min-width: 540px) and (max-width: 812px)
+and (min-height: 300px) and (max-height: 375px)
+and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
+    .project-body {
+        padding: 20px;
+        margin-top: 620px;
+    }
+
+    .project-texts {
+        width: 105%;
+    }
+
+    .project-title {
+        font-size: 30px;
+
+    }
+
+    .project-description {
+        font-size: 15px;
+        padding: 0;
+    }
+}
+
+
+
 /*XR for IOS 17 (FLIPPED)*/
 @media only screen and (min-width: 500px) and (max-width: 896px)
 and (min-height: 360px) and (max-height: 414px)
@@ -122,6 +147,7 @@ and (-webkit-min-device-pixel-ratio: 2.6), only screen and (min--moz-device-pixe
         padding: 0 70px;
     }
 }
+
 
 /*XS, 11 Pro, SE (2nd and 3rd Gen) for IOS 17 */
 @media only screen and (min-width: 375px) and (max-width: 375px)

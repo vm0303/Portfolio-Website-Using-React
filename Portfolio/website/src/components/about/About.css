@@ -396,73 +396,6 @@ and (-webkit-min-device-pixel-ratio: 2.6), only screen and (min--moz-device-pixe
 
 }
 
-/*XS, 11 Pro, SE (2nd and 3rd Gen) for IOS 17 (Flipped)*/
-@media only screen and (min-width: 540px) and (max-width: 667px)
-and (min-height: 300px) and (max-height: 375px)
-and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
-    .about {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        margin-top: 700px;
-    }
-
-    .about-left {
-        width: 100%;
-    }
-
-    .a-card {
-        height: 100vh;
-        width: 100vh;
-
-    }
-
-    .a-card.background {
-        display: none;
-    }
-
-    .about-right {
-        padding: 15px;
-        margin: 15px;
-    }
-
-    .about-title {
-        text-align: center;
-        font-size: 40px;
-        padding: 5px;
-        margin: 5px;
-
-    }
-
-    .about-description {
-        font-size: 15px;
-        padding: 5px 15px;
-        margin: 5px 15px;
-    }
-
-    .about-sub-title {
-        text-align: center;
-        font-size: 17px;
-        margin: 10px 40px;
-        padding: 0 35px;
-
-    }
-
-    .button-container {
-        margin: 10px 30px;
-        padding: 10px 30px;
-    }
-
-    .resume-button {
-        height: 40px;
-        width: 110px;
-        background-color: transparent;
-    }
-
-}
-
-
 
 /*XR for IOS 17*/
 @media only screen and (min-width: 414px) and (max-width: 414px)
@@ -591,6 +524,73 @@ and (-webkit-min-device-pixel-ratio: 2.6), only screen and (min--moz-device-pixe
     .resume-button {
         height: 45px;
         width: 150px;
+        background-color: transparent;
+    }
+
+}
+
+
+/*XS, 11 Pro, SE (2nd and 3rd Gen) for IOS 17 (Flipped)*/
+@media only screen and (min-width: 540px) and (max-width: 812px)
+and (min-height: 300px) and (max-height: 375px)
+and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
+    .about {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: 700px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 100vh;
+        width: 100vh;
+
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .about-title {
+        text-align: center;
+        font-size: 40px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 15px;
+        padding: 5px 15px;
+        margin: 5px 15px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 17px;
+        margin: 10px 40px;
+        padding: 0 35px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+        height: 40px;
+        width: 110px;
         background-color: transparent;
     }
 

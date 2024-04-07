@@ -5,7 +5,6 @@ import {Fade} from 'react-reveal';
 import InputForm from './InputForm';
 import {Slide, toast, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 
 const Contact = ({setMenuOpen}) => {
     const [focused, setFocus] = useState(false);
@@ -223,7 +222,6 @@ const Contact = ({setMenuOpen}) => {
                 document.querySelector('.hamburger').style.opacity = 0.5;
                 document.querySelector('.right').style.pointerEvents = 'none';
                 document.querySelector('.right').style.opacity = 0.5;
-                disableBodyScroll(document.body);
                 setReviewButtonDisabled(true);
                 setFormSubmitted(true);
                 setVals({
@@ -255,7 +253,6 @@ const Contact = ({setMenuOpen}) => {
             autoClose: false,
             transition: Slide,
             onClose: () => {
-                enableBodyScroll(document.body)
                 document.querySelector(".hamburger").style.pointerEvents = "auto";
                 document.querySelector(".hamburger").style.opacity = 1;
                 document.querySelector('.right').style.pointerEvents = 'auto';

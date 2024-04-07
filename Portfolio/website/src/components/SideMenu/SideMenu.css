@@ -92,25 +92,6 @@ and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-
 
 
 
-/*XS, 11 Pro, SE (2nd and 3rd Gen) for IOS 17 (Flipped)*/
-@media only screen and (min-width: 540px) and (max-width: 667px)
-and (min-height: 300px) and (max-height: 375px)
-and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
-    .side_menu {
-        width: 130px;
-        left: -150px;
-        height: 100vh;
-
-    }
-
-    ul {
-        font-size: 15px;
-        transform: translateY(15%);
-
-    }
-}
-
-
 
 /*XR for IOS 17*/
 @media only screen and (min-width: 414px) and (max-width: 414px)
@@ -147,6 +128,27 @@ and (-webkit-min-device-pixel-ratio: 2.6), only screen and (min--moz-device-pixe
 
     }
 }
+
+
+/*XS, 11 Pro, SE (2nd and 3rd Gen) for IOS 17 (Flipped)*/
+@media only screen and (min-width: 540px) and (max-width: 812px)
+and (min-height: 300px) and (max-height: 375px)
+and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2) {
+    .side_menu {
+        width: 130px;
+        left: -150px;
+        height: 100vh;
+
+    }
+
+    ul {
+        font-size: 15px;
+        transform: translateY(15%);
+
+    }
+}
+
+
 
 /*XS, 11 Pro, SE (2nd and 3rd Gen) for IOS 17 */
 @media only screen and (min-width: 375px) and (max-width: 375px)

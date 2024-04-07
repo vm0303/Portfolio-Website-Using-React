@@ -1086,7 +1086,7 @@ and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-
     .review-desc {
         text-align: center;
         font-size: 17px;
-        margin: 15px 135px;
+        margin: 15px 70px;
     }
 
     #light .input-label, #dark .input-label {
