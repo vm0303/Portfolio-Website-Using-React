@@ -199,6 +199,13 @@ const Contact = ({setMenuOpen}) => {
             setMenuOpen(false);
         }
     }, [reviewActive]);
+
+    const newSubmitScroll = () => {
+        const newScrollLimit = 2400;
+        if (window.pageYOffset < newScrollLimit) {
+            window.scrollTo(0, newScrollLimit);
+        }
+    };
     const handleSubmitButtonClick = () => {
 
         if (!submitting) {
@@ -231,6 +238,9 @@ const Contact = ({setMenuOpen}) => {
                     message: ''
                 })
 
+
+                window.addEventListener('scroll', newSubmitScroll);
+
                 setTimeout(() => {
                     if (contactContainerRef.current) {
                         contactContainerRef.current.scrollIntoView({behavior: 'smooth'});
@@ -261,6 +271,7 @@ const Contact = ({setMenuOpen}) => {
                 document.querySelector(".review-button").style.cursor = 'auto';
                 document.querySelector(".review-button").style.opacity = 1;
                 showToastInfo();
+                window.removeEventListener('scroll', newSubmitScroll);
             }
         });
     }
