@@ -200,6 +200,7 @@ const Contact = ({setMenuOpen}) => {
         }
     }, [reviewActive]);
 
+    // This will be used when the toast success message is displayed.
     const newSubmitScroll = () => {
         const newScrollLimit = 2400;
         if (window.pageYOffset < newScrollLimit) {
@@ -362,10 +363,14 @@ const Contact = ({setMenuOpen}) => {
             // Reset the timer to initial value when it reaches zero
             setTimeRemaining(initialTime);
             setStartTimer(false);
+
         }
     }, [startTimer, timeRemaining, initialTime, formSubmitted, reviewButtonDisabled]);
 
 
+    const closeMenu = () => {
+        setMenuOpen(false);
+    };
 
     return (
         <div className='container' id="contact">
@@ -391,6 +396,7 @@ const Contact = ({setMenuOpen}) => {
                                 <InputForm key={inputVals.id} {...inputVals} value={vals[inputVals.name]}
                                            onChange={handleChange} autoCapitalize="none"
                                            disabled={reviewActive || formSubmitted}
+                                           onClick={closeMenu}
 
                                 />
                             ))}
@@ -404,6 +410,7 @@ const Contact = ({setMenuOpen}) => {
                                 placeholder="Enter your message here."
                                 name="message"
                                 required
+                                onClick={closeMenu}
                                 value={vals.message}
                                 onChange={handleChange}
                                 disabled={reviewActive || formSubmitted}
