@@ -51,62 +51,13 @@
  */
 
 
-/*XR, 11, XS Max for IOS 17 (Flipped)*/
-@media only screen
-and (max-width: 808px) /* 1792px / 2 */
-and (orientation: landscape)
-and (-webkit-min-device-pixel-ratio: 2) {
-    .project-body {
-        padding: 20px;
-        margin-top: 620px;
-    }
-
-    .project-texts {
-        width: 105%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 15px;
-        padding: 0;
-    }
-}
-
-
-/*XR, 11, and XS Max for IOS 17*/
-@media only screen
-and (min-width: 414px)
-and (max-width: 414px) /* 828px / 2 */
-and (orientation: portrait)
-and (-webkit-min-device-pixel-ratio: 2) {
-    .project-body {
-        padding: 20px;
-        margin-top: 350px;
-    }
-
-    .project-texts {
-        width: 105%;
-    }
-
-    .project-title {
-        font-size: 30px;
-
-    }
-
-    .project-description {
-        font-size: 15px;
-        padding: 0 70px;
-    }
-}
-
 /*------------------------------------------------------------DONE------------------------------------------------*/
-/*XS for IOS 17 (Flipped)*/
+/*XS, 11 Pro, 12 mini, and 13 mini for IOS 17 (Rotated)*/
 @media only screen
+and (min-width: 712px)
 and (max-width: 812px)
+and (min-height: 318px)
+and (max-height: 375px)
 and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 3) {
     .project-body {
@@ -131,8 +82,67 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
-/*
-SE (2nd and 3rd Gen) for IOS 17 (Flipped)*/
+/*12, 12 Pro, 13, 13 Pro, and 14 for IOS 17 (Rotated) */
+@media only screen
+and (min-width: 725px)
+and (max-width: 811px)
+and (min-height: 320px)
+and (max-height: 390px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .project-body {
+        padding: 20px;
+        margin-top: 620px;
+    }
+
+    .project-texts {
+        width: 105%;
+    }
+
+    .project-title {
+        font-size: 30px;
+
+    }
+
+    .project-description {
+        font-size: 16px;
+        padding: 0;
+    }
+}
+
+
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*XR, 11, XS Max, and 11 Pro Max for IOS 17 (Rotated)*/
+@media only screen
+and (min-width: 800px)
+and (max-width: 808px) /* 1792px / 2 */
+and (min-height: 314px)
+and (max-height: 414px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .project-body {
+        padding: 20px;
+        margin-top: 620px;
+    }
+
+    .project-texts {
+        width: 105%;
+    }
+
+    .project-title {
+        font-size: 40px;
+
+    }
+
+    .project-description {
+        font-size: 15px;
+        padding: 0;
+    }
+}
+
+
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*SE (2nd and 3rd Gen) for IOS 17 (Rotated)*/
 @media only screen
 and (min-width: 667px) /* 1136px / 2 */
 and (max-width: 667px) /* 1136px / 1 */
@@ -140,7 +150,7 @@ and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 2) {
     .project-body {
         padding: 20px;
-        margin-top: 620px;
+        margin-top: 630px;
     }
 
     .project-texts {
@@ -159,8 +169,63 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
+/*XR, 11, XS Max, and 11 Pro Max for IOS 17*/
+@media only screen
+and (min-width: 414px)
+and (max-width: 414px) /* 828px / 2 */
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .project-body {
+        padding: 20px;
+        margin-top: 400px;
+    }
 
-/*XS, SE (2nd and 3rd Gen) for IOS 17 */
+    .project-texts {
+        width: 105%;
+    }
+
+    .project-title {
+        font-size: 30px;
+
+    }
+
+    .project-description {
+        font-size: 15px;
+        padding: 0 70px;
+    }
+}
+
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*12, 12 Pro, 13, 13 Pro, and 14 for IOS 17 */
+@media only screen
+and (min-width: 390px)
+and (max-width: 390px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 3) {
+    .project-body {
+        padding: 20px;
+        margin-top: 280px;
+    }
+
+    .project-texts {
+        width: 105%;
+    }
+
+    .project-title {
+        font-size: 30px;
+
+    }
+
+    .project-description {
+        font-size: 13px;
+        padding: 0 80px;
+    }
+}
+
+
+/*------------------------------------------------------------DONE------------------------------------------------*/
+
+/*XS, SE (2nd and 3rd Gen), 11 Pro, 12 mini, and 13 mini for IOS 17 */
 @media only screen
 and (min-width: 375px)
 and (max-width: 375px) /* 750px / 2 */

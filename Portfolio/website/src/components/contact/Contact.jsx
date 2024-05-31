@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import './Contact.css';
-import Avatar from '../../image/Vishal-Contact.jpg';
+import Avatar from '../../image/Contact-img.jpg';
 import {Fade} from 'react-reveal';
 import InputForm from './InputForm';
 import {Slide, toast, ToastContainer} from 'react-toastify';

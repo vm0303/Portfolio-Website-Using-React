@@ -78,9 +78,28 @@
  */
 
 
-/*XR, 11, and XS Max for IOS 17 (Flipped)*/
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*XS, 11 Pro, 12 mini, and 13 mini for IOS 17 (Rotated)*/
 @media only screen
-and (max-width: 808px) /* 1792px / 2 */
+and (min-width: 712px)
+and (max-width: 812px)
+and (min-height: 318px)
+and (max-height: 375px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 3) {
+    .proj {
+        width: 40%;
+        height: 50vh;
+    }
+}
+
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*12, 12 Pro, 13, 13 Pro, and 14 for IOS 17 (Rotated) */
+@media only screen
+and (min-width: 725px)
+and (max-width: 811px)
+and (min-height: 320px)
+and (max-height: 390px)
 and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 2) {
     .proj {
@@ -90,7 +109,38 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 
-/*XR, 11, and XS Max for IOS 17*/
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*XR, 11, XS Max, and 11 Pro Max for IOS 17 (Rotated)*/
+@media only screen
+and (min-width: 800px)
+and (max-width: 808px) /* 1792px / 2 */
+and (min-height: 314px)
+and (max-height: 414px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .proj {
+        width: 40%;
+        height: 50vh;
+    }
+}
+
+
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*SE (2nd and 3rd Gen) for IOS 17 (Rotated)*/
+@media only screen
+and (min-width: 667px) /* 1136px / 2 */
+and (max-width: 667px) /* 1136px / 1 */
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .proj {
+        width: 40%;
+        height: 50vh;
+    }
+}
+
+
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*XR, 11, XS Max, and 11 Pro Max for IOS 17*/
 @media only screen
 and (min-width: 414px)
 and (max-width: 414px) /* 828px / 2 */
@@ -104,34 +154,21 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
-/*XS for IOS 17 (Flipped)*/
+/*12, 12 Pro, 13, 13 Pro, and 14 for IOS 17 */
 @media only screen
-and (max-width: 812px)
-and (orientation: landscape)
+and (min-width: 390px)
+and (max-width: 390px)
+and (orientation: portrait)
 and (-webkit-min-device-pixel-ratio: 3) {
     .proj {
         width: 40%;
-        height: 50vh;
+        height: 15vh;
     }
 }
 
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
-/*
-SE (2nd and 3rd Gen) for IOS 17 (Flipped)*/
-@media only screen
-and (min-width: 667px) /* 1136px / 2 */
-and (max-width: 667px) /* 1136px / 1 */
-and (orientation: landscape)
-and (-webkit-min-device-pixel-ratio: 2) {
-    .proj {
-        width: 40%;
-        height: 50vh;
-    }
-}
-
-/*------------------------------------------------------------DONE------------------------------------------------*/
-/*XS, SE (2nd and 3rd Gen) for IOS 17 */
+/*XS, SE (2nd and 3rd Gen), 11 Pro, 12 mini, and 13 mini for IOS 17 */
 @media only screen
 and (min-width: 375px)
 and (max-width: 375px) /* 750px / 2 */
