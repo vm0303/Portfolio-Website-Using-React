@@ -78,6 +78,21 @@
  */
 
 
+/*12 Pro Max, 13 Pro Max, and 14 Plus for IOS 17 (Rotated)*/
+@media only screen
+and (min-width: 830px)
+and (max-width: 926px)
+and (min-height: 370px)
+and (max-height: 428px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 3) {
+    .proj {
+        width: 40%;
+        height: 50vh;
+    }
+}
+
+
 /*------------------------------------------------------------DONE------------------------------------------------*/
 /*XS, 11 Pro, 12 mini, and 13 mini for IOS 17 (Rotated)*/
 @media only screen
@@ -135,6 +150,19 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .proj {
         width: 40%;
         height: 50vh;
+    }
+}
+
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*12 Pro Max, 13 Pro Max, and 14 Plus for IOS 17*/
+@media only screen
+and (min-width: 428px)
+and (max-width: 428px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .proj {
+        width: 40%;
+        height: 15vh;
     }
 }
 

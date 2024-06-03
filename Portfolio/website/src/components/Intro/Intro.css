@@ -277,6 +277,100 @@
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
 
+/*12 Pro Max, 13 Pro Max, and 14 Plus for IOS 17 (Rotated)*/
+@media only screen
+and (min-width: 830px)
+and (max-width: 926px)
+and (min-height: 370px)
+and (max-height: 428px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 3) {
+    .intro {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .i-left_side_wrapper {
+        margin: 0 16px;
+        padding: 0 16px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .i-greeting {
+        font-size: 26px;
+
+    }
+
+    #light .i-name {
+        font-size: 28px;
+        margin: 5px;
+
+    }
+
+    #dark .i-name {
+        font-size: 28px;
+        margin: 5px;
+
+    }
+
+    .i-title-item {
+        font-size: 26px;
+        -webkit-transform: translateY(-7px);
+        -ms-transform: translateY(-7px);
+        transform: translateY(-7px);
+        margin: 5px 0;
+    }
+
+    .i-desc {
+        font-size: 17px;
+        width: 73%;
+        margin: 5px 0;
+
+    }
+
+    .i-hobbies {
+        font-size: 17px;
+        margin: -5px 0;
+        width: 75%;
+    }
+
+    .i-img {
+        margin-top: 5px;
+        height: 140vh;
+    }
+
+    .i-background {
+        margin-top: 5px;
+        height: 142vh;
+    }
+
+
+    .arrows {
+        display: none;
+    }
+
+    @-moz-document url-prefix() {
+        .intro {
+            padding-top: 90px;
+        }
+        .i-hobbies {
+            margin: 15px 0;
+        }
+
+    }
+
+
+}
+
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
 /*XS, 11 Pro, 12 mini, and 13 mini for IOS 17 (Rotated)*/
@@ -361,15 +455,19 @@ and (-webkit-min-device-pixel-ratio: 3) {
     }
 
     @-moz-document url-prefix() {
-        .i-title-item {
-            margin: 0;
-            transform: translateY(-4px);
+        .intro {
+            padding-top: 90px;
         }
         .i-hobbies {
             margin: 15px 0;
         }
 
+        .i-desc {
+            width: 65%;
+        }
+
     }
+
 
 
 }
@@ -456,12 +554,15 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     @-moz-document url-prefix() {
-        .i-title-item {
-            margin: 0;
-            transform: translateY(-4px);
+        .intro {
+            padding-top: 90px;
         }
         .i-hobbies {
             margin: 15px 0;
+        }
+
+        .i-desc {
+            width: 70%;
         }
 
     }
@@ -552,9 +653,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     @-moz-document url-prefix() {
-        .i-title-item {
-            margin: 0;
-            transform: translateY(-4px);
+        .intro {
+            padding-top: 90px;
         }
         .i-hobbies {
             margin: 15px 0;
@@ -648,10 +748,100 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     @-moz-document url-prefix() {
-        .i-title-item {
-            margin: 0;
-            transform: translateY(-4px);
+        .intro {
+            padding-top: 80px;
         }
+        .i-hobbies {
+            margin: 15px 0;
+        }
+
+
+    }
+
+
+}
+
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*12 Pro Max, 13 Pro Max, and 14 Plus for IOS 17*/
+@media only screen
+and (min-width: 428px)
+and (max-width: 428px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .intro {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-top: 50px;
+    }
+
+    .i-left_side_wrapper {
+        margin: 15px;
+        padding: 15px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .i-greeting {
+        font-size: 22px;
+
+    }
+
+    #light .i-name {
+        font-size: 26px;
+        margin: 5px;
+
+    }
+
+    #dark .i-name {
+        font-size: 26px;
+        margin: 5px;
+
+    }
+
+    .i-title-item {
+        font-size: 22px;
+        -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        transform: translateY(-5px);
+        margin: 5px 0;
+    }
+
+    .i-desc {
+        font-size: 16px;
+        width: 98%;
+        margin: 5px 0;
+    }
+
+    .i-hobbies {
+        font-size: 16px;
+        margin: 5px 0;
+        width: 70%;
+    }
+
+    .i-img {
+        margin-top: 0;
+        height: 50vh;
+    }
+
+    .i-background {
+        margin-top: 0;
+        height: 50vh;
+    }
+
+    .arrows {
+        display: none;
+    }
+
+    @-moz-document url-prefix() {
+
+
         .i-hobbies {
             margin: 15px 0;
         }
@@ -743,10 +933,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     @-moz-document url-prefix() {
-        .i-title-item {
-            margin: 0;
-            transform: translateY(-4px);
-        }
+
         .i-hobbies {
             margin: 15px 0;
         }
@@ -837,13 +1024,25 @@ and (-webkit-min-device-pixel-ratio: 3) {
         display: none;
     }
 
+
     @-moz-document url-prefix() {
-        .i-title-item {
-            margin: 0;
-            transform: translateY(-4px);
+
+        .intro {
+            padding-top: 50px;
         }
+
         .i-hobbies {
             margin: 15px 0;
+        }
+
+        .i-img {
+            margin-top: 0;
+            height: 50vh;
+        }
+
+        .i-background {
+            margin-top: 0;
+            height: 50vh;
         }
 
     }
@@ -933,10 +1132,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     @-moz-document url-prefix() {
-        .i-title-item {
-            margin: 0;
-            transform: translateY(-4px);
+
+        .intro {
+            padding-top: 50px;
         }
+
         .i-hobbies {
             margin: 15px 0;
         }
