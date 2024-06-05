@@ -95,6 +95,7 @@
     -o-transition: all 500ms;
     transition: all 500ms;
     margin: 15px 0;
+
 }
 
 
@@ -262,6 +263,75 @@
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
 
+@media only screen
+and (min-width: 810px)
+and (max-width: 932px)
+and (min-height: 370px)
+and (max-height: 430px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 3) {
+    .about {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: 750px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 100vh;
+        width: 100vh;
+
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .about-title {
+        text-align: center;
+        font-size: 40px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 18px;
+        padding: 5px 15px;
+        margin: 5px 15px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 20px;
+        margin: 10px 65px;
+        padding: 0 100px;
+
+    }
+
+    .button-container {
+        margin: 15px 30px;
+        padding: 15px 30px;
+    }
+
+    .resume-button {
+        height: 55px;
+        width: 160px;
+        background-color: transparent;
+    }
+
+}
+
 
 /*12 Pro Max, 13 Pro Max, and 14 Plus for IOS 17 (Rotated)*/
 @media only screen
@@ -406,13 +476,14 @@ and (-webkit-min-device-pixel-ratio: 3) {
 }
 
 
+
 /*------------------------------------------------------------DONE------------------------------------------------*/
-/*12, 12 Pro, 13, 13 Pro, and 14 for IOS 17 (Rotated) */
+/*12, 12 Pro, 13, 13 Pro, 14, 14 Pro, 15, and 15 Pro for IOS 17 (Rotated) */
 @media only screen
 and (min-width: 725px)
 and (max-width: 811px)
 and (min-height: 320px)
-and (max-height: 390px)
+and (max-height: 393px)
 and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 2) {
     .about {
@@ -451,16 +522,16 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .about-description {
-        font-size: 16px;
+        font-size: 15px;
         padding: 5px 20px;
         margin: 5px 20px;
     }
 
     .about-sub-title {
         text-align: center;
-        font-size: 18px;
+        font-size: 17px;
         margin: 10px 75px;
-        padding: 0 30px;
+        padding: 5px 40px;
 
     }
 
@@ -627,6 +698,74 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
+
+@media only screen
+and (min-width: 430px)
+and (max-width: 430px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .about {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: 260px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 40vh;
+        width: 40vh;
+
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .about-title {
+        text-align: center;
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 17px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 19px;
+        margin: 10px 20px;
+        padding: 0 20px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+        height: 45px;
+        width: 150px;
+        background-color: transparent;
+    }
+
+}
+
 /*------------------------------------------------------------DONE------------------------------------------------*/
 /*12 Pro Max, 13 Pro Max, and 14 Plus for IOS 17*/
 @media only screen
@@ -769,6 +908,94 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/* 14 Pro, 15, 15 Pro for IOS 17 */
+@media only screen
+and (min-width: 393px)
+and (max-width: 393px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 3) {
+    .about {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: 350px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 40vh;
+        width: 40vh;
+
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .about-title {
+        text-align: center;
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 13px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 15px;
+        margin: 10px 5px;
+        padding: 0 5px;
+
+    }
+
+    .button-container {
+        margin: 10px 30px;
+        padding: 10px 30px;
+    }
+
+    .resume-button {
+        height: 45px;
+        width: 150px;
+        background-color: transparent;
+    }
+
+    .resume-button p {
+        font-size: 14px;
+    }
+
+    @-moz-document url-prefix() {
+
+        .about {
+
+            margin-top: 200px;
+        }
+
+        .a-card {
+            height: 35vh;
+            width: 35vh;
+
+        }
+
+
+    }
+
+}
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
 /*12, 12 Pro, 13, 13 Pro, and 14 for IOS 17 */

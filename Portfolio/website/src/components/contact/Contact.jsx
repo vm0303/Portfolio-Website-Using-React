@@ -49,6 +49,16 @@ const Contact = ({setMenuOpen}) => {
         },
         {
             id: 2,
+            name: 'user_email',
+            type: 'email',
+            placeholder: 'Enter your email here.',
+            errorMsg: 'Please enter a valid email address. This is so I can reply my response back to you.',
+            label: "Email",
+            required: true,
+
+        },
+        {
+            id: 3,
             name: 'user_subject',
             type: 'text',
             placeholder: 'Enter the message subject here.',
@@ -58,17 +68,7 @@ const Contact = ({setMenuOpen}) => {
             label: 'Subject',
             required: true,
             pattern: "^[! ]?[^\\s](\\s*[^\\s]){1,76}$"
-        },
-        {
-            id: 3,
-            name: 'user_email',
-            type: 'email',
-            placeholder: 'Enter your email here.',
-            errorMsg: 'Please enter a valid email address. This is so I can reply my response back to you.',
-            label: "Email",
-            required: true,
-
-        },
+        }
     ]);
     const [fadeOut, setFadeOut] = useState(false);
     const initialTime = 20;
@@ -430,7 +430,6 @@ const Contact = ({setMenuOpen}) => {
                         <div id="showToastForTextField" aria-live="assertive" style={{display: 'none'}}>
                             {showToastInfo}
                         </div>
-                        <ToastContainer className="toastMessage"/>
                     </div>
                 </div>
             </Fade>
@@ -479,6 +478,7 @@ const Contact = ({setMenuOpen}) => {
                     </div>
                 )}
             </div>
+            <ToastContainer className="toastMessage"/>
         </div>
 
     );

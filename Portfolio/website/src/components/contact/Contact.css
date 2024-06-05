@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 #light .Toastify__close-button {
     color: white;
 
@@ -747,29 +740,201 @@ form {
 }
 
 
-@-moz-document url-prefix() {
-
-    .modal-overlay {
-        position: absolute;
-
-    }
-
-    .modal-content {
-        position: absolute;
-        transform: translateY(-43%);
-        z-index: 10000; /* Place content on top of the overlay */
-    }
-
-}
-
-
-
-
-
 /*
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
 
+/*14 Pro Max, 15 Pro Max, 15 Plus for IOS 17 (Rotated) */
+@media only screen
+and (min-width: 810px)
+and (max-width: 932px)
+and (min-height: 370px)
+and (max-height: 430px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 3) {
+    .container {
+        height: auto;
+    }
+
+    .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 10px 10px;
+        margin: 10px 10px;
+    }
+
+    .text-area-label {
+        font-size: 11px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: -8px;
+
+    }
+
+    .container-image {
+        margin: 110px 215px;
+        padding: 50px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .container-title {
+        font-size: 30px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .container-desc {
+        font-size: 18px;
+        text-align: center;
+        width: 45%;
+    }
+
+    .container-bg {
+        display: none;
+    }
+
+    form {
+        margin-top: 230px;
+
+    }
+
+    #light textarea {
+        width: 101.15%;
+        font-size: 13px;
+        transform: translateX(-8px);
+
+    }
+
+
+    #dark textarea {
+        width: 101.15%;
+        font-size: 13px;
+        transform: translateX(-8px);
+
+    }
+
+    #light textarea::placeholder {
+        font-size: 13px;
+
+    }
+
+
+    #dark textarea::placeholder {
+        font-size: 13px;
+
+
+    }
+
+    .error-message-textArea {
+        font-size: 9px;
+        width: 102.6%;
+        transform: translateX(-10px);
+
+    }
+
+    .review-button {
+        margin: 10px 215px;
+        height: 55px;
+        width: 160px;
+    }
+
+    .review-button p {
+        margin-left: 1px;
+    }
+
+
+    .container-review {
+        max-width: 80%;
+    }
+
+    #light .container-review {
+
+        box-shadow: 0 0 10px rgba(70, 70, 70, 0.91); /* Drop shadow for depth */
+    }
+
+    #dark .container-review {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.66); /* Drop shadow for depth */
+    }
+
+
+    .review-title {
+        text-align: center; /* Center-align the title */
+        margin-bottom: 20px; /* Space below the title */
+        font-size: 30px;
+    }
+
+    .review-desc {
+        text-align: center;
+        font-size: 20px;
+        margin: 15px 150px;
+
+    }
+
+    #light .input-label, #dark .input-label {
+        font-size: 14px;
+
+    }
+
+    #light .input-value, #dark .input-value {
+        font-size: 12px;
+        word-wrap: break-word;
+    }
+
+
+    /*Modal Buttons*/
+    .review-form-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-evenly;
+        margin-top: 20px;
+
+    }
+
+    .back-button {
+        height: 45px;
+        width: 150px;
+        margin: 5px
+    }
+
+    .submit-button {
+        height: 45px;
+        width: 150px;
+        margin: 5px
+    }
+
+    @-moz-document url-prefix() {
+
+        .container {
+            height: auto;
+        }
+
+        .container-info-image {
+            position: relative;
+
+        }
+        .container-image {
+            margin: 105px 270px;
+        }
+        #light textarea, #dark textarea {
+            height: 25%;
+        }
+        .review-button {
+            margin: 10px 265px
+        }
+        .review-desc {
+            margin: 15px 190px;
+        }
+
+
+    }
+
+}
 
 /*12 Pro Max, 13 Pro Max, and 14 Plus for IOS 17 (Rotated)*/
 @media only screen
@@ -1088,7 +1253,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
     .review-desc {
         text-align: center;
         font-size: 20px;
-        margin: 15px 120px;
+        margin: 15px 115px;
 
     }
 
@@ -1164,12 +1329,12 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
-/*12, 12 Pro, 13, 13 Pro, and 14 for IOS 17 (Rotated) */
+/*12, 12 Pro, 13, 13 Pro, 14, 14 Pro, 15, and 15 Pro for IOS 17 (Rotated) */
 @media only screen
 and (min-width: 725px)
 and (max-width: 811px)
 and (min-height: 320px)
-and (max-height: 390px)
+and (max-height: 393px)
 and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 2) {
     .container {
@@ -1194,10 +1359,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .container-image {
-        margin: 120px 190px;
+        margin: 100px 190px;
         padding: 50px;
-        width: 240px;
-        height: 240px;
+        width: 225px;
+        height: 225px;
     }
 
     .container-title {
@@ -1207,9 +1372,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .container-desc {
-        font-size: 16px;
+        font-size: 15px;
         text-align: center;
-        width: 45%;
+        width: 43%;
     }
 
     .container-bg {
@@ -1255,7 +1420,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .review-button {
-        margin: 20px 200px;
+        margin: 20px 195px;
         height: 50px;
         width: 150px;
     }
@@ -1287,7 +1452,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .review-desc {
         text-align: center;
-        font-size: 20px;
+        font-size: 19px;
         margin: 15px 130px;
 
     }
@@ -1721,6 +1886,189 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
+
+@media only screen
+and (min-width: 430px)
+and (max-width: 430px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .container {
+        height: auto;
+
+    }
+
+    .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 10px 10px;
+        margin: 10px 10px;
+    }
+
+    .text-area-label {
+        font-size: 15px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: -10px;
+
+    }
+
+    .container-image {
+        margin: 105px 37px;
+        padding: 50px;
+        width: 215px;
+        height: 215px;
+    }
+
+    .container-title {
+        font-size: 27px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .container-desc {
+        font-size: 17px;
+        text-align: center;
+        width: 85%;
+    }
+
+    .container-bg {
+        display: none;
+    }
+
+    form {
+        margin-top: 230px;
+
+    }
+
+    #light textarea {
+        width: 105%;
+        font-size: 13px;
+        transform: translateX(-10px);
+
+    }
+
+    #dark textarea {
+        width: 105%;
+        font-size: 13px;
+        transform: translateX(-10px);
+
+    }
+
+    #light textarea::placeholder {
+        font-size: 13px;
+
+    }
+
+
+    #dark textarea::placeholder {
+        font-size: 13px;
+
+
+    }
+
+    .error-message-textArea {
+        font-size: 12px;
+        width: 106.96%;
+        transform: translateX(-10px);
+
+    }
+
+    .review-button {
+        margin: 0 66px;
+        height: 45px;
+        width: 150px;
+    }
+
+    .review-button p {
+        margin-left: 1px;
+    }
+
+    .container-review {
+        max-width: 75%;
+    }
+
+    #light .container-review {
+
+        box-shadow: 0 0 10px rgba(70, 70, 70, 0.91); /* Drop shadow for depth */
+    }
+
+    #dark .container-review {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.66); /* Drop shadow for depth */
+    }
+
+
+    .review-title {
+        text-align: center; /* Center-align the title */
+        margin-bottom: 20px; /* Space below the title */
+        font-size: 25px;
+    }
+
+    .review-desc {
+        text-align: center;
+        font-size: 18px;
+        margin: 15px 5px;
+
+    }
+
+    #light .input-label, #dark .input-label {
+        font-size: 16px;
+
+    }
+
+    #light .input-value, #dark .input-value {
+        font-size: 14px;
+        word-wrap: break-word;
+    }
+
+
+    .review-form-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-evenly;
+        margin-top: 30px;
+
+    }
+
+    .back-button {
+        height: 45px;
+        width: 150px;
+        margin: 5px
+    }
+
+    .submit-button {
+        height: 45px;
+        width: 150px;
+        margin: 5px
+    }
+
+    @-moz-document url-prefix() {
+
+        .container {
+            height: auto;
+        }
+
+        .container-info-image {
+            position: relative;
+
+        }
+        #light textarea, #dark textarea {
+            height: 23%;
+        }
+
+
+    }
+
+}
+
+
+
+
+
 /*------------------------------------------------------------DONE------------------------------------------------*/
 /*12 Pro Max, 13 Pro Max, and 14 Plus for IOS 17*/
 @media only screen
@@ -2085,6 +2433,204 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
+/* 14 Pro, 15, 15 Pro for IOS 17 */
+@media only screen
+and (min-width: 393px)
+and (max-width: 393px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 3) {
+    .container {
+        height: auto;
+    }
+
+    .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 10px 10px;
+        margin: 10px 10px;
+    }
+
+    .text-area-label {
+        font-size: 13px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: -10px;
+
+    }
+
+    .container-image {
+        margin: 95px 27px;
+        padding: 50px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .container-title {
+        font-size: 27px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .container-desc {
+        font-size: 13px;
+        text-align: center;
+        width: 75%;
+    }
+
+    .container-bg {
+        display: none;
+    }
+
+    form {
+        margin-top: 230px;
+
+    }
+
+    #light textarea {
+        width: 105.7%;
+        font-size: 12px;
+        transform: translateX(-10px);
+
+    }
+
+    #dark textarea {
+        width: 105.7%;
+        font-size: 12px;
+        transform: translateX(-10px);
+
+    }
+
+    #light textarea::placeholder {
+        font-size: 12px;
+
+    }
+
+
+    #dark textarea::placeholder {
+        font-size: 12px;
+
+
+    }
+
+    .error-message-textArea {
+        font-size: 11px;
+        width: 108.3%;
+        transform: translateX(-10px);
+
+    }
+
+    .container-review {
+        max-width: 65%;
+    }
+
+    #light .container-review {
+
+        box-shadow: 0 0 10px rgba(70, 70, 70, 0.91); /* Drop shadow for depth */
+    }
+
+    #dark .container-review {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.66); /* Drop shadow for depth */
+    }
+
+    .review-button {
+        margin: 0 52px;
+        height: 45px;
+        width: 150px;
+    }
+
+    .review-button p {
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    .review-title {
+        text-align: center; /* Center-align the title */
+        margin-bottom: 20px; /* Space below the title */
+        font-size: 18px;
+    }
+
+    .review-desc {
+        text-align: center;
+        font-size: 15px;
+        margin: 15px 0;
+
+    }
+
+    #light .input-label, #dark .input-label {
+        font-size: 15px;
+
+    }
+
+    #light .input-value, #dark .input-value {
+        font-size: 13px;
+        word-wrap: break-word;
+    }
+
+
+    .review-form-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-evenly;
+        margin-top: 20px;
+
+    }
+
+    .back-button {
+        height: 45px;
+        width: 150px;
+        margin: 5px;
+
+    }
+
+    #light .back-button p {
+        font-size: 15px;
+    }
+
+    #dark .back-button p {
+        font-size: 15px;
+    }
+
+    .submit-button {
+        height: 45px;
+        width: 150px;
+        margin: 5px;
+
+    }
+
+    #light .submit-button p {
+        font-size: 15px;
+    }
+
+    #dark .submit-button p {
+        font-size: 15px;
+    }
+
+    @-moz-document url-prefix() {
+
+        .container {
+            height: auto;
+        }
+
+        .container-info-image {
+            position: relative;
+
+        }
+        #light textarea, #dark textarea {
+            height: 25%;
+        }
+
+
+    }
+
+}
+
+
+/*------------------------------------------------------------DONE------------------------------------------------*/
 /*12, 12 Pro, 13, 13 Pro, and 14 for IOS 17 */
 @media only screen
 and (min-width: 390px)
@@ -2240,11 +2786,11 @@ and (-webkit-min-device-pixel-ratio: 3) {
     }
 
     #light .back-button p {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     #dark .back-button p {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .submit-button {
@@ -2255,11 +2801,11 @@ and (-webkit-min-device-pixel-ratio: 3) {
     }
 
     #light .submit-button p {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     #dark .submit-button p {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     @-moz-document url-prefix() {
