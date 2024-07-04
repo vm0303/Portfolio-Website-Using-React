@@ -253,9 +253,8 @@ const Contact = ({setMenuOpen}) => {
         }
     };
     const showToastSuccess = () => {
-        toast.success("Thank you! The form has been submitted successfully. " +
-            "I'll get back to you shortly. " +
-            "Click to close this message.", {
+        toast.success("Thank you! Your form has been submitted successfully. " +
+            "I'll respond back as soon as I can. Click or tap to close this message.", {
             className: "toast-message",
             position: "bottom-right",
             hideProgressBar: false,
@@ -283,10 +282,10 @@ const Contact = ({setMenuOpen}) => {
         if (submitButtonCountdown === 0) {
             const interval = setInterval(() => {
                 setFlash(prevState => !prevState);
-            }, 500);
+            }, 550);
 
             // Clear interval after 5 seconds
-            setTimeout(() => clearInterval(interval), 5000);
+            setTimeout(() => clearInterval(interval), 7000);
         }
     }, [submitButtonCountdown]);
 
@@ -308,7 +307,7 @@ const Contact = ({setMenuOpen}) => {
         setStartTimer(true);
         let toastMessage = "";
         if (hours > 0) {
-            toastMessage = `Please wait ${hours} hour${hours > 1 ? 's' : ''}`;
+            toastMessage = `please wait ${hours} hour${hours > 1 ? 's' : ''}`;
             if (minutes > 0 || seconds > 0) {
                 toastMessage += `, ${minutes} minute${minutes > 1 ? 's' : ''}`;
                 if (seconds > 0) {
@@ -316,23 +315,25 @@ const Contact = ({setMenuOpen}) => {
                 }
             }
         } else if (minutes > 0) {
-            toastMessage = `Please wait ${minutes} minute${minutes > 1 ? 's' : ''}`;
+            toastMessage = `please wait ${minutes} minute${minutes > 1 ? 's' : ''}`;
             if (seconds > 0) {
                 toastMessage += ` and ${seconds} second${seconds > 1 ? 's' : ''}`;
             }
         } else {
-            toastMessage = `Please wait ${seconds} second${seconds > 1 ? 's' : ''}`;
+            toastMessage = `please wait ${seconds} second${seconds > 1 ? 's' : ''}`;
         }
 
         toast.info(
-            toastMessage + " till you can submit another form. Click to close this message",
+            "To help prevent spam, " + toastMessage + " before submitting another form. " +
+            "Thank you for you patience! Click or tap to close this message, " +
+            "or wait 7 seconds.",
             {
                 className: "toast-message",
                 position: "bottom-right",
                 hideProgressBar: false,
                 closeOnClick: true,
-                pauseOnHover: true,
-                autoClose: 5000,
+                pauseOnHover: false,
+                autoClose: 7000,
                 transition: Slide
             });
 
@@ -478,7 +479,7 @@ const Contact = ({setMenuOpen}) => {
                     </div>
                 )}
             </div>
-            <ToastContainer className="toastMessage"/>
+            <ToastContainer/>
         </div>
 
     );

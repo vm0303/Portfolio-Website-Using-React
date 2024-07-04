@@ -28,18 +28,19 @@ const About = () => {
                     </h3>
 
                     <p className="about-description">
-                        My passion for coding started early, driving me to specialize in user-friendly solutions for
-                        both front-end and back-end development. Through academic projects and diverse professional
-                        roles, I've honed my skills, delivering robust solutions and staying updated with industry
-                        trends. In addition, learning and acquiring the AWS Cloud Practitioner certification
-                        enhanced my ability to deliver innovative digital experiences while use optimized
-                        infrastructure and operational efficiency. My commitment to collaboration
-                        and continuous learning fuels my passion for creating cutting-edge technology solutions.
+                        My passion for coding began early, inspiring me to specialize in creating user-friendly
+                        solutions for both front-end and back-end development. Through academic projects and a
+                        variety of professional roles, I have refined my skills to consistently deliver robust
+                        solutions and stay ahead of any new trends in the industry. Furthermore, learning and earning
+                        the AWS Cloud Practitioner certification has further enhanced my ability to provide
+                        innovative digital experiences, leveraging optimized infrastructure and operational efficiency.
+                        My dedication to collaboration and continuous learning drives my passion for developing
+                        cutting-edge technology solutions.
                     </p>
 
                     <p className="about-description">
-                        When I'm not immersed in coding, you'll find me working out at the gym, playing video games,
-                        riding my bicycle through scenic paths, or enjoying various movies and TV shows.
+                        Outside of coding, I enjoy working out, playing video games,
+                        riding my bicycle along scenic paths, and watching various movies and TV shows.
                     </p>
 
                     <div className="button-container">

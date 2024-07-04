@@ -106,7 +106,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
     }
 
     ul {
-        font-size: 15px;
+        font-size: 17px;
         transform: translateY(15%);
 
     }
@@ -118,7 +118,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
 @media only screen
 and (min-width: 712px)
 and (max-width: 812px)
-and (min-height: 318px)
+and (min-height: 300px)
 and (max-height: 375px)
 and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 3) {
@@ -136,6 +136,25 @@ and (-webkit-min-device-pixel-ratio: 3) {
     }
 }
 
+/*iPad Mini (5th Gen - 2019) */
+@media only screen
+and (min-width: 768px)
+and (max-width: 768px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .side_menu {
+        width: 250px;
+        left: -250px;
+        height: 100vh;
+
+    }
+
+    ul {
+        font-size: 25px;
+        transform: translateY(15%);
+    }
+}
+
 
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
@@ -143,10 +162,10 @@ and (-webkit-min-device-pixel-ratio: 3) {
 @media only screen
 and (min-width: 725px)
 and (max-width: 811px)
-and (min-height: 320px)
+and (min-height: 310px)
 and (max-height: 393px)
 and (orientation: landscape)
-and (-webkit-min-device-pixel-ratio: 2) {
+and (-webkit-min-device-pixel-ratio: 3) {
     .side_menu {
         width: 145px;
         left: -155px;
@@ -156,7 +175,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     ul {
         font-size: 16px;
-        transform: translateY(20%);
+        transform: translateY(15%);
 
     }
 }
@@ -167,7 +186,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 @media only screen
 and (min-width: 800px)
 and (max-width: 808px)
-and (min-height: 314px)
+and (min-height: 310px)
 and (max-height: 414px)
 and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 2) {
@@ -179,7 +198,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     ul {
-        font-size: 15px;
+        font-size: 16px;
         transform: translateY(15%);
 
     }

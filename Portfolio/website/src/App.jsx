@@ -1,8 +1,8 @@
 import Intro from "./components/Intro/Intro";
-import About from "./components/about/About";
+import About from "./components/About/About";
 import Navbar from "./components/Navbar/Navbar";
 import ProjectList from "./components/ProjectList/ProjectList";
-import Contact from "./components/contact/Contact";
+import Contact from "./components/Contact/Contact";
 import {createContext, useEffect, useState} from "react";
 import Popup from 'reactjs-popup';
 

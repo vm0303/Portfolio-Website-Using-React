@@ -59,11 +59,12 @@ const Intro = () => {
                             </div>
                         </div>
                         <p className="i-desc">
-                            I specialize in the development of precise and intuitive web applications, while boasting
-                            expertise in back-end technologies such as Oracle Database Management, SQL queries, and
-                            the Spring Framework. Furthermore, my proficiency in AWS spans cloud architecture,
-                            serverless computing, data analytics, and security, enabling businesses to thrive in the
-                            dynamic digital landscape with innovation and efficiency.
+                            I specialize in developing intuitive software and web applications using Java,
+                            Python, SQL, and the Spring Framework. In addition, my expertise in AWS, which includes
+                            cloud architecture, serverless computing, data analytics, and security,
+                            enables me to build scalable and secure solutions, helping businesses optimize their
+                            operations
+                            and enhance data management in a dynamic digital landscape.
                         </p>
                         <br/>
                         <div className="i-hobbies">
