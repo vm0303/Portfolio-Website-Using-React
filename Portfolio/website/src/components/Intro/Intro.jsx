@@ -59,12 +59,12 @@ const Intro = () => {
                             </div>
                         </div>
                         <p className="i-desc">
-                            I specialize in developing intuitive software and web applications using Java,
-                            Python, SQL, and the Spring Framework. In addition, my expertise in AWS, which includes
-                            cloud architecture, serverless computing, data analytics, and security,
-                            enables me to build scalable and secure solutions, helping businesses optimize their
-                            operations
-                            and enhance data management in a dynamic digital landscape.
+                            I specialize in developing intuitive software and web applications using Java, Python,
+                            SQL, and the Spring Framework. With expertise in AWS cloud architecture, serverless
+                            computing, and data analytics, I create scalable and secure solutions that optimize
+                            business operations and enhance data management. My proficiency in front-end frameworks
+                            like Angular and React, combined with experience in agile methodologies and version
+                            control systems, ensures efficient and collaborative development.
                         </p>
                         <br/>
                         <div className="i-hobbies">

@@ -1,9 +1,4 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
+
 
 .intro {
     display: -webkit-box;
@@ -125,7 +120,6 @@
 #dark .i-title-item {
     color: #22b255;
 }
-
 
 
 .i-img {
@@ -270,6 +264,102 @@
 /*
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
+
+/*iPad Mini (5th Gen - 2019) */
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .intro {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-top: 115px;
+    }
+
+    .i-left_side_wrapper {
+        margin: 0 15px;
+        padding: 0 15px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .i-greeting {
+        font-size: 33px;
+
+    }
+
+    #light .i-name {
+        font-size: 36px;
+        margin: 5px;
+
+
+    }
+
+    #dark .i-name {
+        font-size: 36px;
+        margin: 5px;
+
+    }
+
+    .i-title-item {
+        font-size: 33px;
+        -webkit-transform: translateY(-7px);
+        -ms-transform: translateY(-7px);
+        transform: translateY(-7px);
+        margin: 5px 0;
+    }
+
+    .i-desc {
+        font-size: 21px;
+        width: 77%;
+        margin: 5px 0;
+
+    }
+
+    .i-hobbies {
+        font-size: 21px;
+        margin: -5px 0;
+        width: 80%;
+    }
+
+    .i-img {
+        margin-top: 45px;
+        height: 120vh;
+    }
+
+    .i-background {
+        margin-top: 45px;
+        height: 121vh;
+    }
+
+
+    .arrows {
+        display: none;
+    }
+
+    @-moz-document url-prefix() {
+        .intro {
+            padding-top: 80px;
+        }
+        .i-hobbies {
+            margin: 15px 0;
+        }
+
+
+    }
+
+
+}
+
+
 /*14 Pro Max, 15 Pro Max, 15 Plus for IOS 17 (Rotated) */
 @media only screen
 and (min-width: 810px)
@@ -325,7 +415,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
     .i-desc {
         font-size: 18px;
-        width: 84%;
+        width: 90%;
         margin: 5px 0;
 
     }
@@ -378,7 +468,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        padding-top: 20px;
+        padding-top: 40px;
     }
 
     .i-left_side_wrapper {
@@ -420,7 +510,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
     .i-desc {
         font-size: 17px;
-        width: 78%;
+        width: 82%;
         margin: 5px 0;
     }
 
@@ -457,7 +547,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
 }
 
-/*------------------------------------------------------------DONE------------------------------------------------*/
+/*------------------FULLY DONE------------------------------------------------*/
 /*XS, 11 Pro, 12 mini, and 13 mini for IOS 17 (Rotated)*/
 @media only screen
 and (min-width: 712px)
@@ -471,7 +561,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        padding-top: 20px;
+        padding-top: 40px;
     }
 
     .i-left_side_wrapper {
@@ -513,7 +603,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
     .i-desc {
         font-size: 15px;
-        width: 81%;
+        width: 86%;
         margin: 5px 0;
 
     }
@@ -572,7 +662,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        padding-top: 20px;
+        padding-top: 40px;
     }
 
     .i-left_side_wrapper {
@@ -614,7 +704,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
     .i-desc {
         font-size: 15px;
-        width: 68%;
+        width: 82%;
         margin: 5px 0;
 
     }
@@ -671,7 +761,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        padding-top: 20px;
+        padding-top: 40px;
     }
 
     .i-left_side_wrapper {
@@ -713,7 +803,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .i-desc {
         font-size: 16px;
-        width: 76%;
+        width: 80%;
         margin: 5px 0;
 
     }
@@ -810,7 +900,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .i-desc {
         font-size: 19px;
-        width: 86%;
+        width: 85%;
         margin: 5px 0;
 
     }
@@ -850,7 +940,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
-/*------------------------------------------------------------DONE------------------------------------------------*/
+/*---------------------FULLY DONE------------------------------------------------*/
 /*
 SE (2nd and 3rd Gen) for IOS 17 (Rotated)*/
 @media only screen
@@ -863,7 +953,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        padding-top: 20px;
+        padding-top: 40px;
     }
 
     .i-left_side_wrapper {
@@ -906,7 +996,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .i-desc {
         font-size: 15px;
-        width: 78%;
+        width: 91%;
         margin: 5px 0;
 
     }
@@ -957,7 +1047,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        padding-top: 80px;
+        padding-top: 100px;
     }
 
     .i-left_side_wrapper {
@@ -999,7 +1089,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .i-desc {
         font-size: 17px;
-        width: 94%;
+        width: 98%;
         margin: 5px 0;
     }
 
@@ -1010,12 +1100,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .i-img {
-        margin-top: 35px;
+        margin-top: 40px;
         height: 50vh;
     }
 
     .i-background {
-        margin-top: 35px;
+        margin-top: 40px;
         height: 50vh;
     }
 
@@ -1047,7 +1137,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        padding-top: 50px;
+        padding-top: 80px;
     }
 
     .i-left_side_wrapper {
@@ -1089,7 +1179,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .i-desc {
         font-size: 15px;
-        width: 105%;
+        width: 100%;
         margin: 5px 0;
     }
 
@@ -1179,7 +1269,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .i-desc {
         font-size: 14px;
-        width: 102%;
+        width: 97%;
         margin: 5px 0;
 
     }
@@ -1227,7 +1317,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        padding-top: 0;
+        padding-top: 30px;
     }
 
     .i-left_side_wrapper {
@@ -1334,8 +1424,9 @@ and (-webkit-min-device-pixel-ratio: 3) {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        padding-top: 0;
+        padding-top: 20px;
     }
+
 
     .i-left_side_wrapper {
         margin: 15px;
@@ -1376,7 +1467,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
     .i-desc {
         font-size: 13px;
-        width: 103%;
+        width: 97%;
         margin: 5px 0;
 
     }
@@ -1430,7 +1521,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
 }
 
 
-/*------------------------------------------------------------DONE------------------------------------------------*/
+/*------------------------FULLY DONE------------------------------------------------*/
 /*XS, SE (2nd and 3rd Gen), 11 Pro, 12 mini, and 13 mini for IOS 17 */
 @media only screen
 and (min-width: 375px)
@@ -1484,7 +1575,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .i-desc {
         font-size: 12px;
-        width: 98%;
+        width: 94%;
         margin: 5px 0;
 
     }

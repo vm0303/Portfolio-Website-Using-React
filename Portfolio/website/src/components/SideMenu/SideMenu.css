@@ -68,6 +68,29 @@ ul li a {
 /*
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
+
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .side_menu {
+        width: 250px;
+        left: -250px;
+        height: 100vh;
+
+    }
+
+    ul {
+        font-size: 30px;
+        transform: translateY(15%);
+    }
+}
+
+
+
+
+
 /*14 Pro Max, 15 Pro Max, 15 Plus for IOS 17 (Rotated) */
 @media only screen
 and (min-width: 810px)
@@ -150,7 +173,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     ul {
-        font-size: 25px;
+        font-size: 30px;
         transform: translateY(15%);
     }
 }

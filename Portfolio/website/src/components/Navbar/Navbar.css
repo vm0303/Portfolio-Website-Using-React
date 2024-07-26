@@ -119,6 +119,42 @@
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
 
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .navbar {
+        height: 60px;
+    }
+
+    .wrapper {
+        padding: 11px 30px;
+    }
+
+    .icon {
+        font-size: 25px;
+    }
+}
+
+@media only screen
+and (min-width: 768px)
+and (max-width: 768px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .navbar {
+        height: 60px;
+    }
+
+    .wrapper {
+        padding: 11px 30px;
+    }
+
+    .icon {
+        font-size: 25px;
+    }
+}
+
 @media only screen and (min-width: 320px) and (max-width: 667px) {
     .wrapper {
         padding: 10px 20px;

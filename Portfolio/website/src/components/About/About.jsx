@@ -28,14 +28,14 @@ const About = () => {
                     </h3>
 
                     <p className="about-description">
-                        My passion for coding began early, inspiring me to specialize in creating user-friendly
-                        solutions for both front-end and back-end development. Through academic projects and a
-                        variety of professional roles, I have refined my skills to consistently deliver robust
-                        solutions and stay ahead of any new trends in the industry. Furthermore, learning and earning
-                        the AWS Cloud Practitioner certification has further enhanced my ability to provide
-                        innovative digital experiences, leveraging optimized infrastructure and operational efficiency.
-                        My dedication to collaboration and continuous learning drives my passion for developing
-                        cutting-edge technology solutions.
+                        I’ve been passionate about coding from a young age, which has led me to specialize in creating
+                        user-friendly solutions for both front-end and back-end development. I work with technologies
+                        like HTML5, CSS3, JavaScript, Angular, React, Java, Spring Boot, and Hibernate to build dynamic
+                        and effective applications. Additionally, My AWS Cloud Practitioner certification further
+                        empowers me to
+                        develop innovative, scalable solutions. I’m always eager to learn and collaborate, using
+                        tools like Git, Bitbucket, Maven, and Jira to stay connected and streamline my work. My goal
+                        is to develop cutting-edge technology that truly makes a difference in the world.
                     </p>
 
                     <p className="about-description">

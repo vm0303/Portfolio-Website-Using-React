@@ -1748,7 +1748,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 /*iPad Mini (5th Gen - 2019) */
 @media only screen
 and (min-width: 768px)
-and (max-width: 788px)
+and (max-width: 768px)
 and (orientation: portrait)
 and (-webkit-min-device-pixel-ratio: 2) {
     .container {
@@ -1765,7 +1765,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .text-area-label {
-        font-size: 21px;
+        font-size: 22px;
         margin-top: 20px;
         margin-bottom: 10px;
         margin-left: -10px;
@@ -1773,7 +1773,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .container-image {
-        margin: 125px 138px;
+        margin: 125px 140px;
         padding: 50px;
         width: 350px;
         height: 350px;
@@ -1802,32 +1802,32 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     #light textarea {
         width: 102.5%;
-        font-size: 17px;
+        font-size: 18px;
         transform: translateX(-10px);
 
     }
 
     #dark textarea {
         width: 102.5%;
-        font-size: 17px;
+        font-size: 18px;
         transform: translateX(-10px);
 
     }
 
     #light textarea::placeholder {
-        font-size: 17px;
+        font-size: 18px;
 
     }
 
 
     #dark textarea::placeholder {
-        font-size: 17px;
+        font-size: 18px;
 
 
     }
 
     .error-message-textArea {
-        font-size: 17px;
+        font-size: 18px;
         width: 103.6%;
         transform: translateX(-10px);
 
@@ -1844,7 +1844,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     #light .review-button p, #dark .review-button p {
-        font-size: 18px;
+        font-size: 21px;
     }
 
 
@@ -1870,19 +1870,20 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .review-desc {
         text-align: center;
-        font-size: 21px;
-        margin: 15px 110px;
+        font-size: 23px;
+        margin: 15px 85px;
     }
 
     #light .input-label, #dark .input-label {
-        font-size: 20px;
+        font-size: 24px;
 
     }
 
     #light .input-value, #dark .input-value {
-        font-size: 18px;
+        font-size: 22px;
         word-wrap: break-word;
     }
+
 
 
     /*Modal Buttons*/
@@ -1904,7 +1905,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     #light .back-button p, #dark .back-button p {
-        font-size: 18px;
+        font-size: 21px;
     }
 
     .submit-button {
@@ -1914,10 +1915,28 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     #light .submit-button p, #dark .submit-button p {
-        font-size: 18px;
+        font-size: 21px;
     }
 
+    #light .Toastify__toast-container--bottom-right, #dark .Toastify__toast-container--bottom-right {
+        right: 5.25em
+    }
 
+    #light .toast-message, #dark .toast-message {
+        font-size: 19px; /* Adjust font size as needed */
+        width: 125%; /* Adjust width, ensuring it doesn't go off-screen */
+
+    }
+
+    #light .Toastify__toast-icon, #dark .Toastify__toast-icon {
+        margin-inline-end: 20px;
+        width: 30px;
+    }
+
+    #light .Toastify__close-button > svg {
+        height: 30px;
+        width: 30px;
+    }
     @-moz-document url-prefix() {
 
         .container {

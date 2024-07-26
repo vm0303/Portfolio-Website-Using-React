@@ -18,7 +18,6 @@ export const ThemeContext = createContext(null);
 function App() {
     const [theme, setTheme] = useState("light");
     const [menuOpen, setMenuOpen] = useState(false);
-
     const [isMobileView, setIsMobileView] = useState(false);
 
     const toggleTheme = () => {
