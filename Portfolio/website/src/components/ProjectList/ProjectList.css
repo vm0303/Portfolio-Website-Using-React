@@ -50,6 +50,34 @@
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
 
+
+/*iPad Mini (5th Gen - 2019) Landscape */
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .project-body {
+        padding: 50px;
+        margin-top: 680px;
+    }
+
+    .project-texts {
+        width: 105%;
+    }
+
+    .project-title {
+        font-size: 50px;
+
+    }
+
+    .project-description {
+        font-size: 21px;
+        padding: 0;
+    }
+
+}
+
 /*14 Pro Max, 15 Pro Max, 15 Plus for IOS 17 (Rotated) */
 @media only screen
 and (min-width: 810px)
@@ -228,7 +256,7 @@ and (orientation: portrait)
 and (-webkit-min-device-pixel-ratio: 2) {
     .project-body {
         padding: 20px;
-        margin-top: 430px;
+        margin-top: 500px;
     }
 
     .project-texts {
@@ -241,7 +269,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .project-description {
-        font-size: 19px;
+        font-size: 21px;
         padding: 0;
     }
 

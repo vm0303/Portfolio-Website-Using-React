@@ -25,6 +25,7 @@ body {
 }
 
 
+
 .light-tooltip {
     background-color: #235fc8;
     color: white;
@@ -42,16 +43,99 @@ body {
 }
 
 
-.toggle-icon {
+.sun-toggle-icon {
+    width: 25px;
+    height: 25px;
+    transform: translateX(4px);
+
+}
+
+.moon-toggle-icon {
     width: 25px;
     height: 25px;
 
 }
 
-@media only screen and (min-width: 768px) and (max-width: 768px) {
+@media only screen and (min-width: 1024px) and (max-width: 1024px) and (orientation: landscape) {
     .toggle-switch {
         top: 70px;
+    }
 
+    .sun-toggle-icon {
+        width: 40px;
+        height: 40px;
+        transform: translateX(10px);
+    }
+
+    .moon-toggle-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .light-tooltip {
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .dark-tooltip {
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    #light .react-switch .react-switch-handle {
+        height: 35px !important;
+        width: 35px !important;
+        top: 2px !important;
+        transform: translateX(3px) !important;
+    }
+
+    #dark .react-switch .react-switch-handle {
+        height: 35px !important;
+        width: 35px !important;
+        top: 2px !important;
+        transform: translateX(47px) !important;
+    }
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 768px) and (orientation: portrait) {
+    .toggle-switch {
+        top: 70px;
+    }
+
+    .sun-toggle-icon {
+        width: 40px;
+        height: 40px;
+        transform: translateX(8px);
+    }
+
+    .moon-toggle-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .light-tooltip {
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .dark-tooltip {
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    #light .react-switch .react-switch-handle {
+        height: 35px !important;
+        width: 35px !important;
+        top: 2px !important;
+    }
+
+    #dark .react-switch .react-switch-handle {
+        height: 35px !important;
+        width: 35px !important;
+        top: 2px !important;
+        transform: translateX(45px) !important;
     }
 
 }

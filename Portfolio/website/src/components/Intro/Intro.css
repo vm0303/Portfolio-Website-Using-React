@@ -265,7 +265,7 @@
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
 
-/*iPad Mini (5th Gen - 2019) */
+/*iPad Mini (5th Gen - 2019) Landscape */
 @media only screen
 and (min-width: 1024px)
 and (max-width: 1024px)
@@ -297,14 +297,14 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     #light .i-name {
-        font-size: 36px;
+        font-size: 45px;
         margin: 5px;
 
 
     }
 
     #dark .i-name {
-        font-size: 36px;
+        font-size: 45px;
         margin: 5px;
 
     }
@@ -319,7 +319,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .i-desc {
         font-size: 21px;
-        width: 77%;
+        width: 81%;
         margin: 5px 0;
 
     }
@@ -394,13 +394,13 @@ and (-webkit-min-device-pixel-ratio: 3) {
     }
 
     #light .i-name {
-        font-size: 29px;
+        font-size: 35px;
         margin: 5px;
 
     }
 
     #dark .i-name {
-        font-size: 29px;
+        font-size: 35px;
         margin: 5px;
 
     }
@@ -489,13 +489,13 @@ and (-webkit-min-device-pixel-ratio: 3) {
     }
 
     #light .i-name {
-        font-size: 28px;
+        font-size: 35px;
         margin: 5px;
 
     }
 
     #dark .i-name {
-        font-size: 28px;
+        font-size: 35px;
         margin: 5px;
 
     }
@@ -547,7 +547,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
 }
 
-/*------------------FULLY DONE------------------------------------------------*/
+/*------------------ DONE------------------------------------------------*/
 /*XS, 11 Pro, 12 mini, and 13 mini for IOS 17 (Rotated)*/
 @media only screen
 and (min-width: 712px)
@@ -582,13 +582,13 @@ and (-webkit-min-device-pixel-ratio: 3) {
     }
 
     #light .i-name {
-        font-size: 26px;
+        font-size: 35px;
         margin: 5px;
 
     }
 
     #dark .i-name {
-        font-size: 26px;
+        font-size: 35px;
         margin: 5px;
 
     }
@@ -683,13 +683,13 @@ and (-webkit-min-device-pixel-ratio: 3) {
     }
 
     #light .i-name {
-        font-size: 26px;
+        font-size: 35px;
         margin: 5px;
 
     }
 
     #dark .i-name {
-        font-size: 26px;
+        font-size: 35px;
         margin: 5px;
 
     }
@@ -782,13 +782,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     #light .i-name {
-        font-size: 28px;
+        font-size: 35px;
         margin: 5px;
 
     }
 
     #dark .i-name {
-        font-size: 28px;
+        font-size: 35px;
         margin: 5px;
 
     }
@@ -857,7 +857,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        padding-top: 80px;
+        padding-top: 150px;
     }
 
     .i-left_side_wrapper {
@@ -878,14 +878,14 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     #light .i-name {
-        font-size: 34px;
+        font-size: 45px;
         margin: 5px;
 
 
     }
 
     #dark .i-name {
-        font-size: 34px;
+        font-size: 45px;
         margin: 5px;
 
     }
@@ -899,25 +899,25 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .i-desc {
-        font-size: 19px;
-        width: 85%;
+        font-size: 21px;
+        width: 92%;
         margin: 5px 0;
 
     }
 
     .i-hobbies {
-        font-size: 19px;
+        font-size: 21px;
         margin: -5px 0;
-        width: 80%;
+        width: 90%;
     }
 
     .i-img {
-        margin-top: 15px;
+        margin-top: 80px;
         height: 60vh;
 }
 
     .i-background {
-        margin-top: 15px;
+        margin-top: 80px;
         height: 61vh;
     }
 
@@ -940,7 +940,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
-/*---------------------FULLY DONE------------------------------------------------*/
+/*--------------------- DONE------------------------------------------------*/
 /*
 SE (2nd and 3rd Gen) for IOS 17 (Rotated)*/
 @media only screen
@@ -974,14 +974,14 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     #light .i-name {
-        font-size: 26px;
+        font-size: 35px;
         margin: 5px;
 
 
     }
 
     #dark .i-name {
-        font-size: 26px;
+        font-size: 35px;
         margin: 5px;
 
     }
@@ -1068,13 +1068,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     #light .i-name {
-        font-size: 27px;
+        font-size: 31px;
         margin: 5px;
 
     }
 
     #dark .i-name {
-        font-size: 27px;
+        font-size: 31px;
         margin: 5px;
 
     }
@@ -1158,13 +1158,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     #light .i-name {
-        font-size: 26px;
+        font-size: 31px;
         margin: 5px;
 
     }
 
     #dark .i-name {
-        font-size: 26px;
+        font-size: 31px;
         margin: 5px;
 
     }
@@ -1248,13 +1248,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     #light .i-name {
-        font-size: 26px;
+        font-size: 31px;
         margin: 5px;
 
     }
 
     #dark .i-name {
-        font-size: 26px;
+        font-size: 31px;
         margin: 5px;
 
     }
@@ -1338,13 +1338,13 @@ and (-webkit-min-device-pixel-ratio: 3) {
     }
 
     #light .i-name {
-        font-size: 24px;
+        font-size: 28px;
         margin: 5px;
 
     }
 
     #dark .i-name {
-        font-size: 24px;
+        font-size: 28px;
         margin: 5px;
 
     }
@@ -1446,13 +1446,13 @@ and (-webkit-min-device-pixel-ratio: 3) {
     }
 
     #light .i-name {
-        font-size: 23px;
+        font-size: 28px;
         margin: 5px;
 
     }
 
     #dark .i-name {
-        font-size: 23px;
+        font-size: 28px;
         margin: 5px;
 
     }
@@ -1521,7 +1521,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
 }
 
 
-/*------------------------FULLY DONE------------------------------------------------*/
+/*------------------------ DONE------------------------------------------------*/
 /*XS, SE (2nd and 3rd Gen), 11 Pro, 12 mini, and 13 mini for IOS 17 */
 @media only screen
 and (min-width: 375px)
@@ -1533,7 +1533,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        padding-top: 0;
+        padding-top: 20px;
     }
 
     .i-left_side_wrapper {
@@ -1554,13 +1554,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     #light .i-name {
-        font-size: 22px;
+        font-size: 25px;
         margin: 5px;
 
     }
 
     #dark .i-name {
-        font-size: 22px;
+        font-size: 25px;
         margin: 5px;
 
     }

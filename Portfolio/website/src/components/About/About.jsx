@@ -31,11 +31,11 @@ const About = () => {
                         I’ve been passionate about coding from a young age, which has led me to specialize in creating
                         user-friendly solutions for both front-end and back-end development. I work with technologies
                         like HTML5, CSS3, JavaScript, Angular, React, Java, Spring Boot, and Hibernate to build dynamic
-                        and effective applications. Additionally, My AWS Cloud Practitioner certification further
-                        empowers me to
-                        develop innovative, scalable solutions. I’m always eager to learn and collaborate, using
-                        tools like Git, Bitbucket, Maven, and Jira to stay connected and streamline my work. My goal
-                        is to develop cutting-edge technology that truly makes a difference in the world.
+                        and effective applications. Additionally, my AWS Cloud Practitioner certification further
+                        empowers me to develop innovative, scalable solutions. I’m always eager to learn and
+                        collaborate,
+                        using tools like Git, Bitbucket, Maven, and Jira to stay connected and streamline my work.
+                        My goal is to develop cutting-edge technology that truly makes a difference in the world.
                     </p>
 
                     <p className="about-description">

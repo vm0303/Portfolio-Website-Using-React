@@ -77,6 +77,19 @@
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
 
+/*iPad Mini (5th Gen - 2019) Landscape */
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .proj {
+        width: 40%;
+        height: 40vh;
+    }
+}
+
+
 /*14 Pro Max, 15 Pro Max, 15 Plus for IOS 17 (Rotated) */
 @media only screen
 and (min-width: 810px)
