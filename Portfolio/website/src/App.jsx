@@ -45,8 +45,8 @@ function App() {
             );
 
             setIsMobileView(width <= 932);
-            setIsIpadView(width > 430 && width <= 1024 && !isExcluded);
-            setIsLandscape(width > height && width <= 1024);
+            setIsIpadView(width > 430 && width <= 1080 && !isExcluded);
+            setIsLandscape(width > height && width <= 1080);
         };
 
         window.addEventListener("resize", handleResize);

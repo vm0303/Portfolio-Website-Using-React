@@ -118,40 +118,47 @@
 /*
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
-
+/*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018), iPad (7th, 8th, and 9th Gen) - Landscape */
 @media only screen
 and (min-width: 1024px)
-and (max-width: 1024px)
+and (max-width: 1080px)
 and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 2) {
     .navbar {
         height: 60px;
     }
-
     .wrapper {
-        padding: 11px 30px;
+        padding: 8px 30px;
+    }
+    .icon {
+        font-size: 30px;
     }
 
-    .icon {
-        font-size: 25px;
+    .left .hamburger {
+        width: 41px;
+        height: 32px;
     }
 }
 
+/*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018), iPad (7th Gen - 2019)  */
 @media only screen
 and (min-width: 768px)
-and (max-width: 768px)
+and (max-width: 810px)
 and (orientation: portrait)
 and (-webkit-min-device-pixel-ratio: 2) {
     .navbar {
         height: 60px;
     }
-
     .wrapper {
-        padding: 11px 30px;
+        padding: 8px 30px;
+    }
+    .icon {
+        font-size: 30px;
     }
 
-    .icon {
-        font-size: 25px;
+    .left .hamburger {
+        width: 41px;
+        height: 32px;
     }
 }
 

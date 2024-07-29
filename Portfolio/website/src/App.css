@@ -56,6 +56,51 @@ body {
 
 }
 
+/*iPad (7th, 8th and 9th Gen) - Landscape */
+@media only screen and (min-width: 1080px) and (max-width: 1080px) and (orientation: landscape) {
+    .toggle-switch {
+        top: 75px;
+        right: 15px;
+    }
+
+    .sun-toggle-icon {
+        width: 40px;
+        height: 40px;
+        transform: translateX(10px);
+    }
+
+    .moon-toggle-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .light-tooltip {
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .dark-tooltip {
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    #light .react-switch .react-switch-handle {
+        height: 35px !important;
+        width: 35px !important;
+        top: 2px !important;
+        transform: translateX(3px) !important;
+    }
+
+    #dark .react-switch .react-switch-handle {
+        height: 35px !important;
+        width: 35px !important;
+        top: 2px !important;
+        transform: translateX(47px) !important;
+    }
+
+}
+
+/*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018) - Landscape */
 @media only screen and (min-width: 1024px) and (max-width: 1024px) and (orientation: landscape) {
     .toggle-switch {
         top: 70px;
@@ -98,8 +143,8 @@ body {
 
 }
 
-
-@media only screen and (min-width: 768px) and (max-width: 768px) and (orientation: portrait) {
+/*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018), iPad (7th, 8th, and 9th Gen)*/
+@media only screen and (min-width: 768px) and (max-width: 810px) and (orientation: portrait) {
     .toggle-switch {
         top: 70px;
     }

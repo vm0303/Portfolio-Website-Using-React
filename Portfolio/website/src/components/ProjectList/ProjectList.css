@@ -50,8 +50,37 @@
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
 
+/*iPad (7th, 8th, 9th Gen) - Landscape */
+@media only screen
+and (min-width: 1080px)
+and (max-width: 1080px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .project-body {
+        padding: 55px;
+        margin-top: 680px;
+    }
 
-/*iPad Mini (5th Gen - 2019) Landscape */
+    .project-texts {
+        width: 105%;
+    }
+
+    .project-title {
+        font-size: 50px;
+
+    }
+
+    .project-description {
+        font-size: 23px;
+        padding: 0;
+    }
+
+}
+
+{
+
+}
+/*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018) - Landscape */
 @media only screen
 and (min-width: 1024px)
 and (max-width: 1024px)
@@ -217,6 +246,42 @@ and (-webkit-min-device-pixel-ratio: 3) {
     }
 }
 
+/*
+iPad (7th, 8th, 9th Gen)
+ */
+@media only screen
+and (min-width: 810px)
+and (max-width: 810px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .project-body {
+        padding: 20px;
+        margin-top: 500px;
+    }
+
+    .project-texts {
+        width: 105%;
+    }
+
+    .project-title {
+        font-size: 50px;
+
+    }
+
+    .project-description {
+        font-size: 23px;
+        padding: 0;
+    }
+
+    @-moz-document url-prefix() {
+
+        .project-body {
+            margin-top: 650px;
+        }
+
+    }
+}
+
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
 /*XR, 11, XS Max, and 11 Pro Max for IOS 17 (Rotated)*/
@@ -248,7 +313,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 
-/*iPad Mini (5th Gen - 2019) */
+/*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018) */
 @media only screen
 and (min-width: 768px)
 and (max-width: 768px)

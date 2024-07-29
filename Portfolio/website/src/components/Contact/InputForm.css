@@ -119,8 +119,57 @@
 /*
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
+/*iPad (7th, 8th, 9th Gen) - Landscape */
+@media only screen
+and (min-width: 1080px)
+and (max-width: 1080px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .formInput {
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
 
-/*iPad Mini (5th Gen - 2019) Landscape */
+    #light input {
+        width: 101.55%;
+        font-size: 23px;
+        transform: translateX(-8px);
+        -webkit-transform: translateX(-8px);
+        -ms-transform: translateX(-8px);
+
+    }
+
+    #dark input {
+        width: 101.55%;
+        font-size: 23px;
+        transform: translateX(-8px);
+        -webkit-transform: translateX(-8px);
+        -ms-transform: translateX(-8px);
+
+    }
+
+    .input-area-label {
+        font-size: 28px;
+        -webkit-transform: translateX(-8px);
+        -ms-transform: translateX(-8px);
+        transform: translateX(-8px);
+
+
+    }
+
+    .error-message {
+        font-size: 22px;
+        width: 102.65%;
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+
+    }
+
+
+}
+
+/*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018) - Landscape */
 @media only screen
 and (min-width: 1024px)
 and (max-width: 1024px)
@@ -401,6 +450,57 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
 }
 
+/*
+iPad (7th, 8th, 9th Gen)
+ */
+@media only screen
+and (min-width: 810px)
+and (max-width: 810px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .formInput {
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    #light input {
+        width: 102.8%;
+        font-size: 19px;
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+
+    #dark input {
+        width: 102.8%;
+        font-size: 19px;
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+
+    }
+
+    .input-area-label {
+        font-size: 23px;
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+
+
+    }
+
+    .error-message {
+        font-size: 19px;
+        width: 103.6%;
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+
+    }
+
+
+}
+
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
 /*XR, 11, XS Max, and 11 Pro Max for IOS 17 (Rotated)*/
@@ -455,7 +555,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
-/*iPad Mini (5th Gen - 2019) */
+/*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018) */
 @media only screen
 and (min-width: 768px)
 and (max-width: 768px)
@@ -468,7 +568,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     #light input {
         width: 102.8%;
-        font-size: 17px;
+        font-size: 18px;
         -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);
         transform: translateX(-10px);
@@ -476,7 +576,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     #dark input {
         width: 102.8%;
-        font-size: 17px;
+        font-size: 18px;
         -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);
         transform: translateX(-10px);
@@ -493,7 +593,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .error-message {
-        font-size: 17px;
+        font-size: 18px;
         width: 103.6%;
         -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);

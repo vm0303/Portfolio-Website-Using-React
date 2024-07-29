@@ -76,8 +76,19 @@
 /*
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
+/*iPad (7th, 8th, 9th Gen) - Landscape */
+@media only screen
+and (min-width: 1080px)
+and (max-width: 1080px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .proj {
+        width: 40%;
+        height: 40vh;
+    }
+}
 
-/*iPad Mini (5th Gen - 2019) Landscape */
+/*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018) - Landscape */
 @media only screen
 and (min-width: 1024px)
 and (max-width: 1024px)
@@ -152,6 +163,28 @@ and (-webkit-min-device-pixel-ratio: 3) {
 }
 
 
+/*
+iPad (7th, 8th, 9th Gen)
+ */
+@media only screen
+and (min-width: 810px)
+and (max-width: 810px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .proj {
+        width: 40%;
+        height: 23vh;
+    }
+
+    .proj-web-header-circle {
+        width: 10px;
+        height: 10px;
+        margin: 5px;
+        border-radius: 50px;
+    }
+}
+
+
 /*------------------------------------------------------------DONE------------------------------------------------*/
 /*XR, 11, XS Max, and 11 Pro Max for IOS 17 (Rotated)*/
 @media only screen
@@ -168,7 +201,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 
-/*iPad Mini (5th Gen - 2019) */
+/*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018) */
 @media only screen
 and (min-width: 768px)
 and (max-width: 768px)

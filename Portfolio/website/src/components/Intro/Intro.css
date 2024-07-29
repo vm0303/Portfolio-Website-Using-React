@@ -265,7 +265,102 @@
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
 
-/*iPad Mini (5th Gen - 2019) Landscape */
+
+/*iPad (7th, 8th, 9th Gen) - Landscape */
+@media only screen
+and (min-width: 1080px)
+and (max-width: 1080px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .intro {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-top: 130px;
+    }
+
+    .i-left_side_wrapper {
+        margin: 0 15px;
+        padding: 0 15px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .i-greeting {
+        font-size: 35px;
+
+    }
+
+    #light .i-name {
+        font-size: 47px;
+        margin: 5px;
+
+
+    }
+
+    #dark .i-name {
+        font-size: 47px;
+        margin: 5px;
+
+    }
+
+    .i-title-item {
+        font-size: 35px;
+        -webkit-transform: translateY(-7px);
+        -ms-transform: translateY(-7px);
+        transform: translateY(-7px);
+        margin: 5px 0;
+    }
+
+    .i-desc {
+        font-size: 23px;
+        width: 83%;
+        margin: 5px 0;
+
+    }
+
+    .i-hobbies {
+        font-size: 23px;
+        margin: -5px 0;
+        width: 80%;
+    }
+
+    .i-img {
+        margin-top: 80px;
+        height: 120vh;
+    }
+
+    .i-background {
+        margin-top: 80px;
+        height: 121vh;
+    }
+
+
+    .arrows {
+        display: none;
+    }
+
+    @-moz-document url-prefix() {
+        .intro {
+            padding-top: 80px;
+        }
+        .i-hobbies {
+            margin: 15px 0;
+        }
+
+
+    }
+
+
+}
+
+/*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018) - Landscape */
 @media only screen
 and (min-width: 1024px)
 and (max-width: 1024px)
@@ -747,6 +842,102 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
 }
 
+/*
+iPad (7th, 8th, 9th Gen)
+ */
+@media only screen
+and (min-width: 810px)
+and (max-width: 810px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .intro {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-top: 150px;
+    }
+
+    .i-left_side_wrapper {
+        margin: 0 15px;
+        padding: 0 15px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .i-greeting {
+        font-size: 36px;
+
+    }
+
+    #light .i-name {
+        font-size: 49px;
+        margin: 5px;
+
+
+    }
+
+    #dark .i-name {
+        font-size: 49px;
+        margin: 5px;
+
+    }
+
+    .i-title-item {
+        font-size: 36px;
+        -webkit-transform: translateY(-7px);
+        -ms-transform: translateY(-7px);
+        transform: translateY(-7px);
+        margin: 5px 0;
+    }
+
+    .i-desc {
+        font-size: 23px;
+        width: 94%;
+        margin: 5px 0;
+
+    }
+
+    .i-hobbies {
+        font-size: 23px;
+        margin: -5px 0;
+        width: 90%;
+    }
+
+    .i-img {
+        margin-top: 95px;
+        height: 60vh;
+    }
+
+    .i-background {
+        margin-top: 95px;
+        height: 61vh;
+    }
+
+
+    .arrows {
+        display: none;
+    }
+
+    @-moz-document url-prefix() {
+        .intro {
+            padding-top: 80px;
+        }
+        .i-hobbies {
+            margin: 15px 0;
+        }
+
+
+    }
+
+
+}
+
 /*------------------------------------------------------------DONE------------------------------------------------*/
 /*XR, 11, XS Max, and 11 Pro Max for IOS 17 (Rotated)*/
 @media only screen
@@ -846,7 +1037,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
-/*iPad Mini (5th Gen - 2019) */
+
+/*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018) */
 @media only screen
 and (min-width: 768px)
 and (max-width: 768px)
@@ -912,12 +1104,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .i-img {
-        margin-top: 80px;
+        margin-top: 95px;
         height: 60vh;
 }
 
     .i-background {
-        margin-top: 80px;
+        margin-top: 95px;
         height: 61vh;
     }
 
