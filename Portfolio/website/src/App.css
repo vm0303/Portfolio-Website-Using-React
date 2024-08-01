@@ -56,6 +56,109 @@ body {
 
 }
 
+/*
+------------------------Mobile CSS--------------------------------------------------------------------------------
+ */
+
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*
+iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen) - Landscape
+ */
+@media only screen and (min-width: 1366px) and (max-width: 1366px) and (orientation: landscape) {
+    .toggle-switch {
+        top: 90px;
+        right: 10px;
+    }
+
+    .sun-toggle-icon {
+        width: 50px;
+        height: 50px;
+        transform: translateX(15px);
+    }
+
+    .moon-toggle-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .light-tooltip {
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 27px;
+    }
+
+    .dark-tooltip {
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 27px;
+    }
+
+    #light .react-switch .react-switch-handle {
+        height: 45px !important;
+        width: 45px !important;
+        top: 2px !important;
+        transform: translateX(3px) !important;
+    }
+
+    #dark .react-switch .react-switch-handle {
+        height: 45px !important;
+        width: 45px !important;
+        top: 2px !important;
+        transform: translateX(57px) !important;
+    }
+
+}
+
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*
+iPad Air (3rd Gen), iPad Pro 10.5-inch - Landscape
+ */
+@media only screen and (min-width: 1112px) and (max-width: 1112px) and (orientation: landscape) {
+    .toggle-switch {
+        top: 75px;
+        right: 10px;
+    }
+
+    .sun-toggle-icon {
+        width: 40px;
+        height: 40px;
+        transform: translateX(10px);
+    }
+
+    .moon-toggle-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .light-tooltip {
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 21px;
+    }
+
+    .dark-tooltip {
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 21px;
+    }
+
+    #light .react-switch .react-switch-handle {
+        height: 35px !important;
+        width: 35px !important;
+        top: 2px !important;
+        transform: translateX(3px) !important;
+    }
+
+    #dark .react-switch .react-switch-handle {
+        height: 35px !important;
+        width: 35px !important;
+        top: 2px !important;
+        transform: translateX(47px) !important;
+    }
+
+}
+
+/*------------------------------------------------------------DONE------------------------------------------------*/
 /*iPad (7th, 8th and 9th Gen) - Landscape */
 @media only screen and (min-width: 1080px) and (max-width: 1080px) and (orientation: landscape) {
     .toggle-switch {
@@ -100,6 +203,7 @@ body {
 
 }
 
+/*------------------ DONE------------------------------------------------*/
 /*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018) - Landscape */
 @media only screen and (min-width: 1024px) and (max-width: 1024px) and (orientation: landscape) {
     .toggle-switch {
@@ -143,8 +247,57 @@ body {
 
 }
 
-/*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018), iPad (7th, 8th, and 9th Gen)*/
-@media only screen and (min-width: 768px) and (max-width: 810px) and (orientation: portrait) {
+/*------------------ DONE------------------------------------------------*/
+/*iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen)*/
+@media only screen and (min-width: 1024px) and (max-width: 1024px) and (orientation: portrait) {
+    .toggle-switch {
+        top: 105px;
+    }
+
+    .sun-toggle-icon {
+        width: 50px;
+        height: 50px;
+        transform: translateX(15px);
+    }
+
+    .moon-toggle-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .light-tooltip {
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 25px;
+    }
+
+    .dark-tooltip {
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 25px;
+    }
+
+    #light .react-switch .react-switch-handle {
+        height: 45px !important;
+        width: 45px !important;
+        top: 2px !important;
+        transform: translateX(2px) !important;
+    }
+
+    #dark .react-switch .react-switch-handle {
+        height: 45px !important;
+        width: 45px !important;
+        top: 2px !important;
+        transform: translateX(58px) !important;
+    }
+
+}
+
+
+/*------------------ DONE------------------------------------------------*/
+/*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018),
+iPad (7th, 8th, and 9th Gen), iPad Air (3rd Gen), iPad Pro 10.5-inch */
+@media only screen and (min-width: 768px) and (max-width: 834px) and (orientation: portrait) {
     .toggle-switch {
         top: 70px;
     }

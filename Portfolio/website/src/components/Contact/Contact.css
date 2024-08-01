@@ -757,6 +757,473 @@ form {
 /*
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
+
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*
+iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen) - Landscape
+ */
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1366px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .container {
+        height: auto;
+    }
+
+    .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 10px 10px;
+        margin: 10px 10px;
+    }
+
+    .text-area-label {
+        font-size: 32px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: -8px;
+
+    }
+
+    .container-image {
+        margin: 205px 412px;
+        padding: 50px;
+        width: 400px;
+        height: 400px;
+    }
+
+    .container-title {
+        font-size: 60px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .container-desc {
+        font-size: 30px;
+        text-align: center;
+        width: 41%;
+    }
+
+    .container-bg {
+        display: none;
+    }
+
+    form {
+        margin-top: 400px;
+
+    }
+
+    #light textarea {
+        width: 100.95%;
+        font-size: 27px;
+        transform: translateX(-8px);
+
+    }
+
+
+    #dark textarea {
+        width: 100.95%;
+        font-size: 27px;
+        transform: translateX(-8px);
+
+    }
+
+    #light textarea::placeholder {
+        font-size: 27px;
+
+    }
+
+
+    #dark textarea::placeholder {
+        font-size: 27px;
+
+
+    }
+
+    .error-message-textArea {
+        font-size: 26px;
+        width: 101.95%;
+        transform: translateX(-10px);
+
+    }
+
+    .review-button {
+        margin: 30px 414px;
+        height: 75px;
+        width: 200px;
+
+    }
+
+    .review-button p {
+        margin-left: 1px;
+
+    }
+
+    #light .review-button p, #dark .review-button p {
+        font-size: 28px;
+    }
+
+
+    .container-review {
+        max-width: 80%;
+    }
+
+    #light .container-review {
+
+        box-shadow: 0 0 10px rgba(70, 70, 70, 0.91); /* Drop shadow for depth */
+    }
+
+    #dark .container-review {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.66); /* Drop shadow for depth */
+    }
+
+
+    .review-title {
+        text-align: center; /* Center-align the title */
+        margin-bottom: 20px; /* Space below the title */
+        font-size: 55px;
+    }
+
+    .review-desc {
+        text-align: center;
+        font-size: 35px;
+        margin: 15px 235px;
+
+    }
+
+    #light .input-label, #dark .input-label {
+        font-size: 33px;
+
+    }
+
+    #light .input-value, #dark .input-value {
+        font-size: 31px;
+        word-wrap: break-word;
+    }
+
+
+    /*Modal Buttons*/
+    .review-form-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-evenly;
+        margin-top: 20px;
+
+    }
+
+    .back-button {
+        height: 75px;
+        width: 200px;
+        margin: 5px
+    }
+
+    #light .back-button p, #dark .back-button p {
+        font-size: 28px;
+    }
+
+
+    .submit-button {
+        height: 75px;
+        width: 200px;
+        margin: 5px
+    }
+
+    #light .submit-button p, #dark .submit-button p {
+        font-size: 28px;
+    }
+
+    #light .Toastify__toast-container--bottom-right, #dark .Toastify__toast-container--bottom-right {
+        right: 21.5em
+    }
+
+    #light .toast-message, #dark .toast-message {
+        font-size: 30px; /* Adjust font size as needed */
+        width: 208%; /* Adjust width, ensuring it doesn't go off-screen */
+
+    }
+
+    #light .Toastify__toast-icon, #dark .Toastify__toast-icon {
+        margin-inline-end: 25px;
+        width: 50px;
+    }
+
+    #light .Toastify__close-button > svg {
+        height: 40px;
+        width: 35px;
+    }
+
+    #dark .Toastify__close-button > svg {
+        height: 40px;
+        width: 35px;
+    }
+
+    @-moz-document url-prefix() {
+
+        .container {
+            height: auto;
+        }
+
+        .container-info-image {
+            position: relative;
+
+        }
+        .container-image {
+            margin: 105px 270px;
+        }
+        #light textarea, #dark textarea {
+            height: 25%;
+        }
+        .review-button {
+            margin: 10px 265px
+        }
+        .review-desc {
+            margin: 15px 190px;
+        }
+
+
+    }
+
+}
+
+/*------------------ DONE------------------------------------------------*/
+/*iPad Air (3rd Gen), iPad Pro 10.5-inch*/
+@media only screen
+and (min-width: 1112px)
+and (max-width: 1112px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .container {
+        height: auto;
+    }
+
+    .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 10px 10px;
+        margin: 10px 10px;
+    }
+
+    .text-area-label {
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: -8px;
+
+    }
+
+    .container-image {
+        margin: 195px 305px;
+        padding: 50px;
+        width: 360px;
+        height: 360px;
+    }
+
+    .container-title {
+        font-size: 50px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .container-desc {
+        font-size: 26px;
+        text-align: center;
+        width: 45%;
+    }
+
+    .container-bg {
+        display: none;
+    }
+
+    form {
+        margin-top: 400px;
+
+    }
+
+    #light textarea {
+        width: 101.20%;
+        font-size: 23px;
+        transform: translateX(-8px);
+
+    }
+
+
+    #dark textarea {
+        width: 101.20%;
+        font-size: 23px;
+        transform: translateX(-8px);
+
+    }
+
+    #light textarea::placeholder {
+        font-size: 23px;
+
+    }
+
+
+    #dark textarea::placeholder {
+        font-size: 23px;
+
+
+    }
+
+    .error-message-textArea {
+        font-size: 22px;
+        width: 102.4%;
+        transform: translateX(-10px);
+
+    }
+
+    .review-button {
+        margin: 30px 323px;
+        height: 60px;
+        width: 180px;
+
+    }
+
+    .review-button p {
+        margin-right: 1px;
+
+    }
+
+    #light .review-button p, #dark .review-button p {
+        font-size: 23px;
+    }
+
+
+    .container-review {
+        max-width: 80%;
+    }
+
+    #light .container-review {
+
+        box-shadow: 0 0 10px rgba(70, 70, 70, 0.91); /* Drop shadow for depth */
+    }
+
+    #dark .container-review {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.66); /* Drop shadow for depth */
+    }
+
+
+    .review-title {
+        text-align: center; /* Center-align the title */
+        margin-bottom: 20px; /* Space below the title */
+        font-size: 45px;
+    }
+
+    .review-desc {
+        text-align: center;
+        font-size: 28px;
+        margin: 15px 200px;
+
+    }
+
+    #light .input-label, #dark .input-label {
+        font-size: 27px;
+
+    }
+
+    #light .input-value, #dark .input-value {
+        font-size: 25px;
+        word-wrap: break-word;
+    }
+
+
+    /*Modal Buttons*/
+    .review-form-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-evenly;
+        margin-top: 20px;
+
+    }
+
+    .back-button {
+        height: 60px;
+        width: 180px;
+        margin: 5px
+    }
+
+    #light .back-button p, #dark .back-button p {
+        font-size: 23px;
+    }
+
+
+    .submit-button {
+        height: 60px;
+        width: 180px;
+        margin: 5px
+    }
+
+    #light .submit-button p, #dark .submit-button p {
+        font-size: 23px;
+    }
+
+    #light .Toastify__toast-container--bottom-right, #dark .Toastify__toast-container--bottom-right {
+        right: 12.5em
+    }
+
+    #light .toast-message, #dark .toast-message {
+        font-size: 23px; /* Adjust font size as needed */
+        width: 160%; /* Adjust width, ensuring it doesn't go off-screen */
+
+    }
+
+    #light .Toastify__toast-icon, #dark .Toastify__toast-icon {
+        margin-inline-end: 20px;
+        width: 30px;
+    }
+
+    #light .Toastify__close-button > svg {
+        height: 35px;
+        width: 30px;
+    }
+
+    #dark .Toastify__close-button > svg {
+        height: 35px;
+        width: 30px;
+    }
+
+
+    @-moz-document url-prefix() {
+
+        .container {
+            height: auto;
+        }
+
+        .container-info-image {
+            position: relative;
+
+        }
+        .container-image {
+            margin: 105px 270px;
+        }
+        #light textarea, #dark textarea {
+            height: 25%;
+        }
+        .review-button {
+            margin: 10px 265px
+        }
+        .review-desc {
+            margin: 15px 190px;
+        }
+
+
+    }
+
+}
+
+/*------------------ DONE------------------------------------------------*/
 /*iPad (7th, 8th, 9th Gen) - Landscape */
 @media only screen
 and (min-width: 1080px)
@@ -954,6 +1421,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
         width: 30px;
     }
 
+    #dark .Toastify__close-button > svg {
+        height: 35px;
+        width: 30px;
+    }
+
     @-moz-document url-prefix() {
 
         .container {
@@ -982,7 +1454,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
-
+/*------------------ DONE------------------------------------------------*/
 /*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018) - Landscape */
 @media only screen
 and (min-width: 1024px)
@@ -1180,6 +1652,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
         width: 30px;
     }
 
+    #dark .Toastify__close-button > svg {
+        height: 30px;
+        width: 30px;
+    }
+
+
     @-moz-document url-prefix() {
 
         .container {
@@ -1208,6 +1686,240 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
+/*------------------ DONE------------------------------------------------*/
+/*
+iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen)
+ */
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .container {
+        height: auto;
+    }
+
+    .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 10px 10px;
+        margin: 10px 10px;
+    }
+
+    .text-area-label {
+        font-size: 27px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: -8px;
+
+    }
+
+    .container-image {
+        margin: 185px 266px;
+        padding: 50px;
+        width: 350px;
+        height: 350px;
+    }
+
+    .container-title {
+        font-size: 60px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .container-desc {
+        font-size: 27px;
+        text-align: center;
+        width: 53%;
+    }
+
+    .container-bg {
+        display: none;
+    }
+
+    form {
+        margin-top: 365px;
+
+    }
+
+    #light textarea {
+        width: 101.35%;
+        font-size: 25px;
+        transform: translateX(-8px);
+
+    }
+
+
+    #dark textarea {
+        width: 101.35%;
+        font-size: 25px;
+        transform: translateX(-8px);
+
+    }
+
+    #light textarea::placeholder {
+        font-size: 25px;
+
+    }
+
+
+    #dark textarea::placeholder {
+        font-size: 25px;
+
+
+    }
+
+    .error-message-textArea {
+        font-size: 24px;
+        width: 102.65%;
+        transform: translateX(-10px);
+
+    }
+
+    .review-button {
+        margin: 20px 295px;
+        height: 80px;
+        width: 190px;
+
+    }
+
+    .review-button p {
+        margin-right: 1px;
+
+    }
+
+    #light .review-button p, #dark .review-button p {
+        font-size: 27px;
+    }
+
+
+    .container-review {
+        max-width: 80%;
+    }
+
+    #light .container-review {
+
+        box-shadow: 0 0 10px rgba(70, 70, 70, 0.91); /* Drop shadow for depth */
+    }
+
+    #dark .container-review {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.66); /* Drop shadow for depth */
+    }
+
+
+    .review-title {
+        text-align: center; /* Center-align the title */
+        margin-bottom: 20px; /* Space below the title */
+        font-size: 55px;
+    }
+
+    .review-desc {
+        text-align: center;
+        font-size: 32px;
+        margin: 15px 135px;
+
+    }
+
+    #light .input-label, #dark .input-label {
+        font-size: 30px;
+
+    }
+
+    #light .input-value, #dark .input-value {
+        font-size: 28px;
+        word-wrap: break-word;
+    }
+
+
+    /*Modal Buttons*/
+    .review-form-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-evenly;
+        margin-top: 20px;
+
+    }
+
+    .back-button {
+        height: 80px;
+        width: 190px;
+        margin: 5px
+    }
+
+    #light .back-button p, #dark .back-button p {
+        font-size: 27px;
+    }
+
+
+    .submit-button {
+        height: 80px;
+        width: 190px;
+        margin: 5px
+    }
+
+    #light .submit-button p, #dark .submit-button p {
+        font-size: 27px;
+    }
+
+    #light .Toastify__toast-container--bottom-right, #dark .Toastify__toast-container--bottom-right {
+        right: 21.5em
+    }
+
+    #light .toast-message, #dark .toast-message {
+        font-size: 30px; /* Adjust font size as needed */
+        width: 208%; /* Adjust width, ensuring it doesn't go off-screen */
+
+    }
+
+    #light .Toastify__toast-icon, #dark .Toastify__toast-icon {
+        margin-inline-end: 25px;
+        width: 50px;
+    }
+
+    #light .Toastify__close-button > svg {
+        height: 40px;
+        width: 35px;
+    }
+
+    #dark .Toastify__close-button > svg {
+        height: 40px;
+        width: 35px;
+    }
+
+    @-moz-document url-prefix() {
+
+        .container {
+            height: auto;
+        }
+
+        .container-info-image {
+            position: relative;
+
+        }
+        .container-image {
+            margin: 105px 270px;
+        }
+        #light textarea, #dark textarea {
+            height: 25%;
+        }
+        .review-button {
+            margin: 10px 265px
+        }
+        .review-desc {
+            margin: 15px 190px;
+        }
+
+
+    }
+
+}
+
+/*------------------ DONE------------------------------------------------*/
 /*14 Pro Max, 15 Pro Max, 15 Plus for IOS 17 (Rotated) */
 @media only screen
 and (min-width: 810px)
@@ -1400,6 +2112,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
 }
 
+/*------------------ DONE------------------------------------------------*/
 /*12 Pro Max, 13 Pro Max, and 14 Plus for IOS 17 (Rotated)*/
 @media only screen
 and (min-width: 830px)
@@ -1589,6 +2302,224 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
 }
 
+/*------------------ DONE------------------------------------------------*/
+/*
+iPad Air (3rd Gen), iPad Pro 10.5-inch
+ */
+@media only screen
+and (min-width: 834px)
+and (max-width: 834px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .container {
+        height: auto;
+    }
+
+    .container-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 20px 10px;
+        margin: 20px 10px;
+    }
+
+    .text-area-label {
+        font-size: 25px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: -10px;
+
+    }
+
+    .container-image {
+        margin: 170px 171px;
+        padding: 50px;
+        width: 350px;
+        height: 350px;
+    }
+
+    .container-title {
+        font-size: 50px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .container-desc {
+        font-size: 24px;
+        text-align: center;
+        width: 60%;
+    }
+
+    .container-bg {
+        display: none;
+    }
+
+    form {
+        margin-top: 370px;
+
+    }
+
+    #light textarea {
+        width: 102.4%;
+        font-size: 21px;
+        transform: translateX(-10px);
+
+    }
+
+    #dark textarea {
+        width: 102.4%;
+        font-size: 21px;
+        transform: translateX(-10px);
+
+    }
+
+    #light textarea::placeholder {
+        font-size: 21px;
+
+    }
+
+
+    #dark textarea::placeholder {
+        font-size: 21px;
+
+
+    }
+
+    .error-message-textArea {
+        font-size: 21px;
+        width: 103.6%;
+        transform: translateX(-10px);
+
+    }
+
+    .review-button {
+        margin: 10px 212px;
+        height: 65px;
+        width: 180px;
+    }
+
+    .review-button p {
+        margin-right: 1px;
+    }
+
+    #light .review-button p, #dark .review-button p {
+        font-size: 23px;
+    }
+
+
+    .container-review {
+        max-width: 75%;
+    }
+
+    #light .container-review {
+
+        box-shadow: 0 0 10px rgba(70, 70, 70, 0.91); /* Drop shadow for depth */
+    }
+
+    #dark .container-review {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.66); /* Drop shadow for depth */
+    }
+
+
+    .review-title {
+        text-align: center; /* Center-align the title */
+        margin-bottom: 20px; /* Space below the title */
+        font-size: 40px;
+    }
+
+    .review-desc {
+        text-align: center;
+        font-size: 25px;
+        margin: 15px 95px;
+    }
+
+    #light .input-label, #dark .input-label {
+        font-size: 26px;
+
+    }
+
+    #light .input-value, #dark .input-value {
+        font-size: 24px;
+        word-wrap: break-word;
+    }
+
+
+    /*Modal Buttons*/
+    .review-form-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-evenly;
+        margin-top: 20px;
+
+    }
+
+    .back-button {
+        height: 65px;
+        width: 180px;
+        margin: 5px
+    }
+
+    #light .back-button p, #dark .back-button p {
+        font-size: 23px;
+    }
+
+    .submit-button {
+        height: 65px;
+        width: 180px;
+        margin: 5px
+    }
+
+    #light .submit-button p, #dark .submit-button p {
+        font-size: 23px;
+    }
+
+    #light .Toastify__toast-container--bottom-right, #dark .Toastify__toast-container--bottom-right {
+        right: 10.25em
+    }
+
+    #light .toast-message, #dark .toast-message {
+        font-size: 21px; /* Adjust font size as needed */
+        width: 150%; /* Adjust width, ensuring it doesn't go off-screen */
+
+    }
+
+    #light .Toastify__toast-icon, #dark .Toastify__toast-icon {
+        margin-inline-end: 20px;
+        width: 30px;
+    }
+
+    #light .Toastify__close-button > svg {
+        height: 30px;
+        width: 30px;
+    }
+
+    #dark .Toastify__close-button > svg {
+        height: 30px;
+        width: 30px;
+    }
+
+    @-moz-document url-prefix() {
+
+        .container {
+            height: auto;
+        }
+
+        .container-info-image {
+            position: relative;
+
+        }
+        #light textarea, #dark textarea {
+            height: 25%;
+        }
+
+
+    }
+
+}
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
 /*XS, 11 Pro, 12 mini, and 13 mini for IOS 17 (Rotated)*/
@@ -2008,6 +2939,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
 }
 
+/*------------------ DONE------------------------------------------------*/
 /*
 iPad (7th, 8th, 9th Gen)
  */
@@ -2202,6 +3134,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
         width: 30px;
     }
 
+    #dark .Toastify__close-button > svg {
+        height: 30px;
+        width: 30px;
+    }
+
     @-moz-document url-prefix() {
 
         .container {
@@ -2252,7 +3189,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .container-image {
-        margin: 105px 215px;
+        margin: 105px 205px;
         padding: 50px;
         width: 250px;
         height: 250px;
@@ -2267,7 +3204,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .container-desc {
         font-size: 16px;
         text-align: center;
-        width: 43%;
+        width: 40%;
     }
 
     .container-bg {
@@ -2406,7 +3343,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
-
+/*------------------ DONE------------------------------------------------*/
 /*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018) */
 @media only screen
 and (min-width: 768px)
@@ -2596,6 +3533,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     #light .Toastify__close-button > svg {
+        height: 30px;
+        width: 30px;
+    }
+
+    #dark .Toastify__close-button > svg {
         height: 30px;
         width: 30px;
     }
@@ -2810,7 +3752,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
-
+/*------------------ DONE------------------------------------------------*/
 /*14 Pro Max, 15 Pro Max, 15 Plus for IOS 17 */
 @media only screen
 and (min-width: 430px)
@@ -3218,7 +4160,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .container-desc {
         font-size: 14px;
         text-align: center;
-        width: 85%;
+        width: 80%;
     }
 
     .container-bg {

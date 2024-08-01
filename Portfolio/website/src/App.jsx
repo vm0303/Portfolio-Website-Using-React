@@ -18,7 +18,8 @@ function App() {
     const [theme, setTheme] = useState("light");
     const [menuOpen, setMenuOpen] = useState(false);
     const [isMobileView, setIsMobileView] = useState(false);
-    const [isIpadView, setIsIpadView] = useState(false);
+    const [isSmalliPad, setIsSmalliPad] = useState(false);
+    const [isLargeiPad, setIsLargeiPad] = useState(false);
     const [isLandscape, setIsLandscape] = useState(false);
 
     const toggleTheme = () => {
@@ -32,6 +33,7 @@ function App() {
 
             // List of mobile landscape viewport ranges to exclude
             const excludedRanges = [
+                {minWidth: 667, maxWidth: 667, minHeight: 325, maxHeight: 375},
                 {minWidth: 800, maxWidth: 808, minHeight: 310, maxHeight: 414},
                 {minWidth: 725, maxWidth: 811, minHeight: 310, maxHeight: 393},
                 {minWidth: 712, maxWidth: 812, minHeight: 300, maxHeight: 375},
@@ -44,9 +46,20 @@ function App() {
                 height >= range.minHeight && height <= range.maxHeight
             );
 
+            const newIsLargeiPad = (width === 1024 && height >= 1292 && height <= 1366) || (width === 1366 && height >= 950 && height <= 1024);
+            const newIsSmalliPad = width > 430 && width <= 1112 && !isExcluded && !newIsLargeiPad;
+            const newIsLandscape = width > height && width <= 1112 && !newIsLargeiPad;
+
+            console.log(`Width: ${width}, Height: ${height}`);
+            console.log(`isExcluded: ${isExcluded}`);
+            console.log(`isLargeiPad: ${newIsLargeiPad}`);
+            console.log(`isSmalliPad: ${newIsSmalliPad}`);
+            console.log(`isLandscape: ${newIsLandscape}`);
+
             setIsMobileView(width <= 932);
-            setIsIpadView(width > 430 && width <= 1080 && !isExcluded);
-            setIsLandscape(width > height && width <= 1080);
+            setIsLargeiPad(newIsLargeiPad);
+            setIsSmalliPad(newIsSmalliPad);
+            setIsLandscape(newIsLandscape);
         };
 
         window.addEventListener("resize", handleResize);
@@ -55,17 +68,24 @@ function App() {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    const switchProps = isIpadView
+    const switchProps = isLargeiPad
         ? {
-            width: isLandscape ? 85 : 80,
-            height: isLandscape ? 40 : 40,
-            handleDiameter: isLandscape ? 30 : 40,
-        }
-        : {
-            width: 55,
-            height: 25,
-            handleDiameter: 25,
-        };
+            width: isLandscape ? 110 : 105,
+            height: 50,
+            handleDiameter: 50,
+        } : isSmalliPad
+            ? {
+                width: isLandscape ? 85 : 80,
+                height: 40,
+                handleDiameter: isLandscape ? 30 : 40,
+            }
+            : {
+                width: 55,
+                height: 25,
+                handleDiameter: 25,
+            };
+
+    console.log(`Switch Props: ${JSON.stringify(switchProps)}`);
 
     return (
         <ThemeContext.Provider value={{theme, toggleTheme}}>

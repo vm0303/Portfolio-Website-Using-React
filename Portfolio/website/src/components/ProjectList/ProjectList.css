@@ -50,6 +50,67 @@
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
 
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*
+iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen) - Landscape
+ */
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1366px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .project-body {
+        padding: 55px;
+        margin-top: 780px;
+    }
+
+    .project-texts {
+        width: 105%;
+    }
+
+    .project-title {
+        font-size: 65px;
+
+    }
+
+    .project-description {
+        font-size: 30px;
+        padding: 0;
+    }
+
+}
+
+/*------------------ DONE------------------------------------------------*/
+/*
+iPad Air (3rd Gen), iPad Pro 10.5-inch
+ */
+@media only screen
+and (min-width: 1112px)
+and (max-width: 1112px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .project-body {
+        padding: 55px;
+        margin-top: 780px;
+    }
+
+    .project-texts {
+        width: 105%;
+    }
+
+    .project-title {
+        font-size: 50px;
+
+    }
+
+    .project-description {
+        font-size: 26px;
+        padding: 0;
+    }
+
+}
+
+/*------------------ DONE------------------------------------------------*/
 /*iPad (7th, 8th, 9th Gen) - Landscape */
 @media only screen
 and (min-width: 1080px)
@@ -77,9 +138,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
-{
-
-}
+/*------------------ DONE------------------------------------------------*/
 /*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018) - Landscape */
 @media only screen
 and (min-width: 1024px)
@@ -107,6 +166,37 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
+/*------------------ DONE------------------------------------------------*/
+/*
+iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen)
+ */
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .project-body {
+        padding: 50px;
+        margin-top: 680px;
+    }
+
+    .project-texts {
+        width: 105%;
+    }
+
+    .project-title {
+        font-size: 65px;
+
+    }
+
+    .project-description {
+        font-size: 27px;
+        padding: 0;
+    }
+
+}
+
+/*------------------ DONE------------------------------------------------*/
 /*14 Pro Max, 15 Pro Max, 15 Plus for IOS 17 (Rotated) */
 @media only screen
 and (min-width: 810px)
@@ -137,9 +227,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
 }
 
 
-
-
-
+/*------------------ DONE------------------------------------------------*/
 /*12 Pro Max, 13 Pro Max, and 14 Plus for IOS 17 (Rotated)*/
 @media only screen
 and (min-width: 830px)
@@ -169,6 +257,42 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
 }
 
+/*------------------ DONE------------------------------------------------*/
+/*
+iPad Air (3rd Gen), iPad Pro 10.5-inch
+ */
+@media only screen
+and (min-width: 834px)
+and (max-width: 834px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .project-body {
+        padding: 20px;
+        margin-top: 600px;
+    }
+
+    .project-texts {
+        width: 105%;
+    }
+
+    .project-title {
+        font-size: 55px;
+
+    }
+
+    .project-description {
+        font-size: 24px;
+        padding: 0;
+    }
+
+    @-moz-document url-prefix() {
+
+        .project-body {
+            margin-top: 650px;
+        }
+
+    }
+}
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
 /*XS, 11 Pro, 12 mini, and 13 mini for IOS 17 (Rotated)*/
@@ -246,6 +370,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
     }
 }
 
+/*------------------ DONE------------------------------------------------*/
 /*
 iPad (7th, 8th, 9th Gen)
  */
@@ -312,7 +437,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
-
+/*------------------ DONE------------------------------------------------*/
 /*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018) */
 @media only screen
 and (min-width: 768px)
@@ -384,6 +509,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
+/*------------------ DONE------------------------------------------------*/
 /*14 Pro Max, 15 Pro Max, 15 Plus for IOS 17 */
 @media only screen
 and (min-width: 430px)

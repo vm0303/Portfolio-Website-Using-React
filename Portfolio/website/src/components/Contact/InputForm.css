@@ -119,6 +119,114 @@
 /*
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
+
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*
+iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen) - Landscape
+ */
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1366px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .formInput {
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    #light input {
+        width: 101.15%;
+        font-size: 27px;
+        transform: translateX(-8px);
+        -webkit-transform: translateX(-8px);
+        -ms-transform: translateX(-8px);
+
+    }
+
+    #dark input {
+        width: 101.15%;
+        font-size: 27px;
+        transform: translateX(-8px);
+        -webkit-transform: translateX(-8px);
+        -ms-transform: translateX(-8px);
+
+    }
+
+    .input-area-label {
+        font-size: 32px;
+        -webkit-transform: translateX(-8px);
+        -ms-transform: translateX(-8px);
+        transform: translateX(-8px);
+
+
+    }
+
+    .error-message {
+        font-size: 26px;
+        width: 101.95%;
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+
+    }
+
+
+}
+
+/*------------------ DONE------------------------------------------------*/
+/*
+iPad Air (3rd Gen), iPad Pro 10.5-inch
+ */
+@media only screen
+and (min-width: 1112px)
+and (max-width: 1112px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .formInput {
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    #light input {
+        width: 101.45%;
+        font-size: 23px;
+        transform: translateX(-8px);
+        -webkit-transform: translateX(-8px);
+        -ms-transform: translateX(-8px);
+
+    }
+
+    #dark input {
+        width: 101.45%;
+        font-size: 23px;
+        transform: translateX(-8px);
+        -webkit-transform: translateX(-8px);
+        -ms-transform: translateX(-8px);
+
+    }
+
+    .input-area-label {
+        font-size: 28px;
+        -webkit-transform: translateX(-8px);
+        -ms-transform: translateX(-8px);
+        transform: translateX(-8px);
+
+
+    }
+
+    .error-message {
+        font-size: 22px;
+        width: 102.45%;
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+
+    }
+
+
+}
+
+/*------------------ DONE------------------------------------------------*/
 /*iPad (7th, 8th, 9th Gen) - Landscape */
 @media only screen
 and (min-width: 1080px)
@@ -169,6 +277,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
+/*------------------ DONE------------------------------------------------*/
 /*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018) - Landscape */
 @media only screen
 and (min-width: 1024px)
@@ -219,7 +328,60 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
+/*------------------ DONE------------------------------------------------*/
+/*
+iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen)
+ */
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .formInput {
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
 
+    #light input {
+        width: 101.6%;
+        font-size: 25px;
+        transform: translateX(-8px);
+        -webkit-transform: translateX(-8px);
+        -ms-transform: translateX(-8px);
+
+    }
+
+    #dark input {
+        width: 101.6%;
+        font-size: 25px;
+        transform: translateX(-8px);
+        -webkit-transform: translateX(-8px);
+        -ms-transform: translateX(-8px);
+
+    }
+
+    .input-area-label {
+        font-size: 27px;
+        -webkit-transform: translateX(-8px);
+        -ms-transform: translateX(-8px);
+        transform: translateX(-8px);
+
+
+    }
+
+    .error-message {
+        font-size: 24px;
+        width: 102.65%;
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+
+    }
+
+
+}
+
+/*------------------ DONE------------------------------------------------*/
 /*14 Pro Max, 15 Pro Max, and 15 Plus for IOS 17 (Rotated)*/
 @media only screen
 and (min-width: 810px)
@@ -273,6 +435,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
 }
 
 
+/*------------------ DONE------------------------------------------------*/
 /*12 Pro Max, 13 Pro Max, and 14 Plus for IOS 17 (Rotated)*/
 @media only screen
 and (min-width: 830px)
@@ -325,6 +488,57 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
 }
 
+/*------------------ DONE------------------------------------------------*/
+/*
+iPad Air (3rd Gen), iPad Pro 10.5-inch
+ */
+@media only screen
+and (min-width: 834px)
+and (max-width: 834px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .formInput {
+        margin-bottom: 25px;
+        margin-top: 25px;
+    }
+
+    #light input {
+        width: 102.8%;
+        font-size: 21px;
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+
+    #dark input {
+        width: 102.8%;
+        font-size: 21px;
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+
+    }
+
+    .input-area-label {
+        font-size: 25px;
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+
+
+    }
+
+    .error-message {
+        font-size: 21px;
+        width: 103.6%;
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+
+    }
+
+
+}
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
 /*XS, 11 Pro, 12 mini, and 13 mini for IOS 17 (Rotated)*/
@@ -450,6 +664,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
 }
 
+/*------------------ DONE------------------------------------------------*/
 /*
 iPad (7th, 8th, 9th Gen)
  */
@@ -555,6 +770,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
+/*------------------DONE------------------------------------------------*/
 /*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018) */
 @media only screen
 and (min-width: 768px)
@@ -664,7 +880,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
-
+/*------------------ DONE------------------------------------------------*/
 /*14 Pro Max, 15 Pro Max, 15 Plus for IOS 17 */
 @media only screen
 and (min-width: 430px)

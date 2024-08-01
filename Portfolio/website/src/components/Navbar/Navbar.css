@@ -118,10 +118,44 @@
 /*
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
-/*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018), iPad (7th, 8th, and 9th Gen) - Landscape */
+
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*
+iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen) - Landscape
+ */
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1366px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .navbar {
+        height: 75px;
+    }
+
+    .wrapper {
+        padding: 8px 30px;
+    }
+
+    .icon {
+        font-size: 40px;
+    }
+
+    .left .hamburger {
+        width: 50px;
+        height: 40px;
+    }
+
+    .social_media_Container {
+        margin-left: 35px;
+    }
+}
+
+/*------------------ DONE------------------------------------------------*/
+/*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018), iPad (7th, 8th, and 9th Gen),
+iPad Air (3rd Gen), iPad Pro 10.5-inch - Landscape */
 @media only screen
 and (min-width: 1024px)
-and (max-width: 1080px)
+and (max-width: 1112px)
 and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 2) {
     .navbar {
@@ -140,10 +174,43 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
-/*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018), iPad (7th Gen - 2019)  */
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen)*/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .navbar {
+        height: 90px;
+    }
+
+    .wrapper {
+        padding: 17px 30px;
+    }
+
+    .icon {
+        font-size: 40px;
+    }
+
+    .left .hamburger {
+        width: 50px;
+        height: 39px;
+    }
+
+    .social_media_Container {
+        margin-left: 40px;
+    }
+}
+
+
+/*------------------ DONE------------------------------------------------*/
+/*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018),
+iPad (7th, 8th, and 9th Gen), iPad Air (3rd Gen), iPad Pro 10.5-inch
+ */
 @media only screen
 and (min-width: 768px)
-and (max-width: 810px)
+and (max-width: 834px)
 and (orientation: portrait)
 and (-webkit-min-device-pixel-ratio: 2) {
     .navbar {

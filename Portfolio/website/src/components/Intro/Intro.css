@@ -265,7 +265,202 @@
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
 
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*
+iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen) - Landscape
+ */
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1366px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .intro {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-top: 250px;
+    }
 
+    .i-left_side_wrapper {
+        margin: 0 15px;
+        padding: 0 15px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .i-greeting {
+        font-size: 50px;
+
+    }
+
+    #light .i-name {
+        font-size: 65px;
+        margin: 5px;
+
+
+    }
+
+    #dark .i-name {
+        font-size: 65px;
+        margin: 5px;
+
+    }
+
+    .i-title-item {
+        font-size: 50px;
+        -webkit-transform: translateY(-7px);
+        -ms-transform: translateY(-7px);
+        transform: translateY(-7px);
+        margin: 5px 0;
+    }
+
+    .i-desc {
+        font-size: 30px;
+        width: 85%;
+        margin: 5px 0;
+
+    }
+
+    .i-hobbies {
+        font-size: 30px;
+        margin: -5px 0;
+        width: 90%;
+    }
+
+    .i-img {
+        margin-top: 170px;
+        height: 120vh;
+    }
+
+    .i-background {
+        margin-top: 170px;
+        height: 121vh;
+    }
+
+
+    .arrows {
+        display: none;
+    }
+
+    @-moz-document url-prefix() {
+        .intro {
+            padding-top: 80px;
+        }
+        .i-hobbies {
+            margin: 15px 0;
+        }
+
+
+    }
+
+
+}
+
+
+/*------------------DONE------------------------------------------------*/
+/*
+iPad Air (3rd Gen), iPad Pro 10.5-inch
+ */
+@media only screen
+and (min-width: 1112px)
+and (max-width: 1112px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .intro {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-top: 195px;
+    }
+
+    .i-left_side_wrapper {
+        margin: 0 15px;
+        padding: 0 15px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .i-greeting {
+        font-size: 38px;
+
+    }
+
+    #light .i-name {
+        font-size: 50px;
+        margin: 5px;
+
+
+    }
+
+    #dark .i-name {
+        font-size: 50px;
+        margin: 5px;
+
+    }
+
+    .i-title-item {
+        font-size: 38px;
+        -webkit-transform: translateY(-7px);
+        -ms-transform: translateY(-7px);
+        transform: translateY(-7px);
+        margin: 5px 0;
+    }
+
+    .i-desc {
+        font-size: 26px;
+        width: 91%;
+        margin: 5px 0;
+
+    }
+
+    .i-hobbies {
+        font-size: 26px;
+        margin: -5px 0;
+        width: 80%;
+    }
+
+    .i-img {
+        margin-top: 120px;
+        height: 120vh;
+    }
+
+    .i-background {
+        margin-top: 120px;
+        height: 121vh;
+    }
+
+
+    .arrows {
+        display: none;
+    }
+
+    @-moz-document url-prefix() {
+        .intro {
+            padding-top: 80px;
+        }
+        .i-hobbies {
+            margin: 15px 0;
+        }
+
+
+    }
+
+
+}
+
+/*------------------DONE------------------------------------------------*/
 /*iPad (7th, 8th, 9th Gen) - Landscape */
 @media only screen
 and (min-width: 1080px)
@@ -360,6 +555,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
+/*------------------DONE------------------------------------------------*/
 /*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018) - Landscape */
 @media only screen
 and (min-width: 1024px)
@@ -454,7 +650,105 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
+/*------------------DONE------------------------------------------------*/
+/*
+iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen)
+ */
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .intro {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-top: 135px;
+    }
 
+    .i-left_side_wrapper {
+        margin: 0 15px;
+        padding: 0 15px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .i-greeting {
+        font-size: 40px;
+
+    }
+
+    #light .i-name {
+        font-size: 55px;
+        margin: 5px;
+
+
+    }
+
+    #dark .i-name {
+        font-size: 55px;
+        margin: 5px;
+
+    }
+
+    .i-title-item {
+        font-size: 40px;
+        -webkit-transform: translateY(-7px);
+        -ms-transform: translateY(-7px);
+        transform: translateY(-7px);
+        margin: 5px 0;
+    }
+
+    .i-desc {
+        font-size: 27px;
+        width: 94%;
+        margin: 5px 0;
+
+    }
+
+    .i-hobbies {
+        font-size: 27px;
+        margin: -5px 0;
+        width: 90%;
+    }
+
+    .i-img {
+        margin-top: 45px;
+        height: 75vh;
+    }
+
+    .i-background {
+        margin-top: 45px;
+        height: 76vh;
+    }
+
+
+    .arrows {
+        display: none;
+    }
+
+    @-moz-document url-prefix() {
+        .intro {
+            padding-top: 80px;
+        }
+        .i-hobbies {
+            margin: 15px 0;
+        }
+
+
+    }
+
+
+}
+
+
+/*------------------DONE------------------------------------------------*/
 /*14 Pro Max, 15 Pro Max, 15 Plus for IOS 17 (Rotated) */
 @media only screen
 and (min-width: 810px)
@@ -549,7 +843,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
 }
 
-
+/*------------------DONE------------------------------------------------*/
 /*12 Pro Max, 13 Pro Max, and 14 Plus for IOS 17 (Rotated)*/
 @media only screen
 and (min-width: 830px)
@@ -636,6 +930,104 @@ and (-webkit-min-device-pixel-ratio: 3) {
         .i-hobbies {
             margin: 15px 0;
         }
+
+    }
+
+
+}
+
+
+/*------------------DONE------------------------------------------------*/
+/*
+iPad Air (3rd Gen), iPad Pro 10.5-inch
+ */
+@media only screen
+and (min-width: 834px)
+and (max-width: 834px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .intro {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-top: 160px;
+    }
+
+    .i-left_side_wrapper {
+        margin: 0 15px;
+        padding: 0 15px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .i-greeting {
+        font-size: 38px;
+
+    }
+
+    #light .i-name {
+        font-size: 51px;
+        margin: 5px;
+
+
+    }
+
+    #dark .i-name {
+        font-size: 51px;
+        margin: 5px;
+
+    }
+
+    .i-title-item {
+        font-size: 38px;
+        -webkit-transform: translateY(-7px);
+        -ms-transform: translateY(-7px);
+        transform: translateY(-7px);
+        margin: 5px 0;
+    }
+
+    .i-desc {
+        font-size: 24px;
+        width: 95%;
+        margin: 5px 0;
+
+    }
+
+    .i-hobbies {
+        font-size: 24px;
+        margin: -5px 0;
+        width: 93%;
+    }
+
+    .i-img {
+        margin-top: 95px;
+        height: 60vh;
+    }
+
+    .i-background {
+        margin-top: 95px;
+        height: 61vh;
+    }
+
+
+    .arrows {
+        display: none;
+    }
+
+    @-moz-document url-prefix() {
+        .intro {
+            padding-top: 80px;
+        }
+        .i-hobbies {
+            margin: 15px 0;
+        }
+
 
     }
 
@@ -842,6 +1234,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
 }
 
+/*------------------ DONE------------------------------------------------*/
 /*
 iPad (7th, 8th, 9th Gen)
  */
@@ -1037,7 +1430,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
-
+/*------------------ DONE------------------------------------------------*/
 /*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018) */
 @media only screen
 and (min-width: 768px)
@@ -1133,8 +1526,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /*--------------------- DONE------------------------------------------------*/
-/*
-SE (2nd and 3rd Gen) for IOS 17 (Rotated)*/
+/*SE (2nd and 3rd Gen) for IOS 17 (Rotated)*/
 @media only screen
 and (min-width: 667px) /* 1136px / 2 */
 and (max-width: 667px) /* 1136px / 1 */
@@ -1228,6 +1620,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
+/*------------------------------------------------------------DONE------------------------------------------------*/
 /*14 Pro Max, 15 Pro Max, 15 Plus for IOS 17*/
 @media only screen
 and (min-width: 430px)

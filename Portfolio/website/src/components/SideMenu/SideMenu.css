@@ -69,28 +69,52 @@ ul li a {
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
 
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*
+iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen) - Landscape
+ */
 @media only screen
-and (min-width: 1024px)
-and (max-width: 1024px)
+and (min-width: 1366px)
+and (max-width: 1366px)
 and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 2) {
     .side_menu {
-        width: 250px;
-        left: -250px;
+        width: 320px;
+        left: -320px;
         height: 100vh;
 
     }
 
     ul {
-        font-size: 30px;
-        transform: translateY(15%);
+        font-size: 40px;
+        transform: translateY(10%);
+    }
+}
+
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*
+iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen)
+ */
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .side_menu {
+        width: 320px;
+        left: -320px;
+        height: 100vh;
+
+    }
+
+    ul {
+        font-size: 40px;
+        transform: translateY(10%);
     }
 }
 
 
-
-
-
+/*------------------------------------------------------------DONE------------------------------------------------*/
 /*14 Pro Max, 15 Pro Max, 15 Plus for IOS 17 (Rotated) */
 @media only screen
 and (min-width: 810px)
@@ -113,6 +137,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
     }
 }
 
+/*------------------------------------------------------------DONE------------------------------------------------*/
 /*12 Pro Max, 13 Pro Max, and 14 Plus for IOS 17 (Rotated)*/
 @media only screen
 and (min-width: 830px)
@@ -158,26 +183,6 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
     }
 }
-
-/*iPad Mini (5th Gen - 2019) */
-@media only screen
-and (min-width: 768px)
-and (max-width: 768px)
-and (orientation: portrait)
-and (-webkit-min-device-pixel-ratio: 2) {
-    .side_menu {
-        width: 250px;
-        left: -250px;
-        height: 100vh;
-
-    }
-
-    ul {
-        font-size: 30px;
-        transform: translateY(15%);
-    }
-}
-
 
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
@@ -227,6 +232,27 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
+
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*iPad Mini (5th Gen - 2019), iPad (7th, 8th, 9th Gen) */
+@media only screen
+and (min-width: 768px)
+and (max-width: 834px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .side_menu {
+        width: 275px;
+        left: -275px;
+        height: 100vh;
+
+    }
+
+    ul {
+        font-size: 33px;
+        transform: translateY(8%);
+    }
+}
+
 /*------------------------------------------------------------DONE------------------------------------------------*/
 /*SE (2nd and 3rd Gen) for IOS 17 (Rotated)*/
 @media only screen
@@ -248,6 +274,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
+
+/*------------------------------------------------------------DONE------------------------------------------------*/
 /*14 Pro Max, 15 Pro Max, 15 Plus for IOS 17 */
 @media only screen
 and (min-width: 430px)

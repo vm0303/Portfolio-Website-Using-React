@@ -257,6 +257,156 @@
 ------------------------Mobile CSS--------------------------------------------------------------------------------
  */
 
+/*------------------------------------------------------------DONE------------------------------------------------*/
+/*
+iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen) - Landscape
+ */
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1366px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .about {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: 1050px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 80vh;
+        width: 80vh;
+
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .about-title {
+        text-align: center;
+        font-size: 65px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 30px;
+        padding: 10px 30px;
+        margin: 10px 30px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 32px;
+        margin: 10px 150px;
+        padding: 5px 90px;
+    }
+
+    .button-container {
+        margin: 15px 30px;
+        padding: 15px 30px;
+    }
+
+    .resume-button {
+        background-color: transparent;
+        height: 75px;
+        width: 200px;
+    }
+
+    #light .resume-button p, #dark .resume-button p {
+        font-size: 28px;
+    }
+
+}
+
+/*------------------ DONE------------------------------------------------*/
+/*
+iPad Air (3rd Gen), iPad Pro 10.5-inch
+ */
+@media only screen
+and (min-width: 1112px)
+and (max-width: 1112px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .about {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: 850px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 80vh;
+        width: 80vh;
+
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .about-title {
+        text-align: center;
+        font-size: 55px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 26px;
+        padding: 10px 20px;
+        margin: 10px 20px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 28px;
+        margin: 10px 150px;
+        padding: 5px 90px;
+    }
+
+    .button-container {
+        margin: 15px 30px;
+        padding: 15px 30px;
+    }
+
+    .resume-button {
+        background-color: transparent;
+        height: 65px;
+        width: 180px;
+    }
+
+    #light .resume-button p, #dark .resume-button p {
+        font-size: 23px;
+    }
+
+}
+
+
+/*------------------ DONE------------------------------------------------*/
 /*iPad (7th, 8th, 9th Gen) - Landscape */
 @media only screen
 and (min-width: 1080px)
@@ -328,7 +478,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
-
+/*------------------ DONE------------------------------------------------*/
 /*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018) - Landscape */
 @media only screen
 and (min-width: 1024px)
@@ -400,8 +550,81 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
+/*------------------ DONE------------------------------------------------*/
+/*
+iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen)
+ */
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .about {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: 675px;
+    }
 
+    .about-left {
+        width: 100%;
+    }
 
+    .a-card {
+        height: 60vh;
+        width: 60vh;
+
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .about-title {
+        text-align: center;
+        font-size: 65px;
+        padding: 10px;
+        margin: 10px;
+
+    }
+
+    .about-description {
+        font-size: 27px;
+        padding: 10px 40px;
+        margin: 10px 25px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 29px;
+        margin: 10px 85px;
+        padding: 5px 90px;
+    }
+
+    .button-container {
+        margin: 15px 30px;
+        padding: 15px 30px;
+    }
+
+    .resume-button {
+        background-color: transparent;
+        height: 80px;
+        width: 190px;
+    }
+
+    #light .resume-button p, #dark .resume-button p {
+        font-size: 27px;
+    }
+
+}
+
+/*------------------ DONE------------------------------------------------*/
 /*14 Pro Max, 15 Pro Max, 15 Plus for IOS 17 (Rotated) */
 @media only screen
 and (min-width: 810px)
@@ -472,7 +695,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
 }
 
-
+/*------------------ DONE------------------------------------------------*/
 /*12 Pro Max, 13 Pro Max, and 14 Plus for IOS 17 (Rotated)*/
 @media only screen
 and (min-width: 830px)
@@ -543,6 +766,80 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
 }
 
+
+/*------------------ DONE------------------------------------------------*/
+/*
+iPad Air (3rd Gen), iPad Pro 10.5-inch
+ */
+@media only screen
+and (min-width: 834px)
+and (max-width: 834px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .about {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: 360px;
+    }
+
+    .about-left {
+        width: 100%;
+    }
+
+    .a-card {
+        height: 55vh;
+        width: 55vh;
+
+    }
+
+    .a-card.background {
+        display: none;
+    }
+
+    .about-right {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .about-title {
+        text-align: center;
+        font-size: 55px;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    .about-description {
+        font-size: 24px;
+        padding: 10px 30px;
+        margin: 10px 10px;
+    }
+
+    .about-sub-title {
+        text-align: center;
+        font-size: 27px;
+        margin: 10px 70px;
+        padding: 5px 35px;
+    }
+
+    .button-container {
+        margin: 15px 30px;
+        padding: 15px 30px;
+    }
+
+    .resume-button {
+        background-color: transparent;
+        height: 65px;
+        width: 180px;
+    }
+
+    #light .resume-button p, #dark .resume-button p {
+        font-size: 23px;
+    }
+
+}
 
 /*------------------------------------------------------------ DONE------------------------------------------------*/
 /*XS, 11 Pro, 12 mini, and 13 mini for IOS 17 (Rotated)*/
@@ -695,7 +992,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
 }
 
-
+/*------------------ DONE------------------------------------------------*/
 /*
 iPad (7th, 8th, 9th Gen)
  */
@@ -760,7 +1057,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .resume-button {
         background-color: transparent;
         height: 60px;
-        width: 155px;
+        width: 154px;
     }
 
     #light .resume-button p, #dark .resume-button p {
@@ -842,7 +1139,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
-
+/*------------------ DONE------------------------------------------------*/
 /*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018) */
 @media only screen
 and (min-width: 768px)
@@ -984,7 +1281,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
-
+/*------------------ DONE------------------------------------------------*/
 /*14 Pro Max, 15 Pro Max, 15 Plus for IOS 17 */
 @media only screen
 and (min-width: 430px)
