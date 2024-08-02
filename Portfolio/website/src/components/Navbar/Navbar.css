@@ -121,7 +121,7 @@
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
 /*
-iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen) - Landscape
+iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen), and iPad Air 13 (M2 - 2024) - Landscape
  */
 @media only screen
 and (min-width: 1366px)
@@ -150,12 +150,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
+
 /*------------------ DONE------------------------------------------------*/
-/*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018), iPad (7th, 8th, and 9th Gen),
+/*iPad Mini (5th Gen, and 6th Gen), iPad (6th Gen - 2018), iPad (7th, 8th, and 9th Gen),
 iPad Air (3rd Gen), iPad Pro 10.5-inch - Landscape */
 @media only screen
 and (min-width: 1024px)
-and (max-width: 1112px)
+and (max-width: 1136px)
 and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 2) {
     .navbar {
@@ -175,7 +176,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
-/*iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen)*/
+/*iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen), and iPad Air 13 (M2 - 2024)*/
 @media only screen
 and (min-width: 1024px)
 and (max-width: 1024px)
@@ -205,11 +206,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 
 /*------------------ DONE------------------------------------------------*/
-/*iPad Mini (5th Gen - 2019), iPad (6th Gen - 2018),
+/*iPad Mini (5th, and 6th Gen), iPad (6th Gen - 2018),
 iPad (7th, 8th, and 9th Gen), iPad Air (3rd Gen), iPad Pro 10.5-inch
  */
 @media only screen
-and (min-width: 768px)
+and (min-width: 744px)
 and (max-width: 834px)
 and (orientation: portrait)
 and (-webkit-min-device-pixel-ratio: 2) {

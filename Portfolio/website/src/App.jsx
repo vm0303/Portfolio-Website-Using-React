@@ -47,8 +47,8 @@ function App() {
             );
 
             const newIsLargeiPad = (width === 1024 && height >= 1292 && height <= 1366) || (width === 1366 && height >= 950 && height <= 1024);
-            const newIsSmalliPad = width > 430 && width <= 1112 && !isExcluded && !newIsLargeiPad;
-            const newIsLandscape = width > height && width <= 1112 && !newIsLargeiPad;
+            const newIsSmalliPad = width > 430 && width <= 1136 && !isExcluded && !newIsLargeiPad;
+            const newIsLandscape = (newIsLargeiPad && width > height) || (newIsSmalliPad && width > height && width <= 1136);
 
             console.log(`Width: ${width}, Height: ${height}`);
             console.log(`isExcluded: ${isExcluded}`);
@@ -67,6 +67,7 @@ function App() {
 
         return () => window.removeEventListener("resize", handleResize);
     }, []);
+
 
     const switchProps = isLargeiPad
         ? {

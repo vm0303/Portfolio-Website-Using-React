@@ -79,7 +79,7 @@
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
 /*
-iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen) - Landscape
+iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen), and iPad Air 13 (M2 - 2024) - Landscape
  */
 @media only screen
 and (min-width: 1366px)
@@ -103,6 +103,29 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
+
+/*iPad Mini (6th Gen) - Landscape*/
+@media only screen
+and (min-width: 1133px)
+and (max-width: 1133px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .proj {
+        width: 40%;
+        height: 40vh;
+    }
+
+    .proj-web-header-circle {
+        width: 10px;
+        height: 10px;
+        margin: 5px;
+        border-radius: 50px;
+    }
+}
+
+
+
+
 /*------------------ DONE------------------------------------------------*/
 /*
 iPad Air (3rd Gen), iPad Pro 10.5-inch
@@ -124,6 +147,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         border-radius: 50px;
     }
 }
+
 
 /*------------------ DONE------------------------------------------------*/
 /*iPad (7th, 8th, 9th Gen) - Landscape */
@@ -168,7 +192,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 /*------------------ DONE------------------------------------------------*/
 /*
-iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen)
+iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen), and iPad Air 13 (M2 - 2024)
  */
 @media only screen
 and (min-width: 1024px)
@@ -225,7 +249,12 @@ and (-webkit-min-device-pixel-ratio: 3) {
 
 /*------------------ DONE------------------------------------------------*/
 /*
-iPad Air (3rd Gen), iPad Pro 10.5-inch
+iPad Air (3rd Gen), iPad Pro 10.5-inch,
+iPad Pro 11-inch (1st generation)
+iPad Pro 11-inch (2nd generation)
+iPad Pro 11-inch (3rd generation)
+iPad Pro 11-inch (4th generation)
+iPad Pro 11-inch (M4)
  */
 @media only screen
 and (min-width: 834px)
@@ -235,6 +264,29 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .proj {
         width: 40%;
         height: 23vh;
+    }
+
+    .proj-web-header-circle {
+        width: 10px;
+        height: 10px;
+        margin: 5px;
+        border-radius: 50px;
+    }
+}
+
+/*
+iPad (10th generation)
+iPad Air (4th generation)
+iPad Air (5th generation)
+ */
+@media only screen
+and (min-width: 820px)
+and (max-width: 820px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .proj {
+        width: 40%;
+        height: 20vh;
     }
 
     .proj-web-header-circle {
@@ -324,6 +376,26 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .proj {
         width: 40%;
         height: 23vh;
+    }
+
+    .proj-web-header-circle {
+        width: 10px;
+        height: 10px;
+        margin: 5px;
+        border-radius: 50px;
+    }
+}
+
+/*------------------DONE------------------------------------------------*/
+/*iPad Mini (6th Gen)*/
+@media only screen
+and (min-width: 744px)
+and (max-width: 744px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .proj {
+        width: 40%;
+        height: 20vh;
     }
 
     .proj-web-header-circle {

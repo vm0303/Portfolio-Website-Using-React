@@ -91,6 +91,27 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
+
+@media only screen
+and (min-width: 1133px)
+and (max-width: 1133px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .side_menu {
+        width: 300px;
+        left: -300px;
+        height: 100vh;
+
+    }
+
+    ul {
+        font-size: 30px;
+        transform: translateY(10%);
+    }
+}
+
+
+
 /*------------------------------------------------------------DONE------------------------------------------------*/
 /*
 iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen)
@@ -234,9 +255,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
-/*iPad Mini (5th Gen - 2019), iPad (7th, 8th, 9th Gen) */
+/*iPad Mini (5th, and 6th Gen), iPad (7th, 8th, 9th Gen) */
 @media only screen
-and (min-width: 768px)
+and (min-width: 744px)
 and (max-width: 834px)
 and (orientation: portrait)
 and (-webkit-min-device-pixel-ratio: 2) {
