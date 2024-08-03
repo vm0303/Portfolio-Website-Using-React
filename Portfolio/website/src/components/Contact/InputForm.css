@@ -136,7 +136,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     #light input {
         width: 101.15%;
-        font-size: 27px;
+        font-size: 26px;
         transform: translateX(-8px);
         -webkit-transform: translateX(-8px);
         -ms-transform: translateX(-8px);
@@ -145,7 +145,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     #dark input {
         width: 101.15%;
-        font-size: 27px;
+        font-size: 26px;
         transform: translateX(-8px);
         -webkit-transform: translateX(-8px);
         -ms-transform: translateX(-8px);
@@ -153,7 +153,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .input-area-label {
-        font-size: 32px;
+        font-size: 29px;
         -webkit-transform: translateX(-8px);
         -ms-transform: translateX(-8px);
         transform: translateX(-8px);
@@ -386,7 +386,7 @@ iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen), and iPad Air 13 (M2 - 2024
  */
 @media only screen
 and (min-width: 1024px)
-and (max-width: 1024px)
+and (max-width: 1044px)
 and (orientation: portrait)
 and (-webkit-min-device-pixel-ratio: 2) {
     .formInput {
@@ -413,7 +413,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .input-area-label {
-        font-size: 27px;
+        font-size: 28px;
         -webkit-transform: translateX(-8px);
         -ms-transform: translateX(-8px);
         transform: translateX(-8px);
@@ -422,7 +422,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .error-message {
-        font-size: 24px;
+        font-size: 25px;
         width: 102.65%;
         -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);

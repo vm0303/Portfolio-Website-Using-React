@@ -73,7 +73,7 @@ iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen), and iPad Air 13 (M2 - 2024
     .sun-toggle-icon {
         width: 50px;
         height: 50px;
-        transform: translateX(15px);
+        transform: translateX(20px);
     }
 
     .moon-toggle-icon {
@@ -84,13 +84,13 @@ iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen), and iPad Air 13 (M2 - 2024
     .light-tooltip {
         border-radius: 10px;
         padding: 10px;
-        font-size: 27px;
+        font-size: 30px;
     }
 
     .dark-tooltip {
         border-radius: 10px;
         padding: 10px;
-        font-size: 27px;
+        font-size: 30px;
     }
 
     #light .react-switch .react-switch-handle {

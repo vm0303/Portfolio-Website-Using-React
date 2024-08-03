@@ -326,7 +326,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     #light .resume-button p, #dark .resume-button p {
-        font-size: 28px;
+        font-size: 30px;
     }
 
 }
