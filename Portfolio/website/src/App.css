@@ -316,11 +316,13 @@ iPad (7th, 8th, and 9th Gen), iPad Air (3rd Gen), iPad Pro 10.5-inch */
     .light-tooltip {
         border-radius: 10px;
         padding: 10px;
+        font-size: 21px;
     }
 
     .dark-tooltip {
         border-radius: 10px;
         padding: 10px;
+        font-size: 21px;
     }
 
     #light .react-switch .react-switch-handle {

@@ -103,7 +103,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
-
+/*------------------ DONE------------------------------------------------*/
 /*iPad Mini (6th Gen) - Landscape*/
 @media only screen
 and (min-width: 1133px)
@@ -274,6 +274,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
+/*------------------ DONE------------------------------------------------*/
 /*
 iPad (10th generation)
 iPad Air (4th generation)

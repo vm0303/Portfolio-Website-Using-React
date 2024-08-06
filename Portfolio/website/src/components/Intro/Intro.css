@@ -362,6 +362,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
+/*------------------ DONE------------------------------------------------*/
 /*iPad Mini (6th Gen) - Landscape*/
 @media only screen
 and (min-width: 1133px)
@@ -1140,6 +1141,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 
+/*------------------ DONE------------------------------------------------*/
 /*iPad (10th generation), iPad Air (4th generation), iPad Air (5th generation)*/
 @media only screen
 and (min-width: 820px)
@@ -1781,16 +1783,16 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .i-desc {
-        font-size: 20px;
-        width: 87%;
+        font-size: 22px;
+        width: 96%;
         margin: 5px 0;
 
     }
 
     .i-hobbies {
-        font-size: 20px;
+        font-size: 22px;
         margin: -5px 0;
-        width: 90%;
+        width: 95%;
     }
 
     .i-img {

@@ -276,18 +276,21 @@ const Contact = ({setMenuOpen}) => {
         });
     }
 
-    //Flashing text event to indicate the user can submit the form.
+    // Flashing text event to indicate the user can submit the form.
     useEffect(() => {
-        // Start the flashing effect when submitButtonCountdown reaches 0
         if (submitButtonCountdown === 0) {
             const interval = setInterval(() => {
                 setFlash(prevState => !prevState);
             }, 550);
 
-            // Clear interval after 5 seconds
-            setTimeout(() => clearInterval(interval), 7000);
+            // Clear interval after 7 seconds and set flash to true
+            setTimeout(() => {
+                clearInterval(interval);
+                setFlash(true);
+            }, 7000);
         }
     }, [submitButtonCountdown]);
+
 
     useEffect(() => {
         if (submitButtonCountdown > 0) {
@@ -445,8 +448,8 @@ const Contact = ({setMenuOpen}) => {
                         <p className="review-desc">
                             If you need to make any changes, click or tap the back button.
                         </p>
-                        <p className={`review-desc ${submitButtonCountdown === 0 && flash ? 'animate-fade-out' : ''} ${submitButtonCountdown === 0 && !flash ? 'animate-fade-in' : ''}`}>
-                            {submitButtonCountdown > 0 ? `Otherwise, please wait ${submitButtonCountdown} seconds before submitting.` : 'You can now submit the form.'}
+                        <p className={`review-desc ${flash ? 'animate-fade-in' : 'animate-fade-out'}`}>
+                            {submitButtonCountdown > 0 ? `Otherwise, please wait ${submitButtonCountdown}s before submitting.` : 'You can now submit the form.'}
                         </p>
 
                         {inputs.map(inputVals => (

@@ -126,7 +126,7 @@ iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen), and iPad Air 13 (M2 - 2024
  */
 @media only screen
 and (min-width: 1366px)
-and (max-width: 1386px)
+and (max-width: 1366px)
 and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 2) {
     .formInput {
@@ -173,7 +173,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
-
+/*------------------ DONE------------------------------------------------*/
 /*iPad Mini (6th Gen) - Landscape*/
 @media only screen
 and (min-width: 1133px)
@@ -187,7 +187,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     #light input {
         width: 101.45%;
-        font-size: 24px;
+        font-size: 27px;
         transform: translateX(-8px);
         -webkit-transform: translateX(-8px);
         -ms-transform: translateX(-8px);
@@ -196,7 +196,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     #dark input {
         width: 101.45%;
-        font-size: 24px;
+        font-size: 27px;
         transform: translateX(-8px);
         -webkit-transform: translateX(-8px);
         -ms-transform: translateX(-8px);
@@ -204,7 +204,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .input-area-label {
-        font-size: 29px;
+        font-size: 30px;
         -webkit-transform: translateX(-8px);
         -ms-transform: translateX(-8px);
         transform: translateX(-8px);
@@ -213,7 +213,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .error-message {
-        font-size: 23px;
+        font-size: 27px;
         width: 102.45%;
         -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);
@@ -386,7 +386,7 @@ iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen), and iPad Air 13 (M2 - 2024
  */
 @media only screen
 and (min-width: 1024px)
-and (max-width: 1044px)
+and (max-width: 1024px)
 and (orientation: portrait)
 and (-webkit-min-device-pixel-ratio: 2) {
     .formInput {
@@ -547,8 +547,7 @@ iPad Pro 11-inch (1st generation)
 iPad Pro 11-inch (2nd generation)
 iPad Pro 11-inch (3rd generation)
 iPad Pro 11-inch (4th generation)
-iPad Pro 11-inch (M4)
- */
+iPad Pro 11-inch (M4)*/
 @media only screen
 and (min-width: 834px)
 and (max-width: 834px)
@@ -597,7 +596,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
-
+/*------------------ DONE------------------------------------------------*/
 /*iPad (10th generation), iPad Air (4th generation), iPad Air (5th generation)*/
 @media only screen
 and (min-width: 820px)
@@ -611,7 +610,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     #light input {
         width: 102.7%;
-        font-size: 20px;
+        font-size: 21px;
         -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);
         transform: translateX(-10px);
@@ -619,7 +618,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     #dark input {
         width: 102.7%;
-        font-size: 20px;
+        font-size: 21px;
         -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);
         transform: translateX(-10px);
@@ -636,7 +635,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .error-message {
-        font-size: 20px;
+        font-size: 21px;
         width: 103.4%;
         -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);
@@ -941,7 +940,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     #light input {
         width: 103.1%;
-        font-size: 17px;
+        font-size: 21px;
         -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);
         transform: translateX(-10px);
@@ -949,7 +948,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     #dark input {
         width: 103.1%;
-        font-size: 17px;
+        font-size: 21px;
         -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);
         transform: translateX(-10px);
@@ -957,7 +956,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .input-area-label {
-        font-size: 20px;
+        font-size: 24px;
         -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);
         transform: translateX(-10px);
@@ -966,7 +965,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .error-message {
-        font-size: 17px;
+        font-size: 21px;
         width: 103.8%;
         -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);

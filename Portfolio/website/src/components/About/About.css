@@ -331,7 +331,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
-
+/*------------------ DONE------------------------------------------------*/
 /*iPad Mini (6th Gen) - Landscape*/
 @media only screen
 and (min-width: 1133px)
@@ -393,12 +393,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .resume-button {
         background-color: transparent;
-        height: 65px;
+        height: 70px;
         width: 185px;
     }
 
     #light .resume-button p, #dark .resume-button p {
-        font-size: 24px;
+        font-size: 27px;
     }
 
 }
@@ -918,8 +918,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 }
 
+/*------------------ DONE------------------------------------------------*/
 /*iPad (10th generation), iPad Air (4th generation), iPad Air (5th generation)*/
-
 @media only screen
 and (min-width: 820px)
 and (max-width: 820px)
@@ -981,11 +981,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .resume-button {
         background-color: transparent;
         height: 65px;
-        width: 180px;
+        width: 186px;
     }
 
     #light .resume-button p, #dark .resume-button p {
-        font-size: 22px;
+        font-size: 23px;
     }
 
 }
@@ -1403,16 +1403,16 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .about-description {
-        font-size: 19px;
+        font-size: 22px;
         padding: 10px 10px;
         margin: 10px 10px;
     }
 
     .about-sub-title {
         text-align: center;
-        font-size: 21px;
-        margin: 10px 70px;
-        padding: 5px 35px;
+        font-size: 24px;
+        margin: 10px 25px;
+        padding: 5px 25px;
     }
 
     .button-container {
@@ -1423,11 +1423,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .resume-button {
         background-color: transparent;
         height: 60px;
-        width: 155px;
+        width: 154px;
     }
 
     #light .resume-button p, #dark .resume-button p {
-        font-size: 21px;
+        font-size: 22px;
     }
 
 }
