@@ -92,9 +92,14 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 
+/*iPad Mini (5th, and 6th Gen), iPad (6th, 7th, 8th, and 9th Gen),
+iPad Air (3rd generation), iPad Pro 11-inch (1st generation),
+iPad Pro 11-inch (2nd generation), iPad Pro 11-inch (3rd generation),
+iPad Pro 11-inch (4th generation), iPad Pro 11-inch (M4) - Landscape
+  */
 @media only screen
-and (min-width: 1133px)
-and (max-width: 1133px)
+and (min-width: 1024px)
+and (max-width: 1210px)
 and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 2) {
     .side_menu {
@@ -110,7 +115,21 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
-
+/*
+iPad (10th generation)
+iPad Air (4th generation)
+iPad Air (5th generation)
+iPad Air 11-inch (M2)
+ */
+@media only screen
+and (min-width: 1180px)
+and (max-width: 1180px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    ul {
+        font-size: 33px;
+    }
+}
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
 /*
@@ -255,7 +274,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
-/*iPad Mini (5th, and 6th Gen), iPad (7th, 8th, 9th Gen) */
+/*iPad Mini (5th, and 6th Gen), iPad (6th, 7th, 8th, 9th and 10th Gen),
+iPad Air (3rd, 4th, 5th), iPad Air 11-inch (M2), iPad Pro 11-inch (1st generation),
+iPad Pro 11-inch (2nd generation), iPad Pro 11-inch (3rd generation),
+iPad Pro 11-inch (4th generation), iPad Pro 11-inch (M4)
+  */
 @media only screen
 and (min-width: 744px)
 and (max-width: 834px)
@@ -269,8 +292,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     ul {
-        font-size: 33px;
-        transform: translateY(8%);
+        font-size: 35px;
+        transform: translateY(10%);
     }
 }
 

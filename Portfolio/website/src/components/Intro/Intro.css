@@ -761,7 +761,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        padding-top: 135px;
+        padding-top: 165px;
     }
 
     .i-left_side_wrapper {
@@ -804,7 +804,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .i-desc {
         font-size: 27px;
-        width: 94%;
+        width: 87%;
         margin: 5px 0;
 
     }

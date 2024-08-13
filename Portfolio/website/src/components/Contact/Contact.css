@@ -2906,12 +2906,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     #light .input-label, #dark .input-label {
-        font-size: 25px;
+        font-size: 24px;
 
     }
 
     #light .input-value, #dark .input-value {
-        font-size: 23px;
+        font-size: 22px;
         word-wrap: break-word;
     }
 

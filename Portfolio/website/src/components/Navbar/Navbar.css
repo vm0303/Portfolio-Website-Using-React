@@ -152,11 +152,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 
 /*------------------ DONE------------------------------------------------*/
-/*iPad Mini (5th Gen, and 6th Gen), iPad (6th Gen - 2018), iPad (7th, 8th, and 9th Gen),
-iPad Air (3rd Gen), iPad Pro 10.5-inch - Landscape */
+/*iPad Mini (5th, and 6th Gen), iPad (6th, 7th, 8th, 9th, and 10th Gen),
+iPad Air (3rd, 4th, and 5th Gen), iPad Pro 10.5-inch, iPad Pro 11-inch (1st generation),
+iPad Pro 11-inch (2nd generation), iPad Pro 11-inch (3rd generation),
+iPad Pro 11-inch (4th generation), iPad Pro 11-inch (M4) - Landscape */
 @media only screen
 and (min-width: 1024px)
-and (max-width: 1136px)
+and (max-width: 1210px)
 and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 2) {
     .navbar {
@@ -206,9 +208,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 
 /*------------------ DONE------------------------------------------------*/
-/*iPad Mini (5th, and 6th Gen), iPad (6th Gen - 2018),
-iPad (7th, 8th, and 9th Gen), iPad Air (3rd Gen), iPad Pro 10.5-inch
- */
+/*iPad Mini (5th, and 6th Gen), iPad (6th, 7th, 8th, 9th, and 10th Gen),
+iPad Air (3rd, 4th, and 5th Gen), iPad Pro 10.5-inch, iPad Pro 11-inch (1st generation),
+iPad Pro 11-inch (2nd generation), iPad Pro 11-inch (3rd generation),
+iPad Pro 11-inch (4th generation), iPad Pro 11-inch (M4)*/
 @media only screen
 and (min-width: 744px)
 and (max-width: 834px)
@@ -230,7 +233,91 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 667px) {
+
+/*XS, 11 Pro, 12 mini, and 13 mini for IOS 17 (Rotated)*/
+@media only screen
+and (min-width: 712px)
+and (max-width: 812px)
+and (min-height: 300px)
+and (max-height: 375px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 3) {
+    .wrapper {
+        padding: 6px 20px;
+    }
+
+    .icon {
+        font-size: 25px;
+    }
+
+    .left .hamburger {
+        width: 28px;
+        height: 23px;
+    }
+}
+
+/*12, 12 Pro, 13, 13 Pro, 14, 14 Pro, 15, and 15 Pro for IOS 17 (Rotated) */
+@media only screen
+and (min-width: 725px)
+and (max-width: 811px)
+and (min-height: 310px)
+and (max-height: 393px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 3) {
+    .wrapper {
+        padding: 6px 20px;
+    }
+
+    .icon {
+        font-size: 25px;
+    }
+
+    .left .hamburger {
+        width: 28px;
+        height: 23px;
+    }
+}
+
+
+/*XR, 11, XS Max, and 11 Pro Max for IOS 17 (Rotated)*/
+@media only screen
+and (min-width: 800px)
+and (max-width: 808px) /* 1792px / 2 */
+and (min-height: 310px)
+and (max-height: 414px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .wrapper {
+        padding: 6px 20px;
+    }
+
+    .icon {
+        font-size: 25px;
+    }
+
+    .left .hamburger {
+        width: 28px;
+        height: 23px;
+    }
+}
+
+/*
+iPhone SE (2nd and 3rd Gen)
+ */
+@media only screen and (min-width: 667px) and (max-width: 667px) and (orientation: landscape) {
+    .wrapper {
+        padding: 6px 20px;
+    }
+
+    .icon {
+        font-size: 25px;
+    }
+}
+
+/*
+All of portrait of iPhones, plus the landscape of SE (2nd, and 3rd gen)
+ */
+@media only screen and (min-width: 320px) and (max-width: 430px) and (orientation: portrait) {
     .wrapper {
         padding: 10px 20px;
     }

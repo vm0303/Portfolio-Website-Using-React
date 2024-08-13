@@ -111,9 +111,11 @@ iPad Pro 12.9-inch (2nd, 3rd, 4th, 5th, and 6th Gen), and iPad Air 13 (M2 - 2024
 
 /*------------------------------------------------------------DONE------------------------------------------------*/
 /*
-iPad Air (3rd Gen), iPad Pro 10.5-inch - Landscape
- */
-@media only screen and (min-width: 1112px) and (max-width: 1136px) and (orientation: landscape) {
+iPad Air (3rd Gen), iPad Pro 10.5-inch, iPad mini (6th Gen), iPad (10th generation), iPad Air (4th generation)
+iPad Air (5th generation), iPad Air 11-inch (M2), iPad Pro 11-inch (1st generation), iPad Pro 11-inch (2nd generation)
+iPad Pro 11-inch (3rd generation), iPad Pro 11-inch (4th generation), iPad Pro 11-inch (M4) - Landscape
+*/
+@media only screen and (min-width: 1112px) and (max-width: 1210px) and (orientation: landscape) {
     .toggle-switch {
         top: 75px;
         right: 10px;
@@ -295,8 +297,10 @@ iPad Air (3rd Gen), iPad Pro 10.5-inch - Landscape
 
 
 /*------------------ DONE------------------------------------------------*/
-/*iPad Mini (5th, and 6th Gen), iPad (6th Gen - 2018),
-iPad (7th, 8th, and 9th Gen), iPad Air (3rd Gen), iPad Pro 10.5-inch */
+/*iPad Mini (5th, and 6th Gen), iPad (6th, 7th, 8th, 9th, and 10th Gen),
+iPad Air (3rd, 4th, and 5th Gen), iPad Pro 10.5-inch, iPad Pro 11-inch (1st generation),
+iPad Pro 11-inch (2nd generation), iPad Pro 11-inch (3rd generation),
+iPad Pro 11-inch (4th generation), iPad Pro 11-inch (M4)*/
 @media only screen and (min-width: 744px) and (max-width: 834px) and (orientation: portrait) {
     .toggle-switch {
         top: 70px;
@@ -329,13 +333,14 @@ iPad (7th, 8th, and 9th Gen), iPad Air (3rd Gen), iPad Pro 10.5-inch */
         height: 35px !important;
         width: 35px !important;
         top: 2px !important;
+        transform: translateX(2px) !important;
     }
 
     #dark .react-switch .react-switch-handle {
         height: 35px !important;
         width: 35px !important;
         top: 2px !important;
-        transform: translateX(45px) !important;
+        transform: translateX(43px) !important;
     }
 
 }

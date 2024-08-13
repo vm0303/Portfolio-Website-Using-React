@@ -449,7 +449,7 @@ const Contact = ({setMenuOpen}) => {
                             If you need to make any changes, click or tap the back button.
                         </p>
                         <p className={`review-desc ${flash ? 'animate-fade-in' : 'animate-fade-out'}`}>
-                            {submitButtonCountdown > 0 ? `Otherwise, please wait ${submitButtonCountdown}s before submitting.` : 'You can now submit the form.'}
+                            {submitButtonCountdown > 0 ? `Otherwise, please wait ${submitButtonCountdown}s before submitting the form.` : 'You can now submit the form.'}
                         </p>
 
                         {inputs.map(inputVals => (
