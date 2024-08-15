@@ -991,7 +991,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     #light input {
         width: 103.3%;
-        font-size: 12px;
+        font-size: 14px;
         -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);
         transform: translateX(-10px);
@@ -999,7 +999,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     #dark input {
         width: 103.3%;
-        font-size: 12px;
+        font-size: 14px;
         -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);
         transform: translateX(-10px);
@@ -1007,7 +1007,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .input-area-label {
-        font-size: 10px;
+        font-size: 16px;
         -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);
         transform: translateX(-10px);
@@ -1016,7 +1016,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .error-message {
-        font-size: 8px;
+        font-size: 9px;
         width: 104.2%;
         -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);
@@ -1329,7 +1329,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .error-message {
-        font-size: 10px;
+        font-size: 11px;
         width: 108.3%;
         -webkit-transform: translateX(-10px);
         -ms-transform: translateX(-10px);

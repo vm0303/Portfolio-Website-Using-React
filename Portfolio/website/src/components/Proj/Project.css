@@ -499,7 +499,7 @@ and (orientation: portrait)
 and (-webkit-min-device-pixel-ratio: 2) {
     .proj {
         width: 40%;
-        height: 15vh;
+        height: 16vh;
     }
 }
 

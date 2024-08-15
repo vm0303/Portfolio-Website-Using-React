@@ -1469,7 +1469,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .about-title {
         text-align: center;
-        font-size: 40px;
+        font-size: 35px;
         padding: 5px;
         margin: 5px;
 
@@ -1498,6 +1498,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
         background-color: transparent;
         height: 45px;
         width: 149px;
+    }
+
+    #light .resume-button p, #dark .resume-button p {
+        font-size: 17px;
     }
 
 }
@@ -1952,12 +1956,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .resume-button {
-        height: 50px;
+        height: 45px;
         width: 146px;
         background-color: transparent;
     }
 
-    .resume-button p {
+    #light .resume-button p, #dark .resume-button p {
         font-size: 14px;
     }
 

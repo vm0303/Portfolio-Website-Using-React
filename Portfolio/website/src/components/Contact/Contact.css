@@ -4271,7 +4271,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .text-area-label {
-        font-size: 10px;
+        font-size: 16px;
         margin-top: 20px;
         margin-bottom: 10px;
         margin-left: -10px;
@@ -4286,7 +4286,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .container-title {
-        font-size: 30px;
+        font-size: 35px;
         text-align: center;
         width: 100%;
     }
@@ -4308,32 +4308,32 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     #light textarea {
         width: 103%;
-        font-size: 12px;
+        font-size: 14px;
         transform: translateX(-10px);
 
     }
 
     #dark textarea {
         width: 103%;
-        font-size: 12px;
+        font-size: 14px;
         transform: translateX(-10px);
 
     }
 
     #light textarea::placeholder {
-        font-size: 12px;
+        font-size: 14px;
 
     }
 
 
     #dark textarea::placeholder {
-        font-size: 12px;
+        font-size: 14px;
 
 
     }
 
     .error-message-textArea {
-        font-size: 8px;
+        font-size: 9px;
         width: 104.2%;
         transform: translateX(-10px);
 
@@ -4345,8 +4345,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
         width: 149px;
     }
 
-    .review-button p {
+    #light .review-button p, #dark .review-button p {
         margin-left: 1px;
+        font-size: 17px;
     }
 
 
@@ -4377,12 +4378,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     #light .input-label, #dark .input-label {
-        font-size: 14px;
+        font-size: 15px;
 
     }
 
     #light .input-value, #dark .input-value {
-        font-size: 12px;
+        font-size: 13px;
         word-wrap: break-word;
     }
 
@@ -4401,18 +4402,45 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .back-button {
         height: 45px;
-        width: 150px;
+        width: 149px;
         margin: 5px
+    }
+
+    #light .back-button p, #dark .back-button p {
+        font-size: 17px;
     }
 
     .submit-button {
         height: 45px;
-        width: 150px;
+        width: 149px;
         margin: 5px
     }
 
+    #light .submit-button p, #dark .submit-button p {
+        font-size: 17px;
+    }
+
+    #light .Toastify__toast-container--bottom-right, #dark .Toastify__toast-container--bottom-right {
+        right: 7.05em
+    }
     #light .toast-message, #dark .toast-message {
-        font-size: 13px;
+        font-size: 15px;
+        width: 135%;
+    }
+
+    #light .Toastify__toast-icon, #dark .Toastify__toast-icon {
+        margin-inline-end: 15px;
+        width: 25px;
+    }
+
+    #light .Toastify__close-button > svg {
+        height: 25px;
+        width: 30px;
+    }
+
+    #dark .Toastify__close-button > svg {
+        height: 25px;
+        width: 30px;
     }
 
     @-moz-document url-prefix() {
@@ -5463,14 +5491,14 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
 
     .error-message-textArea {
-        font-size: 10px;
+        font-size: 11px;
         width: 108.3%;
         transform: translateX(-10px);
 
     }
 
     .container-review {
-        max-width: 65%;
+        max-width: 75%;
     }
 
     #light .container-review {
@@ -5488,7 +5516,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         width: 146px;
     }
 
-    .review-button p {
+    #light .review-button p, #dark .review-button p {
         margin-left: 0;
         font-size: 14px;
     }
@@ -5496,23 +5524,23 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .review-title {
         text-align: center; /* Center-align the title */
         margin-bottom: 20px; /* Space below the title */
-        font-size: 19px;
+        font-size: 22px;
     }
 
     .review-desc {
         text-align: center; /* Center-align description paragraphs */
         font-size: 14px;
-        margin: 10px 0;
+        margin: 10px 20px;
 
     }
 
     #light .input-label, #dark .input-label {
-        font-size: 14px;
+        font-size: 15px;
 
     }
 
     #light .input-value, #dark .input-value {
-        font-size: 12px;
+        font-size: 13px;
         word-wrap: break-word;
     }
 
@@ -5530,37 +5558,55 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     .back-button {
         height: 45px;
-        width: 150px;
+        width: 146px;
         margin: 5px;
 
     }
 
     #light .back-button p {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     #dark .back-button p {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .submit-button {
         height: 45px;
-        width: 150px;
+        width: 146px;
         margin: 5px;
 
     }
 
     #light .submit-button p {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     #dark .submit-button p {
-        font-size: 12px;
-    }
-
-    #light .toast-message, #dark .toast-message {
         font-size: 14px;
     }
+
+
+    #light .toast-message, #dark .toast-message {
+        font-size: 13px;
+        width: 100%;
+    }
+
+    #light .Toastify__toast-icon, #dark .Toastify__toast-icon {
+        margin-inline-end: 15px;
+        width: 25px;
+    }
+
+    #light .Toastify__close-button > svg {
+        height: 25px;
+        width: 30px;
+    }
+
+    #dark .Toastify__close-button > svg {
+        height: 25px;
+        width: 30px;
+    }
+
 
 
     @-moz-document url-prefix() {
