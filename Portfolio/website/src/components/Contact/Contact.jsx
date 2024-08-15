@@ -34,6 +34,7 @@ const Contact = ({setMenuOpen}) => {
     const [reviewActive, setReviewActive] = useState(false);
     const [submitButtonCountdown, setSubmitButtonCountdown] = useState(0); // Countdown state for submit button.
     const [flash, setFlash] = useState(false); // Flash state
+    const intervalRef = useRef(null);
     const [inputs, setInputs] = useState([
         {
             id: 1,
@@ -111,9 +112,12 @@ const Contact = ({setMenuOpen}) => {
     }, [scrollLimit, reviewActive]);
 
     const handleBackButtonClick = () => {
+
+        clearInterval(intervalRef.current)
         // Trigger the fade-out animation by setting reviewActive to false
         setFadeOut(true);
         setSubmitButtonCountdown(3);
+
 
         setTimeout(() => {
             setReviewActive(false);
@@ -279,15 +283,25 @@ const Contact = ({setMenuOpen}) => {
     // Flashing text event to indicate the user can submit the form.
     useEffect(() => {
         if (submitButtonCountdown === 0) {
-            const interval = setInterval(() => {
+            intervalRef.current = setInterval(() => {
                 setFlash(prevState => !prevState);
             }, 550);
 
             // Clear interval after 7 seconds and set flash to true
-            setTimeout(() => {
-                clearInterval(interval);
+            const timeoutId = setTimeout(() => {
+                clearInterval(intervalRef.current);
                 setFlash(true);
             }, 7000);
+
+            // Cleanup function to clear interval and timeout
+            return () => {
+                clearInterval(intervalRef.current);
+                clearTimeout(timeoutId);
+                setFlash(false); // Reset the flash state when component unmounts or dependencies change
+            };
+        } else {
+            // Ensure the text is visible before the countdown reaches 0
+            setFlash(false);
         }
     }, [submitButtonCountdown]);
 
@@ -448,8 +462,13 @@ const Contact = ({setMenuOpen}) => {
                         <p className="review-desc">
                             If you need to make any changes, click or tap the back button.
                         </p>
+                        {submitButtonCountdown > 0 && (
+                            <p className="review-desc">
+                                {`Otherwise, please wait ${submitButtonCountdown}s before submitting the form.`}
+                            </p>
+                        )}
                         <p className={`review-desc ${flash ? 'animate-fade-in' : 'animate-fade-out'}`}>
-                            {submitButtonCountdown > 0 ? `Otherwise, please wait ${submitButtonCountdown}s before submitting the form.` : 'You can now submit the form.'}
+                            You can now submit the form.
                         </p>
 
                         {inputs.map(inputVals => (
